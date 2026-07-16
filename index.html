@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CFA Level 1 — Study Hub</title>
+<meta name="description" content="CFA Level 1 study hub: English notes with Vietnamese translations, vocabulary, formulas and practice questions for all 10 topics.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#10222F;
+  --ink-soft:#3D5060;
+  --paper:#F6F6F1;
+  --card:#FFFFFF;
+  --line:#DFE0D6;
+  --accent:#0E7A5F;
+  --accent-soft:#E3F0EB;
+  --amber:#B7791F;
+  --amber-soft:#F8F0DF;
+  --red:#B23A2F;
+  --red-soft:#F7E8E6;
+  --side-bg:#10222F;
+  --side-ink:#EDEDE4;
+  --side-dim:#8FA0AC;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --body:'Public Sans',system-ui,sans-serif;
+  --disp:'Newsreader',Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto} *{transition:none!important;animation:none!important}}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);font-size:16px;line-height:1.65}
+
+/* ---------- layout ---------- */
+.app{display:grid;grid-template-columns:300px 1fr;min-height:100vh}
+.side{background:var(--side-bg);color:var(--side-ink);padding:28px 0 40px;position:sticky;top:0;height:100vh;overflow-y:auto}
+.side::-webkit-scrollbar{width:8px}
+.side::-webkit-scrollbar-thumb{background:#2C4152;border-radius:4px}
+.main{min-width:0;padding:0 0 90px}
+.wrap{max-width:880px;margin:0 auto;padding:0 34px}
+
+/* ---------- sidebar ---------- */
+.brand{padding:0 24px 20px;border-bottom:1px solid #223649}
+.brand h1{font-family:var(--disp);font-weight:600;font-size:26px;letter-spacing:.2px;color:#fff}
+.brand h1 span{color:#7FC5AF}
+.brand p{font-size:12.5px;color:var(--side-dim);margin-top:4px}
+.globalbar{display:flex;gap:8px;padding:14px 24px;border-bottom:1px solid #223649}
+.gbtn{flex:1;font:600 12px var(--body);color:var(--side-ink);background:#1B3243;border:1px solid #2C4658;border-radius:6px;padding:7px 8px;cursor:pointer;transition:background .15s}
+.gbtn:hover{background:#254155}
+.gbtn.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.navsec{padding:16px 12px 4px}
+.navlabel{font:600 11px var(--body);letter-spacing:1.4px;text-transform:uppercase;color:var(--side-dim);padding:0 12px 8px}
+a.tlink{display:block;text-decoration:none;color:var(--side-ink);padding:9px 12px;border-radius:8px;margin-bottom:2px;transition:background .15s}
+a.tlink:hover{background:#1B3243}
+a.tlink.active{background:#1F3B4E}
+a.tlink:focus-visible,button:focus-visible{outline:2px solid #7FC5AF;outline-offset:2px}
+.tl-top{display:flex;align-items:baseline;gap:8px}
+.tl-num{font:500 11px var(--mono);color:var(--side-dim);min-width:20px}
+.tl-name{font-size:13.5px;font-weight:500;flex:1}
+.tl-w{font:500 11px var(--mono);color:#7FC5AF}
+.tl-bar{height:3px;background:#22384A;border-radius:2px;margin:7px 0 0 28px;overflow:hidden}
+.tl-bar i{display:block;height:100%;background:linear-gradient(90deg,#0E7A5F,#7FC5AF);border-radius:2px}
+.tl-prog{margin:5px 0 0 28px;font:400 10.5px var(--mono);color:var(--side-dim)}
+
+/* ---------- topbar / mobile ---------- */
+.mobilebar{display:none}
+
+/* ---------- home ---------- */
+.hero{padding:64px 0 30px;border-bottom:1px solid var(--line)}
+.eyebrow{font:600 12px var(--body);letter-spacing:2px;text-transform:uppercase;color:var(--accent)}
+.hero h2{font-family:var(--disp);font-size:clamp(34px,5vw,52px);font-weight:600;line-height:1.12;margin:12px 0 16px;max-width:16ch}
+.hero p.lead{font-size:17.5px;color:var(--ink-soft);max-width:62ch}
+.hero .vi-inline{margin-top:14px}
+.examfacts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:34px 0 8px}
+.fact{background:var(--card);padding:16px 18px}
+.fact b{display:block;font:600 15px var(--mono);color:var(--ink)}
+.fact span{font-size:12.5px;color:var(--ink-soft)}
+.topicgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:34px 0}
+.tcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 20px 16px;text-decoration:none;color:var(--ink);display:block;transition:border-color .15s,transform .15s}
+.tcard:hover{border-color:var(--accent);transform:translateY(-2px)}
+.tcard .row{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.tcard h3{font-family:var(--disp);font-size:20px;font-weight:600}
+.tcard .w{font:600 12px var(--mono);color:var(--accent);white-space:nowrap}
+.tcard p{font-size:13.5px;color:var(--ink-soft);margin-top:6px}
+.tcard .bar{height:4px;background:var(--paper);border-radius:2px;margin-top:14px;overflow:hidden}
+.tcard .bar i{display:block;height:100%;background:var(--accent);border-radius:2px}
+.howto{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px 28px;margin-bottom:40px}
+.howto h3{font-family:var(--disp);font-size:22px;margin-bottom:10px}
+.howto ol{padding-left:20px;font-size:14.5px;color:var(--ink-soft)}
+.howto li{margin-bottom:6px}
+
+/* ---------- topic page ---------- */
+.thead{padding:56px 0 26px;border-bottom:1px solid var(--line)}
+.thead .tnum{font:500 13px var(--mono);color:var(--accent);letter-spacing:1px}
+.thead h2{font-family:var(--disp);font-size:clamp(30px,4.4vw,44px);font-weight:600;line-height:1.15;margin:8px 0 4px}
+.thead .viName{font-family:var(--disp);font-style:italic;font-size:19px;color:var(--ink-soft)}
+.weightline{display:flex;align-items:center;gap:14px;margin-top:20px}
+.weightline .bar{flex:1;max-width:340px;height:6px;background:#E7E8DF;border-radius:3px;overflow:hidden}
+.weightline .bar i{display:block;height:100%;background:var(--accent)}
+.weightline b{font:600 13px var(--mono);color:var(--accent)}
+.intro{padding:26px 0 4px}
+.intro p{max-width:70ch;color:var(--ink-soft)}
+
+/* modules */
+.module{margin:34px 0}
+.mhead{display:flex;align-items:baseline;gap:12px;margin-bottom:14px}
+.mhead .mnum{font:600 12px var(--mono);color:var(--amber)}
+.mhead h3{font-family:var(--disp);font-size:26px;font-weight:600}
+.section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin-bottom:14px}
+.section h4{font-size:15px;font-weight:700;margin-bottom:8px}
+.section .en p{margin-bottom:10px}
+.section .en p:last-child{margin-bottom:0}
+.section ul,.section ol{padding-left:22px;margin:8px 0}
+.section li{margin-bottom:5px}
+.section strong{font-weight:700}
+.section em{font-style:italic}
+table.simple{width:100%;border-collapse:collapse;font-size:14px;margin:10px 0}
+table.simple th{text-align:left;font-weight:700;border-bottom:2px solid var(--ink);padding:7px 10px 7px 0}
+table.simple td{border-bottom:1px solid var(--line);padding:7px 10px 7px 0;vertical-align:top}
+
+/* VI toggle */
+.vitoggle{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font:600 12px var(--body);color:var(--accent);background:var(--accent-soft);border:1px solid #BFDDD2;border-radius:999px;padding:5px 13px;cursor:pointer;transition:background .15s}
+.vitoggle:hover{background:#D3E8E0}
+.vitoggle .car{transition:transform .2s;font-size:10px}
+.vitoggle.open .car{transform:rotate(90deg)}
+.vi{display:none;margin-top:12px;padding:14px 16px;border-left:3px solid var(--accent);background:#F4F8F6;border-radius:0 8px 8px 0;font-size:14.5px;color:#2B4A40}
+.vi.show{display:block}
+.vi p{margin-bottom:8px}.vi p:last-child{margin-bottom:0}
+.vi ul,.vi ol{padding-left:20px;margin:6px 0}
+
+/* formulas */
+.fblock{background:var(--amber-soft);border:1px solid #E8D9B8;border-radius:12px;padding:18px 22px;margin-bottom:14px}
+.fblock h4{font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--amber);margin-bottom:10px}
+.frow{display:grid;grid-template-columns:minmax(150px,220px) 1fr;gap:8px 18px;padding:8px 0;border-bottom:1px dashed #E0CFA5;font-size:14px}
+.frow:last-child{border-bottom:none}
+.frow .fn{font-weight:600}
+.frow .fx{font-family:var(--mono);font-size:13.5px;color:#6B4E14}
+.frow .fnote{grid-column:1/-1;font-size:12.5px;color:#8A6B2E;margin-top:-4px}
+
+/* vocab */
+.vocab{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 24px;margin:26px 0}
+.vocab h3{font-family:var(--disp);font-size:22px;margin-bottom:6px}
+.vocab .hint{font-size:12.5px;color:var(--ink-soft);margin-bottom:12px}
+table.vtab{width:100%;border-collapse:collapse;font-size:14px}
+table.vtab th{text-align:left;font:600 11px var(--body);letter-spacing:1px;text-transform:uppercase;color:var(--ink-soft);border-bottom:2px solid var(--ink);padding:6px 10px 6px 0}
+table.vtab td{border-bottom:1px solid var(--line);padding:8px 10px 8px 0;vertical-align:top}
+table.vtab td.term{font-weight:700;white-space:nowrap}
+table.vtab td.viM{color:var(--accent);font-weight:500}
+.viCol{transition:filter .15s}
+body.hideViVocab .viCol{filter:blur(5px);cursor:pointer}
+
+/* quiz */
+.quiz{margin:34px 0 10px}
+.quiz>h3{font-family:var(--disp);font-size:26px;margin-bottom:4px}
+.quiz>.hint{font-size:13px;color:var(--ink-soft);margin-bottom:16px}
+.qcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 24px;margin-bottom:14px}
+.qcard .qnum{font:600 11px var(--mono);color:var(--amber);letter-spacing:1px}
+.qcard .qtext{font-weight:600;margin:6px 0 14px}
+.opt{display:flex;gap:10px;align-items:flex-start;width:100%;text-align:left;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:11px 14px;margin-bottom:8px;cursor:pointer;font:400 14.5px var(--body);color:var(--ink);transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--ink-soft)}
+.opt .ol{font:600 12px var(--mono);color:var(--ink-soft);margin-top:2px}
+.opt.correct{background:var(--accent-soft);border-color:var(--accent)}
+.opt.correct .ol{color:var(--accent)}
+.opt.wrong{background:var(--red-soft);border-color:var(--red)}
+.opt.wrong .ol{color:var(--red)}
+.opt:disabled{cursor:default}
+.expl{display:none;margin-top:12px;border-top:1px dashed var(--line);padding-top:12px;font-size:14px}
+.expl.show{display:block}
+.expl .verdict{font-weight:700;margin-bottom:6px}
+.expl .verdict.ok{color:var(--accent)}
+.expl .verdict.no{color:var(--red)}
+.expl .vi{margin-top:10px}
+.qscore{font:600 13px var(--mono);color:var(--accent);background:var(--accent-soft);border:1px solid #BFDDD2;border-radius:8px;display:inline-block;padding:8px 14px;margin-top:6px}
+
+/* misc */
+.pagenav{display:flex;justify-content:space-between;gap:12px;margin:44px 0 0;padding-top:22px;border-top:1px solid var(--line)}
+.pagenav a{flex:1;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;transition:border-color .15s}
+.pagenav a:hover{border-color:var(--accent)}
+.pagenav .lab{font:600 11px var(--body);letter-spacing:1px;text-transform:uppercase;color:var(--ink-soft)}
+.pagenav .nm{font-family:var(--disp);font-size:17px;margin-top:3px}
+.pagenav a.next{text-align:right}
+.markdone{display:inline-flex;align-items:center;gap:8px;font:600 13px var(--body);color:var(--ink-soft);background:var(--card);border:1px solid var(--line);border-radius:8px;padding:8px 14px;cursor:pointer;margin-top:10px}
+.markdone.done{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
+.footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--line);font-size:12.5px;color:var(--ink-soft)}
+
+@media (max-width:960px){
+  .app{grid-template-columns:1fr}
+  .side{position:fixed;left:0;top:0;bottom:0;width:290px;z-index:40;transform:translateX(-100%);transition:transform .25s}
+  .side.open{transform:none;box-shadow:0 0 60px rgba(0,0,0,.4)}
+  .mobilebar{display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:30;background:var(--side-bg);color:#fff;padding:12px 18px}
+  .mobilebar button{background:#1B3243;color:#fff;border:1px solid #2C4658;border-radius:8px;font:600 13px var(--body);padding:8px 13px;cursor:pointer}
+  .mobilebar .t{font-family:var(--disp);font-size:17px}
+  .topicgrid{grid-template-columns:1fr}
+  .wrap{padding:0 20px}
+  .frow{grid-template-columns:1fr}
+  table.vtab td.term{white-space:normal}
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <nav class="side" id="side" aria-label="Topics">
+    <div class="brand">
+      <h1>CFA<span> L1</span> Study Hub</h1>
+      <p>English notes · Vietnamese support · Practice</p>
+    </div>
+    <div class="globalbar">
+      <button class="gbtn" id="btnAllVi" title="Show every Vietnamese translation">VI: show all</button>
+      <button class="gbtn" id="btnVocabVi" title="Blur Vietnamese column in vocabulary tables (self-test)">Vocab: quiz me</button>
+    </div>
+    <div class="navsec">
+      <div class="navlabel">Curriculum · 2026 weights</div>
+      <div id="navlist"></div>
+    </div>
+  </nav>
+
+  <div class="main">
+    <div class="mobilebar">
+      <button id="btnMenu" aria-label="Open menu">☰ Topics</button>
+      <div class="t">CFA L1 Study Hub</div>
+    </div>
+    <div class="wrap" id="content"></div>
+  </div>
+</div>
+<script>
+/* =====================================================
+   CFA LEVEL 1 STUDY HUB — content data
+   Structure: TOPICS[] -> modules[] -> sections[{h,en,vi}]
+   + formulas, vocab, quiz (3-option MCQ, CFA format)
+   ===================================================== */
+const TOPICS = [
+/* ============ 01 ETHICS ============ */
+{
+id:'ethics', num:'01', name:'Ethical & Professional Standards', vi:'Đạo đức & Chuẩn mực nghề nghiệp', w:[15,20],
+blurb:'The Code of Ethics, the seven Standards of Professional Conduct, and GIPS. The highest-weighted topic and a tie-breaker at the margin.',
+intro:{
+en:'Ethics is the single most important topic at Level 1: it carries a 15–20% weight, and CFA Institute applies an "ethics adjustment" for borderline candidates — a strong ethics score can push a marginal result to a pass. Questions are scenario-based: you must identify which Standard is violated (or that none is). Learn the seven Standards with their sub-sections and practice applying them to grey-area situations.',
+vi:'Ethics là môn quan trọng nhất ở Level 1: chiếm 15–20% tổng điểm, và Viện CFA áp dụng "ethics adjustment" (điều chỉnh điểm đạo đức) cho các thí sinh ở ngưỡng đỗ/trượt — điểm Ethics tốt có thể kéo kết quả từ trượt thành đỗ. Câu hỏi thường ở dạng tình huống: bạn phải xác định Standard nào bị vi phạm (hoặc không vi phạm gì). Hãy học kỹ 7 Standards cùng các mục con và luyện áp dụng vào các tình huống "vùng xám".'
+},
+modules:[
+{ title:'Code of Ethics & Professionalism (Standard I)', sections:[
+{h:'The six components of the Code of Ethics', en:'<p>Members and candidates must:</p><ol><li><strong>Act with integrity, competence, diligence, and respect</strong>, and in an ethical manner with the public, clients, prospective clients, employers, employees, colleagues, and other market participants.</li><li><strong>Place the integrity of the profession and the interests of clients above their own</strong> personal interests.</li><li><strong>Use reasonable care and exercise independent professional judgment</strong> in investment analysis, recommendations, and actions.</li><li><strong>Practice and encourage others to practice</strong> in a professional and ethical manner that reflects credit on the profession.</li><li><strong>Promote the integrity and viability of global capital markets</strong> for the ultimate benefit of society.</li><li><strong>Maintain and improve professional competence</strong> and strive to maintain and improve the competence of other investment professionals.</li></ol>',
+vi:'<p>Thành viên và ứng viên phải:</p><ol><li><strong>Hành động chính trực, có năng lực, cần mẫn và tôn trọng</strong>, cư xử có đạo đức với công chúng, khách hàng, khách hàng tiềm năng, chủ lao động, nhân viên, đồng nghiệp và các thành viên khác của thị trường.</li><li><strong>Đặt tính chính trực của nghề nghiệp và lợi ích khách hàng lên trên</strong> lợi ích cá nhân.</li><li><strong>Cẩn trọng hợp lý và giữ phán đoán chuyên môn độc lập</strong> khi phân tích, khuyến nghị và ra quyết định đầu tư.</li><li><strong>Hành nghề và khuyến khích người khác hành nghề</strong> một cách chuyên nghiệp, có đạo đức, làm rạng danh nghề nghiệp.</li><li><strong>Thúc đẩy tính chính trực và sự bền vững của thị trường vốn toàn cầu</strong> vì lợi ích tối hậu của xã hội.</li><li><strong>Duy trì và nâng cao năng lực chuyên môn</strong> của bản thân và của các chuyên gia đầu tư khác.</li></ol>'},
+{h:'Standard I — Professionalism', en:'<ul><li><strong>I(A) Knowledge of the Law:</strong> comply with the <em>stricter</em> of applicable law or the Code &amp; Standards. Do not knowingly participate in violations; dissociate from illegal activity (reporting to regulators is encouraged but not required by the Code).</li><li><strong>I(B) Independence and Objectivity:</strong> do not offer, solicit, or accept gifts or compensation that could compromise independence. Modest gifts from clients are acceptable with disclosure to the employer; gifts from parties trying to influence research (e.g., issuers paying analysts) are the classic violation. Best practice for issuer-paid research: flat fee, disclosed.</li><li><strong>I(C) Misrepresentation:</strong> no untrue statements or omissions — includes guaranteeing investment returns and <strong>plagiarism</strong> (using others’ work without attribution; exception: recognized statistical sources like Bloomberg do not need citation).</li><li><strong>I(D) Misconduct:</strong> no dishonesty, fraud, or deceit that reflects adversely on professional reputation, integrity, or competence. Personal bankruptcy alone is not misconduct unless fraud was involved.</li></ul>',
+vi:'<ul><li><strong>I(A) Hiểu biết pháp luật:</strong> tuân thủ quy định <em>nghiêm ngặt hơn</em> giữa luật hiện hành và Code &amp; Standards. Không cố ý tham gia vi phạm; phải tách mình khỏi hành vi phạm pháp (báo cáo cơ quan quản lý được khuyến khích nhưng Code không bắt buộc).</li><li><strong>I(B) Độc lập &amp; Khách quan:</strong> không đưa, gạ gẫm hay nhận quà/thù lao có thể ảnh hưởng tính độc lập. Quà nhỏ từ khách hàng có thể nhận nếu khai báo với công ty; quà từ bên muốn thao túng báo cáo phân tích (VD: doanh nghiệp trả tiền cho analyst) là vi phạm điển hình. Nghiên cứu do tổ chức phát hành trả tiền: nhận phí cố định (flat fee) và công bố.</li><li><strong>I(C) Trình bày sai lệch:</strong> không phát ngôn sai hoặc bỏ sót thông tin — bao gồm cam kết bảo đảm lợi nhuận đầu tư và <strong>đạo văn</strong> (dùng công trình người khác không trích nguồn; ngoại lệ: nguồn thống kê phổ biến như Bloomberg không cần trích).</li><li><strong>I(D) Hành vi sai trái:</strong> không gian dối, lừa đảo làm tổn hại danh tiếng, tính chính trực, năng lực nghề nghiệp. Phá sản cá nhân đơn thuần không phải misconduct trừ khi có gian lận.</li></ul>'}
+]},
+{ title:'Duties: Integrity of Capital Markets & Duties to Clients (Standards II–III)', sections:[
+{h:'Standard II — Integrity of Capital Markets', en:'<ul><li><strong>II(A) Material Nonpublic Information (MNPI):</strong> members who possess information that is both <em>material</em> (would affect price / a reasonable investor’s decision) and <em>nonpublic</em> must not act or cause others to act on it. The <strong>mosaic theory</strong> is the key exception: conclusions built from public information plus <em>nonmaterial</em> nonpublic information are legitimate — even if the conclusion itself would be material.</li><li><strong>II(B) Market Manipulation:</strong> no transaction-based manipulation (e.g., trades to create artificial volume or price — "painting the tape") and no information-based manipulation (spreading false rumors, pump-and-dump). Intent matters: legitimate trading strategies that exploit inefficiencies are not manipulation.</li></ul>',
+vi:'<ul><li><strong>II(A) Thông tin trọng yếu chưa công bố (MNPI):</strong> ai nắm thông tin vừa <em>trọng yếu</em> (ảnh hưởng giá / quyết định của nhà đầu tư hợp lý) vừa <em>chưa công khai</em> thì không được giao dịch hoặc xúi giục người khác giao dịch dựa trên đó. <strong>Mosaic theory</strong> là ngoại lệ quan trọng: kết luận được ghép từ thông tin công khai + thông tin chưa công khai nhưng <em>không trọng yếu</em> là hợp pháp — kể cả khi bản thân kết luận đó mang tính trọng yếu.</li><li><strong>II(B) Thao túng thị trường:</strong> cấm thao túng bằng giao dịch (tạo khối lượng/giá ảo — "painting the tape") và thao túng bằng thông tin (tung tin đồn thất thiệt, pump-and-dump). Ý định là mấu chốt: chiến lược giao dịch hợp pháp khai thác sự kém hiệu quả của thị trường không phải thao túng.</li></ul>'},
+{h:'Standard III — Duties to Clients', en:'<ul><li><strong>III(A) Loyalty, Prudence, and Care:</strong> client interests come first — before the employer’s and your own. Soft dollars (brokerage paid with client commissions) must benefit the <em>client</em>. Proxies should be voted in clients’ interests.</li><li><strong>III(B) Fair Dealing:</strong> deal fairly and objectively with all clients when making recommendations or taking investment action. "Fairly" does not mean "equally" — premium service tiers are fine if disclosed and available to all who pay; but all clients must receive material recommendation changes before (or at the same time as) any trades.</li><li><strong>III(C) Suitability:</strong> in an advisory relationship, make a reasonable inquiry into the client’s investment experience, risk/return objectives, and constraints — documented in an <strong>Investment Policy Statement (IPS)</strong>, reviewed at least annually. Judge suitability in a total-portfolio context, not security by security.</li><li><strong>III(D) Performance Presentation:</strong> fair, accurate, and complete; no cherry-picking accounts or periods. GIPS compliance is recommended, not required.</li><li><strong>III(E) Preservation of Confidentiality:</strong> keep client information confidential unless the information concerns illegal activity, disclosure is required by law, or the client permits it. Cooperation with CFA Institute Professional Conduct investigations is allowed.</li></ul>',
+vi:'<ul><li><strong>III(A) Trung thành, Thận trọng, Cẩn trọng:</strong> lợi ích khách hàng đứng trước lợi ích công ty và bản thân. Soft dollars (dịch vụ môi giới trả bằng hoa hồng của khách hàng) phải phục vụ lợi ích <em>khách hàng</em>. Quyền biểu quyết (proxy) phải bỏ phiếu vì lợi ích khách hàng.</li><li><strong>III(B) Đối xử công bằng:</strong> công bằng và khách quan với mọi khách hàng khi khuyến nghị hoặc giao dịch. "Công bằng" không có nghĩa "bằng nhau" — gói dịch vụ cao cấp được phép nếu công bố và ai trả phí đều mua được; nhưng mọi khách hàng phải nhận thay đổi khuyến nghị trọng yếu trước (hoặc cùng lúc) với việc thực hiện giao dịch.</li><li><strong>III(C) Tính phù hợp:</strong> trong quan hệ tư vấn, phải tìm hiểu kinh nghiệm đầu tư, mục tiêu rủi ro/lợi nhuận và các ràng buộc của khách — ghi trong <strong>IPS</strong>, rà soát tối thiểu hằng năm. Đánh giá suitability theo tổng thể danh mục, không theo từng chứng khoán riêng lẻ.</li><li><strong>III(D) Trình bày kết quả đầu tư:</strong> công bằng, chính xác, đầy đủ; không "cherry-pick" tài khoản hay giai đoạn đẹp. Tuân thủ GIPS là khuyến nghị, không bắt buộc.</li><li><strong>III(E) Bảo mật:</strong> giữ bí mật thông tin khách hàng trừ khi liên quan hoạt động phạm pháp, luật yêu cầu công bố, hoặc khách hàng cho phép. Được phép hợp tác với điều tra của CFA Institute Professional Conduct.</li></ul>'}
+]},
+{ title:'Duties to Employers, Investment Analysis, Conflicts, Responsibilities (Standards IV–VII)', sections:[
+{h:'Standard IV — Duties to Employers', en:'<ul><li><strong>IV(A) Loyalty:</strong> do not harm the employer. While employed, you may <em>prepare</em> to leave (arrange to go independent) but may not take client lists, models, or solicit clients before resigning. Skills and experience in your head are yours to keep.</li><li><strong>IV(B) Additional Compensation Arrangements:</strong> no outside compensation that competes with the employer’s interest unless <em>written consent from all parties</em> (employer and the outside party) is obtained.</li><li><strong>IV(C) Responsibilities of Supervisors:</strong> supervisors must take steps to prevent and detect violations. If compliance systems are inadequate, decline supervisory responsibility (in writing) until they are fixed.</li></ul>',
+vi:'<ul><li><strong>IV(A) Trung thành với chủ lao động:</strong> không gây hại cho công ty. Khi còn làm việc, bạn được <em>chuẩn bị</em> nghỉ (sắp xếp ra làm riêng) nhưng không được mang danh sách khách hàng, mô hình, hay lôi kéo khách trước khi nộp đơn nghỉ. Kỹ năng và kinh nghiệm trong đầu là của bạn.</li><li><strong>IV(B) Thu nhập bổ sung:</strong> không nhận thù lao bên ngoài cạnh tranh với lợi ích công ty trừ khi có <em>chấp thuận bằng văn bản của tất cả các bên</em>.</li><li><strong>IV(C) Trách nhiệm người giám sát:</strong> phải có biện pháp ngăn ngừa và phát hiện vi phạm. Nếu hệ thống compliance yếu, phải từ chối nhận trách nhiệm giám sát (bằng văn bản) cho tới khi được khắc phục.</li></ul>'},
+{h:'Standards V, VI, VII — highlights', en:'<ul><li><strong>V(A) Diligence and Reasonable Basis:</strong> every recommendation needs a reasonable and adequate basis supported by research. Using third-party research is fine if you assess its rigor. Group research: you need not agree with the conclusion, but if the process was sound you may keep your name on the report.</li><li><strong>V(B) Communication with Clients:</strong> distinguish <em>fact</em> from <em>opinion</em>; disclose the basic format of the investment process and material changes to it; disclose significant limitations and risks.</li><li><strong>V(C) Record Retention:</strong> maintain records supporting analysis (CFA Institute recommends ≥7 years if no regulatory rule). Records belong to the <em>firm</em>, not the analyst.</li><li><strong>VI(A) Disclosure of Conflicts:</strong> disclose all matters that could impair independence — prominently and in plain language (e.g., board seats, stock ownership, referral relationships).</li><li><strong>VI(B) Priority of Transactions:</strong> client and employer transactions come before personal trades. Family accounts that are regular fee-paying client accounts must be treated like any other client — not disadvantaged.</li><li><strong>VI(C) Referral Fees:</strong> disclose to employer and clients any compensation received for referrals <em>before</em> entering the agreement.</li><li><strong>VII(A) Conduct in CFA Program:</strong> no cheating, no sharing exam content (even the general topic areas tested), no using the exam for personal gain.</li><li><strong>VII(B) Reference to CFA Institute/Designation:</strong> the CFA designation is used as an adjective, never a noun ("She is a CFA charterholder", not "She is a CFA"). No claims of superior performance from holding the charter. Candidates may state they are "a Level II candidate in the CFA Program" only if registered for the next exam.</li></ul>',
+vi:'<ul><li><strong>V(A) Cần mẫn &amp; Cơ sở hợp lý:</strong> mọi khuyến nghị cần cơ sở nghiên cứu hợp lý, đầy đủ. Dùng nghiên cứu bên thứ ba được, nếu đã đánh giá độ tin cậy. Nghiên cứu nhóm: không cần đồng ý với kết luận, nhưng nếu quy trình chặt chẽ thì vẫn có thể để tên trên báo cáo.</li><li><strong>V(B) Trao đổi với khách hàng:</strong> phân biệt <em>sự kiện</em> và <em>quan điểm</em>; công bố quy trình đầu tư cơ bản và các thay đổi trọng yếu; nêu rõ hạn chế và rủi ro đáng kể.</li><li><strong>V(C) Lưu trữ hồ sơ:</strong> lưu tài liệu chứng minh phân tích (CFA Institute khuyến nghị ≥7 năm nếu không có quy định khác). Hồ sơ thuộc về <em>công ty</em>, không thuộc về analyst.</li><li><strong>VI(A) Công bố xung đột lợi ích:</strong> công bố rõ ràng, dễ hiểu mọi vấn đề có thể ảnh hưởng tính độc lập (ghế HĐQT, sở hữu cổ phiếu, quan hệ giới thiệu…).</li><li><strong>VI(B) Ưu tiên giao dịch:</strong> giao dịch cho khách hàng và công ty trước giao dịch cá nhân. Tài khoản người thân nếu là tài khoản khách hàng trả phí bình thường thì phải đối xử như mọi khách hàng khác — không được thiệt thòi.</li><li><strong>VI(C) Phí giới thiệu:</strong> công bố cho công ty và khách hàng mọi khoản thù lao giới thiệu <em>trước khi</em> ký thỏa thuận.</li><li><strong>VII(A) Ứng xử trong kỳ thi CFA:</strong> không gian lận, không chia sẻ nội dung đề (kể cả chủ đề chung được hỏi), không lợi dụng kỳ thi cho lợi ích cá nhân.</li><li><strong>VII(B) Sử dụng danh xưng CFA:</strong> CFA dùng như tính từ, không phải danh từ ("She is a CFA charterholder", không nói "She is a CFA"). Không tuyên bố charter đem lại kết quả đầu tư vượt trội. Ứng viên chỉ được nói "Level II candidate in the CFA Program" nếu đã đăng ký kỳ thi kế tiếp.</li></ul>'},
+{h:'GIPS — Global Investment Performance Standards (overview)', en:'<p>GIPS are voluntary, ethical standards for calculating and presenting investment performance so that results are comparable across firms globally. Key ideas:</p><ul><li>Compliance is claimed <strong>firm-wide</strong> — a firm cannot claim GIPS compliance for only some products, and there is no partial compliance.</li><li>All actual, fee-paying, discretionary portfolios must be assigned to at least one <strong>composite</strong> (a group of portfolios with a similar strategy) — this prevents cherry-picking the best accounts.</li><li>Verification by an independent third party is <em>recommended</em>, not required, and applies to the whole firm.</li></ul>',
+vi:'<p>GIPS là bộ chuẩn mực đạo đức tự nguyện về cách tính và trình bày kết quả đầu tư, giúp so sánh kết quả giữa các công ty trên toàn cầu. Ý chính:</p><ul><li>Tuyên bố tuân thủ ở cấp <strong>toàn công ty</strong> — không được tuyên bố tuân thủ cho một vài sản phẩm, không có "tuân thủ một phần".</li><li>Mọi danh mục thực, trả phí, có toàn quyền quản lý (discretionary) phải được xếp vào ít nhất một <strong>composite</strong> (nhóm danh mục cùng chiến lược) — ngăn việc chỉ khoe các tài khoản đẹp nhất.</li><li>Kiểm chứng độc lập (verification) là <em>khuyến nghị</em>, không bắt buộc, và áp dụng cho toàn công ty.</li></ul>'}
+]}
+],
+vocab:[
+['fiduciary duty','A legal/ethical obligation to act in the best interest of another party (the client).','nghĩa vụ ủy thác — hành động vì lợi ích tốt nhất của khách hàng'],
+['material nonpublic information (MNPI)','Information not yet public that would affect a security’s price or an investor’s decision.','thông tin trọng yếu chưa công bố'],
+['mosaic theory','Combining public + nonmaterial nonpublic info to reach an investment conclusion — permitted.','thuyết khảm — ghép thông tin hợp pháp để ra kết luận'],
+['front running','Trading for oneself ahead of client orders to profit from the price impact.','giao dịch chạy trước lệnh khách hàng'],
+['soft dollars','Client brokerage commissions used to buy research/services — must benefit the client.','hoa hồng mềm — hoa hồng của khách dùng mua dịch vụ nghiên cứu'],
+['plagiarism','Using another’s work or ideas without attribution.','đạo văn'],
+['composite','A grouping of portfolios managed under a similar strategy (GIPS).','nhóm danh mục cùng chiến lược (GIPS)'],
+['whistleblowing','Reporting employer wrongdoing; allowed when protecting market integrity or clients.','tố giác sai phạm nội bộ'],
+['pump and dump','Spreading false positive information to inflate a price, then selling.','bơm giá rồi xả hàng'],
+['dissociate','To separate oneself from illegal or unethical activity (required by I(A)).','tách mình khỏi hành vi vi phạm']
+],
+quiz:[
+{q:'An analyst combines public filings, industry data, and nonmaterial details gathered from conversations with a company’s suppliers to conclude the company will beat earnings estimates. She buys the stock. According to the Standards, she has:', opts:['violated Standard II(A) because her conclusion is material and nonpublic.','not violated Standard II(A) because of the mosaic theory.','violated Standard II(A) unless she first publishes her research.'], ans:1,
+en:'B is correct. Under the mosaic theory, conclusions reached by combining public information with nonmaterial nonpublic information do not violate Standard II(A) — even if the conclusion itself would be material. There is no requirement to publish before trading on a mosaic-based conclusion.',
+vi:'Đáp án B. Theo mosaic theory, kết luận được rút ra từ thông tin công khai + thông tin chưa công khai nhưng không trọng yếu thì không vi phạm Standard II(A) — kể cả khi bản thân kết luận là trọng yếu. Không có yêu cầu phải công bố nghiên cứu trước khi giao dịch.'},
+{q:'A portfolio manager resigns on Friday. The following Monday she contacts, from memory, several former clients whose contact details are publicly available, to solicit business for her new firm. She signed no non-compete agreement. She has most likely:', opts:['violated Standard IV(A) Loyalty by soliciting former clients.','not violated the Standards.','violated Standard III(E) Confidentiality.'], ans:1,
+en:'B is correct. After employment ends (and absent a non-compete agreement), contacting former clients using public information or memory does not violate IV(A). A violation would occur if she solicited clients before resigning or took the employer’s client list/records.',
+vi:'Đáp án B. Sau khi nghỉ việc (và không có thỏa thuận không cạnh tranh), việc liên hệ khách hàng cũ bằng thông tin công khai hoặc trí nhớ không vi phạm IV(A). Vi phạm chỉ xảy ra nếu cô ấy lôi kéo khách trước khi nghỉ hoặc mang theo danh sách/hồ sơ khách hàng của công ty.'},
+{q:'Which statement about the CFA designation is acceptable under Standard VII(B)?', opts:['"As a CFA, I achieve better returns than non-charterholders."','"John Smith, CFA, passed all three exams on his first attempts."','"John Smith is a CFA."'], ans:1,
+en:'B is correct. Stating a factual accomplishment (passing all three levels on first attempts) is allowed. A implies superior performance from the charter — prohibited. C uses "CFA" as a noun; the marks must be used as an adjective.',
+vi:'Đáp án B. Nêu sự kiện có thật (đỗ cả 3 level ngay lần đầu) là được phép. Đáp án A ngụ ý charter đem lại kết quả vượt trội — bị cấm. Đáp án C dùng "CFA" như danh từ; danh xưng phải dùng như tính từ.'},
+{q:'A firm claims GIPS compliance. Which of the following is required?', opts:['Independent third-party verification of the performance record.','Inclusion of all actual, fee-paying, discretionary portfolios in at least one composite.','Compliance for its flagship equity product only.'], ans:1,
+en:'B is correct. GIPS requires every actual, fee-paying, discretionary portfolio to be included in at least one composite so firms cannot cherry-pick. Verification is recommended but not required (A), and compliance must be firm-wide, never product-by-product (C).',
+vi:'Đáp án B. GIPS yêu cầu mọi danh mục thực, trả phí, có toàn quyền quản lý phải nằm trong ít nhất một composite để tránh cherry-pick. Verification chỉ là khuyến nghị (A sai), và tuân thủ phải ở cấp toàn công ty, không theo từng sản phẩm (C sai).'},
+{q:'The laws of Country X (where an analyst works) are stricter than the Code and Standards. The laws of her home Country Y are less strict. Under Standard I(A) she must follow:', opts:['the Code and Standards.','the law of Country X.','the law of Country Y.'], ans:1,
+en:'B is correct. Standard I(A) requires compliance with the strictest applicable rule. Since the local law of Country X (where she works) is stricter than the Code and Standards, she must follow Country X law.',
+vi:'Đáp án B. Standard I(A) yêu cầu tuân theo quy định nghiêm ngặt nhất áp dụng cho mình. Luật nước X (nơi làm việc) nghiêm hơn Code &amp; Standards nên phải theo luật nước X.'}
+]
+},
+/* ============ 02 QUANTITATIVE METHODS ============ */
+{
+id:'quant', num:'02', name:'Quantitative Methods', vi:'Phương pháp định lượng', w:[6,9],
+blurb:'Time value of money, statistics, probability, distributions, hypothesis testing and simple regression — the toolkit used by every other topic.',
+intro:{
+en:'Quant is the mathematical toolkit for the whole curriculum: rates of return, statistical measures, probability, sampling, hypothesis testing, and an introduction to simple linear regression. Master your financial calculator (TI BA II Plus or HP 12C) here — TVM keys, NPV/IRR, and statistics functions save enormous time on exam day.',
+vi:'Quant là bộ công cụ toán cho toàn bộ chương trình: các loại tỷ suất sinh lời, thống kê mô tả, xác suất, chọn mẫu, kiểm định giả thuyết, và nhập môn hồi quy tuyến tính đơn. Hãy thành thạo máy tính tài chính (TI BA II Plus hoặc HP 12C) ngay từ môn này — các phím TVM, NPV/IRR và thống kê tiết kiệm rất nhiều thời gian khi thi.'
+},
+modules:[
+{ title:'Time Value of Money & Rates of Return', sections:[
+{h:'Interest rates and the TVM framework', en:'<p>An interest rate can be viewed as a <strong>required rate of return</strong>, a <strong>discount rate</strong>, or an <strong>opportunity cost</strong>. It decomposes as:</p><p><em>Required rate = real risk-free rate + inflation premium + default risk premium + liquidity premium + maturity premium.</em></p><p>Core mechanics: money grows at compound interest. A single cash flow: FV = PV × (1 + r)<sup>n</sup>. More frequent compounding raises the effective rate: the <strong>effective annual rate (EAR)</strong> converts a stated annual rate compounded m times per year into a true annual growth rate. With continuous compounding, FV = PV × e<sup>rn</sup>.</p><p><strong>Annuities:</strong> an ordinary annuity pays at the <em>end</em> of each period; an annuity due pays at the <em>beginning</em> (worth one extra period of interest: multiply by (1+r)). A <strong>perpetuity</strong> pays forever: PV = PMT / r.</p>',
+vi:'<p>Lãi suất có thể hiểu là <strong>tỷ suất sinh lời yêu cầu</strong>, <strong>tỷ suất chiết khấu</strong>, hoặc <strong>chi phí cơ hội</strong>. Phân rã: <em>lãi suất yêu cầu = lãi suất phi rủi ro thực + bù đắp lạm phát + bù đắp rủi ro vỡ nợ + bù đắp thanh khoản + bù đắp kỳ hạn</em>.</p><p>Cơ chế lõi: tiền tăng trưởng theo lãi kép. Dòng tiền đơn: FV = PV × (1 + r)<sup>n</sup>. Ghép lãi càng nhiều lần thì lãi suất hiệu dụng càng cao: <strong>EAR</strong> quy đổi lãi suất công bố ghép m lần/năm về tốc độ tăng trưởng thực trong 1 năm. Ghép lãi liên tục: FV = PV × e<sup>rn</sup>.</p><p><strong>Niên kim (annuity):</strong> ordinary annuity trả cuối kỳ; annuity due trả đầu kỳ (giá trị cao hơn 1 kỳ lãi: nhân với (1+r)). <strong>Perpetuity</strong> trả vĩnh viễn: PV = PMT / r.</p>'},
+{h:'Rates of return used in the curriculum', en:'<ul><li><strong>Holding period return (HPR):</strong> total return over the period, including income: (P<sub>1</sub> − P<sub>0</sub> + D) / P<sub>0</sub>.</li><li><strong>Arithmetic mean return:</strong> simple average — best for forecasting <em>next period’s</em> expected return.</li><li><strong>Geometric mean return:</strong> compound growth rate — best for measuring <em>past multi-period performance</em>. Geometric ≤ arithmetic; the gap widens with volatility.</li><li><strong>Money-weighted return (MWR / IRR):</strong> accounts for the timing and size of cash flows — measures the <em>investor’s</em> experience.</li><li><strong>Time-weighted return (TWR):</strong> removes the effect of cash flows — the standard for judging the <em>manager</em>.</li><li>Also know: gross vs net return, pre-tax vs after-tax, real vs nominal (1 + nominal = (1 + real)(1 + inflation)), and leveraged return.</li></ul>',
+vi:'<ul><li><strong>HPR:</strong> tổng lợi suất trong kỳ, gồm cả thu nhập: (P<sub>1</sub> − P<sub>0</sub> + D) / P<sub>0</sub>.</li><li><strong>Trung bình cộng:</strong> phù hợp để dự báo lợi suất kỳ vọng <em>kỳ tới</em>.</li><li><strong>Trung bình nhân:</strong> tốc độ tăng trưởng kép — phù hợp đo <em>hiệu quả nhiều kỳ trong quá khứ</em>. Geometric ≤ arithmetic; chênh lệch càng lớn khi biến động càng cao.</li><li><strong>MWR (IRR):</strong> tính đến thời điểm và quy mô dòng tiền — đo trải nghiệm của <em>nhà đầu tư</em>.</li><li><strong>TWR:</strong> loại bỏ ảnh hưởng của dòng tiền — chuẩn mực đánh giá <em>nhà quản lý quỹ</em>.</li><li>Cần biết thêm: gross vs net, trước thuế vs sau thuế, thực vs danh nghĩa ((1 + danh nghĩa) = (1 + thực)(1 + lạm phát)), lợi suất có đòn bẩy.</li></ul>'}
+], formulas:[
+['Future value','FV = PV × (1 + r)^n',''],
+['EAR','EAR = (1 + r/m)^m − 1','m = compounding periods per year; continuous: EAR = e^r − 1'],
+['Perpetuity','PV = PMT / r',''],
+['Ordinary annuity PV','PV = PMT × [1 − (1+r)^−n] / r','Annuity due: multiply by (1 + r)'],
+['HPR','HPR = (P1 − P0 + D) / P0',''],
+['Geometric mean','Rg = [(1+R1)(1+R2)…(1+Rn)]^(1/n) − 1',''],
+['Real vs nominal','(1 + nominal) = (1 + real) × (1 + inflation)','']
+]},
+{ title:'Statistical Measures & Probability', sections:[
+{h:'Central tendency, dispersion, and shape', en:'<ul><li><strong>Mean / median / mode:</strong> the median is robust to outliers; the mode is the most frequent value. Trimmed and winsorized means reduce outlier impact.</li><li><strong>Dispersion:</strong> range, mean absolute deviation, <strong>variance</strong> (average squared deviation; sample variance divides by n − 1) and <strong>standard deviation</strong>. Downside risk: <strong>target semideviation</strong> considers only deviations below a target.</li><li><strong>Coefficient of variation:</strong> CV = s / mean — risk per unit of return; enables comparison across assets with different scales.</li><li><strong>Skewness:</strong> positive (right) skew → long right tail, mean &gt; median &gt; mode. Negative (left) skew → long left tail, mean &lt; median &lt; mode; investors dislike negative skew (frequent small gains, occasional large losses).</li><li><strong>Kurtosis:</strong> leptokurtic (kurtosis &gt; 3, excess &gt; 0) means fatter tails → more extreme outcomes than the normal distribution predicts.</li><li><strong>Correlation:</strong> measures linear association, from −1 to +1. Correlation ≠ causation; beware spurious correlation and outliers.</li></ul>',
+vi:'<ul><li><strong>Mean / median / mode:</strong> median ít bị ảnh hưởng bởi giá trị ngoại lai; mode là giá trị xuất hiện nhiều nhất. Trimmed/winsorized mean giảm tác động outlier.</li><li><strong>Độ phân tán:</strong> khoảng biến thiên, độ lệch tuyệt đối trung bình, <strong>phương sai</strong> (phương sai mẫu chia n − 1) và <strong>độ lệch chuẩn</strong>. Rủi ro phía dưới: <strong>target semideviation</strong> chỉ tính các sai lệch dưới mức mục tiêu.</li><li><strong>Hệ số biến thiên:</strong> CV = s / mean — rủi ro trên mỗi đơn vị lợi suất, dùng so sánh tài sản khác quy mô.</li><li><strong>Độ xiên (skewness):</strong> xiên phải → đuôi phải dài, mean &gt; median &gt; mode. Xiên trái → đuôi trái dài, mean &lt; median &lt; mode; nhà đầu tư không thích xiên trái (lãi nhỏ thường xuyên, thua lỗ lớn thi thoảng).</li><li><strong>Độ nhọn (kurtosis):</strong> leptokurtic (kurtosis &gt; 3) nghĩa là đuôi dày → xác suất kết cục cực đoan cao hơn phân phối chuẩn.</li><li><strong>Tương quan:</strong> đo quan hệ tuyến tính, từ −1 đến +1. Tương quan ≠ nhân quả; cẩn thận tương quan giả và outlier.</li></ul>'},
+{h:'Probability essentials', en:'<ul><li><strong>Types:</strong> empirical (from data), a priori (from logic), subjective (from judgment).</li><li><strong>Rules:</strong> Addition: P(A or B) = P(A) + P(B) − P(AB). Multiplication: P(AB) = P(A|B) × P(B). Independence: P(A|B) = P(A).</li><li><strong>Total probability:</strong> P(A) = Σ P(A|S<sub>i</sub>)P(S<sub>i</sub>) across mutually exclusive, exhaustive scenarios.</li><li><strong>Bayes’ formula</strong> updates a prior probability after new information: P(Event|Info) = P(Info|Event) × P(Event) / P(Info).</li><li><strong>Expected value and variance</strong> of a random variable use probability weights. Portfolio expected return is the weighted average of asset returns; portfolio variance depends on weights, variances, and <em>covariances</em> — this is the mathematical basis of diversification.</li></ul>',
+vi:'<ul><li><strong>Ba loại xác suất:</strong> thực nghiệm (từ dữ liệu), tiên nghiệm (từ suy luận), chủ quan (từ phán đoán).</li><li><strong>Quy tắc:</strong> Cộng: P(A hoặc B) = P(A) + P(B) − P(AB). Nhân: P(AB) = P(A|B) × P(B). Độc lập: P(A|B) = P(A).</li><li><strong>Xác suất toàn phần:</strong> P(A) = Σ P(A|S<sub>i</sub>)P(S<sub>i</sub>) trên các kịch bản loại trừ lẫn nhau và bao trùm.</li><li><strong>Công thức Bayes</strong> cập nhật xác suất tiên nghiệm khi có thông tin mới.</li><li><strong>Kỳ vọng và phương sai</strong> của biến ngẫu nhiên dùng trọng số xác suất. Lợi suất kỳ vọng danh mục = bình quân gia quyền lợi suất tài sản; phương sai danh mục phụ thuộc trọng số, phương sai và <em>hiệp phương sai</em> — nền tảng toán học của đa dạng hóa.</li></ul>'}
+], formulas:[
+['Sample variance','s² = Σ(xi − x̄)² / (n − 1)',''],
+['Coefficient of variation','CV = s / x̄','Lower is better (less risk per unit of return)'],
+['Covariance (2 assets)','Cov = ρ × σA × σB',''],
+['Portfolio variance (2 assets)','σp² = wA²σA² + wB²σB² + 2wAwBCov(A,B)',''],
+['Bayes','P(E|I) = P(I|E)·P(E) / P(I)','']
+]},
+{ title:'Distributions, Sampling & Hypothesis Testing', sections:[
+{h:'Key distributions', en:'<ul><li><strong>Normal:</strong> symmetric, fully described by mean and variance. Confidence intervals: ~68% of outcomes within ±1σ, <strong>90% within ±1.65σ, 95% within ±1.96σ, 99% within ±2.58σ</strong>. A <strong>standard normal (z)</strong> variable: z = (x − μ)/σ.</li><li><strong>Lognormal:</strong> bounded below by zero, right-skewed — used to model asset <em>prices</em> (while continuously compounded <em>returns</em> are modeled as normal).</li><li><strong>Binomial:</strong> number of successes in n independent trials (used in binomial option pricing trees).</li><li><strong>Student’s t:</strong> like the normal but with fatter tails; used for small samples with unknown population variance; converges to normal as degrees of freedom rise.</li><li><strong>Chi-square and F:</strong> used to test variances.</li></ul>',
+vi:'<ul><li><strong>Phân phối chuẩn:</strong> đối xứng, xác định hoàn toàn bởi mean và variance. Khoảng tin cậy: ~68% trong ±1σ, <strong>90% trong ±1.65σ, 95% trong ±1.96σ, 99% trong ±2.58σ</strong>. Biến chuẩn hóa: z = (x − μ)/σ.</li><li><strong>Lognormal:</strong> không âm, xiên phải — dùng mô hình hóa <em>giá</em> tài sản (còn <em>lợi suất</em> ghép liên tục được coi là chuẩn).</li><li><strong>Nhị thức:</strong> số lần thành công trong n phép thử độc lập (dùng trong cây định giá quyền chọn nhị thức).</li><li><strong>Student’s t:</strong> giống chuẩn nhưng đuôi dày hơn; dùng cho mẫu nhỏ, phương sai tổng thể chưa biết; hội tụ về chuẩn khi bậc tự do tăng.</li><li><strong>Chi bình phương và F:</strong> dùng kiểm định phương sai.</li></ul>'},
+{h:'Sampling and the Central Limit Theorem', en:'<p>The <strong>Central Limit Theorem</strong>: for a sample size n ≥ 30, the distribution of the sample mean is approximately normal with mean μ and variance σ²/n — <em>regardless</em> of the population’s distribution. The <strong>standard error</strong> of the mean is σ/√n. Sampling methods: simple random, stratified (guarantees subgroup representation, lower sampling error), cluster, convenience, judgmental. Key biases: <strong>survivorship bias</strong> (dead funds excluded → performance overstated), <strong>look-ahead bias</strong> (using data not available at the time), <strong>data snooping</strong>, and time-period bias.</p>',
+vi:'<p><strong>Định lý giới hạn trung tâm</strong>: với n ≥ 30, phân phối của trung bình mẫu xấp xỉ chuẩn với mean μ và phương sai σ²/n — <em>bất kể</em> phân phối tổng thể. <strong>Sai số chuẩn</strong> của trung bình mẫu là σ/√n. Phương pháp chọn mẫu: ngẫu nhiên đơn giản, phân tầng (bảo đảm đại diện từng nhóm, sai số thấp hơn), theo cụm, thuận tiện, phán đoán. Các thiên lệch: <strong>survivorship bias</strong> (loại quỹ đã chết → thổi phồng hiệu quả), <strong>look-ahead bias</strong> (dùng dữ liệu chưa có tại thời điểm đó), <strong>data snooping</strong>, thiên lệch giai đoạn thời gian.</p>'},
+{h:'Hypothesis testing — the 6 steps', en:'<ol><li>State the hypotheses: the <strong>null (H₀)</strong> always contains the equality ("=", "≤", "≥"); the <strong>alternative (Hₐ)</strong> is what you hope to show.</li><li>Choose the test statistic (z, t, chi-square, F).</li><li>Set the significance level α (probability of a <strong>Type I error</strong> — rejecting a true null). A <strong>Type II error</strong> is failing to reject a false null; <strong>power</strong> = 1 − P(Type II).</li><li>State the decision rule (critical values; two-tailed for "≠", one-tailed for "&gt;" or "&lt;").</li><li>Compute the statistic from the sample.</li><li>Decide: reject H₀ if the statistic exceeds the critical value, or if the <strong>p-value</strong> &lt; α. The p-value is the smallest α at which H₀ can be rejected.</li></ol><p><em>Statistically significant ≠ economically meaningful</em> — transaction costs, taxes, and risk can erase a "significant" anomaly.</p>',
+vi:'<ol><li>Phát biểu giả thuyết: <strong>H₀ (null)</strong> luôn chứa dấu bằng ("=", "≤", "≥"); <strong>Hₐ</strong> là điều bạn muốn chứng minh.</li><li>Chọn thống kê kiểm định (z, t, chi bình phương, F).</li><li>Chọn mức ý nghĩa α (xác suất <strong>sai lầm loại I</strong> — bác bỏ H₀ đúng). <strong>Sai lầm loại II</strong>: không bác bỏ H₀ sai; <strong>power</strong> = 1 − P(loại II).</li><li>Xác định quy tắc quyết định (giá trị tới hạn; hai đuôi cho "≠", một đuôi cho "&gt;" hoặc "&lt;").</li><li>Tính thống kê từ mẫu.</li><li>Kết luận: bác bỏ H₀ nếu thống kê vượt giá trị tới hạn, hoặc <strong>p-value</strong> &lt; α. P-value là mức α nhỏ nhất mà tại đó H₀ bị bác bỏ.</li></ol><p><em>Có ý nghĩa thống kê ≠ có ý nghĩa kinh tế</em> — chi phí giao dịch, thuế, rủi ro có thể xóa sạch một "anomaly" có ý nghĩa thống kê.</p>'}
+], formulas:[
+['Standard error of mean','SE = σ / √n',''],
+['z-statistic','z = (x̄ − μ0) / (σ/√n)','Use t with s instead of σ when population variance unknown'],
+['Confidence interval','x̄ ± z(α/2) × SE','z = 1.65 (90%), 1.96 (95%), 2.58 (99%)'],
+['Sharpe ratio','(Rp − Rf) / σp','Excess return per unit of total risk']
+]}
+],
+vocab:[
+['discount rate','The rate used to convert future cash flows into present value.','tỷ suất chiết khấu'],
+['annuity','A finite series of equal payments at regular intervals.','niên kim — chuỗi thanh toán đều'],
+['perpetuity','A never-ending stream of equal payments.','niên kim vĩnh viễn'],
+['standard deviation','Square root of variance; measures total dispersion of returns.','độ lệch chuẩn'],
+['skewness','Asymmetry of a distribution.','độ xiên / độ bất đối xứng'],
+['kurtosis','The degree of tail fatness of a distribution.','độ nhọn (đuôi dày/mỏng)'],
+['covariance','How two variables move together (unbounded scale).','hiệp phương sai'],
+['p-value','Smallest significance level at which the null can be rejected.','giá trị p'],
+['Type I error','Rejecting a true null hypothesis (probability = α).','sai lầm loại I'],
+['survivorship bias','Bias from excluding failed entities from a data sample.','thiên lệch kẻ sống sót'],
+['standard error','Standard deviation of a sample statistic (e.g., of the sample mean).','sai số chuẩn'],
+['degrees of freedom','Number of independent values used to compute a statistic.','bậc tự do']
+],
+quiz:[
+{q:'An investment offers a stated annual rate of 8% compounded quarterly. The effective annual rate (EAR) is closest to:', opts:['8.00%','8.24%','8.30%'], ans:1,
+en:'B is correct. EAR = (1 + 0.08/4)^4 − 1 = (1.02)^4 − 1 = 1.08243 − 1 = 8.24%. More frequent compounding always raises the effective rate above the stated rate.',
+vi:'Đáp án B. EAR = (1 + 0.08/4)^4 − 1 = (1.02)^4 − 1 = 8.24%. Ghép lãi càng nhiều lần thì lãi suất hiệu dụng càng cao hơn lãi suất công bố.'},
+{q:'A fund returns +50% in year 1 and −50% in year 2. Its geometric mean annual return is closest to:', opts:['0.0%','−13.4%','−25.0%'], ans:1,
+en:'B is correct. Geometric mean = [(1.50)(0.50)]^(1/2) − 1 = (0.75)^0.5 − 1 = 0.866 − 1 = −13.4%. The arithmetic mean would be 0%, illustrating why geometric mean is the right measure of multi-period compound performance.',
+vi:'Đáp án B. Trung bình nhân = [(1.50)(0.50)]^(1/2) − 1 = √0.75 − 1 = −13.4%. Trung bình cộng là 0%, cho thấy vì sao trung bình nhân mới đo đúng hiệu quả kép nhiều kỳ.'},
+{q:'Which measure is most appropriate for evaluating the skill of a portfolio manager who does not control the timing of client deposits and withdrawals?', opts:['Money-weighted rate of return','Time-weighted rate of return','Holding period return'], ans:1,
+en:'B is correct. The time-weighted return removes the distorting effect of external cash flows, which the manager does not control. The money-weighted (IRR) return reflects the investor’s experience because it is sensitive to the size and timing of cash flows.',
+vi:'Đáp án B. TWR loại bỏ ảnh hưởng của dòng tiền ra/vào — thứ nhà quản lý không kiểm soát. MWR (IRR) phản ánh trải nghiệm của nhà đầu tư vì nhạy cảm với quy mô và thời điểm dòng tiền.'},
+{q:'A distribution of returns has a mean less than its median. The distribution is most likely:', opts:['negatively skewed.','positively skewed.','leptokurtic.'], ans:0,
+en:'A is correct. With negative (left) skew, extreme losses pull the mean below the median: mean < median < mode. Positive skew is the opposite. Kurtosis describes tail fatness, not asymmetry.',
+vi:'Đáp án A. Với xiên trái (negative skew), các khoản lỗ cực đoan kéo mean xuống dưới median: mean < median < mode. Xiên phải thì ngược lại. Kurtosis mô tả độ dày đuôi, không phải độ bất đối xứng.'},
+{q:'A researcher tests H₀: μ ≤ 0 versus Hₐ: μ > 0 at a 5% significance level and obtains a p-value of 0.03. The most appropriate conclusion is to:', opts:['fail to reject the null hypothesis.','reject the null hypothesis.','accept the alternative hypothesis as proven.'], ans:1,
+en:'B is correct. Since the p-value (0.03) is less than α (0.05), the null is rejected. Note that hypothesis testing never "proves" the alternative — it only provides evidence against the null (C overstates the conclusion).',
+vi:'Đáp án B. Vì p-value (0.03) nhỏ hơn α (0.05) nên bác bỏ H₀. Lưu ý kiểm định không bao giờ "chứng minh" Hₐ — chỉ cung cấp bằng chứng chống lại H₀ (đáp án C nói quá).'}
+]
+},
+/* ============ 03 ECONOMICS ============ */
+{
+id:'econ', num:'03', name:'Economics', vi:'Kinh tế học', w:[6,9],
+blurb:'Micro (demand, elasticity, market structures), macro (business cycles, money, fiscal & monetary policy) and currency exchange rates.',
+intro:{
+en:'Economics at Level 1 covers firm-level microeconomics (market structures, breakeven and shutdown analysis), the macro environment (business cycles, unemployment, inflation, monetary and fiscal policy), geopolitics and trade, and the mechanics of currency exchange rates. Focus on the logic and definitions — the calculations are light compared with FSA or Fixed Income.',
+vi:'Kinh tế học ở Level 1 gồm vi mô cấp doanh nghiệp (cấu trúc thị trường, phân tích hòa vốn và điểm đóng cửa), môi trường vĩ mô (chu kỳ kinh tế, thất nghiệp, lạm phát, chính sách tiền tệ và tài khóa), địa chính trị – thương mại, và cơ chế tỷ giá hối đoái. Tập trung vào logic và định nghĩa — phần tính toán nhẹ hơn FSA hay Fixed Income.'
+},
+modules:[
+{ title:'Firms & Market Structures', sections:[
+{h:'Breakeven and shutdown points', en:'<p>In the <strong>short run</strong>, a firm should continue operating as long as price covers <strong>average variable cost (AVC)</strong> — fixed costs are sunk. It shuts down when P &lt; AVC. In the <strong>long run</strong>, price must cover <strong>average total cost (ATC)</strong>; otherwise the firm exits. Breakeven: P = ATC (zero economic profit — note that zero <em>economic</em> profit still includes a normal return on capital).</p>',
+vi:'<p>Trong <strong>ngắn hạn</strong>, doanh nghiệp nên tiếp tục hoạt động khi giá còn bù được <strong>chi phí biến đổi bình quân (AVC)</strong> — chi phí cố định là chi phí chìm. Đóng cửa khi P &lt; AVC. Trong <strong>dài hạn</strong>, giá phải bù được <strong>tổng chi phí bình quân (ATC)</strong>; nếu không doanh nghiệp rời ngành. Hòa vốn: P = ATC (lợi nhuận kinh tế bằng 0 — lưu ý lợi nhuận kinh tế bằng 0 vẫn bao gồm mức sinh lời bình thường trên vốn).</p>'},
+{h:'The four market structures', en:'<table class="simple"><tr><th>Structure</th><th>Sellers</th><th>Product</th><th>Barriers</th><th>Pricing power</th></tr><tr><td><strong>Perfect competition</strong></td><td>Many</td><td>Homogeneous</td><td>Very low</td><td>None (price taker); demand is perfectly elastic; P = MR = MC in equilibrium</td></tr><tr><td><strong>Monopolistic competition</strong></td><td>Many</td><td>Differentiated</td><td>Low</td><td>Some; heavy advertising; zero economic profit in long run</td></tr><tr><td><strong>Oligopoly</strong></td><td>Few</td><td>Similar or differentiated</td><td>High</td><td>Significant; interdependent pricing (kinked demand, Cournot, game theory/collusion)</td></tr><tr><td><strong>Monopoly</strong></td><td>One</td><td>Unique</td><td>Very high</td><td>Full; produces where MR = MC, prices above MC; may face regulation</td></tr></table><p>Concentration measures: the N-firm concentration ratio and the <strong>Herfindahl–Hirschman Index (HHI)</strong> = Σ(market share²). Neither directly captures barriers to entry or contestability.</p>',
+vi:'<p>Bốn cấu trúc: <strong>cạnh tranh hoàn hảo</strong> (nhiều người bán, sản phẩm đồng nhất, không có sức mạnh định giá, P = MR = MC); <strong>cạnh tranh độc quyền</strong> (nhiều người bán, sản phẩm khác biệt, quảng cáo mạnh, lợi nhuận kinh tế dài hạn bằng 0); <strong>độc quyền nhóm</strong> (ít người bán, định giá phụ thuộc lẫn nhau — đường cầu gãy, Cournot, lý thuyết trò chơi/thông đồng); <strong>độc quyền</strong> (một người bán, rào cản rất cao, sản xuất tại MR = MC và định giá trên MC, có thể bị quản lý giá).</p><p>Đo mức độ tập trung: tỷ lệ tập trung N công ty và chỉ số <strong>HHI</strong> = Σ(thị phần²). Cả hai đều không phản ánh trực tiếp rào cản gia nhập.</p>'}
+]},
+{ title:'Business Cycles, Inflation & Policy', sections:[
+{h:'The business cycle and indicators', en:'<p>Phases: <strong>trough → expansion → peak → contraction</strong>. Typical patterns: early expansion — sales up, inventories deliberately rebuilt, hiring resumes; late cycle — inflation accelerates, central banks tighten. <strong>Unemployment</strong> is a lagging indicator (firms fire last and hire back last); the stock market and inventory-to-sales ratios are leading indicators. Credit cycles (lending standards, spreads) often amplify business cycles.</p><p><strong>Unemployment types:</strong> frictional (between jobs), structural (skills mismatch), cyclical (demand shortfall). The participation rate can distort the headline rate — discouraged workers leaving the labor force lowers unemployment without any hiring.</p>',
+vi:'<p>Các pha: <strong>đáy → mở rộng → đỉnh → thu hẹp</strong>. Đặc trưng: đầu chu kỳ — doanh số tăng, chủ động tích lại tồn kho, tuyển dụng trở lại; cuối chu kỳ — lạm phát tăng tốc, NHTW thắt chặt. <strong>Thất nghiệp</strong> là chỉ báo trễ (doanh nghiệp sa thải sau cùng và tuyển lại sau cùng); thị trường chứng khoán và tỷ lệ tồn kho/doanh số là chỉ báo dẫn dắt. Chu kỳ tín dụng thường khuếch đại chu kỳ kinh tế.</p><p><strong>Các loại thất nghiệp:</strong> ma sát (đang chuyển việc), cơ cấu (lệch kỹ năng), chu kỳ (thiếu cầu). Tỷ lệ tham gia lao động có thể bóp méo con số thất nghiệp — người lao động nản lòng rời lực lượng lao động làm tỷ lệ thất nghiệp giảm dù không ai được tuyển.</p>'},
+{h:'Monetary and fiscal policy', en:'<ul><li><strong>Monetary policy</strong> (central bank): policy rate, reserve requirements, open market operations. <em>Contractionary</em> when the policy rate is above the neutral rate. Effective central banks are independent, credible, and transparent (inflation targeting, commonly ~2%). Limitations: <strong>liquidity traps</strong>, banks unwilling to lend, and the inability of policy to fix structural (supply-side) problems. Quantitative easing is used when rates approach zero.</li><li><strong>Fiscal policy</strong> (government): spending and taxation. Expansionary = larger deficit. Tools differ in impact: spending has the largest multiplier; tax cuts leak into saving. Problems: <strong>lags</strong> (recognition, action, impact), crowding out of private investment, and political constraints.</li><li>Policy mix: both expansionary → strong growth, likely higher rates later; tight money + loose fiscal → high real rates and a bigger public sector.</li></ul>',
+vi:'<ul><li><strong>Chính sách tiền tệ</strong> (NHTW): lãi suất điều hành, dự trữ bắt buộc, nghiệp vụ thị trường mở. <em>Thắt chặt</em> khi lãi suất điều hành cao hơn lãi suất trung tính. NHTW hiệu quả cần độc lập, đáng tin cậy, minh bạch (mục tiêu lạm phát, thường ~2%). Hạn chế: <strong>bẫy thanh khoản</strong>, ngân hàng ngại cho vay, và không xử lý được vấn đề cơ cấu (phía cung). QE dùng khi lãi suất về gần 0.</li><li><strong>Chính sách tài khóa</strong> (chính phủ): chi tiêu và thuế. Mở rộng = thâm hụt lớn hơn. Chi tiêu có số nhân lớn nhất; giảm thuế bị "rò rỉ" vào tiết kiệm. Vấn đề: <strong>độ trễ</strong> (nhận biết, hành động, tác động), chèn lấn đầu tư tư nhân, ràng buộc chính trị.</li><li>Kết hợp: cả hai cùng mở rộng → tăng trưởng mạnh, lãi suất sau đó có thể tăng; tiền tệ chặt + tài khóa lỏng → lãi suất thực cao, khu vực công phình to.</li></ul>'}
+]},
+{ title:'Exchange Rates', sections:[
+{h:'Quotes, real rates, and forward rates', en:'<p>An exchange rate is stated as <strong>price currency / base currency</strong>: USD/EUR = 1.10 means 1 euro costs 1.10 dollars. If USD/EUR rises, the euro (base) <em>appreciates</em>. The <strong>real exchange rate</strong> adjusts the nominal rate for relative price levels and measures relative purchasing power. Cross rates chain two quotes together.</p><p><strong>Forward rates</strong> are set by covered interest rate parity — arbitrage, not forecasts: F/S = (1 + i<sub>price</sub>) / (1 + i<sub>base</sub>). The currency with the <em>higher</em> interest rate trades at a <strong>forward discount</strong>. Points: forward premium/discount quoted as (F − S), often in pips.</p><p>Regimes range from free float and managed float to pegs, currency boards, and dollarization. Capital restrictions and fixed regimes trade policy autonomy for stability (the "impossible trinity": free capital flow, fixed exchange rate, independent monetary policy — pick two).</p>',
+vi:'<p>Tỷ giá được yết theo <strong>đồng tiền định giá / đồng tiền cơ sở</strong>: USD/EUR = 1.10 nghĩa là 1 euro giá 1.10 USD. USD/EUR tăng → euro (đồng cơ sở) <em>lên giá</em>. <strong>Tỷ giá thực</strong> điều chỉnh tỷ giá danh nghĩa theo mặt bằng giá tương đối, đo sức mua tương đối. Tỷ giá chéo ghép hai cặp tỷ giá.</p><p><strong>Tỷ giá kỳ hạn</strong> được xác định bởi ngang giá lãi suất có phòng hộ (covered interest rate parity) — là kết quả của arbitrage, không phải dự báo: F/S = (1 + i<sub>định giá</sub>) / (1 + i<sub>cơ sở</sub>). Đồng tiền có lãi suất <em>cao hơn</em> giao dịch với <strong>forward discount</strong>.</p><p>Cơ chế tỷ giá: thả nổi tự do, thả nổi có quản lý, neo tỷ giá, currency board, đô la hóa. "Bộ ba bất khả thi": tự do dòng vốn, tỷ giá cố định, chính sách tiền tệ độc lập — chỉ chọn được hai.</p>'}
+], formulas:[
+['Covered interest parity','F = S × (1 + i_price) / (1 + i_base)','F, S quoted as price/base'],
+['HHI','HHI = Σ (market share_i)²',''],
+['Fisher relation','(1 + nominal) = (1 + real)(1 + expected inflation)','Approx: nominal ≈ real + inflation'],
+['Own-price elasticity','%ΔQd / %ΔP','|E| > 1 elastic; revenue falls when price rises']
+]}
+],
+vocab:[
+['elasticity','Sensitivity of quantity demanded to a change in price, income, or other prices.','độ co giãn'],
+['substitute / complement','Positive / negative cross-price elasticity goods.','hàng thay thế / bổ sung'],
+['economies of scale','Falling long-run average cost as output rises.','lợi thế kinh tế theo quy mô'],
+['stagflation','High inflation combined with stagnant growth and high unemployment.','lạm phát đình trệ'],
+['hyperinflation','Extremely rapid, out-of-control inflation.','siêu lạm phát'],
+['neutral rate','Policy rate consistent with trend growth and stable inflation.','lãi suất trung tính'],
+['crowding out','Government borrowing raising rates and displacing private investment.','hiệu ứng chèn lấn'],
+['base currency','The currency being priced in an exchange-rate quote (the denominator).','đồng tiền cơ sở (mẫu số)'],
+['forward premium/discount','Forward rate above/below the spot rate.','điểm kỳ hạn cộng/trừ'],
+['currency peg','Fixing a currency’s value to another currency.','neo tỷ giá']
+],
+quiz:[
+{q:'In the short run, a perfectly competitive firm should shut down production when the market price falls below its:', opts:['average total cost.','average variable cost.','marginal cost.'], ans:1,
+en:'B is correct. In the short run, fixed costs are sunk, so the firm operates as long as price covers average variable cost. Below AVC, every unit produced deepens the loss. P < ATC only forces exit in the long run.',
+vi:'Đáp án B. Trong ngắn hạn chi phí cố định là chi phí chìm, nên doanh nghiệp còn hoạt động khi giá bù được AVC. Dưới AVC, càng sản xuất càng lỗ thêm. P < ATC chỉ buộc rời ngành trong dài hạn.'},
+{q:'Which unemployment indicator behaves as a lagging indicator of the business cycle?', opts:['The unemployment rate','Stock market indices','Average weekly hours worked in manufacturing'], ans:0,
+en:'A is correct. Firms are slow to fire in downturns and slow to rehire in recoveries, so the unemployment rate lags the cycle. Equity indices and average weekly hours are leading indicators.',
+vi:'Đáp án A. Doanh nghiệp chậm sa thải khi suy thoái và chậm tuyển lại khi phục hồi, nên tỷ lệ thất nghiệp là chỉ báo trễ. Chỉ số chứng khoán và số giờ làm việc bình quân tuần là chỉ báo dẫn dắt.'},
+{q:'The spot rate is 1.2000 USD/EUR. One-year interest rates are 3% in the US and 1% in the eurozone. The one-year forward USD/EUR rate is closest to:', opts:['1.1767','1.2000','1.2238'], ans:2,
+en:'C is correct. F = S × (1 + i_USD)/(1 + i_EUR) = 1.2000 × 1.03/1.01 = 1.2238. The euro (lower-rate, base currency) trades at a forward premium; the higher-rate currency (USD) trades at a forward discount.',
+vi:'Đáp án C. F = 1.2000 × 1.03/1.01 = 1.2238. Đồng euro (lãi suất thấp, đồng cơ sở) có forward premium; đồng lãi suất cao (USD) có forward discount.'},
+{q:'A central bank facing an economy in a liquidity trap will find that expansionary monetary policy is:', opts:['highly effective, because rates can fall further.','largely ineffective, because demand for money is extremely elastic.','effective only if combined with currency appreciation.'], ans:1,
+en:'B is correct. In a liquidity trap, people hoard additional money at near-zero rates instead of spending or investing, so further monetary easing has little effect on demand — a key argument for fiscal stimulus in deep recessions.',
+vi:'Đáp án B. Trong bẫy thanh khoản, người dân giữ tiền thay vì chi tiêu/đầu tư khi lãi suất gần 0, nên nới lỏng tiền tệ thêm gần như không kích thích được tổng cầu — lý do chính để dùng kích thích tài khóa trong suy thoái sâu.'}
+]
+},
+/* ============ 04 FSA ============ */
+{
+id:'fsa', num:'04', name:'Financial Statement Analysis', vi:'Phân tích báo cáo tài chính', w:[11,14],
+blurb:'The three statements, revenue and expense recognition, inventories, long-lived assets, cash flows, ratios and financial analysis techniques.',
+intro:{
+en:'FSA is one of the heaviest and most calculation-rich topics. You must know how the income statement, balance sheet, and cash flow statement link together; how accounting choices (FIFO vs LIFO, depreciation methods, capitalizing vs expensing) change reported numbers; and how to compute and interpret the classic ratio families. Expect many "which effect on which statement" questions.',
+vi:'FSA là một trong những môn nặng nhất và nhiều tính toán nhất. Bạn phải nắm cách ba báo cáo (KQKD, CĐKT, LCTT) liên kết với nhau; cách các lựa chọn kế toán (FIFO vs LIFO, phương pháp khấu hao, vốn hóa vs ghi nhận chi phí) làm thay đổi số liệu; và cách tính, diễn giải các nhóm chỉ số kinh điển. Đề thi có rất nhiều câu dạng "ảnh hưởng gì lên báo cáo nào".'
+},
+modules:[
+{ title:'The Three Statements & Recognition Principles', sections:[
+{h:'How the statements connect', en:'<ul><li><strong>Income statement:</strong> Revenue − Expenses = Net income, over a <em>period</em>. Built on <strong>accrual accounting</strong>: revenue is recognized when the performance obligation is satisfied (goods/services transferred), not when cash arrives — the 5-step model of IFRS 15 / ASC 606.</li><li><strong>Balance sheet:</strong> Assets = Liabilities + Equity, at a <em>point in time</em>. Ending equity = beginning equity + net income − dividends + other comprehensive income + net share issuance.</li><li><strong>Cash flow statement:</strong> reconciles beginning to ending cash across operating (CFO), investing (CFI), and financing (CFF) activities. Net income ≠ cash: accruals (receivables, payables, inventory) drive the gap.</li><li>Under <strong>IFRS</strong>, interest paid may be CFO or CFF and dividends received CFO or CFI; under <strong>US GAAP</strong>, interest paid/received and dividends received are CFO, dividends paid are CFF.</li></ul>',
+vi:'<ul><li><strong>Báo cáo KQKD:</strong> Doanh thu − Chi phí = LN ròng, trong một <em>kỳ</em>. Dựa trên <strong>kế toán dồn tích</strong>: doanh thu ghi nhận khi nghĩa vụ thực hiện được hoàn thành (hàng hóa/dịch vụ được chuyển giao), không phải khi thu tiền — mô hình 5 bước của IFRS 15 / ASC 606.</li><li><strong>Bảng CĐKT:</strong> Tài sản = Nợ + VCSH, tại một <em>thời điểm</em>. VCSH cuối kỳ = đầu kỳ + LN ròng − cổ tức + thu nhập toàn diện khác + phát hành CP ròng.</li><li><strong>Báo cáo LCTT:</strong> đối chiếu tiền đầu kỳ và cuối kỳ qua ba hoạt động: kinh doanh (CFO), đầu tư (CFI), tài chính (CFF). LN ròng ≠ tiền: các khoản dồn tích (phải thu, phải trả, tồn kho) tạo ra chênh lệch.</li><li>Theo <strong>IFRS</strong>, lãi vay trả có thể vào CFO hoặc CFF, cổ tức nhận vào CFO hoặc CFI; theo <strong>US GAAP</strong>, lãi vay trả/nhận và cổ tức nhận vào CFO, cổ tức trả vào CFF.</li></ul>'},
+{h:'CFO: indirect method adjustments', en:'<p>The indirect method starts from net income and adjusts to cash from operations:</p><ul><li><strong>Add back</strong> non-cash expenses (depreciation, amortization) and losses on asset sales; <strong>subtract</strong> gains on asset sales (they belong in CFI).</li><li><strong>Working capital:</strong> an <em>increase</em> in a current operating <em>asset</em> (receivables, inventory) <em>uses</em> cash → subtract. An <em>increase</em> in a current operating <em>liability</em> (payables, accrued expenses) <em>provides</em> cash → add.</li></ul><p><strong>Free cash flow to the firm:</strong> FCFF = CFO + interest × (1 − tax rate) − fixed capital investment (under US GAAP). FCFE = CFO − FCInv + net borrowing.</p>',
+vi:'<p>Phương pháp gián tiếp đi từ LN ròng và điều chỉnh về dòng tiền hoạt động:</p><ul><li><strong>Cộng lại</strong> chi phí không dùng tiền (khấu hao) và lỗ bán tài sản; <strong>trừ</strong> lãi bán tài sản (thuộc CFI).</li><li><strong>Vốn lưu động:</strong> <em>tăng</em> tài sản ngắn hạn hoạt động (phải thu, tồn kho) <em>tiêu tốn</em> tiền → trừ. <em>Tăng</em> nợ ngắn hạn hoạt động (phải trả) <em>tạo ra</em> tiền → cộng.</li></ul><p><strong>Dòng tiền tự do:</strong> FCFF = CFO + lãi vay × (1 − thuế suất) − đầu tư TSCĐ (theo US GAAP). FCFE = CFO − FCInv + vay ròng.</p>'}
+]},
+{ title:'Inventories & Long-Lived Assets', sections:[
+{h:'FIFO vs LIFO vs weighted average', en:'<p>When input prices are <strong>rising</strong> (and inventory levels stable):</p><table class="simple"><tr><th></th><th>FIFO</th><th>LIFO (US GAAP only)</th></tr><tr><td>COGS</td><td>Lower (old cheap costs)</td><td>Higher (recent expensive costs)</td></tr><tr><td>Gross profit / net income</td><td>Higher</td><td>Lower</td></tr><tr><td>Ending inventory</td><td>Higher, closer to current cost</td><td>Lower, outdated</td></tr><tr><td>Taxes paid</td><td>Higher</td><td>Lower → higher CFO</td></tr></table><p>LIFO is <em>prohibited under IFRS</em>. The <strong>LIFO reserve</strong> (disclosed) converts LIFO figures to FIFO for comparison: FIFO inventory = LIFO inventory + LIFO reserve. Inventory is carried at the lower of cost and net realizable value (IFRS); write-down reversals are allowed under IFRS but prohibited under US GAAP.</p>',
+vi:'<p>Khi giá đầu vào <strong>tăng</strong> (tồn kho ổn định): FIFO cho COGS thấp hơn (giá vốn cũ rẻ) → LN cao hơn, tồn kho cuối kỳ cao hơn và sát giá hiện hành, nhưng thuế nộp nhiều hơn. LIFO cho COGS cao hơn → LN thấp hơn, tồn kho lỗi thời, thuế thấp hơn → CFO cao hơn.</p><p>LIFO <em>bị cấm theo IFRS</em> (chỉ US GAAP cho phép). <strong>LIFO reserve</strong> (được thuyết minh) dùng để quy đổi LIFO về FIFO: tồn kho FIFO = tồn kho LIFO + LIFO reserve. Tồn kho ghi theo giá thấp hơn giữa giá gốc và giá trị thuần có thể thực hiện (IFRS); IFRS cho phép hoàn nhập giảm giá tồn kho, US GAAP thì không.</p>'},
+{h:'Capitalizing vs expensing; depreciation; impairment', en:'<ul><li><strong>Capitalizing</strong> a cost (recording it as an asset, then depreciating) versus <strong>expensing</strong> it immediately: capitalizing raises current-period profit, assets, equity, and CFO (the outflow shows in CFI), and smooths earnings. Interest incurred during construction is capitalized.</li><li><strong>Depreciation:</strong> straight-line = (cost − salvage)/useful life; double-declining balance front-loads expense (2/life × beginning book value, salvage not in the formula but book value never falls below salvage). Accelerated methods lower early profits but not cash.</li><li><strong>Impairment:</strong> under IFRS, impaired when carrying amount &gt; recoverable amount (higher of fair value less costs to sell and value in use); reversals allowed. US GAAP uses a two-step test based on undiscounted cash flows; reversals prohibited. Revaluation upward of PP&amp;E is permitted only under IFRS.</li></ul>',
+vi:'<ul><li><strong>Vốn hóa</strong> chi phí (ghi thành tài sản rồi khấu hao) so với <strong>ghi chi phí ngay</strong>: vốn hóa làm tăng lợi nhuận kỳ hiện tại, tài sản, VCSH và CFO (dòng tiền ra nằm ở CFI), và làm mượt lợi nhuận. Lãi vay trong quá trình xây dựng được vốn hóa.</li><li><strong>Khấu hao:</strong> đường thẳng = (nguyên giá − giá trị thu hồi)/thời gian sử dụng; số dư giảm dần kép dồn chi phí vào các năm đầu (2/thời gian × giá trị sổ sách đầu kỳ). Khấu hao nhanh làm giảm lợi nhuận đầu kỳ nhưng không ảnh hưởng dòng tiền.</li><li><strong>Suy giảm giá trị:</strong> IFRS — suy giảm khi giá trị ghi sổ &gt; giá trị có thể thu hồi (cao hơn giữa giá trị hợp lý trừ chi phí bán và giá trị sử dụng); được hoàn nhập. US GAAP — kiểm tra 2 bước theo dòng tiền chưa chiết khấu; cấm hoàn nhập. Đánh giá tăng PP&amp;E chỉ được phép theo IFRS.</li></ul>'}
+]},
+{ title:'Financial Ratios & Analysis', sections:[
+{h:'The ratio families', en:'<table class="simple"><tr><th>Family</th><th>Key ratios</th></tr><tr><td><strong>Activity</strong></td><td>Inventory turnover = COGS/avg inventory; Receivables turnover = revenue/avg receivables; DOH = 365/inventory turnover; DSO = 365/receivables turnover; Cash conversion cycle = DOH + DSO − days payables</td></tr><tr><td><strong>Liquidity</strong></td><td>Current ratio = CA/CL; Quick ratio = (cash + ST investments + receivables)/CL; Cash ratio</td></tr><tr><td><strong>Solvency</strong></td><td>Debt-to-equity; Debt-to-assets; Financial leverage = avg assets/avg equity; Interest coverage = EBIT/interest</td></tr><tr><td><strong>Profitability</strong></td><td>Gross/operating/net margin; ROA = NI/avg assets; ROE = NI/avg equity</td></tr></table>',
+vi:'<p>Bốn nhóm chỉ số: <strong>Hoạt động</strong> (vòng quay tồn kho = COGS/tồn kho bình quân; vòng quay phải thu; DOH; DSO; chu kỳ chuyển đổi tiền = DOH + DSO − số ngày phải trả); <strong>Thanh khoản</strong> (current ratio, quick ratio, cash ratio); <strong>Khả năng trả nợ dài hạn</strong> (nợ/VCSH, nợ/tài sản, đòn bẩy tài chính, khả năng trả lãi = EBIT/lãi vay); <strong>Sinh lời</strong> (biên gộp/hoạt động/ròng, ROA, ROE).</p>'},
+{h:'DuPont decomposition of ROE', en:'<p>The 3-factor DuPont: <strong>ROE = Net profit margin × Asset turnover × Financial leverage</strong> = (NI/Revenue) × (Revenue/Assets) × (Assets/Equity). The 5-factor version splits the margin into tax burden (NI/EBT), interest burden (EBT/EBIT), and EBIT margin. DuPont reveals <em>why</em> ROE changed: profitability, efficiency, or simply more debt. Rising ROE driven only by leverage is lower quality than ROE driven by margins or turnover.</p>',
+vi:'<p>DuPont 3 nhân tố: <strong>ROE = Biên LN ròng × Vòng quay tài sản × Đòn bẩy tài chính</strong> = (NI/Doanh thu) × (Doanh thu/Tài sản) × (Tài sản/VCSH). Bản 5 nhân tố tách biên lợi nhuận thành gánh nặng thuế (NI/EBT), gánh nặng lãi vay (EBT/EBIT) và biên EBIT. DuPont cho biết <em>vì sao</em> ROE thay đổi: nhờ sinh lời, hiệu quả sử dụng tài sản, hay chỉ vì vay nợ nhiều hơn. ROE tăng chỉ nhờ đòn bẩy có chất lượng thấp hơn ROE tăng nhờ biên lợi nhuận hoặc vòng quay.</p>'}
+], formulas:[
+['ROE (3-factor DuPont)','ROE = NPM × Asset turnover × Leverage','(NI/Rev)(Rev/Assets)(Assets/Equity)'],
+['Cash conversion cycle','CCC = DOH + DSO − Days payables','Shorter = less cash tied up'],
+['Interest coverage','EBIT / Interest expense',''],
+['FCFF','FCFF = CFO + Int(1 − t) − FCInv','US GAAP classification'],
+['Basic EPS','(NI − preferred dividends) / weighted avg shares','Diluted EPS adds effect of options/convertibles if dilutive'],
+['Quick ratio','(Cash + ST investments + Receivables) / CL','Excludes inventory']
+]}
+],
+vocab:[
+['accrual accounting','Recognizing revenue when earned and expenses when incurred, not when cash moves.','kế toán dồn tích'],
+['performance obligation','A promise to transfer a distinct good or service (IFRS 15).','nghĩa vụ thực hiện'],
+['COGS','Cost of goods sold.','giá vốn hàng bán'],
+['LIFO reserve','Difference between FIFO and LIFO inventory values, disclosed by LIFO firms.','dự trữ LIFO'],
+['net realizable value','Estimated selling price minus completion and selling costs.','giá trị thuần có thể thực hiện'],
+['impairment','Write-down when an asset’s carrying amount is not recoverable.','suy giảm giá trị tài sản'],
+['goodwill','Excess of purchase price over fair value of identifiable net assets acquired.','lợi thế thương mại'],
+['deferred tax liability','Taxes payable in future periods due to temporary differences.','thuế thu nhập hoãn lại phải trả'],
+['diluted EPS','EPS assuming all dilutive securities are converted.','EPS pha loãng'],
+['working capital','Current assets minus current liabilities.','vốn lưu động'],
+['off-balance-sheet','Obligations not recognized on the balance sheet (analyst adjustment target).','ngoài bảng cân đối'],
+['comprehensive income','Net income plus other comprehensive income (OCI).','thu nhập toàn diện']
+],
+quiz:[
+{q:'During a period of rising prices and stable inventory quantities, a company using LIFO (rather than FIFO) will most likely report:', opts:['higher net income and higher inventory.','lower net income and lower inventory.','lower net income and higher inventory.'], ans:1,
+en:'B is correct. Under LIFO the most recent (most expensive) purchases flow to COGS, so COGS is higher and net income lower; ending inventory holds the oldest (cheapest) costs, so inventory is lower. The benefit is lower taxes and thus higher CFO.',
+vi:'Đáp án B. Theo LIFO, hàng mua gần nhất (đắt nhất) đi vào COGS → COGS cao hơn, LN ròng thấp hơn; tồn kho cuối kỳ mang giá cũ (rẻ) → tồn kho thấp hơn. Lợi ích là nộp thuế ít hơn → CFO cao hơn.'},
+{q:'A firm capitalizes a cost that a competitor expenses immediately. Compared with the competitor, in the year of the expenditure the capitalizing firm most likely reports:', opts:['higher net income and higher CFO.','lower net income and higher CFI outflows.','higher net income and lower total assets.'], ans:0,
+en:'A is correct. Capitalizing defers the expense (higher current net income) and classifies the cash outflow as investing rather than operating (higher CFO, larger CFI outflow). Assets are also higher, so C is wrong.',
+vi:'Đáp án A. Vốn hóa làm hoãn chi phí (LN kỳ hiện tại cao hơn) và xếp dòng tiền ra vào hoạt động đầu tư thay vì kinh doanh (CFO cao hơn, CFI ra nhiều hơn). Tài sản cũng cao hơn nên C sai.'},
+{q:'Net income is 100. Depreciation is 20. Accounts receivable increased by 15 and accounts payable increased by 10. CFO under the indirect method is closest to:', opts:['105','115','145'], ans:1,
+en:'B is correct. CFO = 100 + 20 (non-cash) − 15 (increase in receivables uses cash) + 10 (increase in payables provides cash) = 115.',
+vi:'Đáp án B. CFO = 100 + 20 (chi phí không dùng tiền) − 15 (phải thu tăng làm giảm tiền) + 10 (phải trả tăng làm tăng tiền) = 115.'},
+{q:'A company’s ROE increased while its net profit margin and asset turnover were unchanged. The most likely explanation is an increase in:', opts:['financial leverage.','the tax burden ratio.','operating efficiency.'], ans:0,
+en:'A is correct. In the 3-factor DuPont model, ROE = margin × turnover × leverage. With margin and turnover flat, only higher leverage (assets/equity — i.e., more debt relative to equity) can lift ROE. This is lower-quality ROE growth.',
+vi:'Đáp án A. Trong DuPont 3 nhân tố, ROE = biên LN × vòng quay × đòn bẩy. Biên và vòng quay không đổi thì chỉ đòn bẩy tài chính tăng (tài sản/VCSH — tức vay nợ nhiều hơn) mới đẩy ROE lên. Đây là tăng trưởng ROE chất lượng thấp.'},
+{q:'Under IFRS, a reversal of an inventory write-down:', opts:['is prohibited.','is permitted, limited to the amount of the original write-down.','is permitted without limit.'], ans:1,
+en:'B is correct. IFRS permits reversing an inventory write-down when NRV recovers, but only up to the original write-down amount. US GAAP prohibits reversals entirely.',
+vi:'Đáp án B. IFRS cho phép hoàn nhập giảm giá tồn kho khi NRV phục hồi, nhưng tối đa bằng số đã ghi giảm ban đầu. US GAAP cấm hoàn nhập hoàn toàn.'}
+]
+},
+/* ============ 05 CORPORATE ISSUERS ============ */
+{
+id:'corp', num:'05', name:'Corporate Issuers', vi:'Tổ chức phát hành doanh nghiệp', w:[6,9],
+blurb:'Corporate structures and governance, capital investment decisions (NPV/IRR), cost of capital, capital structure and leverage, working capital.',
+intro:{
+en:'Corporate Issuers looks at companies from the inside: how they are governed, how they choose investments (capital budgeting), how they fund themselves (cost of capital, capital structure), and how operating and financial leverage magnify risk. NPV/IRR and WACC calculations here reappear in Equity and Portfolio Management.',
+vi:'Corporate Issuers nhìn doanh nghiệp từ bên trong: cách quản trị, cách lựa chọn dự án đầu tư (capital budgeting), cách huy động vốn (chi phí vốn, cấu trúc vốn), và cách đòn bẩy hoạt động/tài chính khuếch đại rủi ro. Các phép tính NPV/IRR và WACC ở đây sẽ xuất hiện lại trong Equity và Portfolio Management.'
+},
+modules:[
+{ title:'Governance & Stakeholders', sections:[
+{h:'Principal–agent conflicts and governance mechanisms', en:'<p>Corporate governance manages conflicts among stakeholders: shareholders vs managers (the classic <strong>principal–agent problem</strong>: entrenchment, empire building, excessive risk aversion), controlling vs minority shareholders, shareholders vs creditors (equity holders prefer risk; debt holders prefer safety). Mechanisms: the <strong>board of directors</strong> (independence, separation of CEO and chair, committees — audit, remuneration, nomination), say-on-pay, activist investors, the takeover market, and legal/regulatory constraints. ESG considerations enter through material environmental and social factors that affect long-term value and risk.</p>',
+vi:'<p>Quản trị công ty xử lý xung đột giữa các bên liên quan: cổ đông vs ban điều hành (bài toán <strong>người ủy quyền – người đại diện</strong>: cố thủ ghế, xây "đế chế", né rủi ro quá mức), cổ đông chi phối vs cổ đông thiểu số, cổ đông vs chủ nợ (cổ đông thích rủi ro, chủ nợ thích an toàn). Cơ chế: <strong>HĐQT</strong> (tính độc lập, tách vai trò CEO và Chủ tịch, các ủy ban kiểm toán/lương thưởng/đề cử), biểu quyết về thù lao, nhà đầu tư chủ động, thị trường thâu tóm, và ràng buộc pháp lý. Yếu tố ESG được xét qua các nhân tố môi trường – xã hội trọng yếu ảnh hưởng giá trị và rủi ro dài hạn.</p>'}
+]},
+{ title:'Capital Investments: NPV & IRR', sections:[
+{h:'Decision rules', en:'<ul><li><strong>NPV</strong> = present value of all incremental after-tax cash flows minus the initial outlay, discounted at the project’s required return. Accept if NPV &gt; 0 — this directly measures the expected addition to shareholder wealth.</li><li><strong>IRR</strong> = the discount rate that makes NPV = 0. Accept if IRR &gt; required return. Problems: assumes reinvestment at the IRR (often unrealistic), can produce <strong>multiple IRRs</strong> with unconventional cash flows (sign changes), and can <strong>rank mutually exclusive projects incorrectly</strong> when size or timing differs. <em>When NPV and IRR conflict, choose the higher NPV.</em></li><li>Other tools: payback period (ignores time value and cash flows after payback), discounted payback, profitability index (PI = PV of inflows / initial outlay; PI &gt; 1 means NPV &gt; 0 — useful under capital rationing).</li><li>Use only <strong>incremental</strong> cash flows: include opportunity costs and cannibalization/externalities; exclude <strong>sunk costs</strong>; interest costs are excluded from cash flows because they are captured in the discount rate.</li></ul>',
+vi:'<ul><li><strong>NPV</strong> = giá trị hiện tại của toàn bộ dòng tiền tăng thêm sau thuế trừ vốn đầu tư ban đầu, chiết khấu tại tỷ suất yêu cầu. Chấp nhận nếu NPV &gt; 0 — đo trực tiếp phần giá trị tăng thêm cho cổ đông.</li><li><strong>IRR</strong> = tỷ suất chiết khấu làm NPV = 0. Chấp nhận nếu IRR &gt; tỷ suất yêu cầu. Nhược điểm: giả định tái đầu tư tại IRR (thường phi thực tế), có thể có <strong>nhiều IRR</strong> khi dòng tiền đổi dấu nhiều lần, và có thể <strong>xếp hạng sai các dự án loại trừ lẫn nhau</strong> khi khác quy mô hoặc thời điểm. <em>Khi NPV và IRR mâu thuẫn, chọn theo NPV cao hơn.</em></li><li>Công cụ khác: thời gian hoàn vốn (bỏ qua giá trị thời gian và dòng tiền sau hoàn vốn), hoàn vốn có chiết khấu, chỉ số sinh lời PI.</li><li>Chỉ dùng dòng tiền <strong>tăng thêm</strong>: tính chi phí cơ hội và hiệu ứng "ăn thịt" sản phẩm cũ; loại <strong>chi phí chìm</strong>; loại lãi vay khỏi dòng tiền vì đã nằm trong tỷ suất chiết khấu.</li></ul>'}
+]},
+{ title:'Cost of Capital & Leverage', sections:[
+{h:'WACC and component costs', en:'<p><strong>WACC = w<sub>d</sub>·r<sub>d</sub>(1 − t) + w<sub>p</sub>·r<sub>p</sub> + w<sub>e</sub>·r<sub>e</sub></strong>, with weights at <em>target</em> capital structure based on <em>market values</em>. Only debt gets the tax shield (interest is deductible; dividends are not).</p><ul><li><strong>Cost of debt:</strong> YTM on existing debt or the rate on new borrowing, after tax.</li><li><strong>Cost of preferred:</strong> r<sub>p</sub> = D<sub>p</sub> / P<sub>p</sub>.</li><li><strong>Cost of equity:</strong> CAPM (r<sub>e</sub> = R<sub>f</sub> + β(R<sub>m</sub> − R<sub>f</sub>)), the dividend discount approach (r<sub>e</sub> = D<sub>1</sub>/P<sub>0</sub> + g), or bond yield plus risk premium.</li></ul>',
+vi:'<p><strong>WACC = w<sub>d</sub>·r<sub>d</sub>(1 − t) + w<sub>p</sub>·r<sub>p</sub> + w<sub>e</sub>·r<sub>e</sub></strong>, với trọng số theo cấu trúc vốn <em>mục tiêu</em> tính trên <em>giá trị thị trường</em>. Chỉ nợ vay có lá chắn thuế (lãi vay được khấu trừ thuế; cổ tức thì không).</p><ul><li><strong>Chi phí nợ:</strong> YTM của nợ hiện hữu hoặc lãi suất vay mới, sau thuế.</li><li><strong>Chi phí CP ưu đãi:</strong> r<sub>p</sub> = D<sub>p</sub> / P<sub>p</sub>.</li><li><strong>Chi phí VCSH:</strong> CAPM (r<sub>e</sub> = R<sub>f</sub> + β(R<sub>m</sub> − R<sub>f</sub>)), mô hình chiết khấu cổ tức (r<sub>e</sub> = D<sub>1</sub>/P<sub>0</sub> + g), hoặc lợi suất trái phiếu + phần bù rủi ro.</li></ul>'},
+{h:'Operating and financial leverage', en:'<ul><li><strong>DOL</strong> (degree of operating leverage) = %Δ operating income / %Δ sales = contribution margin / operating income. Driven by fixed <em>operating</em> costs.</li><li><strong>DFL</strong> (degree of financial leverage) = %Δ net income / %Δ operating income = EBIT / (EBIT − interest). Driven by fixed <em>financing</em> costs.</li><li><strong>DTL = DOL × DFL</strong> — total sensitivity of net income to sales.</li><li>Business risk (sales + operating risk) plus financial risk determine total leverage. Higher leverage raises the breakeven point and magnifies both gains and losses. Modigliani–Miller: without taxes, capital structure is irrelevant; with taxes, debt adds value via the tax shield until financial distress and agency costs offset it (the static trade-off theory → an optimal capital structure).</li></ul>',
+vi:'<ul><li><strong>DOL</strong> = %Δ lợi nhuận hoạt động / %Δ doanh thu = số dư đảm phí / lợi nhuận hoạt động. Do chi phí <em>hoạt động</em> cố định tạo ra.</li><li><strong>DFL</strong> = %Δ LN ròng / %Δ lợi nhuận hoạt động = EBIT / (EBIT − lãi vay). Do chi phí <em>tài chính</em> cố định tạo ra.</li><li><strong>DTL = DOL × DFL</strong> — độ nhạy tổng hợp của LN ròng theo doanh thu.</li><li>Rủi ro kinh doanh + rủi ro tài chính quyết định tổng đòn bẩy. Đòn bẩy cao nâng điểm hòa vốn và khuếch đại cả lãi lẫn lỗ. Modigliani–Miller: không thuế → cấu trúc vốn không quan trọng; có thuế → nợ tạo giá trị nhờ lá chắn thuế cho tới khi chi phí kiệt quệ tài chính và chi phí đại diện triệt tiêu (lý thuyết đánh đổi tĩnh → tồn tại cấu trúc vốn tối ưu).</li></ul>'}
+], formulas:[
+['NPV','NPV = Σ CFt/(1+r)^t − Initial outlay','Accept if NPV > 0'],
+['WACC','wd·rd(1−t) + wp·rp + we·re','Market-value target weights'],
+['CAPM','re = Rf + β(Rm − Rf)',''],
+['Cost of preferred','rp = Dp / Pp',''],
+['DOL','Q(P−V) / [Q(P−V) − F]','= CM / operating income'],
+['DFL','EBIT / (EBIT − Interest)',''],
+['Breakeven quantity','Q = (F + Interest) / (P − V)','Operating breakeven excludes interest']
+]}
+],
+vocab:[
+['agency cost','Cost arising from conflicts between managers (agents) and owners (principals).','chi phí đại diện'],
+['staggered board','Board whose members are elected in different years (anti-takeover feature).','HĐQT bầu so le'],
+['sunk cost','A past cost that cannot be recovered — irrelevant to decisions.','chi phí chìm'],
+['cannibalization','New project reducing sales of the firm’s existing products.','hiệu ứng ăn mòn doanh thu nội bộ'],
+['capital rationing','A fixed capital budget forcing project selection to maximize total NPV.','hạn mức vốn đầu tư'],
+['tax shield','Tax savings from deductible interest expense.','lá chắn thuế'],
+['contribution margin','Price minus variable cost per unit.','số dư đảm phí'],
+['financial distress','Costs and risks of difficulty meeting debt obligations.','kiệt quệ tài chính'],
+['pecking order theory','Firms prefer internal funds, then debt, then equity (information asymmetry).','lý thuyết trật tự phân hạng'],
+['share repurchase','Company buying back its own shares — an alternative to dividends.','mua lại cổ phiếu']
+],
+quiz:[
+{q:'Two mutually exclusive projects have conflicting NPV and IRR rankings. A firm that wants to maximize shareholder wealth should choose the project with the:', opts:['higher IRR.','higher NPV.','shorter payback period.'], ans:1,
+en:'B is correct. NPV measures the direct addition to shareholder wealth in currency terms and assumes reinvestment at the (more realistic) required rate of return. IRR can mis-rank projects of different scale or cash-flow timing.',
+vi:'Đáp án B. NPV đo trực tiếp phần giá trị tăng thêm cho cổ đông bằng tiền và giả định tái đầu tư tại tỷ suất yêu cầu (thực tế hơn). IRR có thể xếp hạng sai khi các dự án khác quy mô hoặc thời điểm dòng tiền.'},
+{q:'A company has a target structure of 40% debt and 60% equity. Pre-tax cost of debt is 6%, cost of equity is 12%, and the tax rate is 25%. WACC is closest to:', opts:['9.0%','9.6%','7.8%'], ans:0,
+en:'A is correct. WACC = 0.40 × 6% × (1 − 0.25) + 0.60 × 12% = 0.40 × 4.5% + 7.2% = 1.8% + 7.2% = 9.0%. Remember: only the debt component is tax-adjusted.',
+vi:'Đáp án A. WACC = 0.40 × 6% × (1 − 0.25) + 0.60 × 12% = 1.8% + 7.2% = 9.0%. Nhớ: chỉ chi phí nợ được điều chỉnh thuế.'},
+{q:'A firm with high fixed operating costs relative to variable costs will most likely have:', opts:['a high degree of operating leverage and more volatile operating income.','a low breakeven point.','a high degree of financial leverage.'], ans:0,
+en:'A is correct. High fixed operating costs mean each unit of sales beyond breakeven adds more to operating income — DOL is high and operating income is more sensitive to sales changes. The breakeven point is higher, not lower, and DFL relates to interest costs, not operating costs.',
+vi:'Đáp án A. Chi phí hoạt động cố định cao nghĩa là mỗi đơn vị doanh thu vượt điểm hòa vốn đóng góp nhiều hơn vào lợi nhuận — DOL cao, lợi nhuận hoạt động biến động mạnh theo doanh thu. Điểm hòa vốn cao hơn chứ không thấp hơn, còn DFL liên quan lãi vay, không phải chi phí hoạt động.'},
+{q:'When evaluating a capital project, which of the following should be excluded from the incremental cash flows?', opts:['An opportunity cost of using land the firm already owns','Expected cannibalization of an existing product line','Consulting fees already paid for a feasibility study'], ans:2,
+en:'C is correct. Fees already paid are sunk costs — unrecoverable regardless of the decision — and must be excluded. Opportunity costs and cannibalization are genuine incremental effects and must be included.',
+vi:'Đáp án C. Phí đã trả là chi phí chìm — không thu hồi được dù quyết định thế nào — nên phải loại. Chi phí cơ hội và cannibalization là tác động tăng thêm thật sự nên phải tính vào.'}
+]
+},
+/* ============ 06 EQUITY ============ */
+{
+id:'equity', num:'06', name:'Equity Investments', vi:'Đầu tư cổ phiếu', w:[11,14],
+blurb:'Market organization, indices, market efficiency, industry & company analysis, and equity valuation: DDM, FCFE, and price multiples.',
+intro:{
+en:'Equity covers how markets and indices work, the efficient market hypothesis, security characteristics, industry analysis, and — the heart of it — valuation: dividend discount models, free-cash-flow models, and multiplier approaches. Gordon growth model questions are near-guaranteed on the exam.',
+vi:'Equity gồm cách thị trường và chỉ số vận hành, giả thuyết thị trường hiệu quả, đặc điểm chứng khoán, phân tích ngành, và trọng tâm là định giá: mô hình chiết khấu cổ tức, mô hình dòng tiền tự do và phương pháp hệ số. Câu hỏi về Gordon growth model gần như chắc chắn xuất hiện.'
+},
+modules:[
+{ title:'Markets, Orders & Indices', sections:[
+{h:'Positions, margin, and orders', en:'<ul><li><strong>Long</strong> profits when price rises; <strong>short</strong> sells borrowed shares hoping to repurchase cheaper — risk is theoretically unlimited.</li><li><strong>Margin buying:</strong> leverage ratio = 1/margin requirement (50% initial margin → 2× leverage; returns and losses are doubled before costs). A <strong>margin call</strong> occurs when equity falls below the maintenance margin: trigger price P = P<sub>0</sub> × (1 − initial margin)/(1 − maintenance margin).</li><li><strong>Orders:</strong> market orders demand immediacy (execution certainty, price uncertainty); limit orders control price but may never fill; stop orders become market orders once a trigger trades — stop-loss orders reinforce momentum.</li><li>Market structures: quote-driven (dealers), order-driven (auction/matching), brokered. Call vs continuous markets.</li></ul>',
+vi:'<ul><li><strong>Long</strong> lãi khi giá tăng; <strong>short</strong> bán chứng khoán đi vay, kỳ vọng mua lại rẻ hơn — rủi ro về lý thuyết là vô hạn.</li><li><strong>Mua ký quỹ:</strong> hệ số đòn bẩy = 1/tỷ lệ ký quỹ (ký quỹ ban đầu 50% → đòn bẩy 2×; lãi và lỗ đều nhân đôi trước chi phí). <strong>Margin call</strong> khi vốn chủ giảm dưới ký quỹ duy trì: giá kích hoạt P = P<sub>0</sub> × (1 − ký quỹ ban đầu)/(1 − ký quỹ duy trì).</li><li><strong>Lệnh:</strong> lệnh thị trường ưu tiên tốc độ (chắc chắn khớp, không chắc giá); lệnh giới hạn kiểm soát giá nhưng có thể không khớp; lệnh dừng trở thành lệnh thị trường khi chạm giá kích hoạt — stop-loss khuếch đại đà giá.</li><li>Cấu trúc thị trường: dựa trên báo giá (dealer), dựa trên lệnh (đấu giá/khớp lệnh), qua môi giới. Thị trường phiên (call) vs liên tục.</li></ul>'},
+{h:'Index weighting schemes', en:'<table class="simple"><tr><th>Weighting</th><th>Idea</th><th>Key property</th></tr><tr><td>Price-weighted</td><td>Sum of prices / divisor (e.g., Dow)</td><td>Biased toward high-priced stocks; splits change weights</td></tr><tr><td>Market-cap-weighted</td><td>Weight = float-adjusted market cap (e.g., S&amp;P 500)</td><td>Self-rebalancing; momentum tilt toward overvalued large caps</td></tr><tr><td>Equal-weighted</td><td>Same weight each stock</td><td>Small-cap tilt; requires frequent rebalancing</td></tr><tr><td>Fundamental-weighted</td><td>Weights by sales, earnings, book value…</td><td>Value tilt; contrarian rebalancing</td></tr></table>',
+vi:'<p>Bốn cách tính chỉ số: <strong>theo giá</strong> (tổng giá / số chia, VD Dow — thiên vị cổ phiếu giá cao, chia tách làm đổi trọng số); <strong>theo vốn hóa</strong> (điều chỉnh free-float, VD S&amp;P 500 — tự cân bằng, nghiêng về cổ phiếu lớn có thể đang được định giá cao); <strong>tỷ trọng bằng nhau</strong> (nghiêng về vốn hóa nhỏ, phải tái cân bằng thường xuyên); <strong>theo yếu tố cơ bản</strong> (doanh thu, lợi nhuận, giá trị sổ sách — nghiêng về giá trị, tái cân bằng kiểu ngược dòng).</p>'}
+]},
+{ title:'Market Efficiency', sections:[
+{h:'The three forms of the EMH', en:'<ul><li><strong>Weak form:</strong> prices reflect all <em>past market data</em> (prices, volume). If it holds, <em>technical analysis</em> cannot consistently outperform.</li><li><strong>Semi-strong form:</strong> prices reflect all <em>public</em> information. If it holds, <em>fundamental analysis</em> of public data cannot consistently outperform. Tested via event studies.</li><li><strong>Strong form:</strong> prices reflect all information, <em>including private/insider</em> information. Even insiders could not beat the market — empirically rejected (insider trading is profitable, which is why it is illegal).</li></ul><p>Documented anomalies (January effect, momentum, value effects) often shrink after discovery or fail after costs. Behavioral finance (loss aversion, herding, overconfidence) offers explanations for persistent mispricing. Practical implication: in highly efficient markets, <strong>passive investing</strong> is hard to beat after fees.</p>',
+vi:'<ul><li><strong>Dạng yếu:</strong> giá phản ánh mọi <em>dữ liệu thị trường quá khứ</em>. Nếu đúng, <em>phân tích kỹ thuật</em> không thể thắng thị trường bền vững.</li><li><strong>Dạng bán mạnh:</strong> giá phản ánh mọi thông tin <em>công khai</em>. Nếu đúng, <em>phân tích cơ bản</em> trên dữ liệu công khai không thắng được thị trường. Kiểm định bằng event study.</li><li><strong>Dạng mạnh:</strong> giá phản ánh mọi thông tin, <em>kể cả thông tin nội bộ</em>. Ngay cả insider cũng không thắng được — thực nghiệm bác bỏ (giao dịch nội gián sinh lời, đó là lý do nó bị cấm).</li></ul><p>Các anomaly (hiệu ứng tháng Giêng, momentum, hiệu ứng giá trị) thường yếu đi sau khi được công bố hoặc biến mất sau chi phí. Tài chính hành vi (sợ thua lỗ, tâm lý bầy đàn, quá tự tin) giải thích các sai lệch định giá dai dẳng. Hàm ý thực tiễn: ở thị trường hiệu quả cao, <strong>đầu tư thụ động</strong> rất khó bị đánh bại sau phí.</p>'}
+]},
+{ title:'Equity Valuation', sections:[
+{h:'Dividend discount models', en:'<p>Value = present value of expected future cash flows to the shareholder. For a dividend-paying firm with stable growth, the <strong>Gordon growth model</strong>:</p><p><strong>V₀ = D₁ / (r − g)</strong>, where D₁ = D₀(1 + g) is <em>next year’s</em> dividend, r = required return, g = sustainable growth. Requires r &gt; g and stable growth. Value is extremely sensitive to (r − g).</p><ul><li><strong>Sustainable growth:</strong> g = retention ratio × ROE = (1 − payout) × ROE.</li><li><strong>Multistage models</strong> handle high-growth phases before maturity: discount the short-term dividends plus the terminal value from Gordon growth at the point growth stabilizes.</li><li>For non-dividend payers, use <strong>FCFE</strong> models (value = PV of free cash flow to equity at r) or multiples.</li><li>Preferred stock = a perpetuity: V = D / r.</li></ul>',
+vi:'<p>Giá trị = hiện giá dòng tiền kỳ vọng cho cổ đông. Với công ty trả cổ tức tăng trưởng ổn định, <strong>mô hình Gordon</strong>:</p><p><strong>V₀ = D₁ / (r − g)</strong>, trong đó D₁ = D₀(1 + g) là cổ tức <em>năm tới</em>, r = tỷ suất yêu cầu, g = tăng trưởng bền vững. Điều kiện r &gt; g và tăng trưởng ổn định. Giá trị cực kỳ nhạy với (r − g).</p><ul><li><strong>Tăng trưởng bền vững:</strong> g = tỷ lệ giữ lại × ROE = (1 − tỷ lệ chi trả) × ROE.</li><li><strong>Mô hình nhiều giai đoạn</strong> xử lý pha tăng trưởng cao trước khi bão hòa: chiết khấu cổ tức ngắn hạn + giá trị cuối kỳ tính bằng Gordon tại thời điểm tăng trưởng ổn định.</li><li>Công ty không trả cổ tức: dùng mô hình <strong>FCFE</strong> hoặc hệ số so sánh.</li><li>Cổ phiếu ưu đãi = perpetuity: V = D / r.</li></ul>'},
+{h:'Price multiples and enterprise value', en:'<ul><li><strong>P/E:</strong> justified forward P/E from Gordon growth = payout ratio / (r − g). Drawbacks: negative or manipulated earnings.</li><li><strong>P/B:</strong> useful for financial firms; distorted by intangibles and buybacks.</li><li><strong>P/S:</strong> works for unprofitable firms; ignores cost structure.</li><li><strong>P/CF:</strong> less manipulable than earnings.</li><li><strong>EV/EBITDA:</strong> Enterprise value = market cap + debt + preferred − cash. Capital-structure neutral; useful for comparing firms with different leverage.</li><li>Method of comparables: a stock trading at a lower multiple than peers is <em>relatively</em> undervalued — but the whole peer group may be mispriced (relative ≠ intrinsic).</li></ul>',
+vi:'<ul><li><strong>P/E:</strong> P/E hợp lý từ Gordon = tỷ lệ chi trả / (r − g). Nhược: lợi nhuận âm hoặc bị "xào nấu".</li><li><strong>P/B:</strong> hữu ích với công ty tài chính; méo mó bởi tài sản vô hình và mua lại cổ phiếu.</li><li><strong>P/S:</strong> dùng được cho công ty chưa có lãi; bỏ qua cơ cấu chi phí.</li><li><strong>P/CF:</strong> khó thao túng hơn lợi nhuận.</li><li><strong>EV/EBITDA:</strong> EV = vốn hóa + nợ + CP ưu đãi − tiền mặt. Trung lập với cấu trúc vốn; tốt khi so sánh công ty có đòn bẩy khác nhau.</li><li>Phương pháp so sánh: cổ phiếu có hệ số thấp hơn nhóm tương đồng chỉ là rẻ <em>tương đối</em> — cả nhóm có thể đang bị định giá sai (tương đối ≠ nội tại).</li></ul>'}
+], formulas:[
+['Gordon growth','V0 = D1 / (r − g)','D1 = D0(1+g); requires r > g'],
+['Sustainable growth','g = b × ROE','b = retention ratio = 1 − payout'],
+['Justified forward P/E','P0/E1 = payout / (r − g)',''],
+['Preferred stock value','V = D / r','Perpetuity'],
+['Enterprise value','EV = Market cap + Debt + Preferred − Cash',''],
+['Margin call price','P = P0 (1 − IM) / (1 − MM)','IM initial, MM maintenance margin']
+]}
+],
+vocab:[
+['free float','Shares actually available for public trading.','lượng cổ phiếu tự do chuyển nhượng'],
+['short covering','Buying back shares to close a short position.','mua bù vị thế bán khống'],
+['bid–ask spread','Difference between best buy and sell quotes; a liquidity cost.','chênh lệch giá mua–bán'],
+['IPO / secondary offering','First-time vs subsequent public share sale.','phát hành lần đầu / phát hành bổ sung'],
+['intrinsic value','Value based on fundamentals, independent of market price.','giá trị nội tại'],
+['required rate of return','Minimum return an investor demands given risk.','tỷ suất sinh lời yêu cầu'],
+['terminal value','Value of all cash flows beyond the explicit forecast horizon.','giá trị cuối kỳ dự phóng'],
+['payout ratio','Dividends as a share of earnings.','tỷ lệ chi trả cổ tức'],
+['cyclical / defensive','Earnings highly / weakly sensitive to the business cycle.','ngành chu kỳ / phòng thủ'],
+['GDR / ADR','Depository receipts allowing foreign shares to trade locally.','chứng chỉ lưu ký'] 
+],
+quiz:[
+{q:'A stock will pay a dividend of $2.00 next year (D1). Dividends grow at 4% forever and the required return is 9%. The stock’s intrinsic value is closest to:', opts:['$40.00','$41.60','$50.00'], ans:0,
+en:'A is correct. V0 = D1/(r − g) = 2.00/(0.09 − 0.04) = 2.00/0.05 = $40.00. Careful: the $2.00 is already D1; multiplying by (1+g) again — giving $41.60 — is the classic trap.',
+vi:'Đáp án A. V0 = D1/(r − g) = 2.00/0.05 = 40 USD. Cẩn thận: 2.00 đã là D1; nhân thêm (1+g) để ra 41.60 chính là bẫy kinh điển.'},
+{q:'If markets are semi-strong form efficient, which activity can still be expected to produce consistent abnormal returns?', opts:['Technical analysis of price patterns','Fundamental analysis of published financial statements','Trading on material nonpublic information'], ans:2,
+en:'C is correct (as a matter of theory — it is illegal and unethical). Semi-strong efficiency means all public information (past prices AND fundamentals) is already in prices; only private information confers an edge. Strong-form efficiency would eliminate even that edge.',
+vi:'Đáp án C (về mặt lý thuyết — hành vi này phi pháp và phi đạo đức). Thị trường hiệu quả bán mạnh nghĩa là mọi thông tin công khai (gồm cả giá quá khứ VÀ dữ liệu cơ bản) đã nằm trong giá; chỉ thông tin riêng tư mới tạo lợi thế. Dạng mạnh sẽ triệt tiêu cả lợi thế đó.'},
+{q:'An investor buys shares at $50 on 50% initial margin with a 25% maintenance margin. Ignoring costs, the margin call price is closest to:', opts:['$25.00','$33.33','$37.50'], ans:1,
+en:'B is correct. Margin call price = P0 × (1 − IM)/(1 − MM) = 50 × (1 − 0.50)/(1 − 0.25) = 50 × 0.50/0.75 = $33.33.',
+vi:'Đáp án B. Giá margin call = 50 × (1 − 0.50)/(1 − 0.25) = 50 × 0.6667 = 33.33 USD.'},
+{q:'Compared with a market-cap-weighted index of the same stocks, an equal-weighted index most likely has:', opts:['a tilt toward small-cap stocks and higher rebalancing needs.','a tilt toward the largest stocks.','identical performance if no stocks are added or removed.'], ans:0,
+en:'A is correct. Equal weighting gives small companies the same weight as giants — a small-cap tilt — and prices drift away from equal weights daily, so the index requires regular rebalancing (with associated transaction costs).',
+vi:'Đáp án A. Tỷ trọng bằng nhau cho công ty nhỏ trọng số ngang công ty khổng lồ — nghiêng về vốn hóa nhỏ — và giá biến động khiến trọng số lệch khỏi mức bằng nhau mỗi ngày, nên phải tái cân bằng thường xuyên (kèm chi phí giao dịch).'},
+{q:'A firm retains 60% of earnings and earns an ROE of 15%. Its sustainable growth rate is closest to:', opts:['6.0%','9.0%','15.0%'], ans:1,
+en:'B is correct. g = retention ratio × ROE = 0.60 × 15% = 9.0%. This g feeds directly into the Gordon growth model.',
+vi:'Đáp án B. g = tỷ lệ giữ lại × ROE = 0.60 × 15% = 9%. Giá trị g này được dùng trực tiếp trong mô hình Gordon.'}
+]
+},
+/* ============ 07 FIXED INCOME ============ */
+{
+id:'fi', num:'07', name:'Fixed Income', vi:'Thu nhập cố định (Trái phiếu)', w:[11,14],
+blurb:'Bond features and markets, pricing and yield measures, the price–yield relationship, duration & convexity, credit risk, and securitization.',
+intro:{
+en:'Fixed Income is heavily weighted and very learnable: master bond pricing mechanics, yield measures, and — the exam favorites — duration and convexity. The logic of "price and yield move inversely" underlies almost every question. Securitization (MBS/ABS) and credit analysis round out the topic.',
+vi:'Fixed Income có trọng số cao và rất "học được": nắm chắc cơ chế định giá trái phiếu, các thước đo lợi suất, và — hai chủ đề đề thi ưa thích — duration và convexity. Logic "giá và lợi suất ngược chiều" là nền của gần như mọi câu hỏi. Chứng khoán hóa (MBS/ABS) và phân tích tín dụng hoàn thiện chủ đề này.'
+},
+modules:[
+{ title:'Bond Features & Pricing', sections:[
+{h:'Instrument features', en:'<ul><li>Key terms: <strong>par (face) value</strong>, <strong>coupon rate</strong> (fixed, floating = reference rate + spread, zero-coupon), <strong>maturity</strong>, currency, and the <strong>indenture</strong> (the legal contract) with covenants — <em>affirmative</em> (things the issuer must do) and <em>negative</em> (restrictions such as limits on additional debt).</li><li>Seniority: secured (backed by collateral) ranks above unsecured (debentures); within unsecured, senior above subordinated.</li><li>Contingency provisions: <strong>callable</strong> (issuer may redeem early — bad for investors, higher yield), <strong>putable</strong> (investor may sell back — good for investors, lower yield), <strong>convertible</strong> (exchangeable into shares).</li></ul>',
+vi:'<ul><li>Thuật ngữ chính: <strong>mệnh giá</strong>, <strong>lãi suất coupon</strong> (cố định, thả nổi = lãi suất tham chiếu + spread, zero-coupon), <strong>kỳ hạn</strong>, đồng tiền, và <strong>indenture</strong> (hợp đồng pháp lý) với các cam kết — <em>affirmative</em> (việc phải làm) và <em>negative</em> (hạn chế, VD giới hạn vay thêm).</li><li>Thứ tự ưu tiên: có bảo đảm đứng trên không bảo đảm; trong nhóm không bảo đảm, senior đứng trên subordinated.</li><li>Điều khoản kèm theo: <strong>callable</strong> (tổ chức phát hành được mua lại sớm — bất lợi cho nhà đầu tư, lợi suất cao hơn), <strong>putable</strong> (nhà đầu tư được bán lại — có lợi, lợi suất thấp hơn), <strong>convertible</strong> (chuyển đổi thành cổ phiếu).</li></ul>'},
+{h:'Pricing and the price–yield relationship', en:'<p>A bond’s price is the present value of its coupons and face value, discounted at the market discount rate (YTM). Core relationships:</p><ul><li>Coupon rate &lt; YTM → <strong>discount</strong>; coupon = YTM → par; coupon &gt; YTM → <strong>premium</strong>.</li><li>Price and yield are <strong>inversely related</strong>, and the relationship is <strong>convex</strong>: a 1% fall in yield raises price <em>more</em> than a 1% rise lowers it.</li><li><strong>Pull to par:</strong> as maturity approaches, price converges to face value ("constant-yield price trajectory").</li><li>Longer maturity and <em>lower</em> coupon → greater price sensitivity to yield changes.</li><li>Between coupon dates: full (dirty) price = flat (clean) price + accrued interest. Quoted prices are clean.</li></ul>',
+vi:'<p>Giá trái phiếu là hiện giá của các coupon và mệnh giá, chiết khấu tại lãi suất thị trường (YTM). Quan hệ cốt lõi:</p><ul><li>Coupon &lt; YTM → giao dịch <strong>dưới mệnh giá</strong>; coupon = YTM → bằng mệnh giá; coupon &gt; YTM → <strong>trên mệnh giá</strong>.</li><li>Giá và lợi suất <strong>ngược chiều</strong>, và quan hệ này <strong>lồi (convex)</strong>: lợi suất giảm 1% làm giá tăng <em>nhiều hơn</em> mức giá giảm khi lợi suất tăng 1%.</li><li><strong>Pull to par:</strong> càng gần đáo hạn, giá càng hội tụ về mệnh giá.</li><li>Kỳ hạn dài hơn và coupon <em>thấp hơn</em> → giá nhạy hơn với thay đổi lợi suất.</li><li>Giữa hai kỳ coupon: giá đầy đủ (dirty) = giá niêm yết (clean) + lãi dồn tích.</li></ul>'},
+{h:'Yield measures and the yield curve', en:'<ul><li><strong>YTM</strong> assumes the bond is held to maturity, all payments received on time, and coupons <em>reinvested at the YTM</em>.</li><li><strong>Current yield</strong> = annual coupon / price (ignores time value and capital gain/loss).</li><li>Callable bonds: yield-to-call for each call date; <strong>yield-to-worst</strong> is the lowest of all.</li><li>Money market instruments use discount rates or add-on rates on 360- or 365-day conventions — convert to a common basis to compare.</li><li><strong>Spot rates</strong> are yields on zero-coupon bonds; the no-arbitrage price discounts each cash flow at its own spot rate. <strong>Forward rates</strong> are implied future rates. A normal yield curve slopes upward; inversion (short &gt; long yields) has historically preceded recessions.</li><li>Spreads: <strong>G-spread</strong> (over government yields), <strong>I-spread</strong> (over swaps), <strong>Z-spread</strong> (constant spread over the whole spot curve), <strong>OAS</strong> (Z-spread minus option cost — used for callable bonds).</li></ul>',
+vi:'<ul><li><strong>YTM</strong> giả định giữ đến đáo hạn, nhận đủ mọi khoản đúng hạn, và coupon <em>tái đầu tư tại chính YTM</em>.</li><li><strong>Current yield</strong> = coupon năm / giá (bỏ qua giá trị thời gian và lãi/lỗ vốn).</li><li>Trái phiếu callable: tính yield-to-call cho từng ngày call; <strong>yield-to-worst</strong> là mức thấp nhất.</li><li>Công cụ thị trường tiền tệ dùng lãi suất chiết khấu hoặc add-on trên cơ sở 360/365 ngày — phải quy về cùng cơ sở để so sánh.</li><li><strong>Lãi suất spot</strong> là lợi suất trái phiếu zero-coupon; giá không-arbitrage chiết khấu từng dòng tiền theo spot tương ứng. <strong>Lãi suất forward</strong> là lãi suất tương lai hàm ý. Đường cong lợi suất thường dốc lên; đảo ngược (ngắn hạn &gt; dài hạn) trong lịch sử thường báo trước suy thoái.</li><li>Spread: <strong>G-spread</strong> (so với TPCP), <strong>I-spread</strong> (so với swap), <strong>Z-spread</strong> (spread không đổi trên toàn đường spot), <strong>OAS</strong> (Z-spread trừ giá trị quyền chọn — dùng cho trái phiếu callable).</li></ul>'}
+]},
+{ title:'Duration, Convexity & Credit Risk', sections:[
+{h:'Duration', en:'<ul><li><strong>Macaulay duration:</strong> the weighted-average time to receive the bond’s cash flows (in years). Also the horizon at which price risk and reinvestment risk offset.</li><li><strong>Modified duration:</strong> ModDur = MacDur / (1 + YTM per period). It estimates the % price change: <strong>%ΔPrice ≈ −ModDur × Δyield</strong>.</li><li><strong>Effective duration</strong> uses the change in price for parallel shifts of the benchmark curve — required for bonds with embedded options (callable/putable, MBS) whose cash flows change with rates.</li><li>Duration rises with maturity, falls with coupon and with yield level. A zero-coupon bond’s Macaulay duration equals its maturity.</li><li><strong>Money duration</strong> = ModDur × full price; <strong>PVBP</strong> is the price change for a 1 bp yield move.</li></ul>',
+vi:'<ul><li><strong>Macaulay duration:</strong> thời gian bình quân gia quyền nhận các dòng tiền (tính bằng năm). Cũng là kỳ hạn đầu tư mà tại đó rủi ro giá và rủi ro tái đầu tư triệt tiêu nhau.</li><li><strong>Modified duration:</strong> ModDur = MacDur / (1 + YTM mỗi kỳ). Ước lượng % thay đổi giá: <strong>%ΔGiá ≈ −ModDur × Δlợi suất</strong>.</li><li><strong>Effective duration</strong> dùng thay đổi giá khi đường cong chuẩn dịch song song — bắt buộc với trái phiếu có quyền chọn kèm (callable/putable, MBS) vì dòng tiền thay đổi theo lãi suất.</li><li>Duration tăng theo kỳ hạn, giảm khi coupon cao hơn và khi mặt bằng lợi suất cao hơn. Zero-coupon có Macaulay duration bằng đúng kỳ hạn.</li><li><strong>Money duration</strong> = ModDur × giá đầy đủ; <strong>PVBP</strong> là mức thay đổi giá khi lợi suất đổi 1 điểm cơ bản.</li></ul>'},
+{h:'Convexity and combined estimates', en:'<p>Duration is a straight-line estimate of a curved relationship, so it <em>understates</em> price rises and <em>overstates</em> price falls. Adding convexity fixes most of the error:</p><p><strong>%ΔPrice ≈ −ModDur × Δy + ½ × Convexity × (Δy)²</strong></p><p>Positive convexity is valuable: more upside, less downside for the same duration. Callable bonds exhibit <strong>negative convexity</strong> at low yields (price is capped near the call price); putable bonds have extra positive convexity at high yields.</p>',
+vi:'<p>Duration là ước lượng đường thẳng cho một quan hệ cong, nên nó <em>ước lượng thấp</em> mức tăng giá và <em>ước lượng cao</em> mức giảm giá. Cộng thêm convexity sẽ sửa phần lớn sai số:</p><p><strong>%ΔGiá ≈ −ModDur × Δy + ½ × Convexity × (Δy)²</strong></p><p>Convexity dương rất giá trị: cùng một duration nhưng tăng nhiều hơn, giảm ít hơn. Trái phiếu callable có <strong>convexity âm</strong> khi lợi suất thấp (giá bị chặn gần giá call); trái phiếu putable có convexity dương lớn hơn khi lợi suất cao.</p>'},
+{h:'Credit risk and securitization', en:'<ul><li><strong>Credit risk</strong> = expected loss = probability of default × loss given default (LGD = 1 − recovery rate). Spreads widen when default risk or risk aversion rises — spread risk hurts even without default.</li><li>Ratings: investment grade (BBB−/Baa3 and above) vs high yield. Beware: ratings lag markets.</li><li>Analysis frameworks: the <strong>4 Cs</strong> — Capacity, Collateral, Covenants, Character. Key ratios: leverage (debt/EBITDA) and coverage (EBIT/interest).</li><li><strong>Securitization:</strong> a sponsor sells assets (mortgages, auto loans, receivables) to a bankruptcy-remote <strong>SPE</strong>, which issues tranched bonds. Benefits: lower funding costs, liquidity, risk transfer. <strong>Tranching</strong> creates a waterfall: senior tranches are paid first; subordinated tranches absorb first losses (credit tranching). MBS carry <strong>prepayment risk</strong>: contraction risk (rates fall → faster prepayment) and extension risk (rates rise → slower prepayment).</li></ul>',
+vi:'<ul><li><strong>Rủi ro tín dụng</strong> = tổn thất kỳ vọng = xác suất vỡ nợ × tổn thất khi vỡ nợ (LGD = 1 − tỷ lệ thu hồi). Spread giãn khi rủi ro vỡ nợ hoặc mức e ngại rủi ro tăng — rủi ro spread gây thiệt hại kể cả khi không vỡ nợ.</li><li>Xếp hạng: investment grade (từ BBB−/Baa3 trở lên) vs high yield. Lưu ý: xếp hạng thường đi sau thị trường.</li><li>Khung phân tích: <strong>4 chữ C</strong> — Capacity (năng lực trả nợ), Collateral (tài sản bảo đảm), Covenants (cam kết), Character (uy tín). Chỉ số chính: đòn bẩy (nợ/EBITDA) và khả năng chi trả (EBIT/lãi vay).</li><li><strong>Chứng khoán hóa:</strong> bên khởi tạo bán tài sản (khoản vay mua nhà, vay ô tô, phải thu) cho <strong>SPE</strong> tách biệt phá sản, SPE phát hành trái phiếu chia tầng. Lợi ích: chi phí vốn thấp hơn, thanh khoản, chuyển giao rủi ro. <strong>Tranching</strong> tạo "thác nước": tầng senior nhận tiền trước; tầng subordinated chịu lỗ đầu tiên. MBS có <strong>rủi ro trả nợ trước hạn</strong>: contraction risk (lãi giảm → trả trước nhanh) và extension risk (lãi tăng → trả trước chậm).</li></ul>'}
+], formulas:[
+['Bond price','P = Σ C/(1+y)^t + F/(1+y)^n',''],
+['Modified duration','ModDur = MacDur / (1 + y)','y = yield per period'],
+['Duration estimate','%ΔP ≈ −ModDur × Δy',''],
+['With convexity','%ΔP ≈ −ModDur·Δy + ½·Conv·(Δy)²',''],
+['Expected loss','EL = PD × LGD','LGD = 1 − recovery rate'],
+['Current yield','Annual coupon / Price','']
+]}
+],
+vocab:[
+['indenture','The legal contract describing a bond issue.','khế ước trái phiếu'],
+['covenant','A promise (affirmative) or restriction (negative) binding the issuer.','cam kết/điều khoản ràng buộc'],
+['callable bond','Bond the issuer may redeem before maturity.','trái phiếu có quyền mua lại'],
+['accrued interest','Coupon earned but not yet paid, added to the clean price.','lãi dồn tích'],
+['spot rate','Yield on a zero-coupon bond for a given maturity.','lãi suất giao ngay'],
+['yield to worst','Lowest of YTM and all yields-to-call.','lợi suất xấu nhất'],
+['credit spread','Extra yield over a default-free benchmark.','chênh lệch lợi suất tín dụng'],
+['tranche','A slice of a securitization with a defined claim priority.','tầng/lô chứng khoán hóa'],
+['prepayment risk','Uncertainty about the timing of principal repayment in MBS.','rủi ro trả nợ trước hạn'],
+['special purpose entity (SPE)','Bankruptcy-remote entity issuing securitized bonds.','pháp nhân chuyên biệt'],
+['floating-rate note (FRN)','Bond whose coupon resets with a reference rate.','trái phiếu lãi suất thả nổi'],
+['duration gap','Difference between Macaulay duration and the investment horizon.','khoảng chênh duration']
+],
+quiz:[
+{q:'A bond has a modified duration of 7.0 and annual convexity of 90. If its yield falls by 100 bps, the estimated percentage price change is closest to:', opts:['+7.00%','+7.45%','+6.55%'], ans:1,
+en:'B is correct. %ΔP ≈ −7.0 × (−0.01) + 0.5 × 90 × (−0.01)² = +7.0% + 0.45% = +7.45%. Convexity adds to the gain when yields fall and cushions the loss when yields rise.',
+vi:'Đáp án B. %ΔP ≈ −7.0 × (−0.01) + 0.5 × 90 × (0.01)² = +7.0% + 0.45% = +7.45%. Convexity cộng thêm khi lợi suất giảm và giảm bớt thiệt hại khi lợi suất tăng.'},
+{q:'A 10-year bond with a 4% annual coupon trades at a YTM of 5%. The bond most likely trades at:', opts:['a premium to par.','par value.','a discount to par.'], ans:2,
+en:'C is correct. When the coupon rate (4%) is below the market discount rate (5%), the fixed coupons are insufficient at market rates, so the bond must price below par — a discount — to offer the market yield.',
+vi:'Đáp án C. Khi coupon (4%) thấp hơn lãi suất thị trường (5%), các coupon cố định không đủ hấp dẫn, nên trái phiếu phải giao dịch dưới mệnh giá (discount) để đem lại lợi suất thị trường.'},
+{q:'Which bond has the greatest interest rate sensitivity (highest duration), all else equal?', opts:['High coupon, short maturity','Zero coupon, long maturity','High coupon, long maturity'], ans:1,
+en:'B is correct. Duration increases with maturity and decreases with coupon. A long-maturity zero-coupon bond pays everything at the end, so its Macaulay duration equals its (long) maturity — the maximum sensitivity.',
+vi:'Đáp án B. Duration tăng theo kỳ hạn và giảm khi coupon cao. Zero-coupon kỳ hạn dài trả toàn bộ tiền vào cuối kỳ nên Macaulay duration bằng đúng kỳ hạn (dài) — độ nhạy tối đa.'},
+{q:'For a callable bond when interest rates fall well below the coupon rate, the bond most likely exhibits:', opts:['negative convexity.','increased positive convexity.','a price rising without limit.'], ans:0,
+en:'A is correct. As rates fall, the call becomes more likely and the price is capped near the call price — the price-yield curve bends the "wrong" way, i.e., negative convexity. The investor’s upside is limited while downside remains.',
+vi:'Đáp án A. Khi lãi suất giảm sâu, khả năng bị call tăng và giá bị chặn gần giá call — đường giá–lợi suất cong "ngược", tức convexity âm. Nhà đầu tư bị giới hạn phần tăng giá trong khi phần giảm vẫn nguyên.'},
+{q:'A bond has a 2% probability of default and an expected recovery rate of 60%. Its expected loss as a percentage of exposure is closest to:', opts:['0.8%','1.2%','2.0%'], ans:0,
+en:'A is correct. Expected loss = PD × LGD = 2% × (1 − 0.60) = 2% × 40% = 0.8%.',
+vi:'Đáp án A. Tổn thất kỳ vọng = PD × LGD = 2% × (1 − 60%) = 0.8%.'}
+]
+},
+/* ============ 08 DERIVATIVES ============ */
+{
+id:'deriv', num:'08', name:'Derivatives', vi:'Công cụ phái sinh', w:[5,8],
+blurb:'Forwards, futures, swaps, and options: features, payoff profiles, arbitrage-based pricing, and put–call parity.',
+intro:{
+en:'Derivatives at Level 1 is conceptual: know the instruments (forwards, futures, swaps, options), who bears which risk, and the no-arbitrage logic that prices them. The most testable pieces: forward pricing via cost of carry, option moneyness and payoff diagrams, and put–call parity.',
+vi:'Derivatives ở Level 1 thiên về khái niệm: nắm các công cụ (forward, futures, swap, option), ai chịu rủi ro gì, và logic không-arbitrage dùng để định giá. Phần dễ ra thi nhất: định giá forward theo chi phí lưu giữ (cost of carry), trạng thái lời/lỗ (moneyness) và đồ thị payoff của quyền chọn, và ngang giá quyền chọn mua–bán (put–call parity).'
+},
+modules:[
+{ title:'Forward Commitments', sections:[
+{h:'Forwards, futures, and swaps', en:'<ul><li>A <strong>forward</strong> obligates both parties to trade an asset at a set price on a future date. OTC, customized, counterparty risk, no cash changes hands at initiation (value = 0 at start; the forward <em>price</em> is set so this holds).</li><li><strong>Futures</strong> are standardized, exchange-traded forwards with a clearinghouse guarantee, daily <strong>mark-to-market</strong> and margin. This removes most counterparty risk.</li><li>A <strong>swap</strong> is a series of forward-like exchanges. In a plain-vanilla interest rate swap, one side pays fixed and receives floating on a notional amount; only net payments are exchanged. The fixed rate is set so the swap has zero value at initiation. Pay-fixed = like being short bonds / hedging against rising rates.</li><li><strong>Pricing by no-arbitrage (cost of carry):</strong> F₀ = S₀ × (1 + r)<sup>T</sup> + FV(costs) − FV(benefits). Benefits (dividends, coupons, convenience yield) lower the forward price; carrying costs (storage, insurance) raise it. If the market forward deviates, cash-and-carry (or reverse) arbitrage forces it back.</li></ul>',
+vi:'<ul><li><strong>Forward</strong> ràng buộc cả hai bên giao dịch tài sản tại mức giá xác định vào ngày tương lai. OTC, tùy chỉnh, có rủi ro đối tác, không trao tiền lúc khởi tạo (giá trị = 0 tại thời điểm đầu; <em>giá</em> forward được đặt để điều này đúng).</li><li><strong>Futures</strong> là forward chuẩn hóa, giao dịch trên sàn với trung tâm thanh toán bù trừ bảo lãnh, <strong>mark-to-market</strong> hằng ngày và ký quỹ → gần như loại bỏ rủi ro đối tác.</li><li><strong>Swap</strong> là chuỗi các trao đổi kiểu forward. Trong swap lãi suất chuẩn, một bên trả cố định – nhận thả nổi trên vốn danh nghĩa; chỉ trao đổi phần chênh lệch ròng. Lãi suất cố định được đặt để swap có giá trị 0 lúc khởi tạo. Trả cố định = giống bán khống trái phiếu / phòng hộ trước lãi suất tăng.</li><li><strong>Định giá theo không-arbitrage (cost of carry):</strong> F₀ = S₀ × (1 + r)<sup>T</sup> + FV(chi phí) − FV(lợi ích). Lợi ích (cổ tức, coupon, convenience yield) làm giảm giá forward; chi phí lưu giữ (kho bãi, bảo hiểm) làm tăng. Nếu giá thị trường lệch, arbitrage cash-and-carry (hoặc ngược lại) sẽ kéo về.</li></ul>'}
+]},
+{ title:'Options & Put–Call Parity', sections:[
+{h:'Option basics and moneyness', en:'<ul><li>A <strong>call</strong> gives the buyer the <em>right</em> (not obligation) to buy at the strike X; a <strong>put</strong> the right to sell. The buyer pays a <strong>premium</strong>; the seller (writer) keeps the premium and bears the obligation.</li><li>Payoffs at expiry: call buyer = max(0, S − X); put buyer = max(0, X − S). Profits subtract/add the premium. Maximum loss for a buyer = premium; maximum loss for a call writer = unlimited; for a put writer = X − premium.</li><li><strong>Moneyness:</strong> a call is in-the-money when S &gt; X; a put when S &lt; X. Option value = <strong>intrinsic value + time value</strong>; time value erodes to zero at expiry (theta decay).</li><li>Value drivers: calls rise with the underlying price, volatility, time (usually), and rates; fall with strike and expected dividends. Puts are the mirror image (but higher rates <em>reduce</em> put values). <em>Higher volatility raises both call and put values</em> — payoffs are asymmetric.</li><li>European options can be exercised only at expiry; American any time (worth at least as much).</li></ul>',
+vi:'<ul><li><strong>Call</strong> cho người mua <em>quyền</em> (không phải nghĩa vụ) mua tại giá thực hiện X; <strong>put</strong> là quyền bán. Người mua trả <strong>phí quyền chọn</strong>; người bán nhận phí và gánh nghĩa vụ.</li><li>Payoff khi đáo hạn: mua call = max(0, S − X); mua put = max(0, X − S). Lợi nhuận cộng/trừ phí. Lỗ tối đa của người mua = phí; lỗ tối đa của người bán call = vô hạn; người bán put = X − phí.</li><li><strong>Moneyness:</strong> call ITM khi S &gt; X; put ITM khi S &lt; X. Giá trị quyền chọn = <strong>giá trị nội tại + giá trị thời gian</strong>; giá trị thời gian mòn về 0 khi đáo hạn.</li><li>Yếu tố tác động: call tăng theo giá tài sản, độ biến động, thời gian (thường), lãi suất; giảm theo giá thực hiện và cổ tức kỳ vọng. Put ngược lại (nhưng lãi suất cao làm <em>giảm</em> giá put). <em>Biến động cao làm tăng giá cả call lẫn put</em> — vì payoff bất đối xứng.</li><li>Quyền chọn kiểu Âu chỉ thực hiện lúc đáo hạn; kiểu Mỹ bất kỳ lúc nào (giá trị ít nhất bằng kiểu Âu).</li></ul>'},
+{h:'Put–call parity', en:'<p>For European options on the same underlying, strike, and expiry:</p><p><strong>c + X/(1+r)<sup>T</sup> = p + S₀</strong></p><p>Left side = <em>fiduciary call</em> (call + riskless bond paying X); right side = <em>protective put</em> (stock + put). Both give the same payoff — max(S<sub>T</sub>, X) — so they must cost the same, or arbitrage exists. Rearranged, parity lets you create <strong>synthetic</strong> positions: e.g., synthetic call = p + S₀ − X/(1+r)<sup>T</sup>. Put–call–forward parity replaces the stock with a forward: c + X/(1+r)<sup>T</sup> = p + F₀/(1+r)<sup>T</sup>.</p>',
+vi:'<p>Với quyền chọn kiểu Âu cùng tài sản cơ sở, cùng giá thực hiện và ngày đáo hạn:</p><p><strong>c + X/(1+r)<sup>T</sup> = p + S₀</strong></p><p>Vế trái = <em>fiduciary call</em> (call + trái phiếu phi rủi ro trả X); vế phải = <em>protective put</em> (cổ phiếu + put). Cả hai cho cùng payoff — max(S<sub>T</sub>, X) — nên phải có cùng giá, nếu không sẽ có arbitrage. Biến đổi công thức cho phép tạo vị thế <strong>tổng hợp (synthetic)</strong>: VD call tổng hợp = p + S₀ − X/(1+r)<sup>T</sup>. Ngang giá put–call–forward thay cổ phiếu bằng forward.</p>'}
+], formulas:[
+['Forward price','F0 = S0(1+r)^T + FV(costs) − FV(benefits)','Cost of carry model'],
+['Call payoff','max(0, S − X)','Put payoff: max(0, X − S)'],
+['Put–call parity','c + X/(1+r)^T = p + S0','European options only'],
+['Intrinsic value (call)','max(0, S − X)','Option value = intrinsic + time value']
+]}
+],
+vocab:[
+['notional amount','Reference amount on which derivative payments are computed.','giá trị danh nghĩa'],
+['mark-to-market','Daily settlement of futures gains and losses.','hạch toán theo giá thị trường hằng ngày'],
+['clearinghouse','Entity that guarantees both sides of exchange-traded derivatives.','trung tâm thanh toán bù trừ'],
+['strike (exercise) price','Price at which an option can be exercised.','giá thực hiện'],
+['premium','Price paid by the option buyer to the writer.','phí quyền chọn'],
+['in/at/out of the money','Option with positive / zero / negative intrinsic value.','trạng thái lời / hòa / lỗ của quyền chọn'],
+['time value','Option value above intrinsic value; decays with time.','giá trị thời gian'],
+['protective put','Long stock + long put: downside insurance.','chiến lược bảo hộ bằng quyền chọn bán'],
+['covered call','Long stock + short call: income, capped upside.','bán call có bảo đảm'],
+['contango / backwardation','Futures price above / below the spot price.','giá kỳ hạn cao hơn / thấp hơn giá giao ngay']
+],
+quiz:[
+{q:'A stock trades at $100. The risk-free rate is 5% and the stock pays no dividends. The one-year forward price is closest to:', opts:['$95.24','$100.00','$105.00'], ans:2,
+en:'C is correct. F0 = S0(1+r)^T = 100 × 1.05 = $105. The forward price compensates the short for carrying the asset — it is an arbitrage relationship, not a forecast of the future spot price.',
+vi:'Đáp án C. F0 = 100 × 1.05 = 105 USD. Giá forward bù đắp chi phí nắm giữ tài sản — đây là quan hệ arbitrage, không phải dự báo giá giao ngay tương lai.'},
+{q:'An investor buys a call with strike $50 for a premium of $4. At expiration the stock trades at $57. The investor’s profit is:', opts:['$3','$7','$11'], ans:0,
+en:'A is correct. Payoff = max(0, 57 − 50) = $7; profit = payoff − premium = 7 − 4 = $3.',
+vi:'Đáp án A. Payoff = max(0, 57 − 50) = 7; lợi nhuận = 7 − 4 = 3 USD.'},
+{q:'According to put–call parity, a synthetic long call position can be created by:', opts:['long put + long stock + borrowing the PV of the strike.','long put + long stock + lending the PV of the strike.','short put + long risk-free bond.'], ans:0,
+en:'A is correct. From c = p + S0 − X/(1+r)^T: buy the put, buy the stock, and borrow the present value of the strike (the negative bond term = borrowing).',
+vi:'Đáp án A. Từ c = p + S0 − X/(1+r)^T: mua put, mua cổ phiếu, và vay khoản bằng hiện giá của giá thực hiện (dấu trừ của trái phiếu = đi vay).'},
+{q:'Compared with forwards, futures contracts most likely have:', opts:['greater counterparty risk.','greater customization of contract terms.','daily settlement of gains and losses.'], ans:2,
+en:'C is correct. Futures are marked to market daily through a clearinghouse with margin requirements, which nearly eliminates counterparty risk (A wrong) at the cost of standardization (B wrong).',
+vi:'Đáp án C. Futures được hạch toán lãi/lỗ hằng ngày qua trung tâm thanh toán bù trừ với ký quỹ, gần như loại bỏ rủi ro đối tác (A sai) nhưng đổi lại là hợp đồng chuẩn hóa, không tùy chỉnh (B sai).'}
+]
+},
+/* ============ 09 ALTERNATIVES ============ */
+{
+id:'alts', num:'09', name:'Alternative Investments', vi:'Đầu tư thay thế', w:[7,10],
+blurb:'Private capital, real estate, infrastructure, natural resources, hedge funds and digital assets — structures, fees, performance and risk.',
+intro:{
+en:'Alternatives is a short, definition-heavy topic covering private equity/debt, real estate, infrastructure, natural resources (commodities, timber, farmland), hedge funds, and digital assets. The most testable calculations are hedge fund fees ("2 and 20", hurdle rates, high-water marks) and understanding why alternatives are hard to benchmark (illiquidity, appraisal-smoothed returns, survivorship bias).',
+vi:'Alternatives là chủ đề ngắn, nặng về định nghĩa: private equity/private debt, bất động sản, hạ tầng, tài nguyên (hàng hóa, rừng, đất nông nghiệp), hedge fund và tài sản số. Phần tính toán dễ ra thi nhất là phí hedge fund ("2 and 20", hurdle rate, high-water mark) và lý do alternatives khó đo lường hiệu quả (kém thanh khoản, lợi suất bị "làm mượt" do định giá thẩm định, survivorship bias).'
+},
+modules:[
+{ title:'Categories & Structures', sections:[
+{h:'The landscape', en:'<ul><li><strong>Private capital:</strong> private equity (leveraged buyouts, venture capital, growth equity) and private debt (direct lending, mezzanine, distressed). VC stages: seed → early → later → exit via IPO or trade sale. PE funds are closed-end limited partnerships: the <strong>GP</strong> manages, <strong>LPs</strong> commit capital drawn down over time; the <strong>J-curve</strong> describes early negative returns before exits generate gains.</li><li><strong>Real estate:</strong> direct ownership, private funds, and <strong>REITs</strong> (liquid, exchange-traded, income distributing). Returns from income + appreciation; appraisal-based indices smooth volatility and understate risk.</li><li><strong>Infrastructure:</strong> long-lived assets (toll roads, airports, utilities) — greenfield (build) vs brownfield (existing); stable, often inflation-linked cash flows.</li><li><strong>Natural resources:</strong> commodities (via futures — return = collateral yield + roll yield + spot change; contango hurts long roll returns, backwardation helps), plus farmland and timberland.</li><li><strong>Hedge funds:</strong> lightly regulated pooled vehicles using leverage, shorting, derivatives. Strategy families: equity (long/short, market neutral), event-driven (merger arbitrage, distressed), relative value, macro/CTA. Often have lock-ups, gates, and redemption notice periods.</li><li><strong>Digital assets:</strong> cryptocurrencies and tokens on distributed ledgers; high volatility, evolving regulation and custody risk.</li></ul>',
+vi:'<ul><li><strong>Vốn tư nhân:</strong> private equity (LBO, đầu tư mạo hiểm, growth equity) và private debt (cho vay trực tiếp, mezzanine, nợ khó khăn). Các vòng VC: seed → early → later → thoái vốn qua IPO hoặc bán cho đối tác. Quỹ PE là hợp danh hữu hạn đóng: <strong>GP</strong> quản lý, <strong>LP</strong> cam kết vốn được rút dần; <strong>đường cong chữ J</strong> mô tả lợi suất âm giai đoạn đầu trước khi các thương vụ thoái vốn tạo lãi.</li><li><strong>Bất động sản:</strong> sở hữu trực tiếp, quỹ tư nhân, và <strong>REITs</strong> (thanh khoản, niêm yết, chia thu nhập). Lợi nhuận = thu nhập + tăng giá; chỉ số theo định giá thẩm định làm mượt biến động, che giấu rủi ro.</li><li><strong>Hạ tầng:</strong> tài sản tuổi thọ dài (đường thu phí, sân bay, tiện ích) — greenfield (xây mới) vs brownfield (đang vận hành); dòng tiền ổn định, thường gắn lạm phát.</li><li><strong>Tài nguyên:</strong> hàng hóa (qua futures — lợi suất = lãi tài sản thế chấp + roll yield + thay đổi giá spot; contango bất lợi cho vị thế long khi đảo hợp đồng, backwardation có lợi), đất nông nghiệp, rừng.</li><li><strong>Hedge fund:</strong> quỹ ít bị quản lý, dùng đòn bẩy, bán khống, phái sinh. Nhóm chiến lược: cổ phiếu (long/short, trung lập thị trường), theo sự kiện (arbitrage sáp nhập, nợ khó khăn), giá trị tương đối, vĩ mô/CTA. Thường có lock-up, gate, thời hạn báo trước khi rút vốn.</li><li><strong>Tài sản số:</strong> tiền mã hóa và token trên sổ cái phân tán; biến động cao, quy định đang định hình, rủi ro lưu ký.</li></ul>'}
+]},
+{ title:'Fees & Performance', sections:[
+{h:'Hedge fund fee mechanics', en:'<p>Typical structure: a <strong>management fee</strong> (e.g., 2% of AUM) plus an <strong>incentive fee</strong> (e.g., 20% of profits). Variations that matter for calculations:</p><ul><li>Incentive fee on gross gains vs on gains <em>net of the management fee</em>.</li><li><strong>Hurdle rate:</strong> incentive fee applies only to returns above a threshold — <em>hard</em> hurdle (fee on excess over hurdle only) vs <em>soft</em> hurdle (fee on the whole gain once the hurdle is beaten).</li><li><strong>High-water mark:</strong> no incentive fee until the fund recovers past its previous peak NAV — prevents paying twice for the same gains.</li></ul><p>Performance measurement caveats: self-reported databases suffer <strong>survivorship and backfill bias</strong>; illiquid assets show <strong>smoothed returns</strong> → understated volatility and correlation → overstated Sharpe ratios. Alternatives are added to portfolios mainly for diversification and potentially higher returns from illiquidity premiums.</p>',
+vi:'<p>Cấu trúc điển hình: <strong>phí quản lý</strong> (VD 2% AUM) + <strong>phí thưởng</strong> (VD 20% lợi nhuận). Các biến thể quan trọng khi tính toán:</p><ul><li>Phí thưởng tính trên lãi gộp hay lãi <em>sau khi trừ phí quản lý</em>.</li><li><strong>Hurdle rate:</strong> phí thưởng chỉ áp cho phần vượt ngưỡng — <em>hard</em> hurdle (chỉ tính trên phần vượt) vs <em>soft</em> hurdle (vượt ngưỡng thì tính trên toàn bộ lãi).</li><li><strong>High-water mark:</strong> không thu phí thưởng cho tới khi NAV vượt đỉnh cũ — tránh trả phí hai lần cho cùng một khoản lãi.</li></ul><p>Lưu ý đo lường: cơ sở dữ liệu tự khai báo bị <strong>survivorship bias và backfill bias</strong>; tài sản kém thanh khoản có <strong>lợi suất bị làm mượt</strong> → biến động và tương quan bị đánh giá thấp → Sharpe ratio bị thổi phồng. Alternatives được đưa vào danh mục chủ yếu để đa dạng hóa và hưởng phần bù kém thanh khoản.</p>'}
+], formulas:[
+['Total HF fee (2&20, net)','Fee = 2%×AUM + 20%×max(0, gain − mgmt fee − hurdle)','Check the question wording carefully'],
+['Commodity futures return','Collateral yield + roll yield + spot price change','Roll yield > 0 in backwardation']
+]}
+],
+vocab:[
+['general partner (GP)','Manager of a private fund with unlimited liability.','thành viên hợp danh điều hành quỹ'],
+['limited partner (LP)','Investor in a private fund with liability limited to committed capital.','thành viên góp vốn hữu hạn'],
+['committed capital','Total amount LPs agree to provide over the fund’s life.','vốn cam kết'],
+['carried interest','GP’s share of fund profits (the incentive fee in private capital).','phần lợi nhuận chia cho GP'],
+['lock-up period','Time during which investors cannot redeem.','thời gian khóa vốn'],
+['high-water mark','Highest previous NAV that must be exceeded before new incentive fees.','mốc giá trị đỉnh cũ'],
+['hurdle rate','Minimum return before incentive fees apply.','ngưỡng lợi suất tối thiểu'],
+['J-curve','Pattern of early losses then later gains in PE funds.','đường cong chữ J'],
+['REIT','Real estate investment trust — listed, income-distributing property vehicle.','quỹ tín thác bất động sản'],
+['roll yield','Gain/loss from replacing expiring futures with longer-dated ones.','lợi suất đảo hợp đồng kỳ hạn']
+],
+quiz:[
+{q:'A hedge fund with $100 million in assets charges "2 and 20" with the incentive fee calculated net of the management fee and no hurdle. Gross return for the year is 15%. Total fees are closest to:', opts:['$4.6 million','$5.0 million','$5.6 million'], ans:0,
+en:'A is correct. Management fee = 2% × 100 = $2.0m. Gross gain = $15m; gain net of management fee = 15 − 2 = $13m. Incentive = 20% × 13 = $2.6m. Total = 2.0 + 2.6 = $4.6m.',
+vi:'Đáp án A. Phí quản lý = 2% × 100 = 2 triệu. Lãi gộp = 15 triệu; lãi sau phí quản lý = 13 triệu. Phí thưởng = 20% × 13 = 2.6 triệu. Tổng = 4.6 triệu USD.'},
+{q:'The primary purpose of a high-water mark provision is to:', opts:['guarantee investors a minimum return.','prevent the manager from earning incentive fees twice on the same gains.','reduce the management fee in loss years.'], ans:1,
+en:'B is correct. After a drawdown, incentive fees resume only once NAV exceeds its previous peak, so investors do not pay again for merely recovering earlier losses.',
+vi:'Đáp án B. Sau khi quỹ sụt giảm, phí thưởng chỉ được thu lại khi NAV vượt đỉnh cũ, nên nhà đầu tư không phải trả phí lần nữa chỉ vì quỹ phục hồi khoản lỗ trước đó.'},
+{q:'A long-only investor rolling commodity futures in a market in contango will most likely experience:', opts:['positive roll yield.','negative roll yield.','no roll yield.'], ans:1,
+en:'B is correct. In contango, longer-dated futures cost more than expiring ones; selling the cheap expiring contract and buying the expensive deferred contract produces a negative roll yield.',
+vi:'Đáp án B. Trong contango, hợp đồng kỳ hạn xa đắt hơn hợp đồng sắp đáo hạn; bán hợp đồng rẻ để mua hợp đồng đắt tạo ra roll yield âm.'},
+{q:'Appraisal-based valuation of private real estate most likely causes reported returns to exhibit:', opts:['overstated volatility.','understated volatility and correlations with other assets.','no systematic bias.'], ans:1,
+en:'B is correct. Appraisals adjust slowly and smooth reported values, so measured volatility and correlations are biased downward — making the asset class look like a better diversifier (and its Sharpe ratio look better) than it truly is.',
+vi:'Đáp án B. Định giá thẩm định điều chỉnh chậm và làm mượt giá trị, nên biến động và tương quan đo được bị thấp hơn thực tế — khiến lớp tài sản trông có vẻ đa dạng hóa tốt hơn (và Sharpe cao hơn) so với thực chất.'}
+]
+},
+/* ============ 10 PORTFOLIO MANAGEMENT ============ */
+{
+id:'pm', num:'10', name:'Portfolio Management', vi:'Quản lý danh mục đầu tư', w:[8,12],
+blurb:'Risk & return, diversification, the CAL/CML, CAPM & the SML, portfolio planning (IPS), risk management and behavioral biases.',
+intro:{
+en:'Portfolio Management ties the curriculum together: measuring risk and return, the mathematics of diversification, modern portfolio theory (efficient frontier, CML), the CAPM and the SML, building an Investment Policy Statement, and behavioral finance. The CML-vs-SML distinction and CAPM expected-return calculations are exam staples.',
+vi:'Portfolio Management kết nối toàn bộ chương trình: đo lường rủi ro – lợi nhuận, toán học của đa dạng hóa, lý thuyết danh mục hiện đại (đường biên hiệu quả, CML), mô hình CAPM và đường SML, xây dựng IPS, và tài chính hành vi. Phân biệt CML vs SML và tính lợi suất kỳ vọng theo CAPM là dạng bài "ruột" của đề thi.'
+},
+modules:[
+{ title:'Risk, Return & Diversification', sections:[
+{h:'Portfolio risk and the power of correlation', en:'<p>Portfolio expected return is the weighted average of asset returns — but portfolio <em>risk is less than</em> the weighted average of standard deviations whenever correlation ρ &lt; 1. For two assets:</p><p><strong>σ<sub>p</sub>² = w₁²σ₁² + w₂²σ₂² + 2w₁w₂ρσ₁σ₂</strong></p><p>The lower the correlation, the greater the diversification benefit; with ρ = −1, risk can be eliminated entirely. Diversification removes <strong>unsystematic (firm-specific) risk</strong>; <strong>systematic (market) risk</strong> remains. Because unsystematic risk can be diversified away for free, <em>markets only reward systematic risk</em> — the central message of the CAPM. Risk aversion shapes each investor’s optimal point: utility U = E(R) − ½Aσ² (A = risk aversion coefficient).</p>',
+vi:'<p>Lợi suất kỳ vọng danh mục là bình quân gia quyền lợi suất tài sản — nhưng <em>rủi ro danh mục nhỏ hơn</em> bình quân gia quyền độ lệch chuẩn khi tương quan ρ &lt; 1. Với hai tài sản:</p><p><strong>σ<sub>p</sub>² = w₁²σ₁² + w₂²σ₂² + 2w₁w₂ρσ₁σ₂</strong></p><p>Tương quan càng thấp, lợi ích đa dạng hóa càng lớn; ρ = −1 có thể triệt tiêu hoàn toàn rủi ro. Đa dạng hóa loại bỏ <strong>rủi ro phi hệ thống (đặc thù doanh nghiệp)</strong>; <strong>rủi ro hệ thống (thị trường)</strong> vẫn còn. Vì rủi ro phi hệ thống có thể loại bỏ miễn phí nên <em>thị trường chỉ trả công cho rủi ro hệ thống</em> — thông điệp trung tâm của CAPM. Mức e ngại rủi ro quyết định điểm tối ưu của mỗi nhà đầu tư: U = E(R) − ½Aσ².</p>'},
+{h:'Efficient frontier, CAL and CML', en:'<ul><li>The <strong>minimum-variance frontier</strong> plots the lowest-risk portfolio for each return level; the upper half is the <strong>efficient frontier</strong>.</li><li>Adding a risk-free asset creates the <strong>capital allocation line (CAL)</strong>; the best CAL is tangent to the efficient frontier at the <strong>optimal risky portfolio</strong>.</li><li>If all investors share the same expectations, that tangency portfolio is the <strong>market portfolio</strong> and the CAL becomes the <strong>capital market line (CML)</strong>: E(R<sub>p</sub>) = R<sub>f</sub> + σ<sub>p</sub> × [E(R<sub>m</sub>) − R<sub>f</sub>]/σ<sub>m</sub>. Points right of the market portfolio imply borrowing (leverage).</li><li><strong>CML vs SML:</strong> the CML uses <em>total risk (σ)</em> and holds only for efficient portfolios; the <strong>SML</strong> uses <em>systematic risk (β)</em> and applies to <em>every</em> asset and portfolio, fairly priced or not.</li></ul>',
+vi:'<ul><li><strong>Đường biên phương sai tối thiểu</strong> vẽ danh mục rủi ro thấp nhất cho từng mức lợi suất; nửa trên là <strong>đường biên hiệu quả</strong>.</li><li>Thêm tài sản phi rủi ro tạo ra <strong>đường phân bổ vốn (CAL)</strong>; CAL tốt nhất tiếp xúc đường biên hiệu quả tại <strong>danh mục rủi ro tối ưu</strong>.</li><li>Nếu mọi nhà đầu tư có cùng kỳ vọng, danh mục tiếp điểm là <strong>danh mục thị trường</strong> và CAL trở thành <strong>CML</strong>: E(R<sub>p</sub>) = R<sub>f</sub> + σ<sub>p</sub> × [E(R<sub>m</sub>) − R<sub>f</sub>]/σ<sub>m</sub>. Các điểm bên phải danh mục thị trường hàm ý đi vay (đòn bẩy).</li><li><strong>CML vs SML:</strong> CML dùng <em>tổng rủi ro (σ)</em> và chỉ đúng cho danh mục hiệu quả; <strong>SML</strong> dùng <em>rủi ro hệ thống (β)</em> và áp dụng cho <em>mọi</em> tài sản/danh mục, dù được định giá đúng hay sai.</li></ul>'}
+]},
+{ title:'CAPM, Performance Measures & the IPS', sections:[
+{h:'CAPM and the SML', en:'<p><strong>E(R<sub>i</sub>) = R<sub>f</sub> + β<sub>i</sub>[E(R<sub>m</sub>) − R<sub>f</sub>]</strong>. Beta = Cov(R<sub>i</sub>,R<sub>m</sub>)/σ<sub>m</sub>² measures sensitivity to market moves. Interpretation: if a security’s <em>forecast</em> return lies <strong>above the SML</strong>, it offers more than required for its beta → <strong>undervalued</strong> (buy); below the SML → overvalued. CAPM assumptions (frictionless markets, homogeneous expectations, all investors mean-variance optimizers) are unrealistic but produce a powerful, testable benchmark.</p><p><strong>Performance ratios:</strong></p><ul><li><strong>Sharpe</strong> = (R<sub>p</sub> − R<sub>f</sub>)/σ<sub>p</sub> — total risk; use when the portfolio is the investor’s whole wealth.</li><li><strong>Treynor</strong> = (R<sub>p</sub> − R<sub>f</sub>)/β<sub>p</sub> — systematic risk; for well-diversified portfolios.</li><li><strong>Jensen’s alpha</strong> = R<sub>p</sub> − [R<sub>f</sub> + β(R<sub>m</sub> − R<sub>f</sub>)] — return above the CAPM requirement.</li><li><strong>M²</strong> — Sharpe re-expressed in percentage terms versus the market.</li></ul>',
+vi:'<p><strong>E(R<sub>i</sub>) = R<sub>f</sub> + β<sub>i</sub>[E(R<sub>m</sub>) − R<sub>f</sub>]</strong>. Beta = Cov(R<sub>i</sub>,R<sub>m</sub>)/σ<sub>m</sub>² đo độ nhạy với biến động thị trường. Diễn giải: nếu lợi suất <em>dự báo</em> của chứng khoán nằm <strong>trên SML</strong> → được kỳ vọng cao hơn mức yêu cầu theo beta → <strong>đang bị định giá thấp</strong> (nên mua); dưới SML → định giá cao. Các giả định CAPM (thị trường không ma sát, kỳ vọng đồng nhất…) phi thực tế nhưng tạo ra chuẩn so sánh mạnh và kiểm định được.</p><p><strong>Chỉ số hiệu quả:</strong> Sharpe = (R<sub>p</sub> − R<sub>f</sub>)/σ<sub>p</sub> (tổng rủi ro — dùng khi danh mục là toàn bộ tài sản); Treynor = (R<sub>p</sub> − R<sub>f</sub>)/β<sub>p</sub> (rủi ro hệ thống — cho danh mục đã đa dạng hóa tốt); Jensen’s alpha = phần lợi suất vượt yêu cầu CAPM; M² = Sharpe quy về đơn vị %.</p>'},
+{h:'The Investment Policy Statement and behavioral biases', en:'<p>The <strong>IPS</strong> is the governing document of the client relationship. Objectives: <strong>risk</strong> (ability vs willingness to take risk — use the <em>lower</em> of the two) and <strong>return</strong>. Constraints — remember <strong>LLTTU</strong>: Liquidity, Legal/regulatory, Time horizon, Taxes, Unique circumstances. Strategic asset allocation implements the IPS; rebalancing keeps weights within corridors.</p><p><strong>Behavioral biases:</strong> cognitive <em>belief-perseverance</em> errors (conservatism, confirmation, representativeness, illusion of control, hindsight), <em>processing</em> errors (anchoring, mental accounting, framing, availability), and <strong>emotional biases</strong> (loss aversion, overconfidence, self-control, status quo, endowment, regret aversion). Cognitive errors are best corrected with information and education; emotional biases are usually <em>accommodated</em> rather than corrected. Market-wide effects: herding, bubbles, momentum.</p>',
+vi:'<p><strong>IPS</strong> là văn bản "hiến pháp" của quan hệ khách hàng. Mục tiêu: <strong>rủi ro</strong> (khả năng vs mức sẵn lòng chấp nhận rủi ro — lấy mức <em>thấp hơn</em>) và <strong>lợi nhuận</strong>. Ràng buộc — nhớ <strong>LLTTU</strong>: Thanh khoản, Pháp lý, Thời gian đầu tư, Thuế, Hoàn cảnh đặc thù. Phân bổ tài sản chiến lược hiện thực hóa IPS; tái cân bằng giữ tỷ trọng trong biên độ.</p><p><strong>Thiên lệch hành vi:</strong> lỗi nhận thức dạng <em>bám giữ niềm tin</em> (bảo thủ, thiên kiến xác nhận, đại diện, ảo tưởng kiểm soát, hồi tưởng), lỗi <em>xử lý thông tin</em> (neo, kế toán tâm lý, đóng khung, sẵn có), và <strong>thiên lệch cảm xúc</strong> (sợ thua lỗ, quá tự tin, thiếu tự chủ, giữ nguyên hiện trạng, sở hữu, sợ hối tiếc). Lỗi nhận thức sửa được bằng thông tin và giáo dục; thiên lệch cảm xúc thường phải <em>thích nghi</em> thay vì sửa. Hiệu ứng toàn thị trường: bầy đàn, bong bóng, momentum.</p>'}
+], formulas:[
+['CAPM / SML','E(Ri) = Rf + βi(E(Rm) − Rf)',''],
+['Beta','βi = Cov(Ri,Rm) / σm² = ρi,m σi/σm',''],
+['2-asset portfolio risk','σp² = w1²σ1² + w2²σ2² + 2w1w2ρσ1σ2',''],
+['Sharpe','(Rp − Rf)/σp','Total risk'],
+['Treynor','(Rp − Rf)/βp','Systematic risk'],
+['Jensen’s alpha','Rp − [Rf + β(Rm − Rf)]',''],
+['Utility','U = E(R) − 0.5·A·σ²','A = risk aversion coefficient']
+]}
+],
+vocab:[
+['systematic risk','Market-wide risk that diversification cannot remove.','rủi ro hệ thống'],
+['unsystematic risk','Firm-specific risk removable by diversification.','rủi ro phi hệ thống'],
+['beta','Sensitivity of an asset’s return to market returns.','hệ số beta'],
+['efficient frontier','Set of portfolios with maximum return per unit of risk.','đường biên hiệu quả'],
+['capital market line','CAL through the market portfolio; prices total risk of efficient portfolios.','đường thị trường vốn'],
+['security market line','CAPM relationship between beta and expected return for all assets.','đường thị trường chứng khoán'],
+['risk budgeting','Allocating a total risk limit across positions/strategies.','phân bổ ngân sách rủi ro'],
+['drawdown','Decline from a peak in portfolio value.','mức sụt giảm từ đỉnh'],
+['loss aversion','Feeling losses more strongly than equivalent gains.','tâm lý sợ thua lỗ'],
+['herding','Following the crowd’s trades regardless of one’s own analysis.','tâm lý bầy đàn'],
+['strategic asset allocation','Long-run target weights implementing the IPS.','phân bổ tài sản chiến lược'],
+['rebalancing','Restoring portfolio weights to targets.','tái cân bằng danh mục']
+],
+quiz:[
+{q:'The risk-free rate is 3%, the expected market return is 9%, and a stock’s beta is 1.5. According to the CAPM, the stock’s required return is closest to:', opts:['12.0%','13.5%','9.0%'], ans:0,
+en:'A is correct. E(R) = 3% + 1.5 × (9% − 3%) = 3% + 9% = 12%. A common error is multiplying beta by the market return (1.5 × 9% = 13.5%) instead of the market risk premium.',
+vi:'Đáp án A. E(R) = 3% + 1.5 × (9% − 3%) = 12%. Lỗi phổ biến là nhân beta với lợi suất thị trường (13.5%) thay vì với phần bù rủi ro thị trường.'},
+{q:'An analyst forecasts a return of 14% for a stock whose CAPM required return is 12%. The stock plots:', opts:['on the SML and is fairly valued.','above the SML and is undervalued.','below the SML and is overvalued.'], ans:1,
+en:'B is correct. A forecast return above the CAPM requirement means the stock offers more than compensation for its systematic risk — it plots above the SML and is undervalued (a buy).',
+vi:'Đáp án B. Lợi suất dự báo cao hơn mức yêu cầu theo CAPM nghĩa là cổ phiếu đem lại nhiều hơn mức bù đắp cho rủi ro hệ thống — nằm trên SML và đang bị định giá thấp (nên mua).'},
+{q:'Which risk measure is most appropriate for evaluating a portfolio that represents only a small, well-diversified part of an investor’s total wealth?', opts:['Sharpe ratio','Treynor ratio','Standard deviation'], ans:1,
+en:'B is correct. For a well-diversified component of wealth, only systematic risk matters, so the Treynor ratio (excess return per unit of beta) is appropriate. The Sharpe ratio, based on total risk, suits a portfolio that constitutes the investor’s entire wealth.',
+vi:'Đáp án B. Với một phần nhỏ, đã đa dạng hóa tốt của tổng tài sản, chỉ rủi ro hệ thống mới quan trọng, nên dùng Treynor (lợi suất vượt trội trên mỗi đơn vị beta). Sharpe dựa trên tổng rủi ro, phù hợp khi danh mục là toàn bộ tài sản.'},
+{q:'A client has a high ability to take risk but a low willingness to take risk. The adviser should most appropriately:', opts:['base the IPS on the client’s ability to take risk.','base the IPS on the lower of the two and seek to educate the client.','average the two into a moderate risk tolerance.'], ans:1,
+en:'B is correct. When ability and willingness conflict, the prudent approach is to adopt the lower level of risk in the IPS while educating the client — never simply override the client’s stated willingness.',
+vi:'Đáp án B. Khi khả năng và mức sẵn lòng mâu thuẫn, cách thận trọng là lấy mức rủi ro thấp hơn khi lập IPS và giáo dục khách hàng — không được tự ý bỏ qua mức sẵn lòng khách hàng đã nêu.'},
+{q:'Two assets have a correlation of +1.0. Combining them in a portfolio most likely provides:', opts:['no diversification benefit.','elimination of systematic risk.','a portfolio standard deviation below the weighted average of the two.'], ans:0,
+en:'A is correct. With perfect positive correlation, portfolio standard deviation equals exactly the weighted average of the assets’ standard deviations — no risk reduction. Diversification benefits appear only when ρ < 1.',
+vi:'Đáp án A. Với tương quan hoàn hảo dương, độ lệch chuẩn danh mục đúng bằng bình quân gia quyền độ lệch chuẩn hai tài sản — không giảm được rủi ro. Lợi ích đa dạng hóa chỉ xuất hiện khi ρ < 1.'}
+]
+}
+];
+
+/* =====================================================
+   RENDERER + APP LOGIC
+   ===================================================== */
+const MAXW = 20; // scale for weight bars
+const $ = s => document.querySelector(s);
+const content = $('#content');
+
+/* safe storage (works on GitHub Pages; degrades silently elsewhere) */
+const store = {
+  get(k){ try{ return JSON.parse(localStorage.getItem('cfa1_'+k)); }catch(e){ return null; } },
+  set(k,v){ try{ localStorage.setItem('cfa1_'+k, JSON.stringify(v)); }catch(e){} }
+};
+let progress = store.get('progress') || {}; // {topicId:{done:[moduleIdx], quiz:{qIdx:answerIdx}}}
+function saveProgress(){ store.set('progress', progress); }
+function tprog(t){
+  const p = progress[t.id]||{};
+  const doneMods = (p.done||[]).length, totMods = t.modules.length;
+  const quizDone = Object.keys(p.quiz||{}).length, totQ = t.quiz.length;
+  return {doneMods, totMods, quizDone, totQ};
+}
+
+/* ---------- sidebar ---------- */
+function renderNav(active){
+  let h = '<a class="tlink'+(active==='home'?' active':'')+'" href="#home"><div class="tl-top"><span class="tl-num">⌂</span><span class="tl-name">Home / Tổng quan</span></div></a>';
+  TOPICS.forEach(t=>{
+    const pr = tprog(t);
+    const pct = Math.round(((pr.doneMods/pr.totMods)*0.5 + (pr.quizDone/pr.totQ)*0.5)*100);
+    h += '<a class="tlink'+(active===t.id?' active':'')+'" href="#'+t.id+'">'+
+      '<div class="tl-top"><span class="tl-num">'+t.num+'</span><span class="tl-name">'+t.name+'</span><span class="tl-w">'+t.w[0]+'–'+t.w[1]+'%</span></div>'+
+      '<div class="tl-bar"><i style="width:'+(t.w[1]/MAXW*100)+'%"></i></div>'+
+      '<div class="tl-prog">'+(pct>0? pct+'% studied' : '')+'</div></a>';
+  });
+  $('#navlist').innerHTML = h;
+}
+
+/* ---------- VI toggle helper ---------- */
+function viBlock(vi, label){
+  if(!vi) return '';
+  return '<button class="vitoggle" onclick="toggleVi(this)" aria-expanded="false"><span class="car">▶</span> '+(label||'Xem tiếng Việt / Vietnamese')+'</button><div class="vi">'+vi+'</div>';
+}
+window.toggleVi = function(btn){
+  const box = btn.nextElementSibling;
+  const open = box.classList.toggle('show');
+  btn.classList.toggle('open', open);
+  btn.setAttribute('aria-expanded', open);
+};
+
+/* ---------- home page ---------- */
+function renderHome(){
+  let cards = TOPICS.map(t=>'<a class="tcard" href="#'+t.id+'"><div class="row"><h3>'+t.num+' · '+t.name+'</h3><span class="w">'+t.w[0]+'–'+t.w[1]+'%</span></div><p>'+t.blurb+'</p><div class="bar"><i style="width:'+(t.w[1]/MAXW*100)+'%"></i></div></a>').join('');
+  content.innerHTML =
+  '<div class="hero"><div class="eyebrow">CFA Program · Level 1</div>'+
+  '<h2>Learn it in English. Understand it in Vietnamese.</h2>'+
+  '<p class="lead">All ten Level 1 topics, distilled into study notes, key formulas, exam vocabulary and CFA-style practice questions. The exam is in English — so the material here is too. Tap any green button to reveal a Vietnamese explanation whenever you need it.</p>'+
+  '<div class="vi-inline">'+viBlock('<p>Toàn bộ 10 topic của Level 1 được cô đọng thành ghi chú học tập, công thức trọng tâm, từ vựng thi và câu hỏi luyện tập đúng phong cách CFA. Kỳ thi bằng tiếng Anh — nên tài liệu ở đây cũng bằng tiếng Anh. Bấm nút xanh bất kỳ để hiện giải thích tiếng Việt khi cần. Tiến độ học và kết quả làm bài của bạn được lưu ngay trên trình duyệt.</p>','Giới thiệu bằng tiếng Việt')+'</div>'+
+  '<div class="examfacts">'+
+  '<div class="fact"><b>180 questions</b><span>2 sessions × 90 questions, 2h15m each</span></div>'+
+  '<div class="fact"><b>3 options</b><span>Multiple choice A / B / C — no penalty for guessing</span></div>'+
+  '<div class="fact"><b>~300 hours</b><span>Typical recommended preparation time</span></div>'+
+  '<div class="fact"><b>Calculator</b><span>TI BA II Plus or HP 12C only</span></div>'+
+  '</div></div>'+
+  '<div class="topicgrid">'+cards+'</div>'+
+  '<div class="howto"><h3>How to use this site / Cách dùng</h3><ol>'+
+  '<li><strong>Read the English notes first</strong> — train your brain in the exam language. Open the Vietnamese blocks only when a concept does not click.</li>'+
+  '<li><strong>Learn the vocabulary tables</strong> — use the "Vocab: quiz me" button (sidebar) to blur the Vietnamese column and self-test.</li>'+
+  '<li><strong>Do every practice question</strong> and read both explanations. Wrong answers teach more than right ones.</li>'+
+  '<li><strong>Mark modules complete</strong> to track progress per topic in the sidebar.</li>'+
+  '<li>Suggested study order: Quant → FSA → Fixed Income → Equity → Corporate → Portfolio → Economics → Derivatives → Alternatives → <strong>Ethics last and again right before the exam</strong>.</li>'+
+  '</ol></div>'+
+  '<div class="footer">Independent study notes prepared for personal exam preparation. CFA® and Chartered Financial Analyst® are registered trademarks owned by CFA Institute. This site is not affiliated with, endorsed by, or connected to CFA Institute. Always study the official curriculum and Learning Ecosystem as your primary source.</div>';
+}
+
+/* ---------- topic page ---------- */
+function renderTopic(t){
+  const idx = TOPICS.indexOf(t);
+  let h = '<div class="thead"><div class="tnum">TOPIC '+t.num+' · EXAM WEIGHT '+t.w[0]+'–'+t.w[1]+'%</div><h2>'+t.name+'</h2><div class="viName">'+t.vi+'</div>'+
+    '<div class="weightline"><div class="bar"><i style="width:'+(t.w[1]/MAXW*100)+'%"></i></div><b>'+t.w[0]+'–'+t.w[1]+'% of the exam</b></div></div>';
+  h += '<div class="intro"><p>'+t.intro.en+'</p>'+viBlock('<p>'+t.intro.vi+'</p>')+'</div>';
+
+  t.modules.forEach((m,mi)=>{
+    h += '<div class="module"><div class="mhead"><span class="mnum">MODULE '+t.num+'.'+(mi+1)+'</span><h3>'+m.title+'</h3></div>';
+    m.sections.forEach(s=>{
+      h += '<div class="section"><h4>'+s.h+'</h4><div class="en">'+s.en+'</div>'+viBlock(s.vi)+'</div>';
+    });
+    if(m.formulas){
+      h += '<div class="fblock"><h4>Key formulas</h4>'+m.formulas.map(f=>'<div class="frow"><span class="fn">'+f[0]+'</span><span class="fx">'+f[1]+'</span>'+(f[2]?'<span class="fnote">'+f[2]+'</span>':'')+'</div>').join('')+'</div>';
+    }
+    const done = (progress[t.id]&&progress[t.id].done||[]).includes(mi);
+    h += '<button class="markdone'+(done?' done':'')+'" onclick="toggleDone(\''+t.id+'\','+mi+',this)">'+(done?'✓ Module completed':'○ Mark module complete')+'</button>';
+    h += '</div>';
+  });
+
+  h += '<div class="vocab"><h3>Vocabulary · Từ vựng chuyên ngành</h3><div class="hint">Tip: use "Vocab: quiz me" in the sidebar to blur the Vietnamese column and test yourself. Click a blurred cell to peek.</div><table class="vtab"><tr><th>Term</th><th>Definition (EN)</th><th class="viCol">Nghĩa (VI)</th></tr>'+
+    t.vocab.map(v=>'<tr><td class="term">'+v[0]+'</td><td>'+v[1]+'</td><td class="viM viCol" onclick="peek(this)">'+v[2]+'</td></tr>').join('')+'</table></div>';
+
+  h += '<div class="quiz"><h3>Practice Questions · Bài tập</h3><div class="hint">CFA format: three options, one correct. Answer, then read the explanation — in both languages if helpful.</div>';
+  t.quiz.forEach((q,qi)=>{
+    h += '<div class="qcard" id="q_'+t.id+'_'+qi+'"><div class="qnum">QUESTION '+(qi+1)+' OF '+t.quiz.length+'</div><div class="qtext">'+q.q+'</div>'+
+      q.opts.map((o,oi)=>'<button class="opt" onclick="answer(\''+t.id+'\','+qi+','+oi+')"><span class="ol">'+'ABC'[oi]+'.</span><span>'+o+'</span></button>').join('')+
+      '<div class="expl"><div class="verdict"></div><div class="etext">'+q.en+'</div>'+viBlock('<p>'+q.vi+'</p>','Giải thích tiếng Việt')+'</div></div>';
+  });
+  h += '<div id="score_'+t.id+'"></div></div>';
+
+  const prev = TOPICS[idx-1], next = TOPICS[idx+1];
+  h += '<div class="pagenav">'+
+    (prev?'<a href="#'+prev.id+'"><div class="lab">← Previous</div><div class="nm">'+prev.num+' · '+prev.name+'</div></a>':'<a href="#home"><div class="lab">← Back</div><div class="nm">Home</div></a>')+
+    (next?'<a class="next" href="#'+next.id+'"><div class="lab">Next →</div><div class="nm">'+next.num+' · '+next.name+'</div></a>':'<a class="next" href="#home"><div class="lab">Finished →</div><div class="nm">Back to overview</div></a>')+
+    '</div>';
+  h += '<div class="footer">CFA® is a registered trademark owned by CFA Institute. Independent study notes — not affiliated with CFA Institute.</div>';
+  content.innerHTML = h;
+  restoreQuiz(t);
+  if(document.body.classList.contains('showAllVi')) openAllVi();
+}
+
+/* ---------- interactions ---------- */
+window.peek = function(td){ if(document.body.classList.contains('hideViVocab')){ td.style.filter='none'; setTimeout(()=>td.style.filter='',2500);} };
+
+window.toggleDone = function(tid, mi, btn){
+  progress[tid] = progress[tid]||{done:[],quiz:{}};
+  const arr = progress[tid].done = progress[tid].done||[];
+  const i = arr.indexOf(mi);
+  if(i>=0){arr.splice(i,1); btn.classList.remove('done'); btn.textContent='○ Mark module complete';}
+  else{arr.push(mi); btn.classList.add('done'); btn.textContent='✓ Module completed';}
+  saveProgress(); renderNav(location.hash.replace('#','')||'home');
+};
+
+window.answer = function(tid, qi, oi){
+  const t = TOPICS.find(x=>x.id===tid); const q = t.quiz[qi];
+  const card = document.getElementById('q_'+tid+'_'+qi);
+  if(card.dataset.answered) return;
+  card.dataset.answered = '1';
+  const opts = card.querySelectorAll('.opt');
+  opts.forEach((b,bi)=>{ b.disabled=true;
+    if(bi===q.ans) b.classList.add('correct');
+    else if(bi===oi) b.classList.add('wrong');
+  });
+  const ex = card.querySelector('.expl'); ex.classList.add('show');
+  const v = ex.querySelector('.verdict');
+  if(oi===q.ans){ v.textContent='✓ Correct'; v.classList.add('ok'); }
+  else{ v.textContent='✗ Incorrect — the answer is '+'ABC'[q.ans]; v.classList.add('no'); }
+  progress[tid] = progress[tid]||{done:[],quiz:{}};
+  progress[tid].quiz = progress[tid].quiz||{};
+  progress[tid].quiz[qi] = oi;
+  saveProgress(); renderNav(tid); showScore(t);
+};
+
+function restoreQuiz(t){
+  const p = progress[t.id]; if(!p||!p.quiz) return;
+  Object.entries(p.quiz).forEach(([qi,oi])=>{
+    const q = t.quiz[qi]; const card = document.getElementById('q_'+t.id+'_'+qi);
+    if(!card) return; card.dataset.answered='1';
+    card.querySelectorAll('.opt').forEach((b,bi)=>{ b.disabled=true;
+      if(bi===q.ans) b.classList.add('correct'); else if(bi===+oi) b.classList.add('wrong');});
+    const ex = card.querySelector('.expl'); ex.classList.add('show');
+    const v = ex.querySelector('.verdict');
+    if(+oi===q.ans){v.textContent='✓ Correct';v.classList.add('ok');}
+    else{v.textContent='✗ Incorrect — the answer is '+'ABC'[q.ans];v.classList.add('no');}
+  });
+  showScore(t);
+}
+function showScore(t){
+  const p = progress[t.id]; if(!p||!p.quiz) return;
+  const answered = Object.keys(p.quiz).length;
+  if(answered < t.quiz.length) return;
+  const correct = Object.entries(p.quiz).filter(([qi,oi])=>t.quiz[qi].ans===+oi).length;
+  const el = document.getElementById('score_'+t.id);
+  if(el) el.innerHTML = '<div class="qscore">Score: '+correct+' / '+t.quiz.length+' ('+Math.round(correct/t.quiz.length*100)+'%) — '+(correct/t.quiz.length>=0.7?'exam-ready pace, keep going':'review the modules above and retry later')+'</div>';
+}
+
+/* ---------- global toggles ---------- */
+function openAllVi(){ document.querySelectorAll('.vi').forEach(x=>x.classList.add('show')); document.querySelectorAll('.vitoggle').forEach(b=>b.classList.add('open')); }
+function closeAllVi(){ document.querySelectorAll('.vi').forEach(x=>x.classList.remove('show')); document.querySelectorAll('.vitoggle').forEach(b=>b.classList.remove('open')); }
+$('#btnAllVi').addEventListener('click', function(){
+  const on = document.body.classList.toggle('showAllVi');
+  this.classList.toggle('on', on); this.textContent = on ? 'VI: shown' : 'VI: show all';
+  on ? openAllVi() : closeAllVi();
+});
+$('#btnVocabVi').addEventListener('click', function(){
+  const on = document.body.classList.toggle('hideViVocab');
+  this.classList.toggle('on', on); this.textContent = on ? 'Vocab: revealed on tap' : 'Vocab: quiz me';
+});
+
+/* ---------- router ---------- */
+function route(){
+  const id = location.hash.replace('#','') || 'home';
+  const t = TOPICS.find(x=>x.id===id);
+  renderNav(t?id:'home');
+  t ? renderTopic(t) : renderHome();
+  window.scrollTo(0,0);
+  $('#side').classList.remove('open');
+}
+window.addEventListener('hashchange', route);
+$('#btnMenu').addEventListener('click', ()=>$('#side').classList.toggle('open'));
+route();
+</script>
+</body>
+</html>
