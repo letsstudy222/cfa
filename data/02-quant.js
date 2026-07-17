@@ -8,7 +8,8 @@
    - topic.vocab[]     : [term, định nghĩa EN, nghĩa VI]
    - topic.quiz[]      : Practice Set A — {q, opts[3], ans(0-2), en, vi}
    - extra.checks[]    : mảng theo TỪNG module — câu "Quick check" sau lý thuyết
-   - extra.sets[]      : Practice Set B, C… (mỗi phần tử là 1 bộ câu hỏi)
+   - extra.sets[]      : Practice Set B, C… — Sets H–K là Question Bank 78 câu
+                         từ PDF, chia theo nhóm module, mỗi câu prefix [M#]
    Sửa nội dung trực tiếp trong file này; giữ đúng cú pháp JSON.
    ===================================================================== */
 window.CFA = window.CFA || { topics: [], extra: {}, mocktests: [] };
@@ -2175,6 +2176,884 @@ window.CFA.extra["quant"] = {
      "ans": 1,
      "en": "Stratified sampling guarantees each subgroup is represented in proportion, lowering sampling error versus simple random sampling — it underlies bond-index replication.",
      "vi": "Chọn mẫu phân tầng bảo đảm mỗi nhóm con có mặt đúng tỷ lệ, giảm sai số chọn mẫu so với ngẫu nhiên đơn — nền tảng của mô phỏng chỉ số trái phiếu."
+    }
+   ]
+  },
+  {
+   "name": "Set H — Question Bank: Rates, Returns & TVM (M1–M2)",
+   "qs": [
+    {
+     "q": "[M1] An individual can invest $19,000 today and receive $20,000 in one year's time. If her required rate of return is 5%, the rate of return on the investment is:",
+     "opts": [
+      "Less than the required rate of return",
+      "Equal to the required rate of return",
+      "Greater than the required rate of return"
+     ],
+     "ans": 2,
+     "en": "Return = 20,000/19,000 − 1 = 5.26% > 5% required. The investment clears the hurdle.",
+     "vi": "Lợi suất = 20.000/19.000 − 1 = 5,26% > mức yêu cầu 5%. Khoản đầu tư vượt ngưỡng."
+    },
+    {
+     "q": "[M1] Ten yearly returns: 2.2, 6.2, 8.9, 9.3, 10.5, 11.7, 12.3, 14.1, 15.3, 18.4 (%). The geometric mean return is closest to:",
+     "opts": [
+      "9.62%",
+      "10.80%",
+      "10.89%"
+     ],
+     "ans": 1,
+     "en": "Multiply all (1 + r): 1.022 × 1.062 × … × 1.184 = 2.7893; take the 10th root: 2.7893^(1/10) = 1.1080 → 10.80%. The arithmetic mean (10.89%) is always ≥ the geometric mean.",
+     "vi": "Nhân tất cả (1 + r): 1,022 × 1,062 × … × 1,184 = 2,7893; lấy căn bậc 10: 1,1080 → 10,80%. Trung bình cộng (10,89%) luôn ≥ trung bình nhân."
+    },
+    {
+     "q": "[M1] Over 16 months an investor earned 12%. The annualized return is closest to:",
+     "opts": [
+      "8.87%",
+      "9.00%",
+      "9.38%"
+     ],
+     "ans": 0,
+     "en": "Annualized = (1.12)^(12/16) − 1 = 1.12^0.75 − 1 = 8.87%. Compound over the fraction of a year, don't scale linearly.",
+     "vi": "Năm hóa = (1,12)^(12/16) − 1 = 1,12^0,75 − 1 = 8,87%. Lũy kế theo phần năm, không nhân chia tuyến tính."
+    },
+    {
+     "q": "[M1] Hedge fund: Year 1 begins $30m, returns 10%. Year 2 begins $40m, returns −5%. Year 3 begins $30m, returns −5%. The money-weighted return is closest to:",
+     "opts": [
+      "−1.523%",
+      "−0.749%",
+      "−0.524%"
+     ],
+     "ans": 2,
+     "en": "Rebuild the cash flows: end of Y1 the fund is worth 33 but Y2 begins at 40 → investor added 7. End of Y2 it is 38 but Y3 begins at 30 → investor withdrew 8. End of Y3: 30 × 0.95 = 28.5. Solve IRR of {t0: −30, t1: −7, t2: +8, t3: +28.5} → r ≈ −0.524% per year.",
+     "vi": "Dựng lại dòng tiền: cuối N1 quỹ đáng 33 nhưng N2 mở đầu 40 → nhà đầu tư nộp thêm 7. Cuối N2 là 38 nhưng N3 mở đầu 30 → rút 8. Cuối N3: 30 × 0,95 = 28,5. Giải IRR của {t0: −30, t1: −7, t2: +8, t3: +28,5} → r ≈ −0,524%/năm."
+    },
+    {
+     "q": "[M1] A pension fund must pay $10,000,000 in 15 years. If it earns 5% per year compounded semi-annually, the amount needed today is closest to:",
+     "opts": [
+      "$4,767,427",
+      "$4,810,171",
+      "$4,892,771"
+     ],
+     "ans": 0,
+     "en": "Semi-annual rate 2.5% over 30 periods: PV = 10,000,000/1.025³⁰ = 10,000,000/2.0976 = $4,767,427.",
+     "vi": "Lãi bán niên 2,5% qua 30 kỳ: PV = 10.000.000/1,025³⁰ = 10.000.000/2,0976 = $4.767.427."
+    },
+    {
+     "q": "[M1] Revenue will be 50% higher in four years. The compound annual growth rate is closest to:",
+     "opts": [
+      "10.7%",
+      "11.8%",
+      "12.5%"
+     ],
+     "ans": 0,
+     "en": "CAGR = 1.50^(1/4) − 1 = 10.67%. Dividing 50%/4 = 12.5% ignores compounding.",
+     "vi": "CAGR = 1,50^(1/4) − 1 = 10,67%. Chia 50%/4 = 12,5% là bỏ quên lũy kế."
+    },
+    {
+     "q": "[M1] CDs with equal maturity and risk yield 2.2%, 3.3%, and 4.4%. The opportunity cost of investing in CD 1 is closest to:",
+     "opts": [
+      "0.0%",
+      "1.1%",
+      "2.2%"
+     ],
+     "ans": 2,
+     "en": "Opportunity cost = the return given up by not choosing the best alternative: 4.4% − 2.2% = 2.2% forgone by picking CD 1 over CD 3.",
+     "vi": "Chi phí cơ hội = phần lợi suất từ bỏ khi không chọn phương án tốt nhất: 4,4% − 2,2% = 2,2% bị bỏ lỡ khi chọn CD 1 thay vì CD 3."
+    },
+    {
+     "q": "[M1] A savings account pays a stated 3% in year 1 and 5% in year 2, compounded quarterly. €90,000 deposited at the start grows by the end of year 2 to closest to:",
+     "opts": [
+      "€97,200",
+      "€97,335",
+      "€97,455"
+     ],
+     "ans": 2,
+     "en": "Year 1: ×(1 + 0.03/4)⁴ = ×1.03034 → €92,730. Year 2: ×(1 + 0.05/4)⁴ = ×1.05095 → €97,455. Quarterly compounding beats the simple 3%-then-5%.",
+     "vi": "Năm 1: ×(1 + 0,03/4)⁴ = ×1,03034 → €92.730. Năm 2: ×(1 + 0,05/4)⁴ = ×1,05095 → €97.455. Ghép lãi theo quý cao hơn mức 3% rồi 5% đơn thuần."
+    },
+    {
+     "q": "[M1] Term Deposit 1: 4% stated annual rate, quarterly compounding. The continuously compounded stated rate for Term Deposit 2 that makes the investor indifferent is closest to:",
+     "opts": [
+      "3.92%",
+      "3.98%",
+      "4.06%"
+     ],
+     "ans": 1,
+     "en": "Match effective annual returns: e^r = (1.01)⁴ = 1.04060 → r = ln(1.04060) = 3.98%. Continuous compounding needs a LOWER stated rate to deliver the same effective return.",
+     "vi": "Cân bằng lợi suất hiệu dụng năm: e^r = (1,01)⁴ = 1,04060 → r = ln(1,04060) = 3,98%. Ghép lãi liên tục cần lãi suất danh nghĩa THẤP hơn để cho cùng lợi suất hiệu dụng."
+    },
+    {
+     "q": "[M1] Equity/Fixed-income returns: Y1: 7.20%/2.10%; Y2: 9.60%/−4.60%; Y3: −14.20%/4.70%. With 70/30 weights rebalanced annually, the portfolio's annual geometric mean return is closest to:",
+     "opts": [
+      "0.60%",
+      "0.83%",
+      "1.82%"
+     ],
+     "ans": 0,
+     "en": "Yearly portfolio returns: Y1 = 0.7(7.2) + 0.3(2.1) = 5.67%; Y2 = 0.7(9.6) + 0.3(−4.6) = 5.34%; Y3 = 0.7(−14.2) + 0.3(4.7) = −8.53%. Geometric mean = (1.0567 × 1.0534 × 0.9147)^(1/3) − 1 = 0.60%.",
+     "vi": "Lợi suất danh mục từng năm: N1 = 0,7(7,2) + 0,3(2,1) = 5,67%; N2 = 0,7(9,6) + 0,3(−4,6) = 5,34%; N3 = 0,7(−14,2) + 0,3(4,7) = −8,53%. Trung bình nhân = (1,0567 × 1,0534 × 0,9147)^(1/3) − 1 = 0,60%."
+    },
+    {
+     "q": "[M1] A stock bought for $450 is sold right after a $2 dividend. If the holding period return is −10.2%, the sale price is closest to:",
+     "opts": [
+      "$402",
+      "$404",
+      "$406"
+     ],
+     "ans": 0,
+     "en": "HPR = (P₁ + D − P₀)/P₀ → P₁ = 450 × (1 − 0.102) − 2 = 404.10 − 2 = $402.10.",
+     "vi": "HPR = (P₁ + D − P₀)/P₀ → P₁ = 450 × (1 − 0,102) − 2 = 404,10 − 2 = $402,10."
+    },
+    {
+     "q": "[M1] Buy at $100, receive a $7 dividend, sell at $107. The holding period return is closest to:",
+     "opts": [
+      "0%",
+      "7%",
+      "14%"
+     ],
+     "ans": 2,
+     "en": "HPR = (107 + 7 − 100)/100 = 14%. Both the price gain and the dividend count.",
+     "vi": "HPR = (107 + 7 − 100)/100 = 14%. Cả lãi giá lẫn cổ tức đều được tính."
+    },
+    {
+     "q": "[M1] Which statement about the money-weighted return is most accurate?",
+     "opts": [
+      "It ignores cash withdrawals and additional investments",
+      "It measures what the investor actually earned on the funds invested",
+      "It should be used to compare different investment managers"
+     ],
+     "ans": 1,
+     "en": "MWR is an IRR on the investor's own cash flows — it captures what those funds actually earned. Because deposit/withdrawal timing distorts it, manager comparisons use the time-weighted return instead.",
+     "vi": "MWR là IRR trên dòng tiền của chính nhà đầu tư — đo đúng số tiền đó thực sự sinh lời bao nhiêu. Vì thời điểm nộp/rút bóp méo kết quả, so sánh nhà quản lý phải dùng time-weighted return."
+    },
+    {
+     "q": "[M1] Which risk premium compensates for the risk of loss relative to fair value if the investment must be converted to cash quickly?",
+     "opts": [
+      "Liquidity premium",
+      "Inflation premium",
+      "Maturity premium"
+     ],
+     "ans": 0,
+     "en": "That is the definition of the liquidity premium — compensation for potentially selling below fair value in a thin market.",
+     "vi": "Đó chính là định nghĩa của liquidity premium — phần bù cho khả năng phải bán dưới giá hợp lý trong thị trường mỏng."
+    },
+    {
+     "q": "[M1] With respect to portfolio return measures, which statement is most accurate?",
+     "opts": [
+      "The time-weighted return is sensitive to additions and withdrawals of funds",
+      "The money-weighted return and IRR calculations are similar",
+      "The money-weighted return is preferred for evaluating portfolio managers"
+     ],
+     "ans": 1,
+     "en": "The MWR IS an IRR applied to portfolio cash flows. TWR is designed to be immune to flows, which is exactly why it — not MWR — evaluates managers.",
+     "vi": "MWR CHÍNH LÀ IRR áp lên dòng tiền danh mục. TWR được thiết kế miễn nhiễm với dòng nộp/rút — vì thế nó, chứ không phải MWR, dùng đánh giá nhà quản lý."
+    },
+    {
+     "q": "[M2] Option 1: $136,000 today. Option 2: 30 annual payments of $12,000 starting in one year. Option 3: 20 annual payments of $13,000 starting today. At 8%, the highest-PV option is:",
+     "opts": [
+      "Option 1",
+      "Option 2",
+      "Option 3"
+     ],
+     "ans": 2,
+     "en": "Option 2 (ordinary annuity): 12,000 × [1 − 1.08⁻³⁰]/0.08 = $135,093. Option 3 (annuity due): 13,000 × [1 − 1.08⁻²⁰]/0.08 × 1.08 = $137,847. Option 3 > Option 1 ($136,000) > Option 2.",
+     "vi": "Phương án 2 (niên kim thường): 12.000 × [1 − 1,08⁻³⁰]/0,08 = $135.093. Phương án 3 (niên kim đầu kỳ): 13.000 × [1 − 1,08⁻²⁰]/0,08 × 1,08 = $137.847. PA3 > PA1 ($136.000) > PA2."
+    },
+    {
+     "q": "[M2] Four annual tuition fees of $50,000, payable at the beginning of each year, starting 10 years from today. At 3%, the amount required today is closest to:",
+     "opts": [
+      "$138,294",
+      "$142,442",
+      "$146,716"
+     ],
+     "ans": 1,
+     "en": "Payments at t = 10, 11, 12, 13. Value at t = 9 as an ordinary annuity: 50,000 × [1 − 1.03⁻⁴]/0.03 = 185,855. Discount 9 years: 185,855/1.03⁹ = $142,442.",
+     "vi": "Các khoản chi tại t = 10, 11, 12, 13. Giá trị tại t = 9 theo niên kim thường: 50.000 × [1 − 1,03⁻⁴]/0,03 = 185.855. Chiết khấu 9 năm: 185.855/1,03⁹ = $142.442."
+    },
+    {
+     "q": "[M2] An investment needs 10 equal annual payments starting today and pays $500,000 fifteen years from today. At 4%, the required annual payment is closest to:",
+     "opts": [
+      "$32,913",
+      "$34,230",
+      "$40,044"
+     ],
+     "ans": 0,
+     "en": "PV of the payout: 500,000/1.04¹⁵ = 277,632. Set equal to an annuity due: X × [1 − 1.04⁻¹⁰]/0.04 × 1.04 = X × 8.4353 → X = 277,632/8.4353 = $32,913.",
+     "vi": "PV của khoản nhận: 500.000/1,04¹⁵ = 277.632. Cho bằng niên kim đầu kỳ: X × [1 − 1,04⁻¹⁰]/0,04 × 1,04 = X × 8,4353 → X = 277.632/8,4353 = $32.913."
+    },
+    {
+     "q": "[M2] $1,000 annually for five years, first payment three years from today. At 6%, the present value today is closest to:",
+     "opts": [
+      "$3,537",
+      "$3,749",
+      "$4,212"
+     ],
+     "ans": 1,
+     "en": "An ordinary annuity with the first payment at t = 3 is valued one period earlier, at t = 2: 1,000 × [1 − 1.06⁻⁵]/0.06 = 4,212.36. Discount two more years: 4,212.36/1.06² = $3,749.",
+     "vi": "Niên kim thường với khoản đầu tại t = 3 được định giá lùi một kỳ, tại t = 2: 1.000 × [1 − 1,06⁻⁵]/0,06 = 4.212,36. Chiết khấu thêm hai năm: 4.212,36/1,06² = $3.749."
+    }
+   ]
+  },
+  {
+   "name": "Set I — Question Bank: Statistics, Probability & Portfolio Math (M3–M5)",
+   "qs": [
+    {
+     "q": "[M3] A continuous distribution's left tail is longer than its right tail. The distribution has:",
+     "opts": [
+      "Leptokurtosis",
+      "Positive skewness",
+      "Negative skewness"
+     ],
+     "ans": 2,
+     "en": "A longer LEFT tail = negative (left) skew: extreme losses stretch the distribution leftward. Kurtosis is about tail thickness, not asymmetry.",
+     "vi": "Đuôi TRÁI dài hơn = lệch âm (lệch trái): các khoản lỗ cực đoan kéo phân phối về bên trái. Kurtosis nói về độ dày đuôi, không phải độ bất đối xứng."
+    },
+    {
+     "q": "[M3] Sample returns: −2%, −1%, 1%, 2%. The mean absolute deviation is:",
+     "opts": [
+      "Less than the sample standard deviation",
+      "Equal to the sample standard deviation",
+      "Greater than the sample standard deviation"
+     ],
+     "ans": 0,
+     "en": "Mean = 0. MAD = (2 + 1 + 1 + 2)/4 = 1.5%. Sample s = √[(4 + 1 + 1 + 4)/3] = √3.33 = 1.83%. MAD ≤ s in general — squaring weights large deviations more heavily.",
+     "vi": "Trung bình = 0. MAD = (2 + 1 + 1 + 2)/4 = 1,5%. Độ lệch chuẩn mẫu = √[(4 + 1 + 1 + 4)/3] = 1,83%. MAD ≤ s nói chung — bình phương đánh trọng số nặng hơn cho các sai lệch lớn."
+    },
+    {
+     "q": "[M3] Seven fund returns: 12%, 7%, 5%, 4%, 8%, 3%, 3%. The second quartile return is:",
+     "opts": [
+      "4%",
+      "5%",
+      "6%"
+     ],
+     "ans": 1,
+     "en": "Q2 = the median. Sorted: 3, 3, 4, 5, 7, 8, 12 → the 4th of 7 values = 5%.",
+     "vi": "Q2 = trung vị. Sắp xếp: 3, 3, 4, 5, 7, 8, 12 → giá trị thứ 4 trong 7 = 5%."
+    },
+    {
+     "q": "[M3] EPS of four companies: −£0.50, £0.50, £2.50, £5.50. The 50th percentile is closest to:",
+     "opts": [
+      "£1.50",
+      "£2.00",
+      "£2.50"
+     ],
+     "ans": 0,
+     "en": "With an even count, the median is the average of the two middle values: (0.50 + 2.50)/2 = £1.50.",
+     "vi": "Với số quan sát chẵn, trung vị là trung bình của hai giá trị giữa: (0,50 + 2,50)/2 = £1,50."
+    },
+    {
+     "q": "[M3] Q1 = 11, Q2 = 62, Q3 = 93, Q4 = 359. The interquartile range equals:",
+     "opts": [
+      "31",
+      "82",
+      "348"
+     ],
+     "ans": 1,
+     "en": "IQR = Q3 − Q1 = 93 − 11 = 82 — the span of the middle 50% of the data.",
+     "vi": "IQR = Q3 − Q1 = 93 − 11 = 82 — độ trải của 50% dữ liệu ở giữa."
+    },
+    {
+     "q": "[M3] Which measure best quantifies risk per unit of mean return?",
+     "opts": [
+      "Sharpe ratio",
+      "Standard deviation",
+      "Coefficient of variation"
+     ],
+     "ans": 2,
+     "en": "CV = σ/mean: risk PER unit of return. The Sharpe ratio is the inverse concept — excess return per unit of risk.",
+     "vi": "CV = σ/trung bình: rủi ro TRÊN mỗi đơn vị lợi suất. Sharpe là khái niệm ngược — lợi suất vượt trội trên mỗi đơn vị rủi ro."
+    },
+    {
+     "q": "[M3] Discarding the lowest and highest 2.5% of values and averaging the remaining 95% produces a:",
+     "opts": [
+      "Trimmed mean",
+      "Harmonic mean",
+      "Winsorized mean"
+     ],
+     "ans": 0,
+     "en": "Trimming DELETES the tails. Winsorizing would instead REPLACE tail values with the cutoff values and keep all observations.",
+     "vi": "Trimmed là XÓA phần đuôi. Winsorized thì THAY các giá trị đuôi bằng giá trị ngưỡng và giữ đủ số quan sát."
+    },
+    {
+     "q": "[M3] Ranked ascending, the 19th observation in a sample of 75 lies in the second:",
+     "opts": [
+      "Decile",
+      "Quintile",
+      "Quartile"
+     ],
+     "ans": 1,
+     "en": "Location of the 25th percentile: L = (75 + 1) × 0.25 = 19 — so observation 19 marks the TOP of the first quartile. Quintile boundaries sit at L = 15.2 and 30.4, so #19 falls inside the second quintile (20%–40% band). Second decile ends at L = 15.2, so it's not that either.",
+     "vi": "Vị trí phân vị 25: L = (75 + 1) × 0,25 = 19 — quan sát 19 nằm ĐÚNG ranh giới trên của tứ phân vị thứ nhất. Ranh giới ngũ phân vị tại L = 15,2 và 30,4, nên #19 nằm trong ngũ phân vị thứ hai (dải 20%–40%). Thập phân vị thứ hai kết thúc tại L = 15,2 nên cũng không phải."
+    },
+    {
+     "q": "[M3] In a negatively skewed unimodal distribution, the highest value belongs to the:",
+     "opts": [
+      "Mean",
+      "Mode",
+      "Median"
+     ],
+     "ans": 1,
+     "en": "Negative skew ordering: mean < median < mode. The long left tail drags the mean down the most; the mode stays at the peak.",
+     "vi": "Thứ tự khi lệch âm: mean < median < mode. Đuôi trái dài kéo mean xuống mạnh nhất; mode đứng ở đỉnh."
+    },
+    {
+     "q": "[M3] For a continuous positively skewed unimodal distribution:",
+     "opts": [
+      "Both the mode and the median are less than the mean",
+      "Both the mode and the median are greater than the mean",
+      "The mode is less than the mean and the median is greater than the mean"
+     ],
+     "ans": 0,
+     "en": "Positive skew: mode < median < mean — the long right tail pulls the mean upward past both.",
+     "vi": "Lệch dương: mode < median < mean — đuôi phải dài kéo mean vượt lên trên cả hai."
+    },
+    {
+     "q": "[M3] Mean return 1.0%, standard deviation 2.7%, minimum target return 1.0%. The sample target semideviation is:",
+     "opts": [
+      "Less than 2.7%",
+      "Equal to 2.7%",
+      "Greater than 2.7%"
+     ],
+     "ans": 0,
+     "en": "Target semideviation sums squared shortfalls ONLY for observations below the target, yet divides by the same n − 1. Dropping the above-target terms makes the sum smaller → semideviation < full standard deviation.",
+     "vi": "Target semideviation chỉ cộng bình phương phần hụt của các quan sát DƯỚI mục tiêu, nhưng vẫn chia cho cùng n − 1. Bỏ các số hạng trên mục tiêu làm tổng nhỏ đi → semideviation < độ lệch chuẩn đầy đủ."
+    },
+    {
+     "q": "[M3] Correlation between two variables measures:",
+     "opts": [
+      "Only their linear relationship",
+      "Only their non-linear relationship",
+      "Both linear and non-linear relationships"
+     ],
+     "ans": 0,
+     "en": "Correlation captures LINEAR association only — a perfect curve (e.g. y = x²) can show near-zero correlation. Always plot the data.",
+     "vi": "Tương quan chỉ bắt quan hệ TUYẾN TÍNH — một đường cong hoàn hảo (như y = x²) có thể cho tương quan gần 0. Luôn vẽ dữ liệu ra xem."
+    },
+    {
+     "q": "[M3] Five annual returns: −23%, 20%, 3%, 13%, −1%. With a 6% target, the target downside deviation is closest to:",
+     "opts": [
+      "12%",
+      "13%",
+      "15%"
+     ],
+     "ans": 2,
+     "en": "Below-target years: −23 (shortfall 29), 3 (shortfall 3), −1 (shortfall 7). Sum of squares = 841 + 9 + 49 = 899. Divide by n − 1 = 4 → 224.75; √224.75 = 14.99% ≈ 15%.",
+     "vi": "Các năm dưới mục tiêu: −23 (hụt 29), 3 (hụt 3), −1 (hụt 7). Tổng bình phương = 841 + 9 + 49 = 899. Chia n − 1 = 4 → 224,75; √224,75 = 14,99% ≈ 15%."
+    },
+    {
+     "q": "[M3] The coefficient of variation of monthly returns is the ratio of the:",
+     "opts": [
+      "Standard deviation of returns to the mean return",
+      "Mean excess return to the standard deviation",
+      "Standard deviation of returns to the mean excess return"
+     ],
+     "ans": 0,
+     "en": "CV = σ/mean — plain mean, no risk-free adjustment. Option B describes the Sharpe ratio.",
+     "vi": "CV = σ/trung bình — trung bình thường, không trừ lãi phi rủi ro. Phương án B mô tả Sharpe ratio."
+    },
+    {
+     "q": "[M4] X takes 35, 50, 80 with probabilities 0.20, 0.30, 0.50. The standard deviation of X is closest to:",
+     "opts": [
+      "18.73",
+      "20.00",
+      "22.91"
+     ],
+     "ans": 0,
+     "en": "E(X) = 0.2(35) + 0.3(50) + 0.5(80) = 62. Var = 0.2(35−62)² + 0.3(50−62)² + 0.5(80−62)² = 145.8 + 43.2 + 162 = 351 → σ = √351 = 18.73.",
+     "vi": "E(X) = 0,2(35) + 0,3(50) + 0,5(80) = 62. Var = 0,2(35−62)² + 0,3(50−62)² + 0,5(80−62)² = 145,8 + 43,2 + 162 = 351 → σ = √351 = 18,73."
+    },
+    {
+     "q": "[M4] Future EPS is $2.00, $2.20, or $2.40, equally likely. The variance (in $²) is closest to:",
+     "opts": [
+      "0.03",
+      "0.16",
+      "0.20"
+     ],
+     "ans": 0,
+     "en": "Mean = 2.20. Var = [(−0.20)² + 0² + (0.20)²]/3 = 0.08/3 = 0.0267 ≈ 0.03. Probability-weighted — divide by 3, not 2, since these are probabilities, not a sample.",
+     "vi": "Trung bình = 2,20. Var = [(−0,20)² + 0² + (0,20)²]/3 = 0,08/3 = 0,0267 ≈ 0,03. Trọng số theo xác suất — chia 3 chứ không phải 2, vì đây là phân phối xác suất, không phải mẫu."
+    },
+    {
+     "q": "[M4] Favorable scenario (p = 0.60): dividend $2.00 with 0.80, $1.50 with 0.20. The expected dividend GIVEN the favorable scenario is closest to:",
+     "opts": [
+      "$1.14",
+      "$1.37",
+      "$1.90"
+     ],
+     "ans": 2,
+     "en": "Conditional expectation uses only that branch: 0.80(2.00) + 0.20(1.50) = 1.60 + 0.30 = $1.90. The 0.60 scenario probability would only enter an UNCONDITIONAL expectation.",
+     "vi": "Kỳ vọng có điều kiện chỉ dùng nhánh đó: 0,80(2,00) + 0,20(1,50) = 1,60 + 0,30 = $1,90. Xác suất kịch bản 0,60 chỉ xuất hiện khi tính kỳ vọng KHÔNG điều kiện."
+    },
+    {
+     "q": "[M4] To calculate the expected portfolio return IN a bearish scenario, the most appropriate tool is:",
+     "opts": [
+      "The multiplication rule",
+      "Conditional expected values",
+      "The total probability rule for expected value"
+     ],
+     "ans": 1,
+     "en": "“Expected return given the bearish scenario” is by definition a conditional expectation. The total probability rule would combine ALL scenarios into the unconditional mean.",
+     "vi": "“Lợi suất kỳ vọng trong kịch bản giảm giá” theo định nghĩa là kỳ vọng có điều kiện. Quy tắc xác suất toàn phần dùng để gộp MỌI kịch bản thành kỳ vọng không điều kiện."
+    },
+    {
+     "q": "[M5] Joint probabilities: (R_C = −15%, R_P = −10%) = 0.6; (R_C = 30%, R_P = 25%) = 0.4. The covariance between portfolio and currency returns is closest to:",
+     "opts": [
+      "294",
+      "378",
+      "819"
+     ],
+     "ans": 1,
+     "en": "E(R_C) = 0.6(−15) + 0.4(30) = 3; E(R_P) = 0.6(−10) + 0.4(25) = 4. Cov = 0.6(−15−3)(−10−4) + 0.4(30−3)(25−4) = 0.6(252) + 0.4(567) = 151.2 + 226.8 = 378 %².",
+     "vi": "E(R_C) = 0,6(−15) + 0,4(30) = 3; E(R_P) = 0,6(−10) + 0,4(25) = 4. Cov = 0,6(−18)(−14) + 0,4(27)(21) = 151,2 + 226,8 = 378 %²."
+    },
+    {
+     "q": "[M5] A portfolio's safety-first ratio and coefficient of variation both equal 1.2. The return threshold R_L is:",
+     "opts": [
+      "Negative",
+      "Zero",
+      "Positive"
+     ],
+     "ans": 0,
+     "en": "CV = σ/E(R) = 1.2 → σ = 1.2E(R). SFRatio = [E(R) − R_L]/σ = 1.2 → E(R) − R_L = 1.2σ = 1.44E(R) → R_L = −0.44E(R) < 0 for a positive expected return.",
+     "vi": "CV = σ/E(R) = 1,2 → σ = 1,2E(R). SFRatio = [E(R) − R_L]/σ = 1,2 → E(R) − R_L = 1,2σ = 1,44E(R) → R_L = −0,44E(R) < 0 khi lợi suất kỳ vọng dương."
+    },
+    {
+     "q": "[M5] Two securities have correlation 0.5 and each has a return standard deviation of 9%. Their covariance (in %²) is closest to:",
+     "opts": [
+      "20.3",
+      "40.5",
+      "61.7"
+     ],
+     "ans": 1,
+     "en": "Cov = ρ × σ₁ × σ₂ = 0.5 × 9 × 9 = 40.5 %².",
+     "vi": "Cov = ρ × σ₁ × σ₂ = 0,5 × 9 × 9 = 40,5 %²."
+    },
+    {
+     "q": "[M5] If two assets' returns exhibit perfect positive correlation, the two-asset portfolio's standard deviation is:",
+     "opts": [
+      "Less than the weighted average standard deviation",
+      "Equal to the weighted average standard deviation",
+      "Greater than the weighted average standard deviation"
+     ],
+     "ans": 1,
+     "en": "With ρ = +1 there is zero diversification benefit: σp collapses to exactly w₁σ₁ + w₂σ₂. Any ρ < 1 pulls σp below the weighted average.",
+     "vi": "Với ρ = +1 không có lợi ích đa dạng hóa: σp thu về đúng w₁σ₁ + w₂σ₂. Bất kỳ ρ < 1 nào cũng kéo σp xuống dưới bình quân gia quyền."
+    }
+   ]
+  },
+  {
+   "name": "Set J — Question Bank: Simulation, Sampling & Hypothesis Testing (M6–M8)",
+   "qs": [
+    {
+     "q": "[M6] Bootstrap resampling:",
+     "opts": [
+      "Repeatedly draws samples without replacement",
+      "Can be used to estimate the standard error of a population median",
+      "Relies on an analytical formula to estimate the distribution of estimators"
+     ],
+     "ans": 1,
+     "en": "Bootstrap draws WITH replacement and builds the estimator's distribution empirically — no formula needed. Its strength is exactly statistics with no analytical standard error, like the median.",
+     "vi": "Bootstrap rút mẫu CÓ hoàn lại và dựng phân phối của ước lượng bằng thực nghiệm — không cần công thức. Sức mạnh của nó chính là các thống kê không có công thức sai số chuẩn giải tích, như trung vị."
+    },
+    {
+     "q": "[M6] Y = exp(X) is lognormally distributed, where X is normal. The distribution of Y:",
+     "opts": [
+      "Is skewed to the left",
+      "Is often used to model stock prices",
+      "Has a mean equal to exp(μ), where μ is the mean of X"
+     ],
+     "ans": 1,
+     "en": "Lognormal is right-skewed and bounded below by zero — perfect for prices, which can't go negative. Its mean is exp(μ + σ²/2), not exp(μ).",
+     "vi": "Lognormal lệch phải và bị chặn dưới tại 0 — hợp để mô hình hóa giá cổ phiếu vốn không thể âm. Trung bình của nó là exp(μ + σ²/2), không phải exp(μ)."
+    },
+    {
+     "q": "[M6] The lognormal distribution is:",
+     "opts": [
+      "Negatively skewed",
+      "Bounded below by zero",
+      "Widely used for modeling the probability distribution of asset returns"
+     ],
+     "ans": 1,
+     "en": "Lognormal values are always positive (bounded below by zero) and positively skewed. Convention: lognormal for PRICES, normal for (log) RETURNS — returns can be negative.",
+     "vi": "Giá trị lognormal luôn dương (chặn dưới tại 0) và lệch dương. Quy ước: lognormal cho GIÁ, normal cho LỢI SUẤT (log) — vì lợi suất có thể âm."
+    },
+    {
+     "q": "[M6] Both the normal and the lognormal distribution:",
+     "opts": [
+      "Are symmetrical",
+      "Are completely described by two parameters",
+      "Have outcomes spanning all real numbers from −∞ to +∞"
+     ],
+     "ans": 1,
+     "en": "Both are pinned down by μ and σ (the lognormal by the parameters of its underlying normal). Only the normal is symmetric and spans the whole real line.",
+     "vi": "Cả hai được xác định trọn vẹn bởi μ và σ (lognormal theo tham số của phân phối normal nền). Chỉ normal mới đối xứng và trải khắp trục số thực."
+    },
+    {
+     "q": "[M7] Interviewing a simple random sample of ten consumers from three randomly selected cities exemplifies:",
+     "opts": [
+      "Cluster sampling",
+      "Systematic sampling",
+      "Stratified random sampling"
+     ],
+     "ans": 0,
+     "en": "Cities are randomly chosen clusters, then units are sampled within them — two-stage cluster sampling. Stratified sampling would draw from EVERY city (stratum), not just three.",
+     "vi": "Các thành phố là cụm được chọn ngẫu nhiên, rồi lấy mẫu bên trong — cluster sampling hai giai đoạn. Stratified phải rút từ MỌI thành phố (tầng), không phải chỉ ba."
+    },
+    {
+     "q": "[M7] The central limit theorem states the sampling distribution of the sample mean is approximately normal for large samples:",
+     "opts": [
+      "If the population distribution is normal",
+      "If the population distribution is symmetrical",
+      "For populations described by any probability distribution"
+     ],
+     "ans": 2,
+     "en": "The power of the CLT is precisely that it needs NO distributional assumption about the population (finite variance suffices) — normality of the mean emerges for large n regardless.",
+     "vi": "Sức mạnh của CLT nằm đúng ở chỗ KHÔNG cần giả định gì về phân phối tổng thể (chỉ cần phương sai hữu hạn) — tính chuẩn của trung bình mẫu tự xuất hiện khi n lớn."
+    },
+    {
+     "q": "[M7] Population: mean net income $2.4m, standard deviation $3.2m. For a sample of 36 companies, the standard error of the sample mean is closest to:",
+     "opts": [
+      "$88,889",
+      "$400,000",
+      "$533,333"
+     ],
+     "ans": 2,
+     "en": "SE = σ/√n = 3,200,000/√36 = 3,200,000/6 = $533,333. The population mean is irrelevant to the SE.",
+     "vi": "SE = σ/√n = 3.200.000/√36 = $533.333. Trung bình tổng thể không liên quan đến SE."
+    },
+    {
+     "q": "[M7] Using only the 12 mutual funds in a standard internal database is best described as:",
+     "opts": [
+      "Cluster sampling",
+      "Judgmental sampling",
+      "Convenience sampling"
+     ],
+     "ans": 2,
+     "en": "Data chosen because they are easily accessible = convenience sampling. Judgmental sampling would select funds deliberately using expert criteria.",
+     "vi": "Dữ liệu được chọn vì dễ với tới = convenience sampling. Judgmental là chủ động chọn theo tiêu chí chuyên môn."
+    },
+    {
+     "q": "[M7] A sampling distribution of a statistic must be constructed from samples that are:",
+     "opts": [
+      "Large",
+      "Of the same size",
+      "From the same stratum"
+     ],
+     "ans": 1,
+     "en": "A sampling distribution is the distribution of a statistic across all possible samples of a FIXED size n — equal size is the defining requirement.",
+     "vi": "Phân phối mẫu là phân phối của một thống kê trên mọi mẫu khả dĩ có CÙNG cỡ n — cỡ mẫu bằng nhau là yêu cầu định nghĩa."
+    },
+    {
+     "q": "[M7] A lognormal population has σ = 50. Samples of size 100 are drawn. The sampling distribution of the sample mean is most likely:",
+     "opts": [
+      "Skewed right with a standard deviation of 50",
+      "Approximately symmetric with a standard deviation of 5",
+      "Approximately symmetric with a standard deviation of 0.5"
+     ],
+     "ans": 1,
+     "en": "CLT: with n = 100 the mean's distribution is approximately normal despite the skewed population, and SE = 50/√100 = 5.",
+     "vi": "CLT: với n = 100, phân phối của trung bình mẫu xấp xỉ chuẩn dù tổng thể lệch, và SE = 50/√100 = 5."
+    },
+    {
+     "q": "[M8] The power of a test is best described as the:",
+     "opts": [
+      "Same as the level of significance",
+      "Probability of rejecting a true null hypothesis",
+      "Probability of correctly rejecting the null hypothesis"
+     ],
+     "ans": 2,
+     "en": "Power = 1 − P(Type II error) = the probability of rejecting the null when it is FALSE. Rejecting a TRUE null is the Type I error (= significance level α).",
+     "vi": "Power = 1 − P(sai lầm loại II) = xác suất bác bỏ H₀ khi nó SAI. Bác bỏ H₀ ĐÚNG là sai lầm loại I (= mức ý nghĩa α)."
+    },
+    {
+     "q": "[M8] A nonparametric test is most appropriate when:",
+     "opts": [
+      "Comparing differences between means",
+      "Data are given in ranks",
+      "Data meet distributional assumptions"
+     ],
+     "ans": 1,
+     "en": "Ranks carry order but not magnitude — parametric machinery doesn't apply. When distributional assumptions DO hold, parametric tests are preferred (more powerful).",
+     "vi": "Thứ hạng mang thông tin thứ tự nhưng không mang độ lớn — công cụ tham số không dùng được. Khi giả định phân phối ĐƯỢC thỏa, ưu tiên kiểm định tham số (mạnh hơn)."
+    },
+    {
+     "q": "[M8] Testing the mean difference between two normally distributed populations using DEPENDENT samples with unknown variances calls for a:",
+     "opts": [
+      "Chi-square test",
+      "Paired comparisons t-test",
+      "t-test with a pooled estimator of the common variance"
+     ],
+     "ans": 1,
+     "en": "Dependent (matched) samples → work with the paired differences: a paired t-test. The pooled-variance t-test requires INDEPENDENT samples.",
+     "vi": "Mẫu phụ thuộc (bắt cặp) → làm việc trên chênh lệch từng cặp: paired t-test. Kiểm định t gộp phương sai đòi hỏi mẫu ĐỘC LẬP."
+    },
+    {
+     "q": "[M8] The test statistic for the variance of a single normally distributed population is the:",
+     "opts": [
+      "z-statistic",
+      "F-statistic",
+      "Chi-square statistic"
+     ],
+     "ans": 2,
+     "en": "One variance → chi-square: (n − 1)s²/σ₀². The F-statistic compares TWO variances.",
+     "vi": "Một phương sai → chi-square: (n − 1)s²/σ₀². Thống kê F dùng để so HAI phương sai."
+    },
+    {
+     "q": "[M8] All else equal, specifying a smaller significance level makes the probability of a Type II error:",
+     "opts": [
+      "Decrease",
+      "Remain the same",
+      "Increase"
+     ],
+     "ans": 2,
+     "en": "Shrinking α makes rejecting harder — you accept the null more often, including when it is false. The two error probabilities trade off; only a larger sample cuts both.",
+     "vi": "Thu nhỏ α làm việc bác bỏ khó hơn — bạn chấp nhận H₀ thường xuyên hơn, kể cả khi nó sai. Hai loại sai lầm đánh đổi nhau; chỉ tăng cỡ mẫu mới giảm được cả hai."
+    },
+    {
+     "q": "[M8] Sample: n = 64, mean $32,000, s = $12,000. Testing whether the population mean exceeds $11,000, the test statistic is closest to:",
+     "opts": [
+      "1.8",
+      "14.0",
+      "21.3"
+     ],
+     "ans": 1,
+     "en": "t = (x̄ − μ₀)/(s/√n) = (32,000 − 11,000)/(12,000/8) = 21,000/1,500 = 14.0.",
+     "vi": "t = (x̄ − μ₀)/(s/√n) = (32.000 − 11.000)/(12.000/8) = 21.000/1.500 = 14,0."
+    }
+   ]
+  },
+  {
+   "name": "Set K — Question Bank: Correlation, Regression & Big Data (M9–M11)",
+   "qs": [
+    {
+     "q": "[M9] Which is best described as a nonparametric hypothesis test concerning correlation? A test using the:",
+     "opts": [
+      "Pearson correlation coefficient",
+      "Bivariate correlation coefficient",
+      "Spearman rank correlation coefficient"
+     ],
+     "ans": 2,
+     "en": "Spearman works on RANKS, so it needs no distributional assumptions — the nonparametric counterpart of the Pearson (parametric) correlation test.",
+     "vi": "Spearman làm việc trên THỨ HẠNG nên không cần giả định phân phối — bản nonparametric của kiểm định tương quan Pearson (parametric)."
+    },
+    {
+     "q": "[M9] Ranks of four paired observations — X: 1, 2, 3, 4; Y: 2, 3, 4, 1. The Spearman rank correlation is closest to:",
+     "opts": [
+      "−0.2",
+      "0.8",
+      "1.0"
+     ],
+     "ans": 0,
+     "en": "Differences d = −1, −1, −1, +3 → Σd² = 1 + 1 + 1 + 9 = 12. r_s = 1 − 6Σd²/[n(n² − 1)] = 1 − 72/(4 × 15) = 1 − 1.2 = −0.2.",
+     "vi": "Chênh lệch d = −1, −1, −1, +3 → Σd² = 12. r_s = 1 − 6Σd²/[n(n² − 1)] = 1 − 72/60 = −0,2."
+    },
+    {
+     "q": "[M9] A contingency table classifies stocks by market cap (small/medium/large) and beta (high/medium/low). The degrees of freedom for the chi-square test of independence are:",
+     "opts": [
+      "4",
+      "6",
+      "9"
+     ],
+     "ans": 0,
+     "en": "df = (rows − 1)(columns − 1) = (3 − 1)(3 − 1) = 4.",
+     "vi": "df = (số hàng − 1)(số cột − 1) = (3 − 1)(3 − 1) = 4."
+    },
+    {
+     "q": "[M9] For a hypothesis test of the correlation between two normally distributed variables with sample size n, the degrees of freedom are:",
+     "opts": [
+      "n − 2",
+      "n − 1",
+      "2n − 2"
+     ],
+     "ans": 0,
+     "en": "Two means are estimated on the way to r, so df = n − 2 — the same df as the slope test in simple regression, which is no accident.",
+     "vi": "Hai trung bình được ước lượng trên đường tính r, nên df = n − 2 — trùng với df của kiểm định hệ số góc trong hồi quy đơn, không hề ngẫu nhiên."
+    },
+    {
+     "q": "[M9] With n = 51 and sample correlation 0.6, the t-statistic for the correlation test is closest to:",
+     "opts": [
+      "0.07",
+      "5.25",
+      "6.64"
+     ],
+     "ans": 1,
+     "en": "t = r√(n − 2)/√(1 − r²) = 0.6 × √49/√(1 − 0.36) = 0.6 × 7/0.8 = 5.25.",
+     "vi": "t = r√(n − 2)/√(1 − r²) = 0,6 × 7/0,8 = 5,25."
+    },
+    {
+     "q": "[M10] An underlying assumption of the simple linear regression model is that the residuals:",
+     "opts": [
+      "Are normally distributed",
+      "Have high correlations across observations",
+      "Have different variances across observations"
+     ],
+     "ans": 0,
+     "en": "The assumptions: linearity, normally distributed residuals, homoskedasticity (SAME variance), and independence (NO correlation across observations). Options B and C state the violations.",
+     "vi": "Bộ giả định: tuyến tính, phần dư phân phối chuẩn, phương sai đồng nhất (CÙNG phương sai), và độc lập (KHÔNG tương quan giữa các quan sát). Phương án B và C là các vi phạm."
+    },
+    {
+     "q": "[M10] Regressing the supply of wheat on the demand for corn: the supply of wheat is the:",
+     "opts": [
+      "Indicator variable",
+      "Explained variable",
+      "Independent variable"
+     ],
+     "ans": 1,
+     "en": "The variable being explained (the Y, dependent variable) is the supply of wheat; corn demand is the explanatory X.",
+     "vi": "Biến được giải thích (Y, biến phụ thuộc) là cung lúa mì; cầu ngô là biến giải thích X."
+    },
+    {
+     "q": "[M10] All else equal, a wider prediction interval for the dependent variable results from an increase in the:",
+     "opts": [
+      "Sample size",
+      "Level of significance",
+      "Standard error of the estimate"
+     ],
+     "ans": 2,
+     "en": "A larger SEE means more scatter around the line → wider intervals. Bigger samples and a HIGHER significance level (smaller critical t) both NARROW the interval.",
+     "vi": "SEE lớn hơn nghĩa là dữ liệu phân tán quanh đường hồi quy nhiều hơn → khoảng rộng hơn. Mẫu lớn hơn và mức ý nghĩa CAO hơn (t tới hạn nhỏ hơn) đều làm khoảng HẸP lại."
+    },
+    {
+     "q": "[M10] Slope 1.0, intercept 1.2%, standard error of the forecast 1.4%, critical t = ±2.032. With a forecast index return of 3.5%, the 95% prediction interval for the stock's return is closest to:",
+     "opts": [
+      "0.7% to 6.3%",
+      "1.9% to 7.5%",
+      "3.3% to 6.1%"
+     ],
+     "ans": 1,
+     "en": "Point forecast: ŷ = 1.2 + 1.0 × 3.5 = 4.7%. Interval: 4.7 ± 2.032 × 1.4 = 4.7 ± 2.84 → 1.9% to 7.5%.",
+     "vi": "Dự báo điểm: ŷ = 1,2 + 1,0 × 3,5 = 4,7%. Khoảng: 4,7 ± 2,032 × 1,4 = 4,7 ± 2,84 → 1,9% đến 7,5%."
+    },
+    {
+     "q": "[M10] In simple linear regression, the total sum of squares best describes:",
+     "opts": [
+      "A scatter plot",
+      "The variation of the dependent variable",
+      "A paired observation between variables"
+     ],
+     "ans": 1,
+     "en": "TSS = Σ(y − ȳ)² — the dependent variable's total variation, later split into explained (RSS) and unexplained (SSE) parts.",
+     "vi": "TSS = Σ(y − ȳ)² — tổng biến thiên của biến phụ thuộc, sau đó được tách thành phần giải thích được (RSS) và phần dư (SSE)."
+    },
+    {
+     "q": "[M10] A model where only the independent variable is in logarithmic form is the:",
+     "opts": [
+      "Log-lin model",
+      "Lin-log model",
+      "Log-log model"
+     ],
+     "ans": 1,
+     "en": "Name order = (form of Y)-(form of X). Y linear, X logged → LIN-LOG. Log-lin logs Y only; log-log logs both.",
+     "vi": "Thứ tự tên = (dạng của Y)-(dạng của X). Y tuyến tính, X lấy log → LIN-LOG. Log-lin chỉ log Y; log-log log cả hai."
+    },
+    {
+     "q": "[M10] The null hypothesis for the F-distributed test statistic in simple linear regression tests whether the:",
+     "opts": [
+      "Slope is equal to zero",
+      "Intercept is equal to zero",
+      "Slope is not equal to zero"
+     ],
+     "ans": 0,
+     "en": "H₀: b₁ = 0 (no linear relationship). In simple regression F = t² for the slope — the two tests are equivalent.",
+     "vi": "H₀: b₁ = 0 (không có quan hệ tuyến tính). Trong hồi quy đơn, F = t² của hệ số góc — hai kiểm định tương đương."
+    },
+    {
+     "q": "[M10] A data transformation may be needed to use simple linear regression when the:",
+     "opts": [
+      "Dependent variable is non-normally distributed",
+      "Pairs of variables are uncorrelated",
+      "Relationship between the variables is non-linear"
+     ],
+     "ans": 2,
+     "en": "Transformations (logs, squares, reciprocals) exist to LINEARIZE a curved relationship so the linear model applies.",
+     "vi": "Các phép biến đổi (log, bình phương, nghịch đảo) sinh ra để TUYẾN TÍNH HÓA quan hệ cong, giúp mô hình tuyến tính áp dụng được."
+    },
+    {
+     "q": "[M10] A residual is best described as the difference between the observed value of the dependent variable and:",
+     "opts": [
+      "Its mean",
+      "Its estimated value from the fitted sample regression line",
+      "Its expected value from the true population relationship"
+     ],
+     "ans": 1,
+     "en": "Residual = observed − FITTED (sample) value. The gap versus the true population line is the (unobservable) error term.",
+     "vi": "Phần dư = giá trị quan sát − giá trị ƯỚC LƯỢNG từ đường hồi quy mẫu. Khoảng cách so với đường tổng thể thật là sai số (không quan sát được)."
+    },
+    {
+     "q": "[M10] SSE = 280, sum of squares regression = 25, n = 30 paired observations. The standard error of the estimate is closest to:",
+     "opts": [
+      "2.5",
+      "3.2",
+      "10.0"
+     ],
+     "ans": 1,
+     "en": "SEE = √[SSE/(n − 2)] = √(280/28) = √10 = 3.16. The regression sum of squares is a distractor here.",
+     "vi": "SEE = √[SSE/(n − 2)] = √(280/28) = √10 = 3,16. Tổng bình phương hồi quy chỉ là số gây nhiễu."
+    },
+    {
+     "q": "[M10] The standard error of the estimate is best described as:",
+     "opts": [
+      "A relative measure of fit",
+      "The percentage of the dependent variable's variation that is explained",
+      "A measure of the distance between observed values and those predicted by the regression"
+     ],
+     "ans": 2,
+     "en": "SEE is an ABSOLUTE measure of scatter around the fitted line (in the units of Y). The 'percentage explained' describes R², a relative measure.",
+     "vi": "SEE là thước đo TUYỆT ĐỐI của độ phân tán quanh đường hồi quy (theo đơn vị của Y). 'Phần trăm được giải thích' là R², thước đo tương đối."
+    },
+    {
+     "q": "[M11] Which is most likely used to detect sentiment shifts in an analyst's commentary?",
+     "opts": [
+      "Tokenization",
+      "Data curation",
+      "Natural language processing"
+     ],
+     "ans": 2,
+     "en": "Interpreting tone/sentiment in text is an NLP task. Tokenization is only a preprocessing step inside the NLP pipeline; curation is data cleaning.",
+     "vi": "Đọc sắc thái/cảm xúc trong văn bản là bài toán NLP. Tokenization chỉ là bước tiền xử lý trong pipeline NLP; curation là làm sạch dữ liệu."
+    },
+    {
+     "q": "[M11] The failure of machine learning models to predict accurately can result from:",
+     "opts": [
+      "Overfitting, but not underfitting",
+      "Underfitting, but not overfitting",
+      "Either overfitting or underfitting"
+     ],
+     "ans": 2,
+     "en": "Overfitting memorizes noise (fails out-of-sample); underfitting misses the real pattern (fails everywhere). Both destroy predictive power.",
+     "vi": "Overfitting học thuộc cả nhiễu (hỏng ngoài mẫu); underfitting bỏ lỡ quy luật thật (hỏng ở mọi nơi). Cả hai đều phá sức dự báo."
+    },
+    {
+     "q": "[M11] In its broadest sense, fintech is best described as:",
+     "opts": [
+      "The vast amount of data generated by financial services",
+      "Executing strategies through computer-generated algorithms",
+      "Technological innovation in the design and delivery of financial services and products"
+     ],
+     "ans": 2,
+     "en": "Fintech = technology-driven innovation across financial services. Option A describes Big Data; B describes algorithmic trading — both are subsets.",
+     "vi": "Fintech = đổi mới dựa trên công nghệ trong thiết kế và cung cấp dịch vụ tài chính. Phương án A mô tả Big Data; B mô tả giao dịch thuật toán — đều chỉ là tập con."
+    },
+    {
+     "q": "[M11] With respect to Big Data, which is most likely classified as alternative data?",
+     "opts": [
+      "Email communication data",
+      "Corporate regulatory filings",
+      "Data from derivative markets"
+     ],
+     "ans": 0,
+     "en": "Alternative data come from non-traditional sources (individuals' digital exhaust, sensors, business processes). Filings and market data are traditional financial data.",
+     "vi": "Dữ liệu thay thế đến từ nguồn phi truyền thống (dấu vết số của cá nhân, cảm biến, quy trình kinh doanh). Hồ sơ công bố và dữ liệu thị trường là dữ liệu tài chính truyền thống."
+    },
+    {
+     "q": "[M11] The most recent advancement in fintech is applications that can:",
+     "opts": [
+      "Process data",
+      "Automate tasks",
+      "Make decisions"
+     ],
+     "ans": 2,
+     "en": "The progression runs: process data → automate tasks → and, most recently, AI systems that make decisions themselves.",
+     "vi": "Chuỗi tiến hóa: xử lý dữ liệu → tự động hóa tác vụ → và mới nhất, hệ thống AI tự ra quyết định."
     }
    ]
   }

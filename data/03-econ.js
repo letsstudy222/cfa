@@ -8,7 +8,8 @@
    - topic.vocab[]     : [term, định nghĩa EN, nghĩa VI]
    - topic.quiz[]      : Practice Set A — {q, opts[3], ans(0-2), en, vi}
    - extra.checks[]    : mảng theo TỪNG module — câu "Quick check" sau lý thuyết
-   - extra.sets[]      : Practice Set B, C… (mỗi phần tử là 1 bộ câu hỏi)
+   - extra.sets[]      : Practice Set B, C… — Sets G–J là Question Bank 75 câu
+                         từ PDF, chia theo nhóm module, mỗi câu prefix [M#]
    Sửa nội dung trực tiếp trong file này; giữ đúng cú pháp JSON.
    ===================================================================== */
 window.CFA = window.CFA || { topics: [], extra: {}, mocktests: [] };
@@ -1711,6 +1712,851 @@ window.CFA.extra["econ"] = {
      "ans": 2,
      "en": "F = 1.0800 × 1.05/1.03 ≈ 1.1010. The lower-rate currency (EUR, the base) trades at a forward premium under covered interest parity.",
      "vi": "F = 1,0800 × 1,05/1,03 ≈ 1,1010. Đồng lãi suất thấp hơn (EUR, đồng cơ sở) giao dịch với forward premium theo covered interest parity."
+    }
+   ]
+  },
+  {
+   "name": "Set G — Question Bank: Market Structures & Business Cycles (M1–M2)",
+   "qs": [
+    {
+     "q": "[M1] Firms operating under monopolistic competition most likely:",
+     "opts": [
+      "Have few competitors",
+      "Benefit from high barriers to entry",
+      "Sell products that are close substitutes for those offered by other firms"
+     ],
+     "ans": 2,
+     "en": "Monopolistic competition = MANY sellers, LOW barriers, and differentiated products that remain close substitutes — each firm has slight pricing power but faces intense substitute competition.",
+     "vi": "Cạnh tranh độc quyền = NHIỀU người bán, rào cản THẤP, sản phẩm khác biệt hóa nhưng vẫn là hàng thay thế gần — mỗi công ty có chút quyền định giá nhưng chịu cạnh tranh thay thế gay gắt."
+    },
+    {
+     "q": "[M1] A market structure characterized by homogeneous/standardized products is best described as:",
+     "opts": [
+      "Monopoly",
+      "Monopolistic competition",
+      "Perfect competition and oligopoly"
+     ],
+     "ans": 2,
+     "en": "Perfect competition sells identical commodities; oligopolies can too (steel, cement). Monopolistic competition is DEFINED by differentiation, and a monopoly has no comparison product at all.",
+     "vi": "Cạnh tranh hoàn hảo bán hàng hóa y hệt nhau; độc quyền nhóm cũng có thể (thép, xi măng). Cạnh tranh độc quyền được ĐỊNH NGHĨA bằng khác biệt hóa, còn độc quyền thì không có sản phẩm nào để so."
+    },
+    {
+     "q": "[M1] A downward-sloping long-run average cost (LRAC) curve represents a firm experiencing:",
+     "opts": [
+      "Economies of scale",
+      "Diseconomies of scale",
+      "Decreasing levels of investment"
+     ],
+     "ans": 0,
+     "en": "Falling LRAC as output grows = economies of scale. Rising LRAC would signal diseconomies.",
+     "vi": "LRAC giảm khi sản lượng tăng = lợi thế kinh tế theo quy mô. LRAC tăng mới là bất lợi theo quy mô."
+    },
+    {
+     "q": "[M1] In a perfectly competitive market, a firm's breakeven point is the minimum of the:",
+     "opts": [
+      "Average total cost curve",
+      "Average fixed cost curve",
+      "Average variable cost curve"
+     ],
+     "ans": 0,
+     "en": "Breakeven: P = min ATC (zero economic profit). The SHUTDOWN point in the short run is min AVC — the classic pairing to memorize.",
+     "vi": "Hòa vốn: P = ATC tối thiểu (lợi nhuận kinh tế bằng 0). Điểm ĐÓNG CỬA ngắn hạn là AVC tối thiểu — cặp khái niệm kinh điển cần thuộc."
+    },
+    {
+     "q": "[M1] In the long run, a monopolistically competitive firm:",
+     "opts": [
+      "Earns positive economic profits",
+      "Faces a perfectly elastic demand curve",
+      "Produces at a higher level of average cost than the minimum average cost"
+     ],
+     "ans": 2,
+     "en": "Entry drives economic profit to zero, but the downward-sloping demand curve means the tangency with ATC occurs LEFT of the ATC minimum — permanent excess capacity.",
+     "vi": "Gia nhập tự do ép lợi nhuận kinh tế về 0, nhưng đường cầu dốc xuống khiến điểm tiếp xúc với ATC nằm BÊN TRÁI đáy ATC — dư thừa công suất vĩnh viễn."
+    },
+    {
+     "q": "[M1] In an oligopoly, the situation where firms have no incentive to deviate from their pricing strategy given competitors' anticipated choices is:",
+     "opts": [
+      "The Nash equilibrium",
+      "The Stackelberg model",
+      "Pricing interdependence"
+     ],
+     "ans": 0,
+     "en": "Nash equilibrium: each player's strategy is optimal GIVEN the others' strategies, so no one deviates unilaterally.",
+     "vi": "Cân bằng Nash: chiến lược của mỗi bên là tối ưu KHI BIẾT chiến lược của các bên kia, nên không ai đơn phương thay đổi."
+    },
+    {
+     "q": "[M1] Marginal revenue equals price in which market structure?",
+     "opts": [
+      "Oligopoly",
+      "Monopoly",
+      "Perfect competition"
+     ],
+     "ans": 2,
+     "en": "A price taker sells every unit at the market price → MR = P. Any downward-sloping demand (monopoly, oligopoly) forces MR < P.",
+     "vi": "Người chấp nhận giá bán mọi đơn vị tại giá thị trường → MR = P. Đường cầu dốc xuống (độc quyền, độc quyền nhóm) buộc MR < P."
+    },
+    {
+     "q": "[M1] The perfectly competitive firm's long-run supply curve is its:",
+     "opts": [
+      "Marginal cost schedule",
+      "Average revenue schedule",
+      "Average total cost schedule"
+     ],
+     "ans": 0,
+     "en": "The firm supplies where P = MC, so the MC schedule (above minimum ATC in the long run) IS the supply curve.",
+     "vi": "Công ty cung ứng tại P = MC, nên chính đường MC (phía trên ATC tối thiểu trong dài hạn) LÀ đường cung."
+    },
+    {
+     "q": "[M1] To calculate the Herfindahl–Hirschman index:",
+     "opts": [
+      "Add the market shares of the largest firms",
+      "Add the market shares of the largest firms and then square the sum",
+      "Square the market shares of the largest firms and then add the results"
+     ],
+     "ans": 2,
+     "en": "HHI = Σ(share²). Squaring FIRST weights big firms disproportionately — that's the design; it captures concentration better than a simple sum.",
+     "vi": "HHI = Σ(thị phần²). Bình phương TRƯỚC khiến công ty lớn có trọng số vượt trội — đó là chủ ý thiết kế; nó bắt độ tập trung tốt hơn phép cộng đơn thuần."
+    },
+    {
+     "q": "[M1] Market 1: many sellers, no non-price competition. Market 2: few sellers, strong non-price competition. Market 3: many sellers, strong non-price competition. The most likely oligopoly is:",
+     "opts": [
+      "Market 1",
+      "Market 2",
+      "Market 3"
+     ],
+     "ans": 1,
+     "en": "Oligopoly = FEW interdependent sellers competing heavily on advertising, features, and service. Market 1 profiles as perfect competition; Market 3 as monopolistic competition.",
+     "vi": "Độc quyền nhóm = ÍT người bán phụ thuộc lẫn nhau, cạnh tranh mạnh bằng quảng cáo, tính năng, dịch vụ. Market 1 mang dáng cạnh tranh hoàn hảo; Market 3 là cạnh tranh độc quyền."
+    },
+    {
+     "q": "[M1] Monopolistic competition is best characterized by:",
+     "opts": [
+      "High barriers to entry and exit",
+      "A small number of buyers and sellers",
+      "Product differentiation through non-price strategies"
+     ],
+     "ans": 2,
+     "en": "Many sellers, low barriers, and differentiation via branding, quality, and marketing — the defining trio.",
+     "vi": "Nhiều người bán, rào cản thấp, và khác biệt hóa bằng thương hiệu, chất lượng, marketing — bộ ba định danh."
+    },
+    {
+     "q": "[M1] If a perfectly competitive industry becomes monopolistically competitive, each firm's long-run average total cost per unit sold will most likely:",
+     "opts": [
+      "Decrease",
+      "Remain the same",
+      "Increase"
+     ],
+     "ans": 2,
+     "en": "Differentiation adds costs (advertising, variety) and the new tangency sits left of the ATC minimum — average cost per unit rises, the price of product variety.",
+     "vi": "Khác biệt hóa thêm chi phí (quảng cáo, đa dạng mẫu mã) và điểm tiếp xúc mới nằm trái đáy ATC — chi phí bình quân mỗi đơn vị tăng, cái giá của sự đa dạng sản phẩm."
+    },
+    {
+     "q": "[M1] If a monopolistically competitive industry becomes perfectly competitive, each firm's long-run average total cost per unit sold will most likely:",
+     "opts": [
+      "Decrease",
+      "Remain the same",
+      "Increase"
+     ],
+     "ans": 0,
+     "en": "The mirror image: standardization strips differentiation costs and production moves to the ATC minimum → average cost falls.",
+     "vi": "Hình ảnh gương: chuẩn hóa gỡ bỏ chi phí khác biệt hóa và sản xuất dời về đáy ATC → chi phí bình quân giảm."
+    },
+    {
+     "q": "[M1] Total variable cost $3m, total fixed cost $5m. In the short run, the shutdown point is when total revenue declines to:",
+     "opts": [
+      "$3 million",
+      "$5 million",
+      "$8 million"
+     ],
+     "ans": 0,
+     "en": "Shut down when TR < TVC = $3m: below that, operating doesn't even cover variable costs, so every unit produced deepens the loss. Fixed costs are sunk in the short run.",
+     "vi": "Đóng cửa khi TR < TVC = $3tr: dưới mức đó, hoạt động không bù nổi cả chi phí biến đổi, mỗi đơn vị sản xuất thêm chỉ khoét sâu khoản lỗ. Chi phí cố định là chi phí chìm trong ngắn hạn."
+    },
+    {
+     "q": "[M2] Which is most likely a LAGGING economic indicator?",
+     "opts": [
+      "Inventory-sales ratio",
+      "S&P 500 Stock Index",
+      "Manufacturers' new orders for consumer goods"
+     ],
+     "ans": 0,
+     "en": "Inventories pile up AFTER sales slow — a lagging signal. Stock indexes and new orders both anticipate activity (leading indicators).",
+     "vi": "Tồn kho chất đống SAU KHI doanh số chậm lại — tín hiệu trễ. Chỉ số chứng khoán và đơn hàng mới đều đi trước hoạt động kinh tế (chỉ báo sớm)."
+    },
+    {
+     "q": "[M2] During the recovery phase of the business cycle, inflation most likely:",
+     "opts": [
+      "Decelerates but with a lag",
+      "Remains moderate",
+      "Further accelerates"
+     ],
+     "ans": 1,
+     "en": "Recovery starts from the trough with ample slack — inflation stays moderate. It picks up during expansion and accelerates further into the slowdown; deceleration-with-a-lag belongs to contraction.",
+     "vi": "Recovery khởi đầu từ đáy với nguồn lực nhàn rỗi dồi dào — lạm phát giữ mức vừa phải. Nó nhích lên trong expansion và tăng tốc thêm vào slowdown; giảm-tốc-có-độ-trễ thuộc về contraction."
+    },
+    {
+     "q": "[M2] Which index is most likely a LEADING economic indicator?",
+     "opts": [
+      "Consumer price index",
+      "Broad stock market index",
+      "Industrial production index"
+     ],
+     "ans": 1,
+     "en": "Equity prices embed expectations of future profits → leading. Industrial production moves WITH the cycle (coincident); CPI turns late (lagging).",
+     "vi": "Giá cổ phiếu chứa kỳ vọng lợi nhuận tương lai → chỉ báo sớm. Sản xuất công nghiệp đi CÙNG chu kỳ (đồng thời); CPI đổi hướng muộn (trễ)."
+    },
+    {
+     "q": "[M2] The spread between 10-year treasury yields and overnight borrowing rates most likely:",
+     "opts": [
+      "Is a lagging economic indicator",
+      "Decreases when the market expects an economic downturn",
+      "Increases as the market expects future short-term rates to decrease"
+     ],
+     "ans": 1,
+     "en": "Expecting a downturn → expecting rate cuts → long yields fall toward (or below) short rates → the spread narrows or inverts. The yield-curve spread is a famous LEADING indicator.",
+     "vi": "Kỳ vọng suy thoái → kỳ vọng cắt lãi suất → lợi suất dài hạn rơi về (hoặc dưới) lãi ngắn hạn → spread thu hẹp hoặc đảo ngược. Spread đường cong lợi suất là chỉ báo SỚM nổi tiếng."
+    },
+    {
+     "q": "[M2] Which is most likely a COINCIDENT indicator of economic activity?",
+     "opts": [
+      "Average duration of unemployment",
+      "Average weekly hours, manufacturing",
+      "Employees on non-agricultural payrolls"
+     ],
+     "ans": 2,
+     "en": "Payroll employment tracks the cycle in real time. Weekly hours change BEFORE hiring (leading); unemployment duration stretches long after the turn (lagging).",
+     "vi": "Số lao động trên bảng lương đi theo chu kỳ theo thời gian thực. Số giờ làm mỗi tuần đổi TRƯỚC khi tuyển dụng (sớm); thời gian thất nghiệp bình quân kéo dài mãi sau điểm ngoặt (trễ)."
+    },
+    {
+     "q": "[M2] The business cycle phase characterized by SLOWING growth in economic activity is the:",
+     "opts": [
+      "Slowdown",
+      "Expansion",
+      "Contraction"
+     ],
+     "ans": 0,
+     "en": "Slowdown: still growing, but decelerating — the economy is past its peak momentum. Contraction means activity is actually FALLING.",
+     "vi": "Slowdown: vẫn tăng trưởng nhưng chậm dần — nền kinh tế đã qua đỉnh đà. Contraction nghĩa là hoạt động thực sự SỤT GIẢM."
+    }
+   ]
+  },
+  {
+   "name": "Set H — Question Bank: Fiscal & Monetary Policy (M3–M4)",
+   "qs": [
+    {
+     "q": "[M3] Which change most likely reflects a DISCRETIONARY fiscal policy action?",
+     "opts": [
+      "A decrease in corporate tax revenues due to lower profitability",
+      "An increase in government expenditures due to new infrastructure projects",
+      "An increase in unemployment benefit payments due to rising unemployment"
+     ],
+     "ans": 1,
+     "en": "Discretionary = a deliberate government decision (new projects). Options A and C happen automatically as the economy moves — they are automatic stabilizers.",
+     "vi": "Discretionary = quyết định chủ động của chính phủ (dự án mới). Phương án A và C tự xảy ra khi nền kinh tế biến động — đó là các bộ ổn định tự động."
+    },
+    {
+     "q": "[M3] With respect to fiscal policy, transfer payments are best described as:",
+     "opts": [
+      "Welfare payments",
+      "Infrastructure spending",
+      "Spending on recurring goods and services"
+     ],
+     "ans": 0,
+     "en": "Transfers redistribute income (welfare, pensions, unemployment benefits) without any good or service received in return — they are excluded from GDP for exactly that reason.",
+     "vi": "Chi chuyển giao tái phân phối thu nhập (trợ cấp, lương hưu, bảo hiểm thất nghiệp) mà không nhận lại hàng hóa/dịch vụ nào — vì đúng lý do đó chúng bị loại khỏi GDP."
+    },
+    {
+     "q": "[M3] A decline in tax revenues due to a recession is best described as an example of a(n):",
+     "opts": [
+      "Automatic stabilizer",
+      "Expansionary fiscal policy",
+      "Contractionary fiscal policy"
+     ],
+     "ans": 0,
+     "en": "No policy decision was made — falling incomes mechanically cut tax receipts, cushioning the downturn. That self-acting cushion is the definition of an automatic stabilizer.",
+     "vi": "Không có quyết định chính sách nào được đưa ra — thu nhập giảm tự động kéo số thu thuế xuống, đệm cho cú suy giảm. Tấm đệm tự vận hành đó chính là định nghĩa của bộ ổn định tự động."
+    },
+    {
+     "q": "[M3] Which of the following is an expansionary fiscal policy?",
+     "opts": [
+      "An increase in sales taxes",
+      "A decrease in interest rates",
+      "An increase in public spending on infrastructure"
+     ],
+     "ans": 2,
+     "en": "More government spending injects demand — expansionary FISCAL policy. Cutting interest rates is expansionary but MONETARY; raising sales taxes is contractionary.",
+     "vi": "Tăng chi tiêu công bơm thêm tổng cầu — chính sách TÀI KHÓA mở rộng. Hạ lãi suất cũng mở rộng nhưng là TIỀN TỆ; tăng thuế tiêu thụ là thắt chặt."
+    },
+    {
+     "q": "[M3] Which fiscal policy action is most likely contractionary?",
+     "opts": [
+      "Increasing taxes and decreasing spending",
+      "Decreasing taxes and increasing spending",
+      "Decreasing taxes and decreasing spending"
+     ],
+     "ans": 0,
+     "en": "Both levers pull demand DOWN: taxes up (less disposable income) and spending down (less injection). Option B is doubly expansionary; option C is ambiguous.",
+     "vi": "Cả hai cần gạt đều kéo tổng cầu XUỐNG: thuế tăng (thu nhập khả dụng giảm) và chi tiêu giảm (bơm ít hơn). Phương án B mở rộng kép; phương án C thì nhập nhằng."
+    },
+    {
+     "q": "[M3] A fiscal policy tool that can IMMEDIATELY influence spending is most likely:",
+     "opts": [
+      "Indirect taxes",
+      "Exchange rate targeting",
+      "Capital expenditure plans"
+     ],
+     "ans": 0,
+     "en": "Indirect taxes (VAT, excise) can be changed quickly and hit consumer prices — and thus spending — at once. Capital projects take years to plan and execute; exchange-rate targeting is monetary policy.",
+     "vi": "Thuế gián thu (VAT, tiêu thụ đặc biệt) có thể điều chỉnh nhanh và tác động vào giá tiêu dùng — tức chi tiêu — ngay lập tức. Dự án đầu tư công mất nhiều năm lên kế hoạch và thi công; neo tỷ giá là chính sách tiền tệ."
+    },
+    {
+     "q": "[M3] An objective of fiscal policy is to:",
+     "opts": [
+      "Maintain price stability",
+      "Redistribute the wealth within an economy",
+      "Influence the quantity of credit in an economy"
+     ],
+     "ans": 1,
+     "en": "Redistribution via taxes and transfers is a core fiscal objective. Price stability and credit conditions belong to the central bank.",
+     "vi": "Tái phân phối của cải qua thuế và chi chuyển giao là mục tiêu tài khóa cốt lõi. Ổn định giá và điều kiện tín dụng thuộc về ngân hàng trung ương."
+    },
+    {
+     "q": "[M3] Which government action is most likely an expansionary fiscal policy?",
+     "opts": [
+      "Increasing the sales tax rate",
+      "Decreasing the savings tax rate",
+      "Decreasing infrastructure spending"
+     ],
+     "ans": 1,
+     "en": "Cutting the tax on savings raises disposable income and stimulates activity. The other two options withdraw demand — both contractionary.",
+     "vi": "Giảm thuế trên tiết kiệm nâng thu nhập khả dụng và kích thích hoạt động. Hai phương án còn lại rút bớt tổng cầu — đều thắt chặt."
+    },
+    {
+     "q": "[M3] Monetary policy is used to:",
+     "opts": [
+      "Promote stable growth",
+      "Redistribute income and wealth",
+      "Determine taxation and spending"
+     ],
+     "ans": 0,
+     "en": "Central banks manage money and credit to pursue price stability and steady growth. Redistribution and tax/spending decisions are fiscal territory.",
+     "vi": "Ngân hàng trung ương điều hành tiền và tín dụng nhằm ổn định giá và tăng trưởng đều. Tái phân phối và quyết định thuế/chi tiêu là lãnh địa tài khóa."
+    },
+    {
+     "q": "[M3] An argument AGAINST being concerned about high national debt levels is that:",
+     "opts": [
+      "The debt is owed internally to fellow citizens",
+      "Government borrowing leads to higher private sector investment",
+      "The central bank can print money to finance a deficit"
+     ],
+     "ans": 0,
+     "en": "If citizens hold the debt, interest payments circulate within the economy rather than leaking abroad. Borrowing tends to CROWD OUT private investment (B is backwards), and money-printing invites inflation.",
+     "vi": "Nếu công dân trong nước nắm nợ, tiền lãi luân chuyển bên trong nền kinh tế thay vì chảy ra nước ngoài. Vay nợ chính phủ có xu hướng CHÈN LẤN đầu tư tư nhân (B nói ngược), còn in tiền thì mời gọi lạm phát."
+    },
+    {
+     "q": "[M4] Long-term growth potential 2%, inflation target 3%. The neutral rate of interest is most likely:",
+     "opts": [
+      "1%",
+      "3%",
+      "5%"
+     ],
+     "ans": 2,
+     "en": "Neutral rate = trend real growth + inflation target = 2% + 3% = 5% — the policy rate that neither stimulates nor restrains.",
+     "vi": "Lãi suất trung tính = tăng trưởng thực xu hướng + mục tiêu lạm phát = 2% + 3% = 5% — mức lãi suất chính sách không kích thích cũng không kìm hãm."
+    },
+    {
+     "q": "[M4] The inflation target of an effective central bank is most likely:",
+     "opts": [
+      "Equal to zero to avoid the risk of deflation",
+      "Sufficiently below zero to maintain high credibility",
+      "Low enough to ensure a significant degree of price stability"
+     ],
+     "ans": 2,
+     "en": "Targets sit LOW but POSITIVE (typically ~2%): low enough for price stability, positive enough to keep a safety margin above deflation. A zero target risks tipping into deflation with any shock.",
+     "vi": "Mục tiêu đặt THẤP nhưng DƯƠNG (thường ~2%): đủ thấp để ổn định giá, đủ dương để giữ biên an toàn trên vùng giảm phát. Mục tiêu bằng 0 dễ trượt vào giảm phát chỉ với một cú sốc."
+    },
+    {
+     "q": "[M4] Which is most likely to limit the effectiveness of monetary policy?",
+     "opts": [
+      "A liquidity trap",
+      "The crowding out effect",
+      "A time lag to implement government spending"
+     ],
+     "ans": 0,
+     "en": "In a liquidity trap, demand for money becomes infinitely elastic — extra liquidity is hoarded, so rate cuts stop working. Crowding out and spending lags are FISCAL-policy problems.",
+     "vi": "Trong bẫy thanh khoản, cầu tiền co giãn vô hạn — thanh khoản bơm thêm bị găm giữ, hạ lãi suất mất tác dụng. Chèn lấn và độ trễ triển khai chi tiêu là vấn đề của chính sách TÀI KHÓA."
+    },
+    {
+     "q": "[M4] When a central bank sells government bonds to commercial banks, broad money growth:",
+     "opts": [
+      "Decreases",
+      "Remains the same",
+      "Increases"
+     ],
+     "ans": 0,
+     "en": "Banks pay for the bonds with reserves → reserves drain → lending capacity shrinks → broad money growth slows. An open-market SALE is contractionary.",
+     "vi": "Ngân hàng trả tiền mua trái phiếu bằng dự trữ → dự trữ bị hút → năng lực cho vay co lại → tăng trưởng cung tiền rộng chậm đi. BÁN trên thị trường mở là thắt chặt."
+    },
+    {
+     "q": "[M4] Independence, credibility, and transparency are most likely:",
+     "opts": [
+      "Key objectives of fiscal policy",
+      "Properties of the monetary transmission mechanism",
+      "Qualities that determine the success of an inflation-targeting central bank"
+     ],
+     "ans": 2,
+     "en": "An inflation-targeting central bank succeeds when it is free from political pressure (independence), believed (credibility), and predictable (transparency) — expectations then anchor themselves to the target.",
+     "vi": "Ngân hàng trung ương theo mục tiêu lạm phát thành công khi thoát khỏi áp lực chính trị (độc lập), được tin tưởng (uy tín), và dễ đoán (minh bạch) — kỳ vọng khi đó tự neo vào mục tiêu."
+    },
+    {
+     "q": "[M4] With respect to conventional monetary policy, combating inflation is most likely:",
+     "opts": [
+      "Less difficult than combating deflation",
+      "Equally difficult as combating deflation",
+      "More difficult than combating deflation"
+     ],
+     "ans": 0,
+     "en": "Rates can rise without limit to fight inflation, but they cannot fall (much) below zero — deflation runs into the zero lower bound while debt burdens grow in real terms. Deflation is the harder enemy.",
+     "vi": "Lãi suất có thể tăng không giới hạn để chống lạm phát, nhưng không thể giảm (nhiều) dưới 0 — giảm phát đụng trần sàn lãi suất 0 trong khi gánh nợ phình to theo giá trị thực. Giảm phát là kẻ thù khó nhằn hơn."
+    },
+    {
+     "q": "[M4] Fiat money:",
+     "opts": [
+      "Is not currently used in any major economy",
+      "Can be exchanged for a precious metal at the country's central bank",
+      "Derives its value via government decree and because people accept it for payment"
+     ],
+     "ans": 2,
+     "en": "Fiat money has no intrinsic backing — legal-tender status plus collective acceptance IS the value. Every major economy uses it today.",
+     "vi": "Tiền pháp định không có tài sản đảm bảo nội tại — vị thế đồng tiền hợp pháp cộng sự chấp nhận của cộng đồng CHÍNH LÀ giá trị. Mọi nền kinh tế lớn hiện nay đều dùng nó."
+    },
+    {
+     "q": "[M4] Which of the following is a LIMITATION of monetary policy?",
+     "opts": [
+      "The presence of automatic stabilizers in the economy",
+      "The ineffectiveness of interest rate adjustments in deflationary environments",
+      "The uneven distribution of income and wealth among segments of the population"
+     ],
+     "ans": 1,
+     "en": "At the zero lower bound in deflation, rate cuts lose traction — the core limitation of conventional monetary policy. Automatic stabilizers are a fiscal feature; inequality is a fiscal concern.",
+     "vi": "Tại sàn lãi suất 0 trong giảm phát, việc hạ lãi suất mất lực kéo — hạn chế cốt lõi của chính sách tiền tệ truyền thống. Bộ ổn định tự động là đặc tính tài khóa; bất bình đẳng là mối quan tâm tài khóa."
+    },
+    {
+     "q": "[M4] To be effective in targeting inflation, a central bank is LEAST likely to need:",
+     "opts": [
+      "Government oversight",
+      "Transparency of decisions",
+      "Credibility with market participants"
+     ],
+     "ans": 0,
+     "en": "The requirement is independence FROM the government, not oversight BY it. Transparency and credibility are essential.",
+     "vi": "Điều cần là độc lập KHỎI chính phủ, không phải chịu giám sát BỞI chính phủ. Minh bạch và uy tín là thiết yếu."
+    },
+    {
+     "q": "[M4] Real trend growth 0.5%; policy rate 1.5%. If monetary policy is contractionary, the inflation target is:",
+     "opts": [
+      "Less than 1.0%",
+      "Equal to 1.0%",
+      "Greater than 1.0%"
+     ],
+     "ans": 0,
+     "en": "Contractionary means the policy rate sits ABOVE neutral: neutral < 1.5%. Neutral = trend growth + target = 0.5% + target → target < 1.0%.",
+     "vi": "Thắt chặt nghĩa là lãi suất chính sách nằm TRÊN mức trung tính: trung tính < 1,5%. Trung tính = tăng trưởng xu hướng + mục tiêu = 0,5% + mục tiêu → mục tiêu < 1,0%."
+    },
+    {
+     "q": "[M4] To reduce inflation, a central bank most likely implements an interest rate policy that is:",
+     "opts": [
+      "Contractionary",
+      "Neutral",
+      "Expansionary"
+     ],
+     "ans": 0,
+     "en": "Push the policy rate above neutral → borrowing costs rise → demand cools → inflation eases.",
+     "vi": "Đẩy lãi suất chính sách lên trên mức trung tính → chi phí vay tăng → tổng cầu nguội → lạm phát dịu."
+    },
+    {
+     "q": "[M4] Monetary policy is MOST effective when the:",
+     "opts": [
+      "Demand for money is infinitely elastic",
+      "Central bank targets an exchange rate",
+      "Risk of inflation is greater than the risk of deflation"
+     ],
+     "ans": 2,
+     "en": "With inflation risk dominant, the rate lever has full room to work. Infinitely elastic money demand IS the liquidity trap, and an exchange-rate target surrenders independent policy.",
+     "vi": "Khi rủi ro lạm phát chi phối, cần gạt lãi suất có trọn không gian phát huy. Cầu tiền co giãn vô hạn CHÍNH LÀ bẫy thanh khoản, còn neo tỷ giá là từ bỏ chính sách độc lập."
+    },
+    {
+     "q": "[M4] Which monetary policy action is most likely EXPANSIONARY? The central bank:",
+     "opts": [
+      "Acts as the lender in a repurchase agreement",
+      "Sells government bonds to commercial banks",
+      "Raises reserve requirements of commercial banks"
+     ],
+     "ans": 0,
+     "en": "Lending cash against collateral in a repo INJECTS liquidity into the banking system. Selling bonds and raising reserve requirements both drain or immobilize reserves — contractionary.",
+     "vi": "Cho vay tiền nhận tài sản đảm bảo trong repo là BƠM thanh khoản vào hệ thống ngân hàng. Bán trái phiếu và nâng dự trữ bắt buộc đều hút hoặc đóng băng dự trữ — thắt chặt."
+    },
+    {
+     "q": "[M4] The overarching objective of most central banks is to maintain:",
+     "opts": [
+      "Price stability",
+      "Full employment",
+      "The government's ability to service its debt"
+     ],
+     "ans": 0,
+     "en": "Price stability is the primary mandate almost everywhere; employment goals (where they exist) come second, and financing the government is explicitly NOT a mandate.",
+     "vi": "Ổn định giá cả là sứ mệnh hàng đầu gần như ở mọi nơi; mục tiêu việc làm (nếu có) xếp sau, còn tài trợ cho chính phủ dứt khoát KHÔNG phải nhiệm vụ."
+    },
+    {
+     "q": "[M4] Wages and prices rigid; government spending decreases and interest rates decrease. This mix most likely reflects:",
+     "opts": [
+      "Easy fiscal policy and easy monetary policy",
+      "Tight fiscal policy and easy monetary policy",
+      "Easy fiscal policy and tight monetary policy"
+     ],
+     "ans": 1,
+     "en": "Spending cuts = tight fiscal; falling rates = easy money. This mix shrinks the public sector while low rates hand the baton to private demand.",
+     "vi": "Cắt chi tiêu = tài khóa chặt; lãi suất giảm = tiền tệ lỏng. Tổ hợp này thu nhỏ khu vực công trong khi lãi suất thấp trao gậy tiếp sức cho cầu tư nhân."
+    },
+    {
+     "q": "[M4] A role of MOST central banks is to:",
+     "opts": [
+      "Set income tax rates",
+      "Decide on government expenditures",
+      "Regulate their country's payments system"
+     ],
+     "ans": 2,
+     "en": "Central banks run and safeguard the payments/settlement infrastructure (alongside issuing currency, supervising banks, and holding reserves). Taxes and spending are the legislature's job.",
+     "vi": "Ngân hàng trung ương vận hành và bảo vệ hạ tầng thanh toán/quyết toán (bên cạnh phát hành tiền, giám sát ngân hàng, giữ dự trữ). Thuế và chi tiêu là việc của cơ quan lập pháp."
+    },
+    {
+     "q": "[M4] Contractionary fiscal policy and expansionary monetary policy have OFFSETTING effects on GDP. The public sector's share of GDP will most likely:",
+     "opts": [
+      "Decrease",
+      "Remain the same",
+      "Increase"
+     ],
+     "ans": 0,
+     "en": "GDP is unchanged overall, but its composition shifts: government spending falls (tight fiscal) while cheap credit lifts private activity → the public share shrinks.",
+     "vi": "Tổng GDP không đổi, nhưng cơ cấu dịch chuyển: chi tiêu chính phủ giảm (tài khóa chặt) trong khi tín dụng rẻ nâng hoạt động tư nhân → tỷ trọng khu vực công co lại."
+    }
+   ]
+  },
+  {
+   "name": "Set I — Question Bank: Geopolitics & International Trade (M5–M6)",
+   "qs": [
+    {
+     "q": "[M5] With respect to motivations for globalization, which is best characterized as an INTRINSIC gain?",
+     "opts": [
+      "Increased supply chain efficiency",
+      "Accelerated productivity from learning new methods",
+      "Access to resources that are not readily available in the home country"
+     ],
+     "ans": 1,
+     "en": "Intrinsic gains arise from the act of exchange itself — knowledge transfer, learning by doing, productivity growth. Supply-chain efficiency and resource access are external, practical motivations.",
+     "vi": "Lợi ích nội tại sinh ra từ chính hành vi trao đổi — chuyển giao tri thức, học qua làm, tăng năng suất. Hiệu quả chuỗi cung ứng và tiếp cận tài nguyên là động lực thực dụng, bên ngoài."
+    },
+    {
+     "q": "[M5] Which organization was founded to assist in the reconstruction of the international PAYMENT system?",
+     "opts": [
+      "The World Trade Organization",
+      "The International Monetary Fund",
+      "The International Bank for Reconstruction and Development"
+     ],
+     "ans": 1,
+     "en": "The IMF's Bretton Woods mandate: rebuild and stabilize international payments and exchange rates. The IBRD (World Bank) financed post-war reconstruction of ECONOMIES; the WTO governs trade rules.",
+     "vi": "Sứ mệnh Bretton Woods của IMF: tái thiết và ổn định hệ thống thanh toán quốc tế cùng tỷ giá. IBRD (World Bank) tài trợ tái thiết NỀN KINH TẾ hậu chiến; WTO cai quản luật chơi thương mại."
+    },
+    {
+     "q": "[M5] A country HIGH on the globalization spectrum but LOW on the cooperation spectrum fits the archetype of:",
+     "opts": [
+      "Autarky",
+      "Hegemony",
+      "Bilateralism"
+     ],
+     "ans": 1,
+     "en": "A hegemon engages the world economy deeply but on its own terms, using leverage rather than shared rules. Autarky is low on both axes; multilateralism is high on both.",
+     "vi": "Bá quyền tham gia sâu vào kinh tế thế giới nhưng theo luật của riêng mình, dùng đòn bẩy thay vì luật chung. Autarky thấp trên cả hai trục; multilateralism cao trên cả hai."
+    },
+    {
+     "q": "[M5] Setting standards for the size and shape of shipping containers is most likely an example of:",
+     "opts": [
+      "Regulatory cooperation",
+      "Process standardization",
+      "Operational synchronization"
+     ],
+     "ans": 1,
+     "en": "Agreeing on uniform container dimensions standardizes a PROCESS so goods flow seamlessly across carriers and ports — the textbook example of process standardization in geopolitical cooperation.",
+     "vi": "Thống nhất kích thước container chuẩn hóa một QUY TRÌNH để hàng hóa chảy mượt qua mọi hãng vận tải và cảng biển — ví dụ giáo khoa của chuẩn hóa quy trình trong hợp tác địa chính trị."
+    },
+    {
+     "q": "[M5] Which would most likely lead to an INCREASE in globalization? A decrease in:",
+     "opts": [
+      "Soft power",
+      "Nationalism",
+      "Standardization"
+     ],
+     "ans": 1,
+     "en": "Nationalism pulls countries inward; less of it lowers the political resistance to trade, investment, and openness. Less soft power or less standardization would hinder, not help.",
+     "vi": "Chủ nghĩa dân tộc kéo quốc gia hướng nội; bớt đi sẽ giảm lực cản chính trị với thương mại, đầu tư và mở cửa. Bớt soft power hay bớt chuẩn hóa chỉ cản trở chứ không giúp."
+    },
+    {
+     "q": "[M5] In response to a BLACK SWAN risk, investors are most likely to make which type of change?",
+     "opts": [
+      "Tactical",
+      "Sector specific",
+      "Asset allocation"
+     ],
+     "ans": 2,
+     "en": "Black swans are unforeseeable and high-impact — you cannot time or sector-pick them. The defense is portfolio-level resilience: broad asset allocation built to survive shocks.",
+     "vi": "Thiên nga đen không thể lường trước và tác động lớn — không thể canh thời điểm hay chọn ngành để né. Phòng thủ nằm ở cấp danh mục: phân bổ tài sản đủ bền để sống sót qua cú sốc."
+    },
+    {
+     "q": "[M5] Cyber threats most likely fall into the category of:",
+     "opts": [
+      "Event risk",
+      "Thematic risk",
+      "Exogenous risk"
+     ],
+     "ans": 1,
+     "en": "Thematic risks are known forces that evolve over time — cyber, climate, migration. Event risk clusters around known dates (elections); exogenous risk arrives as a sudden surprise.",
+     "vi": "Rủi ro chủ đề là các lực đã biết, tiến hóa theo thời gian — an ninh mạng, khí hậu, di cư. Rủi ro sự kiện xoay quanh mốc ngày đã biết (bầu cử); rủi ro ngoại sinh ập đến bất ngờ."
+    },
+    {
+     "q": "[M5] Natural disasters are an example of:",
+     "opts": [
+      "Event risk",
+      "Thematic risk",
+      "Exogenous risk"
+     ],
+     "ans": 2,
+     "en": "Exogenous risks are sudden, unanticipated shocks from outside the system — disasters, surprise conflict escalations. No calendar, no evolving theme: pure surprise.",
+     "vi": "Rủi ro ngoại sinh là cú sốc đột ngột, không lường trước, đến từ bên ngoài hệ thống — thiên tai, xung đột leo thang bất ngờ. Không lịch hẹn, không chủ đề tiến hóa: thuần bất ngờ."
+    },
+    {
+     "q": "[M5] Which is most likely a BENEFIT of globalization?",
+     "opts": [
+      "Increased profits",
+      "More equal income distribution",
+      "Stronger environmental, social, and governance standards"
+     ],
+     "ans": 0,
+     "en": "Globalization lifts profits through bigger markets and lower costs. Its documented downsides include WIDER income gaps and pressure on ESG standards — the reverse of options B and C.",
+     "vi": "Toàn cầu hóa nâng lợi nhuận nhờ thị trường rộng hơn và chi phí thấp hơn. Mặt trái được ghi nhận gồm khoảng cách thu nhập RỘNG hơn và áp lực lên chuẩn ESG — ngược với phương án B và C."
+    },
+    {
+     "q": "[M5] The main objective of the World Bank Group is to:",
+     "opts": [
+      "Support exchange rate stability and an open international payments system",
+      "Provide the legal and institutional foundation of the multinational trading system",
+      "Help developing countries fight poverty and enhance environmentally sound economic growth"
+     ],
+     "ans": 2,
+     "en": "World Bank = development and poverty reduction. Option A describes the IMF; option B describes the WTO — the classic three-institution matching question.",
+     "vi": "World Bank = phát triển và giảm nghèo. Phương án A mô tả IMF; phương án B mô tả WTO — câu ghép cặp ba định chế kinh điển."
+    },
+    {
+     "q": "[M6] A common market most likely incorporates ALL aspects of a(n):",
+     "opts": [
+      "Customs union",
+      "Monetary union",
+      "Economic union"
+     ],
+     "ans": 0,
+     "en": "The ladder ascends: FTA → customs union (+ common external tariff) → common market (+ free movement of labor and capital) → economic union (+ common institutions) → monetary union (+ single currency). Each rung contains everything below it.",
+     "vi": "Chiếc thang đi lên: FTA → liên minh thuế quan (+ thuế quan ngoài chung) → thị trường chung (+ tự do di chuyển lao động và vốn) → liên minh kinh tế (+ thể chế chung) → liên minh tiền tệ (+ đồng tiền chung). Mỗi bậc chứa trọn mọi bậc dưới nó."
+    },
+    {
+     "q": "[M6] An export subsidy for a normal good in a SMALL country will most likely increase the:",
+     "opts": [
+      "Domestic consumption of the good",
+      "Price of the good in the domestic market",
+      "National welfare of the country providing the subsidy"
+     ],
+     "ans": 1,
+     "en": "Producers divert output to subsidized exports until the domestic price rises to the world price plus subsidy. Domestic consumption falls at the higher price, and the deadweight losses REDUCE national welfare.",
+     "vi": "Nhà sản xuất chuyển hàng sang xuất khẩu được trợ cấp cho đến khi giá nội địa tăng lên bằng giá thế giới cộng trợ cấp. Tiêu dùng trong nước giảm vì giá cao hơn, và tổn thất vô ích LÀM GIẢM phúc lợi quốc gia."
+    },
+    {
+     "q": "[M6] An argument AGAINST free trade is that it:",
+     "opts": [
+      "Has the potential to lead to greater income inequality",
+      "Increases average production costs",
+      "Discourages foreign research and development"
+     ],
+     "ans": 0,
+     "en": "Trade's aggregate gains are unevenly shared — workers in import-competing sectors can lose, widening inequality. Trade LOWERS average costs and tends to spread R&D, so B and C are backwards.",
+     "vi": "Lợi ích tổng thể của thương mại được chia không đều — lao động ở các ngành cạnh tranh với hàng nhập có thể thiệt, nới rộng bất bình đẳng. Thương mại HẠ chi phí bình quân và lan tỏa R&D, nên B và C nói ngược."
+    },
+    {
+     "q": "[M6] When a PRICE-TAKER country imposes a tariff on an imported good:",
+     "opts": [
+      "National welfare increases",
+      "Consumers gain consumer surplus",
+      "Local producers gain producer surplus"
+     ],
+     "ans": 2,
+     "en": "The domestic price rises by the tariff: producers gain surplus and the government collects revenue, but consumers lose MORE than both combined — a small country's tariff always shrinks national welfare.",
+     "vi": "Giá nội địa tăng đúng bằng thuế quan: nhà sản xuất được thêm thặng dư và chính phủ thu thuế, nhưng người tiêu dùng mất NHIỀU HƠN cả hai cộng lại — thuế quan của nước nhỏ luôn làm teo phúc lợi quốc gia."
+    }
+   ]
+  },
+  {
+   "name": "Set J — Question Bank: Capital Flows & FX Calculations (M7–M8)",
+   "qs": [
+    {
+     "q": "[M7] Foreign inflation 2%, domestic inflation 3%, nominal exchange rate (domestic per foreign) rises 6%. The change in the REAL exchange rate is closest to:",
+     "opts": [
+      "4%",
+      "5%",
+      "7%"
+     ],
+     "ans": 1,
+     "en": "Real (d/f) = nominal (d/f) × P_foreign/P_domestic → %Δreal ≈ %Δnominal + π_f − π_d = 6 + 2 − 3 = 5%. The foreign currency gained 5% in real purchasing-power terms.",
+     "vi": "Real (d/f) = nominal (d/f) × P_nước ngoài/P_trong nước → %Δreal ≈ %Δnominal + π_f − π_d = 6 + 2 − 3 = 5%. Đồng ngoại tệ lên giá 5% theo sức mua thực."
+    },
+    {
+     "q": "[M7] When a country has a fiscal surplus AND private saving exceeds investment, its exports are:",
+     "opts": [
+      "Less than its imports",
+      "Equal to its imports",
+      "Greater than its imports"
+     ],
+     "ans": 2,
+     "en": "The national accounts identity: X − M = (S − I) + (T − G). Both terms on the right are positive → a trade surplus. Excess domestic saving must flow abroad, financing net exports.",
+     "vi": "Đẳng thức tài khoản quốc gia: X − M = (S − I) + (T − G). Cả hai số hạng bên phải đều dương → thặng dư thương mại. Tiết kiệm trong nước dư thừa phải chảy ra nước ngoài, tài trợ cho xuất khẩu ròng."
+    },
+    {
+     "q": "[M7] Converting nominal exchange rates into REAL exchange rates requires the:",
+     "opts": [
+      "GDP of both countries",
+      "Price levels in both countries",
+      "Interest rates in both countries"
+     ],
+     "ans": 1,
+     "en": "The real rate deflates the nominal rate by the two price levels: real = nominal × P_f/P_d. Interest rates enter FORWARD pricing, not real-rate conversion.",
+     "vi": "Tỷ giá thực khử lạm phát tỷ giá danh nghĩa bằng hai mặt bằng giá: real = nominal × P_f/P_d. Lãi suất đi vào định giá FORWARD, không phải quy đổi tỷ giá thực."
+    },
+    {
+     "q": "[M7] US prices rise 2%, Eurozone prices rise 6%, and the nominal USD/EUR rate falls 4%. The absolute change in the real exchange rate is closest to:",
+     "opts": [
+      "0%",
+      "4%",
+      "8%"
+     ],
+     "ans": 0,
+     "en": "USD/EUR: USD is the price (domestic) currency, EUR the base (foreign). %Δreal ≈ %Δnominal + π_f − π_d = −4 + 6 − 2 = 0%. The nominal fall exactly offsets the inflation differential — real rate unchanged, PPP in action.",
+     "vi": "USD/EUR: USD là đồng định giá (trong nước), EUR là đồng cơ sở (nước ngoài). %Δreal ≈ %Δnominal + π_f − π_d = −4 + 6 − 2 = 0%. Cú giảm danh nghĩa khử vừa khít chênh lệch lạm phát — tỷ giá thực không đổi, PPP hiện hình."
+    },
+    {
+     "q": "[M7] An ideal international currency regime would most likely have:",
+     "opts": [
+      "Currencies that are fully convertible",
+      "Floating exchange rates between currencies",
+      "A common monetary policy across different countries"
+     ],
+     "ans": 0,
+     "en": "The ideal regime's three properties: credibly FIXED rates, FULL convertibility, and INDEPENDENT national monetary policies. Only convertibility appears among the options — floating rates and a shared policy are not part of the ideal.",
+     "vi": "Ba thuộc tính của chế độ lý tưởng: tỷ giá CỐ ĐỊNH đáng tin, chuyển đổi HOÀN TOÀN, và chính sách tiền tệ quốc gia ĐỘC LẬP. Chỉ tính chuyển đổi xuất hiện trong các phương án — tỷ giá thả nổi và chính sách chung không thuộc hình mẫu lý tưởng."
+    },
+    {
+     "q": "[M7] In contrast to real exchange rates, NOMINAL foreign exchange rates:",
+     "opts": [
+      "Tend to deviate from purchasing power parity",
+      "Represent the relative price levels in the two countries",
+      "Are indexes useful for understanding trade and capital flows"
+     ],
+     "ans": 0,
+     "en": "Nominal rates are actual transaction prices and wander from PPP for long stretches. Representing relative price levels and serving as analytical indexes describe REAL rates.",
+     "vi": "Tỷ giá danh nghĩa là giá giao dịch thực tế và lệch khỏi PPP trong thời gian dài. Đại diện cho mặt bằng giá tương đối và làm chỉ số phân tích là đặc tính của tỷ giá THỰC."
+    },
+    {
+     "q": "[M7] Which condition best supports a well-functioning CURRENCY BOARD system?",
+     "opts": [
+      "Flexible domestic prices and wages",
+      "Rapid growth in supply of the global reserve asset",
+      "Large non-traded sectors of the domestic economy"
+     ],
+     "ans": 0,
+     "en": "A currency board surrenders independent monetary policy, so economic shocks must be absorbed by the PRICES and WAGES themselves — flexibility there is the survival condition.",
+     "vi": "Currency board từ bỏ chính sách tiền tệ độc lập, nên các cú sốc kinh tế phải được hấp thụ bởi chính GIÁ và LƯƠNG — sự linh hoạt ở đó là điều kiện sống còn."
+    },
+    {
+     "q": "[M7] Dollarization is best described as an exchange rate regime whereby a country:",
+     "opts": [
+      "Uses the currency of another nation as its medium of exchange",
+      "Participates in a monetary union sharing the same legal tender",
+      "Commits to exchange domestic currency for a specified foreign currency at a fixed rate"
+     ],
+     "ans": 0,
+     "en": "Dollarization = adopting another country's money outright, with no domestic currency and zero monetary independence. Option B describes a monetary union; option C a currency board.",
+     "vi": "Đô la hóa = dùng thẳng đồng tiền của nước khác, không còn nội tệ và không còn chút độc lập tiền tệ nào. Phương án B mô tả liên minh tiền tệ; phương án C là currency board."
+    },
+    {
+     "q": "[M8] All else equal, in an efficient market a FORWARD exchange rate will DECREASE as a result of an increase in the:",
+     "opts": [
+      "Spot exchange rate",
+      "Foreign risk-free interest rate",
+      "Domestic risk-free interest rate"
+     ],
+     "ans": 1,
+     "en": "Covered interest parity: F(d/f) = S × (1 + i_domestic)/(1 + i_foreign). A higher foreign rate grows the denominator → F falls. Higher spot or higher domestic rates push F UP.",
+     "vi": "Ngang giá lãi suất có phòng hộ: F(d/f) = S × (1 + i_trong nước)/(1 + i_nước ngoài). Lãi nước ngoài cao hơn làm mẫu số phình → F giảm. Spot cao hơn hoặc lãi trong nước cao hơn đẩy F LÊN."
+    },
+    {
+     "q": "[M8] USD/AUD spot 0.8027; AUD 1-year rate 3.30%; USD 1-year rate 2.42%. The USD/AUD 1-year forward rate is closest to:",
+     "opts": [
+      "0.7959",
+      "0.8096",
+      "0.8292"
+     ],
+     "ans": 0,
+     "en": "USD/AUD = USD per 1 AUD → USD is the price currency, AUD the base. F = S × (1 + i_price)/(1 + i_base) = 0.8027 × 1.0242/1.0330 = 0.7959. The higher-yielding AUD trades at a forward DISCOUNT — parity removes the free lunch.",
+     "vi": "USD/AUD = số USD cho 1 AUD → USD là đồng định giá, AUD là đồng cơ sở. F = S × (1 + i_định giá)/(1 + i_cơ sở) = 0,8027 × 1,0242/1,0330 = 0,7959. Đồng AUD lãi cao hơn giao dịch forward CHIẾT KHẤU — ngang giá xóa bữa trưa miễn phí."
+    },
+    {
+     "q": "[M8] An arbitrage relationship involving countries' relative interest rates serves as the basis for:",
+     "opts": [
+      "Real exchange rates",
+      "Forward exchange rates",
+      "Nominal exchange rates"
+     ],
+     "ans": 1,
+     "en": "Covered interest rate parity — borrow in one currency, invest in the other, hedge with a forward — pins the forward rate to the interest differential. Any other forward price is riskless profit.",
+     "vi": "Ngang giá lãi suất có phòng hộ — vay đồng này, đầu tư đồng kia, phòng hộ bằng forward — neo tỷ giá kỳ hạn vào chênh lệch lãi suất. Mọi mức forward khác đều là lợi nhuận phi rủi ro."
+    },
+    {
+     "q": "[M8] CAD/USD moves 1.3216 → 1.2944; JPY/USD moves 105.42 → 104.74. The percentage change in the JPY/CAD cross-rate is closest to:",
+     "opts": [
+      "−2.7%",
+      "1.4%",
+      "2.8%"
+     ],
+     "ans": 1,
+     "en": "JPY/CAD = (JPY/USD)/(CAD/USD). Beginning: 105.42/1.3216 = 79.77. End: 104.74/1.2944 = 80.92. Change = 80.92/79.77 − 1 = +1.4% — the CAD strengthened against the JPY.",
+     "vi": "JPY/CAD = (JPY/USD)/(CAD/USD). Đầu kỳ: 105,42/1,3216 = 79,77. Cuối kỳ: 104,74/1,2944 = 80,92. Thay đổi = 80,92/79,77 − 1 = +1,4% — CAD mạnh lên so với JPY."
+    },
+    {
+     "q": "[M8] Spot USD/EUR = 1.1605; the 1-year forward rate = 1.17240. The forward points are:",
+     "opts": [
+      "+101.5",
+      "+102.5",
+      "+119.0"
+     ],
+     "ans": 2,
+     "en": "Forward points = (F − S) × 10,000 = (1.17240 − 1.16050) × 10,000 = 0.0119 × 10,000 = +119.0. Convention: points are the difference scaled by 10⁴ for four-decimal quotes.",
+     "vi": "Điểm kỳ hạn = (F − S) × 10.000 = (1,17240 − 1,16050) × 10.000 = +119,0. Quy ước: điểm là phần chênh nhân 10⁴ với báo giá bốn chữ số thập phân."
+    },
+    {
+     "q": "[M8] Spot rates: USD/GBP = 1.2604; USD/EUR = 1.1786. The spot EUR/GBP cross rate is closest to:",
+     "opts": [
+      "0.9351",
+      "1.0694",
+      "1.4855"
+     ],
+     "ans": 1,
+     "en": "EUR/GBP = (USD/GBP)/(USD/EUR) = 1.2604/1.1786 = 1.0694 — the USD cancels: euros per dollar times dollars per pound leaves euros per pound.",
+     "vi": "EUR/GBP = (USD/GBP)/(USD/EUR) = 1,2604/1,1786 = 1,0694 — đồng USD triệt tiêu: euro trên mỗi đô nhân đô trên mỗi bảng còn lại euro trên mỗi bảng."
     }
    ]
   }
