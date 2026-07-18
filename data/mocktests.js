@@ -2002,3 +2002,1993 @@ window.CFA.mocktests.push({
  }
 ]
 });
+window.CFA.mocktests.push({
+ name: "Mock Exam 2 — Session 1 (Ethics · Quant · Econ · FSA · Corporate Issuers)",
+ qs: [
+ {
+  "q": "Which of the following is a VIOLATION of the Standard relating to preservation of confidentiality?",
+  "opts": [
+   "Members share details relating to former clients with third party service providers",
+   "Members convey to clients that not all firm-sponsored resources may be appropriate for communicating confidential information",
+   "When allowed under the law, members share confidential client information to defend themselves in a CFA Institute Professional Conduct Program investigation"
+  ],
+  "ans": 0,
+  "en": "The duty of confidentiality extends to FORMER clients — sharing their details with outside providers breaches III(E). Advising clients on secure channels is good practice, and cooperating with a PCP investigation is explicitly permitted.",
+  "vi": "Nghĩa vụ bảo mật kéo dài cả với khách hàng CŨ — chia sẻ thông tin của họ cho bên cung cấp dịch vụ ngoài là vi phạm III(E). Tư vấn khách về kênh liên lạc an toàn là thực hành tốt, còn hợp tác với điều tra PCP được cho phép rõ ràng."
+ },
+ {
+  "q": "Which is most accurate under the Standard relating to knowledge of the law? Members are required to:",
+  "opts": [
+   "Dissociate from client activities they believe are unethical",
+   "Have detailed knowledge of all the laws that could potentially govern their activities",
+   "Report potential violations by fellow members to the CFA Institute Professional Conduct Program"
+  ],
+  "ans": 0,
+  "en": "Standard I(A) requires dissociating from illegal or unethical activity. It demands only an UNDERSTANDING of applicable law — not encyclopedic knowledge — and reporting peers to the PCP is encouraged, not required.",
+  "vi": "Standard I(A) yêu cầu tách mình khỏi hoạt động phi pháp hoặc phi đạo đức. Nó chỉ đòi HIỂU luật áp dụng — không phải thuộc lòng mọi luật — và báo cáo đồng nghiệp lên PCP là được khuyến khích, không bắt buộc."
+ },
+ {
+  "q": "Robert Dowling, CFA, is part of a research team that recommended a \"buy\" rating, but Dowling disagrees. To comply with the Standard on diligence and reasonable basis, Dowling:",
+  "opts": [
+   "Must decline to be identified with the report",
+   "Must ensure the report reflects his opinion",
+   "May continue to be identified with the report as long as the recommendation has a reasonable basis"
+  ],
+  "ans": 2,
+  "en": "Group research needs a reasonable and adequate basis — not unanimity. A dissenting member may stay on the report; dissociation is required only when the basis itself is lacking.",
+  "vi": "Nghiên cứu nhóm cần cơ sở hợp lý, đầy đủ — không cần đồng thuận tuyệt đối. Thành viên bất đồng vẫn có thể đứng tên; chỉ buộc rút tên khi chính cơ sở phân tích có vấn đề."
+ },
+ {
+  "q": "Daniel Morgan, a Level III candidate, signs into a CFA-candidate-only forum after the exam and posts his opinion that the CFA Program and examination policies are unfair. Has Morgan violated the Standards?",
+  "opts": [
+   "No",
+   "Yes, by providing confidential program information",
+   "Yes, by compromising the reputation of CFA Institute"
+  ],
+  "ans": 0,
+  "en": "Expressing opinions — even critical ones — about CFA Institute's policies is expressly permitted. Only disclosing confidential EXAM CONTENT would breach VII(A).",
+  "vi": "Bày tỏ quan điểm — kể cả chỉ trích — về chính sách của CFA Institute được cho phép rõ ràng. Chỉ tiết lộ NỘI DUNG ĐỀ THI bảo mật mới vi phạm VII(A)."
+ },
+ {
+  "q": "Which is a recommended procedure under the Standard relating to performance presentation?",
+  "opts": [
+   "Use a single representative account for each mandate when presenting performance history",
+   "Consider the knowledge and sophistication of the audience to whom the performance history is presented",
+   "Exclude terminated accounts while presenting performance history, indicating when the accounts were terminated"
+  ],
+  "ans": 1,
+  "en": "Tailoring the presentation to the audience's sophistication is a recommended III(D) procedure. Composites — not one cherry-picked account — should be used, and TERMINATED accounts must be INCLUDED through their final dates.",
+  "vi": "Điều chỉnh cách trình bày theo mức am hiểu của người nghe là quy trình khuyến nghị của III(D). Phải dùng composite — không phải một tài khoản được chọn đẹp — và tài khoản ĐÃ ĐÓNG phải được GỘP VÀO đến ngày kết thúc."
+ },
+ {
+  "q": "Under the Standard relating to loyalty, prudence, and care, members are most likely required to:",
+  "opts": [
+   "Vote all proxies on behalf of clients even if some offer no direct client benefit",
+   "Avoid the use of soft dollars unless the services purchased have corresponding benefit for the client",
+   "Consider each investment based solely on its characteristics, independently of other portfolio assets"
+  ],
+  "ans": 1,
+  "en": "Client brokerage belongs to the client: soft dollars may only buy research that benefits the client. Proxy voting follows a cost–benefit analysis (not \"all\"), and investments are judged in the PORTFOLIO context.",
+  "vi": "Hoa hồng môi giới thuộc về khách hàng: soft dollars chỉ được mua dịch vụ nghiên cứu có lợi cho khách. Bỏ phiếu proxy theo phân tích chi phí–lợi ích (không phải \"tất cả\"), và khoản đầu tư được đánh giá trong bối cảnh DANH MỤC."
+ },
+ {
+  "q": "According to the GIPS standards, compliance may be claimed only:",
+  "opts": [
+   "After verification has been performed",
+   "If the firm is compliant on a firm-wide basis",
+   "With respect to specific composites and not to individual portfolios"
+  ],
+  "ans": 1,
+  "en": "GIPS compliance is all-or-nothing at the FIRM level. Verification is voluntary, and compliance can never attach to selected composites alone.",
+  "vi": "Tuân thủ GIPS là tất-cả-hoặc-không ở cấp CÔNG TY. Verification là tự nguyện, và không bao giờ được tuyên bố tuân thủ chỉ cho vài composite chọn lọc."
+ },
+ {
+  "q": "Under the Standard on additional compensation arrangements, a member must obtain employer permission before accepting third-party benefits:",
+  "opts": [
+   "Only for services rendered to her employer",
+   "Only for services that might create a conflict with her employer's interest",
+   "Both for services rendered to the employer and for services that might create a conflict"
+  ],
+  "ans": 1,
+  "en": "IV(B) targets compensation that competes with or might CONFLICT with the employer's interest — that is what requires written consent from all parties.",
+  "vi": "IV(B) nhắm vào các khoản thù lao cạnh tranh hoặc có thể XUNG ĐỘT với lợi ích của chủ lao động — đó là thứ cần sự đồng ý bằng văn bản của các bên."
+ },
+ {
+  "q": "Diana Fairbanks, CFA, learns from her auditor husband that a computer firm he audits will receive a qualified opinion. Later she notices a new client account holds substantial shares of that firm. An internet search reveals no news about the audit. To avoid violating the Standards, Fairbanks should most likely:",
+  "opts": [
+   "Take no investment action",
+   "Complete a thorough and diligent analysis of the company and then sell the stock",
+   "Sell the stock immediately as she has a reasonable basis for taking this investment action"
+  ],
+  "ans": 0,
+  "en": "The upcoming qualified opinion is material nonpublic information. Standard II(A) bars trading or causing trades on it — selling in any form would act on MNPI, so she must not act (and should seek public dissemination through proper channels).",
+  "vi": "Ý kiến kiểm toán ngoại trừ sắp công bố là thông tin trọng yếu chưa công khai. Standard II(A) cấm giao dịch hoặc khiến người khác giao dịch dựa trên nó — bán dưới bất kỳ hình thức nào đều là hành động trên MNPI, nên cô không được làm gì (và nên thúc đẩy công bố thông tin qua kênh phù hợp)."
+ },
+ {
+  "q": "If a member self-discloses a matter questioning his professional conduct in his annual statement, an initial investigation is conducted by the:",
+  "opts": [
+   "Standard of Practice Council",
+   "Disciplinary Review Committee",
+   "Professional Conduct Program staff"
+  ],
+  "ans": 2,
+  "en": "Professional Conduct staff (under the Designated Officer) conduct inquiries and investigations; the DRC hears appeals and serious cases afterward.",
+  "vi": "Nhân sự Professional Conduct (dưới Designated Officer) thực hiện thẩm tra và điều tra ban đầu; DRC xử các vụ nghiêm trọng và phúc thẩm sau đó."
+ },
+ {
+  "q": "A firm manages $500 million in large-cap equity: non-fee-paying portfolios are $50 million and fee-paying NON-discretionary portfolios are $75 million. Under GIPS, the firm must present its large-cap composite value as:",
+  "opts": [
+   "$375 million",
+   "$425 million",
+   "$450 million"
+  ],
+  "ans": 0,
+  "en": "Composites contain only actual, FEE-PAYING, DISCRETIONARY portfolios: 500 − 50 (non-fee) − 75 (non-discretionary) = $375m.",
+  "vi": "Composite chỉ gồm danh mục thực, TRẢ PHÍ, TOÀN QUYỀN: 500 − 50 (không phí) − 75 (không toàn quyền) = $375tr."
+ },
+ {
+  "q": "Procedure 1: Disseminate to all employees a list of past violations together with disciplinary actions. Procedure 2: Check references of potential employees to ensure they are of good character. Which is among the recommended procedures for compliance with the Standard relating to misconduct?",
+  "opts": [
+   "Procedure 1 only",
+   "Procedure 2 only",
+   "Both Procedure 1 and Procedure 2"
+  ],
+  "ans": 2,
+  "en": "I(D) recommended procedures include a code of ethics, publicizing the list of violations and sanctions to deter misconduct, and background/reference checks on prospective employees — both procedures qualify.",
+  "vi": "Quy trình khuyến nghị của I(D) gồm bộ quy tắc đạo đức, công bố danh sách vi phạm cùng hình thức kỷ luật để răn đe, và kiểm tra lai lịch/người tham chiếu của ứng viên — cả hai quy trình đều đúng."
+ },
+ {
+  "q": "A member develops allocation procedures for block trades and new issues. Under the recommended fair dealing procedures, the allocation procedures should involve:",
+  "opts": [
+   "Prohibiting consideration of advance interest when allocating trades for new issues",
+   "Bundling orders on a first-in, first-out basis for efficiency as appropriate for the asset class",
+   "Giving client accounts in a block trade execution prices corresponding to order arrival time"
+  ],
+  "ans": 1,
+  "en": "Recommended trade-allocation practice: time-stamp and process orders first-in first-out, bundling where efficient for the asset class. Block-trade participants receive the SAME average price (not arrival-time prices), and new issues ARE allocated using advance indications of interest.",
+  "vi": "Thực hành phân bổ khuyến nghị: đóng dấu thời gian và xử lý lệnh theo thứ tự đến trước làm trước, gộp lệnh khi hiệu quả cho loại tài sản. Các tài khoản trong block trade nhận CÙNG giá bình quân (không theo giờ lệnh đến), còn phát hành mới ĐƯỢC phân bổ dựa trên đăng ký quan tâm trước."
+ },
+ {
+  "q": "Ming Mei Xu, CFA, shares her buy recommendation with the public two days after sending it to her clients; the price rises. Her client Trevor Thomas, CFA, buys a large position, then sells it a month later at a profit, causing a significant price decline. Has the Standard on market manipulation been violated?",
+  "opts": [
+   "No",
+   "Yes, by Xu",
+   "Yes, by Thomas"
+  ],
+  "ans": 0,
+  "en": "Neither acted to deceive: Xu may serve clients before the public, and Thomas simply traded on a recommendation then took profits. Price impact alone — without intent to mislead — is not manipulation.",
+  "vi": "Không ai có ý lừa dối thị trường: Xu được phép phục vụ khách hàng trước công chúng, còn Thomas chỉ mua theo khuyến nghị rồi chốt lời. Tác động lên giá đơn thuần — không có ý đồ đánh lừa — không phải thao túng."
+ },
+ {
+  "q": "Michael Pak retired, stopped paying CFA Institute dues, and no longer files the annual Professional Conduct Statement. Applying to a charity's investment committee, he writes: \"I was a CFA Institute member for 20 years.\" Has Pak violated the Standards?",
+  "opts": [
+   "No",
+   "Yes, the Standard on conduct as participants in CFA Institute programs",
+   "Yes, the Standard on reference to CFA Institute, the CFA designation, and the CFA Program"
+  ],
+  "ans": 0,
+  "en": "The statement is past-tense and factual — he WAS a member for 20 years. Claiming to be a CURRENT member or charterholder after lapsing would be the violation.",
+  "vi": "Câu nói ở thì quá khứ và đúng sự thật — ông ĐÃ TỪNG là thành viên 20 năm. Chỉ khi tự nhận đang LÀ thành viên hay charterholder sau khi hết hiệu lực mới vi phạm."
+ },
+ {
+  "q": "According to the Standard relating to loyalty, members must:",
+  "opts": [
+   "Subordinate any personal obligations to their work",
+   "Place the interests of their employer below the interests of clients",
+   "Refrain from entering into an independent business while still employed"
+  ],
+  "ans": 1,
+  "en": "The Code's hierarchy: market integrity and clients come before the employer. Independent practice is allowed WITH employer consent, and personal obligations need not be surrendered wholesale.",
+  "vi": "Thứ bậc trong Code: tính chính trực của thị trường và khách hàng đứng trên chủ lao động. Kinh doanh độc lập được phép NẾU chủ đồng ý, và nghĩa vụ cá nhân không phải hy sinh toàn bộ."
+ },
+ {
+  "q": "Yun Hae, CFA, manages portfolios at Citadel Capital, where her brother keeps a fee-paying retirement account in which she has no beneficial ownership. For every suitable IPO, Hae allocates shares to other clients first, placing only remaining shares in her brother's account, to avoid potential conflicts. Hae's actions violate the Standard(s) relating:",
+  "opts": [
+   "Only to fair dealing",
+   "Only to priority of transactions",
+   "Both to fair dealing and to priority of transactions"
+  ],
+  "ans": 0,
+  "en": "A fee-paying family account with NO beneficial ownership is an ordinary client — systematically shortchanging it breaches fair dealing III(B). Priority of transactions VI(B) governs accounts she beneficially owns, which this is not.",
+  "vi": "Tài khoản người thân trả phí mà cô KHÔNG có quyền hưởng lợi là khách hàng bình thường — luôn xếp nó cuối là vi phạm fair dealing III(B). Priority of transactions VI(B) chỉ áp cho tài khoản cô hưởng lợi, mà đây không phải."
+ },
+ {
+  "q": "To claim compliance with the GIPS standards, a firm that has existed for two years must:",
+  "opts": [
+   "Wait one year to present three years of GIPS-compliant performance",
+   "Wait three years to present five years of GIPS-compliant performance",
+   "Initially present GIPS-compliant performance since the firm's inception date"
+  ],
+  "ans": 2,
+  "en": "Firms younger than five years present a compliant record since inception, then build toward the ten-year record year by year — no waiting required.",
+  "vi": "Công ty dưới năm tuổi trình bày lịch sử đạt chuẩn kể từ ngày thành lập, rồi bồi đắp dần đến đủ mười năm — không phải chờ đợi."
+ },
+ {
+  "q": "Statement 1: \"Investment professionals should provide to their clients notification of approved referral fee programs.\" Statement 2: \"Members should provide their employer at least annual updates on the amount and nature of compensation received.\" Which is consistent with the recommended procedures for the Standard on referral fees?",
+  "opts": [
+   "Statement 1 only",
+   "Statement 2 only",
+   "Both Statement 1 and Statement 2"
+  ],
+  "ans": 0,
+  "en": "Firms with approved referral programs should have professionals notify clients of them — Statement 1 matches. The recommended update frequency to employers is at least QUARTERLY, so \"annual\" in Statement 2 falls short.",
+  "vi": "Công ty có chương trình giới thiệu được phê duyệt nên yêu cầu nhân sự thông báo cho khách — Statement 1 đúng. Tần suất cập nhật cho chủ lao động được khuyến nghị tối thiểu HÀNG QUÝ, nên chữ \"hàng năm\" ở Statement 2 chưa đạt."
+ },
+ {
+  "q": "A recommended procedure for compliance with the Standard on responsibilities of supervisors is that members should encourage their firms to:",
+  "opts": [
+   "Adopt a code of ethics that addresses general fiduciary concepts",
+   "Provide the firm's clients with a copy of detailed compliance procedures",
+   "Commingle the firm's code of ethics with its detailed compliance procedures"
+  ],
+  "ans": 0,
+  "en": "Firms should adopt a code of ethics stating general fiduciary principles — and keep it SEPARATE from detailed compliance procedures so the ethical foundation stays visible. Clients need the code, not the procedural manual.",
+  "vi": "Công ty nên ban hành bộ quy tắc đạo đức nêu các nguyên tắc tín thác tổng quát — và giữ nó TÁCH BIỆT khỏi quy trình tuân thủ chi tiết để nền tảng đạo đức luôn rõ ràng. Khách hàng cần bộ quy tắc, không phải cẩm nang quy trình."
+ },
+ {
+  "q": "Which claim can an asset management firm most likely make regarding the GIPS standards?",
+  "opts": [
+   "Claim GIPS compliance using the GIPS Compliance Statement",
+   "State that the firm will achieve GIPS compliance by a future date",
+   "Claim partial GIPS compliance with details on areas of non-compliance"
+  ],
+  "ans": 0,
+  "en": "Only the prescribed Compliance Statement may be used, and only when fully compliant. Future-dated promises and partial-compliance claims are both prohibited.",
+  "vi": "Chỉ được dùng đúng Tuyên bố Tuân thủ theo mẫu, và chỉ khi tuân thủ trọn vẹn. Hứa hẹn ngày tương lai và tuyên bố tuân thủ một phần đều bị cấm."
+ },
+ {
+  "q": "According to the Standard relating to suitability, a member should update a client's Investment Policy Statement at least:",
+  "opts": [
+   "Quarterly",
+   "Semiannually",
+   "Annually"
+  ],
+  "ans": 2,
+  "en": "III(C) recommends reviewing and updating the IPS at least annually — and additionally whenever the client's circumstances materially change.",
+  "vi": "III(C) khuyến nghị rà soát và cập nhật IPS tối thiểu hàng năm — và thêm nữa mỗi khi hoàn cảnh của khách thay đổi trọng yếu."
+ },
+ {
+  "q": "Ann Collins, CFA, manages a fund for Kreet Investments (KI). KI's employee retirement plan offers ten mutual funds, including two managed by KI colleagues. Collins reallocates her personal retirement money into the two colleague-managed funds without disclosing the change to KI or her clients. Has Collins violated the Standard on conflicts of interest?",
+  "opts": [
+   "No",
+   "Yes, by failing to disclose the allocation change to KI",
+   "Yes, by failing to disclose the change to her clients"
+  ],
+  "ans": 0,
+  "en": "Choosing among her own employer-sponsored plan options creates no conflict with clients or employer — it is a routine personal investment decision requiring no disclosure.",
+  "vi": "Chọn giữa các quỹ trong chính chương trình hưu trí của công ty không tạo xung đột nào với khách hàng hay chủ lao động — đó là quyết định đầu tư cá nhân thường tình, không cần công bố."
+ },
+ {
+  "q": "John Clark, CFA, starts a new job and re-creates a research report on a company he covered at his previous employer. He uses information gathered directly from the covered company and also his personal notes taken while at his previous employer. Has Clark violated the Standard on record retention?",
+  "opts": [
+   "No",
+   "Yes, because he uses information gathered directly from the covered company",
+   "Yes, because he uses his personal notes taken while working at his previous employer"
+  ],
+  "ans": 2,
+  "en": "Records created on the job — including his own notes — belong to the EMPLOYER. He must rebuild research from newly gathered public and company sources, which the first action correctly does.",
+  "vi": "Hồ sơ tạo ra trong công việc — kể cả ghi chú của chính anh — thuộc về CHỦ LAO ĐỘNG cũ. Anh phải dựng lại nghiên cứu từ nguồn công khai và từ công ty thu thập mới, điều mà hành động thứ nhất làm đúng."
+ },
+ {
+  "q": "According to the Standard relating to misrepresentation, a member is most likely required to:",
+  "opts": [
+   "Disclose his intended use of an external manager",
+   "Always provide a benchmark for investment strategies",
+   "Provide attribution to a member who is no longer with the firm when issuing a report"
+  ],
+  "ans": 0,
+  "en": "Presenting outsourced management as one's own service misrepresents capabilities — the use of external managers must be disclosed. Benchmarks aren't mandated for every strategy, and firm reports need not credit departed staff.",
+  "vi": "Trình bày dịch vụ thuê ngoài như của chính mình là xuyên tạc năng lực — việc dùng nhà quản lý bên ngoài phải được công bố. Benchmark không bắt buộc cho mọi chiến lược, và báo cáo của công ty không cần ghi công nhân sự đã rời đi."
+ },
+ {
+  "q": "With respect to issuer-paid research, members are NOT required to:",
+  "opts": [
+   "Strictly limit the type of compensation they accept from the covered company",
+   "Fully disclose the nature of compensation received from the covered company",
+   "Accept compensation related only to the investment performance of the covered company"
+  ],
+  "ans": 2,
+  "en": "Performance-linked pay is exactly what issuer-paid research must AVOID — the standard calls for a flat fee agreed in advance, plus full disclosure. So option C is not required; it is prohibited.",
+  "vi": "Thù lao gắn với diễn biến giá là thứ nghiên cứu do tổ chức phát hành trả tiền phải TRÁNH — chuẩn mực đòi hỏi phí cố định thỏa thuận trước, kèm công bố đầy đủ. Nên phương án C không phải yêu cầu; nó bị cấm."
+ },
+ {
+  "q": "Joanne Rosewood, CFA, replaces one of the third-party advisers managing her clients' portfolios with an internal investment strategy. She does not notify clients because the investment style is unchanged. Rosewood most likely violated the Standard relating to:",
+  "opts": [
+   "Avoid or disclose conflicts",
+   "Loyalty, prudence, and care",
+   "Communication with clients and prospective clients"
+  ],
+  "ans": 2,
+  "en": "Switching from an external adviser to internal management changes the investment PROCESS — V(B) requires promptly disclosing significant process changes even when the style label stays the same.",
+  "vi": "Đổi từ cố vấn bên ngoài sang quản lý nội bộ là thay đổi QUY TRÌNH đầu tư — V(B) yêu cầu công bố kịp thời các thay đổi trọng yếu của quy trình dù nhãn phong cách không đổi."
+ },
+ {
+  "q": "For a non-colluding oligopoly in a price war market, competitors are most likely to:",
+  "opts": [
+   "Match a rival's price reduction and ignore a rival's price increase",
+   "Ignore a rival's price reduction and match a rival's price increase",
+   "Match both a rival's price reduction and a rival's price increase"
+  ],
+  "ans": 0,
+  "en": "The kinked demand curve logic: cuts are matched (to defend share), increases are ignored (to steal share) — which is what keeps oligopoly prices sticky.",
+  "vi": "Logic đường cầu gãy khúc: giảm giá thì bị theo (để giữ thị phần), tăng giá thì bị mặc kệ (để cướp thị phần) — chính điều này khiến giá trong độc quyền nhóm cứng nhắc."
+ },
+ {
+  "q": "Which sampling method involves selecting every kth member from a population until the desired sample size is obtained?",
+  "opts": [
+   "Cluster sampling",
+   "Systematic sampling",
+   "Convenience sampling"
+  ],
+  "ans": 1,
+  "en": "Fixed-interval selection — every kth element — is the definition of systematic sampling.",
+  "vi": "Chọn theo bước nhảy cố định — phần tử thứ k mỗi lượt — chính là định nghĩa của systematic sampling."
+ },
+ {
+  "q": "In the year of a change in accounting policy, comparability of the presented financial statements is best with:",
+  "opts": [
+   "Prospective application",
+   "Retrospective application",
+   "Modified retrospective application"
+  ],
+  "ans": 1,
+  "en": "Retrospective application restates all prior periods under the new policy, making every year shown directly comparable.",
+  "vi": "Áp dụng hồi tố trình bày lại mọi kỳ trước theo chính sách mới, khiến mọi năm được trình bày so sánh trực tiếp được với nhau."
+ },
+ {
+  "q": "A portfolio's target semideviation is calculated over twelve consecutive months, including seven months of below-target returns. The sum of squared deviations below the target is 42%². The target semideviation is closest to:",
+  "opts": [
+   "1.87%",
+   "1.95%",
+   "2.65%"
+  ],
+  "ans": 1,
+  "en": "Divide by n − 1 using the FULL sample size: 42/(12 − 1) = 3.818 → √3.818 = 1.95%. Dividing by 7 − 1 (the below-target count) is the trap.",
+  "vi": "Chia cho n − 1 với cỡ mẫu ĐẦY ĐỦ: 42/(12 − 1) = 3,818 → √3,818 = 1,95%. Chia cho 7 − 1 (số tháng dưới mục tiêu) là cái bẫy."
+ },
+ {
+  "q": "Which mature company is most likely to use the greatest amount of leverage in its capital structure?",
+  "opts": [
+   "Mining company",
+   "Software company",
+   "Shipping company"
+  ],
+  "ans": 2,
+  "en": "Shipping's long-lived, saleable vessels make superb collateral supporting heavy debt. Mining's revenue is too commodity-volatile, and software has few tangible assets to pledge.",
+  "vi": "Đội tàu đời dài, dễ bán của ngành vận tải biển là tài sản thế chấp tuyệt vời cho vay nợ lớn. Doanh thu khai khoáng quá biến động theo hàng hóa, còn phần mềm có ít tài sản hữu hình để cầm cố."
+ },
+ {
+  "q": "Which statement about company stakeholders is most accurate?",
+  "opts": [
+   "Debtholders tend to prefer that a company raise more equity",
+   "Shareholder–debtholder conflict is greater for short-term creditors",
+   "Shareholders are more likely than debtholders to impose contractual limits on leverage"
+  ],
+  "ans": 0,
+  "en": "More equity thickens the cushion protecting creditors — debtholders love it. The conflict intensifies with LONGER maturities, and leverage covenants are imposed BY debtholders.",
+  "vi": "Thêm vốn chủ làm dày tấm đệm bảo vệ chủ nợ — họ rất thích. Xung đột gay gắt hơn với kỳ hạn DÀI, còn giao ước hạn chế đòn bẩy do CHỦ NỢ áp đặt."
+ },
+ {
+  "q": "Which market structure most likely has the greatest elasticity of demand?",
+  "opts": [
+   "Oligopoly",
+   "Perfect competition",
+   "Monopolistic competition"
+  ],
+  "ans": 1,
+  "en": "The perfectly competitive firm faces a PERFECTLY elastic (horizontal) demand curve — identical substitutes make any price above market lose all sales.",
+  "vi": "Công ty cạnh tranh hoàn hảo đối mặt đường cầu co giãn HOÀN TOÀN (nằm ngang) — hàng thay thế y hệt khiến giá cao hơn thị trường một chút là mất sạch doanh số."
+ },
+ {
+  "q": "Which of the following is an assumption of Modigliani and Miller's propositions regarding capital structure?",
+  "opts": [
+   "Investors have homogeneous expectations",
+   "Investors can borrow and lend at a zero interest rate",
+   "Financing decisions depend on investment decisions"
+  ],
+  "ans": 0,
+  "en": "MM assumes homogeneous expectations, perfect markets, borrowing at the RISK-FREE rate (not zero), and INDEPENDENCE of financing and investment decisions.",
+  "vi": "MM giả định kỳ vọng đồng nhất, thị trường hoàn hảo, vay ở lãi suất PHI RỦI RO (không phải 0), và quyết định tài trợ ĐỘC LẬP với quyết định đầu tư."
+ },
+ {
+  "q": "In geopolitics, cabotage is best described as a:",
+  "opts": [
+   "Financial tool",
+   "Multi-tool approach",
+   "National security tool"
+  ],
+  "ans": 2,
+  "en": "Cabotage — restricting domestic transport routes to domestic carriers — is a national security tool in the geopolitical toolkit.",
+  "vi": "Cabotage — giới hạn tuyến vận tải nội địa cho hãng trong nước — là công cụ an ninh quốc gia trong bộ công cụ địa chính trị."
+ },
+ {
+  "q": "A policy rate that is neutral will become CONTRACTIONARY if trend growth:",
+  "opts": [
+   "Increases and expected inflation increases",
+   "Decreases and expected inflation remains the same",
+   "Decreases and expected inflation increases by the same amount"
+  ],
+  "ans": 1,
+  "en": "Neutral rate = trend growth + expected inflation. If trend growth falls with inflation unchanged, the neutral rate drops BELOW the standing policy rate — the same rate now restrains.",
+  "vi": "Lãi suất trung tính = tăng trưởng xu hướng + lạm phát kỳ vọng. Nếu tăng trưởng xu hướng giảm mà lạm phát giữ nguyên, mức trung tính rơi XUỐNG DƯỚI lãi suất chính sách hiện hành — cùng mức lãi đó giờ thành thắt chặt."
+ },
+ {
+  "q": "A 3-year construction contract: price €108m, expected total costs €70m, Year 1 costs €28m, on-time completion bonus €6m. Costs measure progress; the company has limited experience with similar contracts and delays are possible. Assuming it is highly probable that recognized revenue will not reverse, Year 1 revenue is most likely:",
+  "opts": [
+   "€0",
+   "€43.2",
+   "€45.6"
+  ],
+  "ans": 1,
+  "en": "Progress = 28/70 = 40%. The €6m bonus is variable consideration that fails the \"highly probable no reversal\" test (limited experience, delay risk) — exclude it: 40% × 108 = €43.2m.",
+  "vi": "Tiến độ = 28/70 = 40%. Khoản thưởng €6tr là khoản thanh toán biến đổi không qua được phép thử \"rất khó đảo ngược\" (ít kinh nghiệm, rủi ro trễ hạn) — loại ra: 40% × 108 = €43,2tr."
+ },
+ {
+  "q": "The amount of time from when a company invests in working capital until it collects cash is the:",
+  "opts": [
+   "Net operating cycle",
+   "Defensive interval ratio",
+   "Number of days of sales outstanding"
+  ],
+  "ans": 0,
+  "en": "That span — pay for inputs, hold inventory, collect receivables, net of payables financing — is the net operating (cash conversion) cycle. DSO is only one slice of it.",
+  "vi": "Khoảng đó — trả tiền đầu vào, giữ tồn kho, thu tiền phải thu, trừ phần được nhà cung cấp tài trợ — là chu kỳ hoạt động ròng (chu kỳ chuyển đổi tiền). DSO chỉ là một lát cắt."
+ },
+ {
+  "q": "In the recovery phase of the business cycle, the economy is most likely:",
+  "opts": [
+   "Enjoying an upswing and a positive output gap opens",
+   "Going through a trough and a positive output gap opens",
+   "Going through a trough and a negative output gap starts to narrow"
+  ],
+  "ans": 2,
+  "en": "Recovery = the economy turns at the trough while actual output still sits BELOW potential — the negative output gap begins narrowing, not yet positive.",
+  "vi": "Recovery = nền kinh tế đảo chiều tại đáy trong khi sản lượng thực còn DƯỚI tiềm năng — khoảng cách sản lượng âm bắt đầu thu hẹp, chưa chuyển dương."
+ },
+ {
+  "q": "In periods of rising prices and increasing inventory quantities, using LIFO instead of FIFO most likely increases:",
+  "opts": [
+   "Total assets",
+   "Cost of goods sold",
+   "Days of inventory on hand"
+  ],
+  "ans": 1,
+  "en": "LIFO expenses the newest, most expensive units first → higher COGS, lower inventory (lower assets) and fewer days of inventory on hand.",
+  "vi": "LIFO đưa các đơn vị mới nhất, đắt nhất vào giá vốn trước → COGS cao hơn, tồn kho thấp hơn (tài sản thấp hơn) và số ngày tồn kho ít hơn."
+ },
+ {
+  "q": "Risks associated with supplier relationships are typically mitigated through:",
+  "opts": [
+   "Contracts",
+   "Regulation",
+   "Board representation"
+  ],
+  "ans": 0,
+  "en": "Supplier relationships are contractual: terms, quality clauses, and penalties manage the risk. Regulation governs broader conduct, and board seats belong to shareholders.",
+  "vi": "Quan hệ nhà cung cấp mang tính hợp đồng: điều khoản, cam kết chất lượng, chế tài quản trị rủi ro. Luật lệ điều chỉnh hành vi rộng hơn, còn ghế HĐQT thuộc về cổ đông."
+ },
+ {
+  "q": "An increase in utility for a company's products as the products become more widely adopted best describes:",
+  "opts": [
+   "Network effects",
+   "Operating leverage",
+   "Product differentiation"
+  ],
+  "ans": 0,
+  "en": "Each new user makes the product more valuable to every other user — the network effect (think payment platforms, marketplaces).",
+  "vi": "Mỗi người dùng mới khiến sản phẩm giá trị hơn với mọi người dùng khác — hiệu ứng mạng lưới (nghĩ đến nền tảng thanh toán, sàn giao dịch)."
+ },
+ {
+  "q": "If inventory written down in a previous period subsequently increases in value, the original write-down can be reversed under:",
+  "opts": [
+   "IFRS only",
+   "US GAAP only",
+   "Both IFRS and US GAAP"
+  ],
+  "ans": 0,
+  "en": "IFRS permits reversal up to the original write-down; US GAAP treats the written-down value as the new cost basis — no reversal, ever.",
+  "vi": "IFRS cho hoàn nhập tối đa bằng mức ghi giảm gốc; US GAAP coi giá trị sau ghi giảm là giá gốc mới — không bao giờ hoàn nhập."
+ },
+ {
+  "q": "A cooperative country is most likely to have characteristics of both:",
+  "opts": [
+   "Technology exchange and retaliation",
+   "Rules standardization and reciprocation",
+   "Harmonization of tariffs and arbitrary rules"
+  ],
+  "ans": 1,
+  "en": "Cooperation shows up as standardized rules plus reciprocal exchange (goods, information, technology). Retaliation and arbitrary rule-making are hallmarks of NON-cooperation.",
+  "vi": "Hợp tác thể hiện qua chuẩn hóa luật chơi cộng trao đổi có đi có lại (hàng hóa, thông tin, công nghệ). Trả đũa và luật lệ tùy tiện là dấu hiệu của BẤT hợp tác."
+ },
+ {
+  "q": "All else equal, if interest expense is NOT tax deductible, as a company's marginal tax rate increases, the company's WACC:",
+  "opts": [
+   "Decreases",
+   "Remains the same",
+   "Increases"
+  ],
+  "ans": 1,
+  "en": "The (1 − t) shield exists only because interest is deductible. Remove deductibility and the tax rate drops out of the WACC formula entirely — nothing moves.",
+  "vi": "Lá chắn (1 − t) tồn tại chỉ vì lãi vay được khấu trừ. Bỏ tính khấu trừ thì thuế suất biến mất khỏi công thức WACC — không gì thay đổi."
+ },
+ {
+  "q": "Twenty items in ascending order: −41, −18, −17, −9, −8, −6, −5, 3, 3, 3, 5, 5, 7, 7, 11, 12, 20, 21, 21, 61. The median is closest to:",
+  "opts": [
+   "3",
+   "4",
+   "5"
+  ],
+  "ans": 1,
+  "en": "Even count → average the 10th and 11th values: (3 + 5)/2 = 4.",
+  "vi": "Số quan sát chẵn → trung bình giá trị thứ 10 và 11: (3 + 5)/2 = 4."
+ },
+ {
+  "q": "A company forecasts 10% organic revenue growth with sales volume growing 6.4%. The forecast price/mix impact is closest to:",
+  "opts": [
+   "3.4%",
+   "17.0%",
+   "56.3%"
+  ],
+  "ans": 0,
+  "en": "Growth components compound: (1.10)/(1.064) − 1 = 3.4%. Simple subtraction (3.6%) overstates it slightly.",
+  "vi": "Các cấu phần tăng trưởng nhân lũy kế: (1,10)/(1,064) − 1 = 3,4%. Trừ đơn thuần (3,6%) hơi phóng đại."
+ },
+ {
+  "q": "The term Big Data refers to:",
+  "opts": [
+   "Structured data only",
+   "Unstructured data only",
+   "Both structured and unstructured data"
+  ],
+  "ans": 2,
+  "en": "Big Data spans traditional structured records AND unstructured text, images, and sensor feeds — volume, velocity, and variety.",
+  "vi": "Big Data bao trùm dữ liệu có cấu trúc truyền thống VÀ văn bản, hình ảnh, cảm biến phi cấu trúc — khối lượng, tốc độ, và độ đa dạng."
+ },
+ {
+  "q": "Which best describes the link between the cash flow statement and the balance sheet?",
+  "opts": [
+   "The cash flow statement reconciles changes in all balance sheet accounts",
+   "The investing section reconciles the changes in current assets",
+   "The cash flow statement reconciles the beginning and ending balances of cash on the balance sheet"
+  ],
+  "ans": 2,
+  "en": "The statement's whole purpose: explain how the balance sheet's opening cash became its closing cash through operating, investing, and financing flows.",
+  "vi": "Toàn bộ mục đích của báo cáo: giải thích tiền đầu kỳ trên bảng cân đối biến thành tiền cuối kỳ ra sao qua các dòng hoạt động, đầu tư, tài trợ."
+ },
+ {
+  "q": "Assuming no retaliation, which condition must hold for a LARGE country to increase national welfare by imposing a tariff?",
+  "opts": [
+   "It must have a comparative advantage in producing the imported good",
+   "The deadweight loss must be smaller than the benefit of its improving terms of trade",
+   "It must auction the import licenses to offset the decline in consumer surplus"
+  ],
+  "ans": 1,
+  "en": "A large importer can push world prices down — a terms-of-trade gain. Welfare rises only if that gain outweighs the tariff's deadweight losses.",
+  "vi": "Nước nhập khẩu lớn có thể ép giá thế giới xuống — lợi ích điều kiện thương mại. Phúc lợi chỉ tăng nếu lợi ích đó lớn hơn tổn thất vô ích của thuế quan."
+ },
+ {
+  "q": "An analyst estimates the probabilities of three economic scenarios and, within each, the probabilities of a stock having a positive or negative return. These are best represented by a:",
+  "opts": [
+   "Tree-map",
+   "Tree diagram",
+   "Probability density function"
+  ],
+  "ans": 1,
+  "en": "Sequential conditional outcomes — scenario first, return outcome second — branch naturally into a tree diagram. A tree-MAP is a data-visualization rectangle chart, a different animal.",
+  "vi": "Kết cục có điều kiện theo trình tự — kịch bản trước, kết quả lợi nhuận sau — phân nhánh tự nhiên thành tree diagram. Tree-MAP là biểu đồ ô chữ nhật trong trực quan hóa dữ liệu, một loài khác hẳn."
+ },
+ {
+  "q": "An inflation-targeting central bank most likely has a medium-term inflation target sufficiently:",
+  "opts": [
+   "Below zero to avoid deflation risk but high enough to ensure price stability",
+   "Above zero to avoid deflation risk but low enough to ensure price stability",
+   "Above zero to avoid inflation risk and high enough to ensure price stability"
+  ],
+  "ans": 1,
+  "en": "The target sits modestly ABOVE zero — a buffer against deflation — yet LOW enough (typically ~2%) to preserve price stability.",
+  "vi": "Mục tiêu đặt hơi TRÊN mức 0 — vùng đệm chống giảm phát — nhưng đủ THẤP (thường ~2%) để giữ ổn định giá."
+ },
+ {
+  "q": "Assuming wages and prices are stable, which policy combination most likely leads to an INCREASE in the private sector's share of GDP?",
+  "opts": [
+   "Easy fiscal and easy monetary policy",
+   "Tight fiscal and easy monetary policy",
+   "Easy fiscal and tight monetary policy"
+  ],
+  "ans": 1,
+  "en": "Tight fiscal shrinks the government's slice; easy money fuels private borrowing and spending — the composition shifts toward the private sector.",
+  "vi": "Tài khóa chặt thu nhỏ phần của chính phủ; tiền tệ lỏng tiếp sức vay mượn và chi tiêu tư nhân — cơ cấu dịch về phía khu vực tư."
+ },
+ {
+  "q": "Account 1: 6.1% compounded daily. Account 2: 6.3% compounded annually. Account 3: 6.2% compounded quarterly. For a $1,000 deposit today, the future value in one year is greatest for:",
+  "opts": [
+   "Account 1",
+   "Account 2",
+   "Account 3"
+  ],
+  "ans": 2,
+  "en": "Compare effective annual rates: A1 = (1 + 0.061/365)³⁶⁵ − 1 = 6.29%; A2 = 6.30%; A3 = (1 + 0.062/4)⁴ − 1 = 6.35%. Account 3 wins — frequency helps, but the stated rate matters too.",
+  "vi": "So lãi suất hiệu dụng năm: A1 = (1 + 0,061/365)³⁶⁵ − 1 = 6,29%; A2 = 6,30%; A3 = (1 + 0,062/4)⁴ − 1 = 6,35%. Account 3 thắng — tần suất ghép giúp ích, nhưng lãi suất danh nghĩa cũng quan trọng."
+ },
+ {
+  "q": "At year end, a company has non-convertible debt, ordinary shares, and employee stock options outstanding. The company's capital structure is considered to be:",
+  "opts": [
+   "Simple, if the options are antidilutive",
+   "Complex, because the company has both debt and equity",
+   "Complex, because the options are convertible into ordinary shares"
+  ],
+  "ans": 2,
+  "en": "A complex structure is defined by POTENTIALLY dilutive securities — options that can convert into ordinary shares. Plain debt-plus-equity alone stays simple.",
+  "vi": "Cấu trúc phức tạp được định nghĩa bằng chứng khoán CÓ KHẢ NĂNG pha loãng — quyền chọn có thể chuyển thành cổ phiếu phổ thông. Chỉ nợ cộng vốn chủ thông thường vẫn là cấu trúc đơn giản."
+ },
+ {
+  "q": "Which is most likely to signal manipulation of financial reporting for a large, diversified company?",
+  "opts": [
+   "A history of large expense items classified as unusual",
+   "Operating margins out of line with other diversified companies",
+   "Changes in accounting policies to reflect new accounting standards"
+  ],
+  "ans": 1,
+  "en": "Peer-defying margins with no economic story are a classic red flag. Repeated \"unusual\" items warrant scrutiny but standard-driven policy changes are legitimate; the peer-margin anomaly ranks first for a diversified firm.",
+  "vi": "Biên lợi nhuận lệch hẳn khỏi các công ty cùng nhóm mà không có câu chuyện kinh tế là cờ đỏ kinh điển. Khoản mục \"bất thường\" lặp lại đáng soi nhưng đổi chính sách theo chuẩn mực mới là hợp lệ; bất thường biên so với peers đứng đầu với công ty đa ngành."
+ },
+ {
+  "q": "According to capital allocation principles, managers should ignore:",
+  "opts": [
+   "Taxes",
+   "The volatility of cash flows",
+   "Expenses that were already incurred"
+  ],
+  "ans": 2,
+  "en": "Sunk costs are unrecoverable and irrelevant to forward-looking decisions. Taxes and cash-flow risk very much belong in the analysis.",
+  "vi": "Chi phí chìm không thể thu hồi và không liên quan đến quyết định hướng tương lai. Thuế và độ biến động dòng tiền thì rất cần trong phân tích."
+ },
+ {
+  "q": "An individual invests $50,000 today and receives $56,000 in one year. If her required rate of return is 12.0%, the rate of return on the investment is:",
+  "opts": [
+   "Less than the required rate of return",
+   "Equal to the required rate of return",
+   "Greater than the required rate of return"
+  ],
+  "ans": 1,
+  "en": "Return = 56,000/50,000 − 1 = 12.0% — exactly the required rate.",
+  "vi": "Lợi suất = 56.000/50.000 − 1 = 12,0% — đúng bằng mức yêu cầu."
+ },
+ {
+  "q": "The entire cost of an intangible asset is most likely expensed when incurred if the asset is:",
+  "opts": [
+   "Developed internally",
+   "Acquired through business combinations",
+   "Purchased in a transaction other than a business combination"
+  ],
+  "ans": 0,
+  "en": "Internally developed intangibles are generally expensed (research always; development too under US GAAP, and under IFRS unless strict criteria are met). Purchased and acquired intangibles are capitalized at cost or fair value.",
+  "vi": "Tài sản vô hình tự phát triển nhìn chung ghi vào chi phí (nghiên cứu luôn luôn; phát triển cũng vậy theo US GAAP, và theo IFRS trừ khi đạt tiêu chí nghiêm ngặt). Tài sản mua và tài sản nhận qua hợp nhất được vốn hóa theo giá gốc hoặc giá trị hợp lý."
+ },
+ {
+  "q": "An argument FOR a country's high national debt relative to GDP being a concern is when the debt:",
+  "opts": [
+   "Is owed to domestic citizens",
+   "Is used for capital investments",
+   "Reduces private sector investing"
+  ],
+  "ans": 2,
+  "en": "Crowding out — government borrowing displacing private investment — is the genuine worry. Internally held debt and debt funding productive capital are the counter-arguments.",
+  "vi": "Chèn lấn — vay nợ chính phủ đẩy lùi đầu tư tư nhân — là mối lo thực sự. Nợ do dân trong nước nắm và nợ tài trợ đầu tư sản xuất là các lập luận phản bác."
+ },
+ {
+  "q": "Days of inventory / days sales outstanding / days of payables — Company 1: 45/30/25; Company 2: 62/45/60; Company 3: 50/53/48. The company with the SHORTEST cash conversion cycle is:",
+  "opts": [
+   "Company 1",
+   "Company 2",
+   "Company 3"
+  ],
+  "ans": 1,
+  "en": "CCC = DOH + DSO − DPO: C1 = 45 + 30 − 25 = 50; C2 = 62 + 45 − 60 = 47; C3 = 50 + 53 − 48 = 55. Company 2's generous payables financing wins it the shortest cycle.",
+  "vi": "CCC = DOH + DSO − DPO: C1 = 45 + 30 − 25 = 50; C2 = 62 + 45 − 60 = 47; C3 = 50 + 53 − 48 = 55. Nguồn tài trợ dồi dào từ phải trả giúp Company 2 có chu kỳ ngắn nhất."
+ },
+ {
+  "q": "Which factor is most likely to lead to economies of scale?",
+  "opts": [
+   "Supply constraints",
+   "Duplication of product lines",
+   "Specialization by workers"
+  ],
+  "ans": 2,
+  "en": "Larger scale lets labor and management specialize, cutting cost per unit. Supply constraints and duplicated lines push costs the other way (diseconomies).",
+  "vi": "Quy mô lớn hơn cho phép lao động và quản lý chuyên môn hóa, hạ chi phí mỗi đơn vị. Ràng buộc nguồn cung và trùng lặp dòng sản phẩm đẩy chi phí theo chiều ngược lại (bất lợi quy mô)."
+ },
+ {
+  "q": "Current assets (€ thousands): cash 300, short-term marketable investments 400, receivables 100, inventory 200. If the current ratio is 1.0, the quick ratio is:",
+  "opts": [
+   "0.7",
+   "0.8",
+   "0.9"
+  ],
+  "ans": 1,
+  "en": "Current ratio 1.0 → current liabilities = total current assets = 1,000. Quick = (300 + 400 + 100)/1,000 = 0.8 — inventory drops out.",
+  "vi": "Current ratio 1,0 → nợ ngắn hạn = tổng tài sản ngắn hạn = 1.000. Quick = (300 + 400 + 100)/1.000 = 0,8 — tồn kho bị loại."
+ },
+ {
+  "q": "The bootstrap resampling method:",
+  "opts": [
+   "Guarantees that all items will appear in the resamples",
+   "Relies on an analytical formula to estimate the distribution of the estimators",
+   "Mimics the random sampling process by treating the randomly drawn sample as if it were the population"
+  ],
+  "ans": 2,
+  "en": "Bootstrap resamples WITH replacement from the observed sample, treating it as a stand-in population — no formula, and no guarantee every item appears.",
+  "vi": "Bootstrap rút mẫu CÓ hoàn lại từ mẫu quan sát, coi nó như tổng thể thay thế — không cần công thức, và không bảo đảm mọi phần tử đều xuất hiện."
+ },
+ {
+  "q": "Percentage increases: real USD/EUR exchange rate +5%; Eurozone price level +2%; US price level +1.5%. The predicted change in the nominal USD/EUR spot rate is closest to:",
+  "opts": [
+   "−0.5%",
+   "4.5%",
+   "5.5%"
+  ],
+  "ans": 1,
+  "en": "Real = nominal × P_f/P_d → %Δnominal ≈ %Δreal + π_domestic − π_foreign = 5 + 1.5 − 2 = 4.5%.",
+  "vi": "Real = nominal × P_f/P_d → %Δnominal ≈ %Δreal + π_trong nước − π_nước ngoài = 5 + 1,5 − 2 = 4,5%."
+ },
+ {
+  "q": "A company is PROHIBITED from reversing an impairment loss on a long-lived asset classified as:",
+  "opts": [
+   "Held for use under IFRS",
+   "Held for use under US GAAP",
+   "Held for sale under US GAAP"
+  ],
+  "ans": 1,
+  "en": "US GAAP bars reversals for held-for-USE assets. IFRS permits reversals generally, and even US GAAP allows recovery (up to the original loss) for held-for-SALE assets.",
+  "vi": "US GAAP cấm hoàn nhập với tài sản giữ để SỬ DỤNG. IFRS cho hoàn nhập nói chung, và ngay cả US GAAP cũng cho phục hồi (tối đa bằng khoản lỗ gốc) với tài sản giữ để BÁN."
+ },
+ {
+  "q": "Unaudited financial statements are most likely presented in a(n):",
+  "opts": [
+   "Annual report",
+   "Quarterly report",
+   "Proxy statement"
+  ],
+  "ans": 1,
+  "en": "Interim (quarterly/semiannual) statements are typically unaudited; annual statements carry the auditor's opinion, and proxy statements are governance documents.",
+  "vi": "Báo cáo giữa kỳ (quý/bán niên) thường không kiểm toán; báo cáo năm mang ý kiến kiểm toán viên, còn proxy statement là tài liệu quản trị."
+ },
+ {
+  "q": "From a corporate issuer's perspective, a benefit of issuing debt rather than equity is that debt is most likely:",
+  "opts": [
+   "Cheaper",
+   "Less risky",
+   "More permanent"
+  ],
+  "ans": 0,
+  "en": "Debt's contractual priority and tax-deductible interest make it the cheaper capital. For the ISSUER it is riskier (default risk) and temporary (it matures) — equity is the permanent capital.",
+  "vi": "Thứ tự ưu tiên theo hợp đồng và lãi vay được khấu trừ thuế khiến nợ là nguồn vốn rẻ hơn. Với TỔ CHỨC PHÁT HÀNH nợ rủi ro hơn (rủi ro vỡ nợ) và tạm thời (có đáo hạn) — vốn chủ mới là vốn vĩnh viễn."
+ },
+ {
+  "q": "Compared with its net income, a mature company's operating cash flow is most likely:",
+  "opts": [
+   "Lower",
+   "The same",
+   "Higher"
+  ],
+  "ans": 2,
+  "en": "Adding back depreciation and other non-cash charges typically lifts CFO above net income for mature firms with stable working capital.",
+  "vi": "Cộng ngược khấu hao và các khoản phi tiền mặt thường đưa CFO lên trên lợi nhuận ròng ở công ty trưởng thành có vốn lưu động ổn định."
+ },
+ {
+  "q": "In hypothesis testing, which of the following is stated in terms of POPULATION parameters?",
+  "opts": [
+   "The null hypothesis only",
+   "The alternative hypothesis only",
+   "Both the null and the alternative hypothesis"
+  ],
+  "ans": 2,
+  "en": "Both H₀ and Hₐ are claims about population parameters (μ, σ², ρ…); sample statistics only supply the evidence to choose between them.",
+  "vi": "Cả H₀ và Hₐ đều là mệnh đề về tham số tổng thể (μ, σ², ρ…); thống kê mẫu chỉ cung cấp bằng chứng để lựa chọn giữa hai bên."
+ },
+ {
+  "q": "Year-end data (£m): receivables 55 → 65; inventory 140 → 120; PP&E 1,400 → 1,400; accumulated depreciation 80 → 120; payables 40 → 25. Year 2 net income £860m, no PP&E purchases/sales, no write-downs. Cash flow from operating activities for Year 2 is:",
+  "opts": [
+   "£855",
+   "£895",
+   "£925"
+  ],
+  "ans": 1,
+  "en": "CFO = 860 + depreciation 40 (120 − 80) − ΔAR 10 + ΔInv 20 − ΔAP 15 = £895m. Receivables up consumes cash; inventory down and depreciation give it back; payables down consumes it.",
+  "vi": "CFO = 860 + khấu hao 40 (120 − 80) − ΔPhải thu 10 + ΔTồn kho 20 − ΔPhải trả 15 = £895tr. Phải thu tăng ngốn tiền; tồn kho giảm và khấu hao trả lại; phải trả giảm ngốn tiền."
+ },
+ {
+  "q": "Costs incurred during the development phase related to internally generated, identifiable intangible assets:",
+  "opts": [
+   "Must be expensed",
+   "Must be capitalized",
+   "Can be capitalized if certain criteria are met"
+  ],
+  "ans": 2,
+  "en": "Under IFRS, development costs are capitalized once technical feasibility, intent, ability to sell/use, and reliable measurement are demonstrated — conditional, not automatic.",
+  "vi": "Theo IFRS, chi phí phát triển được vốn hóa khi chứng minh được tính khả thi kỹ thuật, ý định, khả năng bán/sử dụng và đo lường tin cậy — có điều kiện, không tự động."
+ },
+ {
+  "q": "A simple linear regression uses 35 months of data. ANOVA: regression SS = 17.3009 (df 1); error SS = 20.2299 (df 33); mean square error = 0.6130. The standard error of the estimate is closest to:",
+  "opts": [
+   "0.68",
+   "0.78",
+   "1.05"
+  ],
+  "ans": 1,
+  "en": "SEE = √MSE = √0.6130 = 0.78 — the square root of the error mean square, directly off the ANOVA table.",
+  "vi": "SEE = √MSE = √0,6130 = 0,78 — căn bậc hai của trung bình bình phương sai số, lấy thẳng từ bảng ANOVA."
+ },
+ {
+  "q": "If the cost of capital exceeds the return on invested capital, shareholder value will:",
+  "opts": [
+   "Decrease",
+   "Remain the same",
+   "Increase"
+  ],
+  "ans": 0,
+  "en": "ROIC < cost of capital means every dollar invested earns less than it costs — growth under these conditions destroys value.",
+  "vi": "ROIC < chi phí vốn nghĩa là mỗi đồng đầu tư sinh lời ít hơn chi phí của nó — tăng trưởng trong điều kiện này phá hủy giá trị."
+ },
+ {
+  "q": "Electronics manufacturer (€ thousands) — cost of sales: Y1 = 800, Y2 = 1,000; ending inventory cost: Y1 = 120, Y2 = 150; NRV of inventory: Y1 = 160, Y2 = 125. Obsolescence allowances are already in cost of sales. Days of inventory on hand for Year 2 (average inventory, 365 days) is closest to:",
+  "opts": [
+   "45",
+   "49",
+   "52"
+  ],
+  "ans": 0,
+  "en": "Carry each year at the lower of cost and NRV: Y1 = min(120, 160) = 120; Y2 = min(150, 125) = 125. Average = 122.5 → DOH = 122.5/1,000 × 365 = 44.7 ≈ 45.",
+  "vi": "Ghi mỗi năm theo mức thấp hơn giữa giá gốc và NRV: N1 = min(120, 160) = 120; N2 = min(150, 125) = 125. Bình quân = 122,5 → DOH = 122,5/1.000 × 365 = 44,7 ≈ 45."
+ },
+ {
+  "q": "The effectiveness of infrastructure spending as a NEAR-TERM fiscal stimulant would be LEAST constrained by the:",
+  "opts": [
+   "Action lag",
+   "Impact lag",
+   "Recognition lag"
+  ],
+  "ans": 2,
+  "en": "Infrastructure's bottlenecks are the action lag (legislation, planning) and impact lag (construction takes years). The recognition lag — spotting the need for stimulus — afflicts all tools equally and binds infrastructure least.",
+  "vi": "Nút thắt của đầu tư hạ tầng là độ trễ hành động (lập pháp, quy hoạch) và độ trễ tác động (xây dựng mất nhiều năm). Độ trễ nhận biết — phát hiện nhu cầu kích thích — ảnh hưởng mọi công cụ như nhau và trói hạ tầng ít nhất."
+ },
+ {
+  "q": "Land under the revaluation model: original cost €12m; first revaluation €17m (end of Year 1); second revaluation €12m (end of Year 2). As a result of the second revaluation, the company recognizes in Year 2:",
+  "opts": [
+   "A €5 million loss on the income statement",
+   "A €5 million loss in other comprehensive income",
+   "Neither a loss on the income statement nor a loss in OCI"
+  ],
+  "ans": 1,
+  "en": "The first revaluation parked a €5m surplus in OCI. The €5m decline exactly unwinds that surplus through OCI — the income statement is touched only if value falls BELOW original cost.",
+  "vi": "Lần đánh giá lại đầu gửi €5tr thặng dư vào OCI. Cú giảm €5tr tháo đúng khoản thặng dư đó qua OCI — báo cáo lãi lỗ chỉ bị chạm khi giá trị rơi XUỐNG DƯỚI giá gốc."
+ },
+ {
+  "q": "The goal of ordinary least squares regression is to minimize the sum of squared deviations between the observations of the dependent variable and the corresponding:",
+  "opts": [
+   "Estimated values of the dependent variable",
+   "Observed values of the independent variable",
+   "Values of the true underlying dependent variable"
+  ],
+  "ans": 0,
+  "en": "OLS minimizes Σ(y − ŷ)² — observed Y against the FITTED (estimated) Y from the regression line.",
+  "vi": "OLS cực tiểu hóa Σ(y − ŷ)² — Y quan sát so với Y ƯỚC LƯỢNG từ đường hồi quy."
+ },
+ {
+  "q": "Which is most likely a motivation for LEASING a high-value asset long term rather than purchasing it?",
+  "opts": [
+   "Reduced exposure to obsolescence risk",
+   "Not having to recognize an asset on the balance sheet",
+   "Not having to recognize a liability on the balance sheet"
+  ],
+  "ans": 0,
+  "en": "The lessor keeps the residual-value and obsolescence risk — a real economic motive. Under current standards, long-term leases put BOTH a right-of-use asset and a lease liability on the balance sheet, killing the old off-balance-sheet motives.",
+  "vi": "Bên cho thuê gánh rủi ro giá trị còn lại và lỗi thời — một động cơ kinh tế thực. Theo chuẩn mực hiện hành, thuê dài hạn đưa CẢ tài sản quyền sử dụng lẫn nợ thuê lên bảng cân đối, xóa sổ động cơ ngoại bảng ngày xưa."
+ },
+ {
+  "q": "The most appropriate statement about financial ratio analysis is that it has LIMITED use as an analytical tool for:",
+  "opts": [
+   "Evaluating management",
+   "Comparing companies that use different accounting methods",
+   "Providing insights into microeconomic relationships within a company that help analysts project earnings"
+  ],
+  "ans": 1,
+  "en": "Different accounting choices (LIFO vs FIFO, revaluation vs cost…) distort cross-company ratios unless adjusted — the classic limitation. Evaluating management and projecting earnings are ratio analysis's strengths.",
+  "vi": "Lựa chọn kế toán khác nhau (LIFO/FIFO, đánh giá lại/giá gốc…) làm méo tỷ số giữa các công ty nếu không điều chỉnh — hạn chế kinh điển. Đánh giá ban điều hành và dự phóng lợi nhuận là thế mạnh của phân tích tỷ số."
+ },
+ {
+  "q": "Which could result in a PERMANENT difference between accounting profit and taxable income?",
+  "opts": [
+   "Used tax credits",
+   "A tax loss carryforward",
+   "Differences between carrying amount and tax base due to different depreciation methods"
+  ],
+  "ans": 0,
+  "en": "Tax credits permanently change tax owed without ever reversing. Loss carryforwards create deferred tax assets, and depreciation differences are temporary — they reverse over the asset's life.",
+  "vi": "Tín dụng thuế thay đổi vĩnh viễn số thuế phải nộp và không bao giờ hoàn nghịch. Lỗ chuyển sang tạo tài sản thuế hoãn lại, còn chênh lệch khấu hao là tạm thời — sẽ hoàn nghịch qua đời tài sản."
+ },
+ {
+  "q": "EUR/USD spot 0.9876 (EUR per 1 USD); 180-day USD risk-free rate 1.00%; 180-day EUR risk-free rate 1.20%. The 180-day EUR/USD forward rate is closest to:",
+  "opts": [
+   "0.98662",
+   "0.98858",
+   "0.98956"
+  ],
+  "ans": 1,
+  "en": "F = S × (1 + i_price × 180/360)/(1 + i_base × 180/360) = 0.9876 × 1.006/1.005 = 0.98858 — EUR is the price currency, USD the base.",
+  "vi": "F = S × (1 + i_định giá × 180/360)/(1 + i_cơ sở × 180/360) = 0,9876 × 1,006/1,005 = 0,98858 — EUR là đồng định giá, USD là đồng cơ sở."
+ },
+ {
+  "q": "The static trade-off theory of capital structure most likely considers:",
+  "opts": [
+   "Agency costs of equity",
+   "Information asymmetry",
+   "The tax shield provided by debt"
+  ],
+  "ans": 2,
+  "en": "Static trade-off balances debt's tax shield against expected financial distress costs. Agency and information stories belong to other capital-structure theories (agency theory, pecking order).",
+  "vi": "Lý thuyết đánh đổi tĩnh cân bằng lá chắn thuế của nợ với chi phí kiệt quệ tài chính kỳ vọng. Câu chuyện đại diện và bất cân xứng thông tin thuộc các lý thuyết khác (agency, pecking order)."
+ },
+ {
+  "q": "Which can be calculated from BALANCE SHEET information only?",
+  "opts": [
+   "Quick ratio",
+   "Debt coverage",
+   "Receivables turnover ratio"
+  ],
+  "ans": 0,
+  "en": "Quick ratio = (cash + marketable securities + receivables)/current liabilities — all balance sheet lines. Debt coverage needs CFO; receivables turnover needs revenue.",
+  "vi": "Quick ratio = (tiền + chứng khoán + phải thu)/nợ ngắn hạn — toàn khoản mục bảng cân đối. Debt coverage cần CFO; vòng quay phải thu cần doanh thu."
+ },
+ {
+  "q": "Investment 1: 20 annual payments of $50,000 starting in one year. Investment 2: 25 annual payments of $45,000 starting today. Investment 3: annual payments of $40,000 indefinitely, starting today. At a 10% discount rate, the highest present value belongs to:",
+  "opts": [
+   "Investment 1",
+   "Investment 2",
+   "Investment 3"
+  ],
+  "ans": 1,
+  "en": "PV₁ = 50,000 × [1 − 1.1⁻²⁰]/0.1 = 425,678. PV₂ (annuity due) = 45,000 × [1 − 1.1⁻²⁵]/0.1 × 1.1 = 449,312. PV₃ (perpetuity due) = 40,000 + 40,000/0.1 = 440,000. Investment 2 wins.",
+  "vi": "PV₁ = 50.000 × [1 − 1,1⁻²⁰]/0,1 = 425.678. PV₂ (niên kim đầu kỳ) = 45.000 × [1 − 1,1⁻²⁵]/0,1 × 1,1 = 449.312. PV₃ (vĩnh viễn đầu kỳ) = 40.000 + 40.000/0,1 = 440.000. Investment 2 thắng."
+ },
+ {
+  "q": "Which most likely has the greatest access to capital?",
+  "opts": [
+   "Corporation",
+   "Limited partnership",
+   "General partnership"
+  ],
+  "ans": 0,
+  "en": "Corporations tap public equity and debt markets with unlimited investor pools and transferable shares — partnerships rely on far narrower private funding.",
+  "vi": "Công ty cổ phần huy động trên thị trường cổ phiếu và trái phiếu đại chúng với lượng nhà đầu tư không giới hạn và cổ phần chuyển nhượng được — công ty hợp danh chỉ dựa vào nguồn vốn tư nhân hẹp hơn nhiều."
+ },
+ {
+  "q": "Target weight of debt 25%, equity 75%; before-tax cost of debt 4%; cost of equity 12%; marginal tax rate 20%, interest deductible. The WACC is:",
+  "opts": [
+   "9.80%",
+   "10.00%",
+   "10.25%"
+  ],
+  "ans": 0,
+  "en": "WACC = 0.25 × 4% × (1 − 0.20) + 0.75 × 12% = 0.80% + 9.00% = 9.80%.",
+  "vi": "WACC = 0,25 × 4% × (1 − 0,20) + 0,75 × 12% = 0,80% + 9,00% = 9,80%."
+ },
+ {
+  "q": "Earnings distribution: $100m with p = 0.25; $300m with p = 0.70; $600m with p = 0.05. The standard deviation of earnings is closest to:",
+  "opts": [
+   "$115 million",
+   "$134 million",
+   "$375 million"
+  ],
+  "ans": 0,
+  "en": "E = 0.25(100) + 0.70(300) + 0.05(600) = 265. Var = 0.25(−165)² + 0.70(35)² + 0.05(335)² = 6,806 + 858 + 5,611 = 13,275 → σ = $115m.",
+  "vi": "E = 0,25(100) + 0,70(300) + 0,05(600) = 265. Var = 0,25(−165)² + 0,70(35)² + 0,05(335)² = 6.806 + 858 + 5.611 = 13.275 → σ = $115tr."
+ },
+ {
+  "q": "A security bought for ¥500,000 declines 10% over the first 3 months, then rises 9% over the next 3 months. The 6-month holding period return is closest to:",
+  "opts": [
+   "−1.9%",
+   "−1.0%",
+   "−0.5%"
+  ],
+  "ans": 0,
+  "en": "Chain the sub-periods: (0.90)(1.09) − 1 = −1.9%. The −10% loss needs more than +9% to heal — the asymmetry of percentage losses.",
+  "vi": "Nối chuỗi các kỳ con: (0,90)(1,09) − 1 = −1,9%. Khoản lỗ −10% cần hơn +9% mới lành — tính bất đối xứng của phần trăm lỗ."
+ }
+]
+});
+window.CFA.mocktests.push({
+ name: "Mock Exam 2 — Session 2 (FI · Equity · Derivatives · Alternatives · PM)",
+ qs: [
+ {
+  "q": "The price of a European call option is:",
+  "opts": [
+   "Directly related to the price of the underlying and inversely related to volatility",
+   "Directly related to volatility of the underlying and inversely related to the dividend yield",
+   "Directly related to the dividend yield and inversely related to the price of the underlying"
+  ],
+  "ans": 1,
+  "en": "Calls rise with volatility (asymmetric payoff) and fall with dividend yield (payouts drain the underlying's forward value). They also rise with the underlying price — which is why A's second half kills it.",
+  "vi": "Giá call tăng theo biến động (payoff bất đối xứng) và giảm theo tỷ suất cổ tức (chi trả rút bớt giá trị kỳ hạn của tài sản). Nó cũng tăng theo giá tài sản cơ sở — nên vế sau của phương án A sai."
+ },
+ {
+  "q": "Annual spot rates: 1-year 1.0%; 2-year 1.1%; 3-year 1.3%. The arbitrage-free price of a 3% annual-pay, three-year bond is closest to:",
+  "opts": [
+   "104.99",
+   "105.48",
+   "107.62"
+  ],
+  "ans": 0,
+  "en": "Discount each cash flow at its own spot rate: 3/1.01 + 3/1.011² + 103/1.013³ = 2.970 + 2.935 + 99.085 = 104.99.",
+  "vi": "Chiết khấu từng dòng tiền theo đúng spot rate của nó: 3/1,01 + 3/1,011² + 103/1,013³ = 2,970 + 2,935 + 99,085 = 104,99."
+ },
+ {
+  "q": "Which best describes an ABSOLUTE risk objective for a client's portfolio?",
+  "opts": [
+   "An annual tracking risk of less than 2 percent",
+   "A twelve-month 95% value at risk of less than €1,000,000",
+   "Maintaining at least €10,000 in cash for planned monthly withdrawals"
+  ],
+  "ans": 1,
+  "en": "VaR caps risk in standalone terms — absolute. Tracking risk is measured RELATIVE to a benchmark, and the cash floor is a liquidity constraint, not a risk objective.",
+  "vi": "VaR giới hạn rủi ro theo giá trị độc lập — tuyệt đối. Tracking risk đo TƯƠNG ĐỐI so với benchmark, còn mức tiền mặt tối thiểu là ràng buộc thanh khoản, không phải mục tiêu rủi ro."
+ },
+ {
+  "q": "A mortgage pass-through's average life fell from five years to two years over the last six months. Investors most likely experienced:",
+  "opts": [
+   "Balloon risk",
+   "Extension risk",
+   "Contraction risk"
+  ],
+  "ans": 2,
+  "en": "A shrinking average life means prepayments accelerated (rates likely fell) — contraction risk: principal returns sooner than expected, to be reinvested at lower rates.",
+  "vi": "Đời bình quân co lại nghĩa là trả trước tăng tốc (lãi suất có lẽ đã giảm) — contraction risk: gốc quay về sớm hơn dự kiến, phải tái đầu tư ở lãi suất thấp hơn."
+ },
+ {
+  "q": "All else equal, which would LOWER a company's sustainable growth rate?",
+  "opts": [
+   "An increased retention rate",
+   "A decreased return on total assets",
+   "An increased financial leverage ratio"
+  ],
+  "ans": 1,
+  "en": "g = retention × ROE, and ROE = ROA × leverage. Lower ROA drags ROE and g down; higher retention or higher leverage would push g UP.",
+  "vi": "g = tỷ lệ giữ lại × ROE, và ROE = ROA × đòn bẩy. ROA giảm kéo ROE và g xuống; tăng giữ lại hay tăng đòn bẩy sẽ đẩy g LÊN."
+ },
+ {
+  "q": "Which statement about real estate investments is most accurate?",
+  "opts": [
+   "Investors in real estate limited partnerships are exposed to unlimited liability",
+   "Free and clear ownership means that the property is unencumbered by a mortgage",
+   "REITs are required to retain most of their taxable income for future capital expenditures"
+  ],
+  "ans": 1,
+  "en": "Free and clear = full title with no mortgage lien. Limited partners enjoy LIMITED liability, and REITs must DISTRIBUTE (not retain) most taxable income to keep their tax status.",
+  "vi": "Free and clear = sở hữu trọn vẹn không vướng thế chấp. Thành viên góp vốn hưởng trách nhiệm HỮU HẠN, còn REIT phải PHÂN PHỐI (không giữ lại) phần lớn thu nhập chịu thuế để giữ quy chế thuế."
+ },
+ {
+  "q": "In the binomial model, if the probability of a downward movement in the underlying increases, the value of a call option:",
+  "opts": [
+   "Decreases",
+   "Remains unchanged",
+   "Increases"
+  ],
+  "ans": 1,
+  "en": "Option values use RISK-NEUTRAL probabilities derived from u, d, and the risk-free rate — the real-world probability of a down move never enters the formula.",
+  "vi": "Giá quyền chọn dùng xác suất TRUNG HÒA RỦI RO suy từ u, d và lãi suất phi rủi ro — xác suất thực tế của cú giảm không bao giờ vào công thức."
+ },
+ {
+  "q": "Which is best classified as FINANCIAL risk?",
+  "opts": [
+   "Market risk",
+   "Longevity risk",
+   "Accounting risk"
+  ],
+  "ans": 0,
+  "en": "The financial-risk family: market, credit, and liquidity risk. Longevity and accounting risks are non-financial.",
+  "vi": "Họ rủi ro tài chính: rủi ro thị trường, tín dụng và thanh khoản. Rủi ro tuổi thọ và kế toán thuộc phi tài chính."
+ },
+ {
+  "q": "For portfolio managers of ACTIVE funds, market indexes are LEAST useful as:",
+  "opts": [
+   "Benchmarks",
+   "Model portfolios",
+   "Proxies to measure risk-adjusted performance"
+  ],
+  "ans": 1,
+  "en": "Copying an index as a model portfolio is passive management's use. Active managers still need indexes as benchmarks and as market proxies for beta and alpha calculations.",
+  "vi": "Sao chép chỉ số làm danh mục mẫu là cách dùng của quản lý thụ động. Nhà quản lý chủ động vẫn cần chỉ số làm benchmark và làm đại diện thị trường để tính beta, alpha."
+ },
+ {
+  "q": "Which is most likely an element of INDUSTRY AND COMPETITIVE analysis?",
+  "opts": [
+   "Analyzing market share trends",
+   "Determining forecast objects and approaches",
+   "Analyzing uses of capital and sources of financing"
+  ],
+  "ans": 0,
+  "en": "Market share trends reveal competitive position within the industry. Forecast design belongs to the forecasting stage; capital uses and financing belong to company financial analysis.",
+  "vi": "Xu hướng thị phần hé lộ vị thế cạnh tranh trong ngành. Thiết kế dự phóng thuộc bước dự báo; sử dụng vốn và nguồn tài trợ thuộc phân tích tài chính công ty."
+ },
+ {
+  "q": "Duration is MOST accurate as a measure of interest rate risk for a bond portfolio when the slope of the yield curve:",
+  "opts": [
+   "Decreases",
+   "Stays the same",
+   "Increases"
+  ],
+  "ans": 1,
+  "en": "Portfolio duration assumes parallel shifts. When the slope is preserved — all yields moving together — the duration estimate holds; flattening or steepening breaks it.",
+  "vi": "Duration danh mục giả định dịch chuyển song song. Khi độ dốc được giữ nguyên — mọi lợi suất cùng dịch — ước tính duration đứng vững; phẳng hóa hay dốc hóa phá vỡ nó."
+ },
+ {
+  "q": "Which most likely exhibits NEGATIVE convexity?",
+  "opts": [
+   "A callable bond",
+   "A putable bond",
+   "An option-free bond"
+  ],
+  "ans": 0,
+  "en": "As yields fall toward the call price, the issuer's call option caps the upside — the price curve bends the wrong way. Putable and option-free bonds keep positive convexity.",
+  "vi": "Khi lợi suất giảm về gần giá call, quyền mua lại của tổ chức phát hành chặn trần đà tăng giá — đường giá cong sai chiều. Trái phiếu putable và option-free giữ độ lồi dương."
+ },
+ {
+  "q": "A security plotted to the RIGHT of the market portfolio on the security market line has a:",
+  "opts": [
+   "Lower expected return and lower systematic risk than the market",
+   "Higher expected return and higher systematic risk than the market",
+   "Higher expected return and higher unsystematic risk than the market"
+  ],
+  "ans": 1,
+  "en": "The SML's x-axis is beta: right of the market means beta > 1 — more SYSTEMATIC risk and, on the line, a proportionally higher expected return.",
+  "vi": "Trục hoành của SML là beta: bên phải thị trường nghĩa là beta > 1 — nhiều rủi ro HỆ THỐNG hơn và, nằm trên đường, lợi suất kỳ vọng cao hơn tương ứng."
+ },
+ {
+  "q": "Emotional biases:",
+  "opts": [
+   "Stem from impulses and intuition",
+   "Result in the same decisions as assumed by traditional finance theory",
+   "Are more easily corrected through better information than cognitive biases"
+  ],
+  "ans": 0,
+  "en": "Emotional biases spring from feeling and impulse, which is why information and education fix them LESS easily than cognitive errors — and both bias families pull decisions away from rational-theory outcomes.",
+  "vi": "Thiên lệch cảm xúc bắt nguồn từ cảm giác và xung động, vì thế thông tin và giáo dục sửa chúng KHÓ hơn lỗi nhận thức — và cả hai họ thiên lệch đều kéo quyết định rời xa kết quả lý thuyết duy lý."
+ },
+ {
+  "q": "Assuming no clawback provision, which waterfall is most advantageous to the GENERAL partner of a private equity fund?",
+  "opts": [
+   "American waterfall",
+   "European waterfall",
+   "Whole-of-fund waterfall"
+  ],
+  "ans": 0,
+  "en": "The American (deal-by-deal) waterfall pays carry on each profitable exit immediately — earlier and larger GP cash flows. European/whole-of-fund waterfalls make the GP wait until LPs recover all capital.",
+  "vi": "Waterfall kiểu Mỹ (theo từng thương vụ) trả carry ngay trên mỗi thương vụ thoái vốn có lãi — GP nhận tiền sớm và nhiều hơn. Kiểu châu Âu/toàn quỹ bắt GP chờ đến khi LP thu hồi đủ vốn."
+ },
+ {
+  "q": "An investor buys a stock for $108 on margin, posting 40% of the initial price as equity. With a 20% maintenance margin, a margin call first occurs when the price falls below:",
+  "opts": [
+   "$64.80",
+   "$81.00",
+   "$86.40"
+  ],
+  "ans": 1,
+  "en": "Debt per share = 0.60 × 108 = $64.80. Call when (P − 64.80)/P = 0.20 → 0.8P = 64.80 → P = $81.00.",
+  "vi": "Nợ mỗi cổ phiếu = 0,60 × 108 = $64,80. Margin call khi (P − 64,80)/P = 0,20 → 0,8P = 64,80 → P = $81,00."
+ },
+ {
+  "q": "Which derivative contract most likely requires an UPFRONT payment by the buyer at initiation?",
+  "opts": [
+   "Options only",
+   "Forwards only",
+   "Both options and forwards"
+  ],
+  "ans": 0,
+  "en": "An option's asymmetric right costs a premium at inception. Forwards are priced so that value at initiation is zero — no money changes hands.",
+  "vi": "Quyền bất đối xứng của option phải trả phí ngay lúc mở. Forward được định giá sao cho giá trị lúc khởi tạo bằng 0 — không ai trả tiền cho ai."
+ },
+ {
+  "q": "Making a minority equity investment in a mature company that plans to expand operations best describes:",
+  "opts": [
+   "Growth capital investing",
+   "Leveraged buyout investing",
+   "Development capital investing"
+  ],
+  "ans": 0,
+  "en": "Growth capital (growth equity) = minority stakes in mature companies funding expansion. LBOs take CONTROL with debt; the curriculum's label for this strategy is growth capital.",
+  "vi": "Growth capital (growth equity) = cổ phần thiểu số trong công ty trưởng thành để tài trợ mở rộng. LBO nắm QUYỀN KIỂM SOÁT bằng nợ vay; giáo trình gọi chiến lược này là growth capital."
+ },
+ {
+  "q": "Arbitrage is best described as an opportunity to earn:",
+  "opts": [
+   "Risk-free returns with no investment capital",
+   "Risk-free returns with large amounts of investment capital",
+   "Abnormal returns applying an absolute valuation methodology"
+  ],
+  "ans": 0,
+  "en": "True arbitrage is self-financing: simultaneous buy-cheap/sell-dear positions that net zero outlay and lock in a riskless profit.",
+  "vi": "Arbitrage đích thực tự tài trợ: mua rẻ/bán đắt đồng thời, tổng vốn bỏ ra bằng 0 và khóa chặt khoản lời phi rủi ro."
+ },
+ {
+  "q": "Which transaction is most likely to affect a company's financial leverage ratio?",
+  "opts": [
+   "Payment of a 9% stock dividend",
+   "An increase in cash dividends paid",
+   "Completion of a 1-for-20 reverse stock split"
+  ],
+  "ans": 1,
+  "en": "Cash out the door shrinks assets and equity by the same amount, raising assets/equity. Stock dividends and splits merely reshuffle share counts — totals untouched.",
+  "vi": "Tiền mặt chảy ra làm giảm tài sản và vốn chủ cùng một lượng, đẩy tỷ số tài sản/vốn chủ lên. Cổ tức bằng cổ phiếu và chia tách chỉ xáo lại số cổ phần — các tổng số không đổi."
+ },
+ {
+  "q": "All else equal, NON-CUMULATIVE preference shares most likely:",
+  "opts": [
+   "Offer dividends that are less than common shares",
+   "Have a claim on net assets upon liquidation of the company",
+   "Receive past unpaid dividends before dividends are paid to common shareholders"
+  ],
+  "ans": 1,
+  "en": "All preference shares rank ahead of common on liquidation. Catching up on skipped dividends is the CUMULATIVE feature — precisely what non-cumulative shares lack.",
+  "vi": "Mọi cổ phiếu ưu đãi đứng trước cổ phiếu thường khi thanh lý. Truy lĩnh cổ tức bị bỏ lỡ là đặc tính TÍCH LŨY — đúng thứ cổ phiếu không tích lũy thiếu."
+ },
+ {
+  "q": "As one moves to the right along an investor's efficient frontier, a set increase in risk most likely leads to:",
+  "opts": [
+   "Sequentially smaller increases in expected return",
+   "Consistent increases in expected return",
+   "Sequentially larger increases in expected return"
+  ],
+  "ans": 0,
+  "en": "The frontier is concave: each extra unit of risk buys less and less additional expected return — diminishing marginal reward.",
+  "vi": "Đường biên hiệu quả lõm: mỗi đơn vị rủi ro thêm mua được ngày càng ít lợi suất kỳ vọng bổ sung — phần thưởng biên giảm dần."
+ },
+ {
+  "q": "Risk-averse investors make investment decisions that maximize:",
+  "opts": [
+   "Both return and risk",
+   "Return irrespective of risk",
+   "Return for the same amount of risk"
+  ],
+  "ans": 2,
+  "en": "Risk aversion means: among equal-risk choices, take the highest return (and among equal-return choices, the lowest risk).",
+  "vi": "Ghét rủi ro nghĩa là: giữa các lựa chọn cùng mức rủi ro, chọn lợi suất cao nhất (và giữa các lựa chọn cùng lợi suất, chọn rủi ro thấp nhất)."
+ },
+ {
+  "q": "Which factor most likely results in DIFFERENT credit ratings for debt issued by a subsidiary versus debt issued by its parent?",
+  "opts": [
+   "Differences in duration",
+   "Structural subordination",
+   "Cross-default provisions"
+  ],
+  "ans": 1,
+  "en": "Structural subordination: the subsidiary's cash flows service ITS creditors first, leaving parent-level bondholders behind operating-company debt — hence different ratings. Cross-default provisions would pull ratings TOGETHER.",
+  "vi": "Cấp dưới về cấu trúc: dòng tiền của công ty con phục vụ chủ nợ CỦA NÓ trước, đẩy trái chủ cấp công ty mẹ xuống sau nợ của công ty vận hành — nên xếp hạng khác nhau. Điều khoản vỡ nợ chéo lại kéo xếp hạng VỀ CÙNG nhau."
+ },
+ {
+  "q": "An index starts at 1,000. Year 1: price return 4%, dividend return 2%. Year 2: price return 6%, dividend return 3%. The total return index value at the end of Year 2 is closest to:",
+  "opts": [
+   "1,102",
+   "1,150",
+   "1,155"
+  ],
+  "ans": 2,
+  "en": "Total return compounds price plus dividends: 1,000 × 1.06 × 1.09 = 1,155.4. The price-only version gives 1,102, and 1,150 is the no-compounding trap.",
+  "vi": "Chỉ số tổng lợi suất lũy kế cả giá lẫn cổ tức: 1.000 × 1,06 × 1,09 = 1.155,4. Bản chỉ tính giá cho 1.102, còn 1.150 là bẫy cộng dồn không lũy kế."
+ },
+ {
+  "q": "Bond 1: monthly payments, amortizing. Bond 2: quarterly payments, amortizing. Bond 3: monthly payments, non-amortizing. All else equal, the bond with the GREATEST reinvestment risk is:",
+  "opts": [
+   "Bond 1",
+   "Bond 2",
+   "Bond 3"
+  ],
+  "ans": 0,
+  "en": "Reinvestment risk grows with the amount of cash returned early: monthly frequency AND amortizing principal make Bond 1 recycle the most cash soonest.",
+  "vi": "Rủi ro tái đầu tư tăng theo lượng tiền quay về sớm: tần suất tháng CỘNG gốc trả dần khiến Bond 1 xoay vòng nhiều tiền nhất, sớm nhất."
+ },
+ {
+  "q": "In an equally weighted portfolio of many assets, an increase in the correlation between the assets' returns most likely decreases the portfolio's:",
+  "opts": [
+   "Overall risk",
+   "Expected return",
+   "Diversification benefit"
+  ],
+  "ans": 2,
+  "en": "Higher correlation means assets move together — diversification does less work (and portfolio risk actually RISES). Expected return is a weighted average, untouched by correlation.",
+  "vi": "Tương quan cao hơn khiến các tài sản chuyển động cùng nhau — đa dạng hóa mất tác dụng (và rủi ro danh mục thực ra TĂNG). Lợi suất kỳ vọng là bình quân gia quyền, không dính gì tới tương quan."
+ },
+ {
+  "q": "Which best describes an advantage of the EV/EBITDA multiple for valuing equity? An advantage is that:",
+  "opts": [
+   "The multiple must be positive",
+   "EBITDA is a proxy for operating cash flow",
+   "It does not require the market value of debt"
+  ],
+  "ans": 1,
+  "en": "EBITDA approximates pre-capex operating cash flow, making the multiple usable across leverage and depreciation policies. EV construction DOES need debt's market value, and no multiple \"must\" be positive.",
+  "vi": "EBITDA xấp xỉ dòng tiền hoạt động trước capex, giúp bội số dùng được qua các mức đòn bẩy và chính sách khấu hao khác nhau. Tính EV THỰC SỰ cần giá trị thị trường của nợ, và không bội số nào \"buộc phải\" dương."
+ },
+ {
+  "q": "The value of a swap contract at initiation is most likely equal to:",
+  "opts": [
+   "Zero",
+   "The price of the swap",
+   "The present value of the fixed payments"
+  ],
+  "ans": 0,
+  "en": "The fixed rate is set precisely so PV(fixed leg) = PV(expected floating leg) — value at inception is zero for both sides. The swap PRICE is that fixed rate, a different concept.",
+  "vi": "Lãi suất cố định được chọn đúng sao cho PV(chân cố định) = PV(chân thả nổi kỳ vọng) — giá trị lúc khởi tạo bằng 0 cho cả hai bên. GIÁ của swap là mức lãi cố định đó, một khái niệm khác."
+ },
+ {
+  "q": "All else being equal, a cash dividend most likely has the same effect on shareholders' wealth as a:",
+  "opts": [
+   "Stock split",
+   "Stock dividend",
+   "Share repurchase"
+  ],
+  "ans": 2,
+  "en": "Both distribute cash: total shareholder wealth is unchanged (price drops by the dividend, or shares shrink at fair value). Splits and stock dividends move no cash at all — also wealth-neutral, but the CASH-distribution twin is the repurchase.",
+  "vi": "Cả hai đều phân phối tiền mặt: tổng tài sản cổ đông không đổi (giá giảm đúng bằng cổ tức, hoặc số cổ phiếu giảm theo giá hợp lý). Chia tách và cổ tức cổ phiếu không dịch chuyển đồng tiền nào — cũng trung tính, nhưng người anh em phân phối TIỀN của cổ tức là mua lại cổ phiếu."
+ },
+ {
+  "q": "An arbitrage opportunity most likely exists if the price of a put option is LESS than the combined cost of:",
+  "opts": [
+   "Buying the underlying, buying the call, and buying a risk-free bond at PV of the exercise price",
+   "Shorting the underlying, buying the call, and buying a risk-free bond at PV of the exercise price",
+   "Shorting the underlying, buying the call, and shorting a risk-free bond at PV of the exercise price"
+  ],
+  "ans": 1,
+  "en": "Put–call parity: p = c − S + PV(X). The right side is built by buying the call (+c), shorting the underlying (−S), and buying the bond (+PV(X)). A put cheaper than this synthetic put is an arbitrage.",
+  "vi": "Ngang giá put–call: p = c − S + PV(X). Vế phải được dựng bằng mua call (+c), bán khống tài sản (−S), và mua trái phiếu (+PV(X)). Put rẻ hơn put tổng hợp này là cơ hội arbitrage."
+ },
+ {
+  "q": "An analysis of competitive positioning such as Porter's five forces is typically included in:",
+  "opts": [
+   "An initial company research report only",
+   "A subsequent company research report only",
+   "Both initial and subsequent company research reports"
+  ],
+  "ans": 0,
+  "en": "The comprehensive industry and competitive framework anchors the INITIAL report; follow-up reports update estimates and developments rather than rebuild the framework.",
+  "vi": "Khung phân tích ngành và cạnh tranh toàn diện neo ở báo cáo BAN ĐẦU; các báo cáo tiếp theo cập nhật ước tính và diễn biến chứ không dựng lại khung."
+ },
+ {
+  "q": "With respect to private equity funds, quartile rankings:",
+  "opts": [
+   "Are rarely used for performance evaluation",
+   "Include comparisons of different investment strategies",
+   "Are based on funds launched in the same vintage year"
+  ],
+  "ans": 2,
+  "en": "PE performance is compared within a VINTAGE YEAR — funds that invested through the same market environment — and within similar strategies, precisely because cross-vintage comparisons mislead.",
+  "vi": "Hiệu quả PE được so sánh trong cùng NĂM VINTAGE — các quỹ đầu tư qua cùng môi trường thị trường — và cùng nhóm chiến lược, chính vì so sánh khác vintage sẽ gây lạc hướng."
+ },
+ {
+  "q": "In a SEMI-STRONG-form efficient market, which of the following is reflected in prices?",
+  "opts": [
+   "Past market data only",
+   "Private information only",
+   "Both past market data and private information"
+  ],
+  "ans": 0,
+  "en": "Semi-strong prices embed all PUBLIC information — which includes past market data — but not private information. Among the options, only \"past market data\" describes something actually reflected.",
+  "vi": "Giá trong thị trường semi-strong chứa mọi thông tin CÔNG KHAI — bao gồm dữ liệu thị trường quá khứ — nhưng không chứa thông tin riêng tư. Trong các phương án, chỉ \"dữ liệu thị trường quá khứ\" là thứ thực sự được phản ánh."
+ },
+ {
+  "q": "A quarterly-pay bond has an effective annual rate of 10%. The semiannual bond equivalent yield is closest to:",
+  "opts": [
+   "9.76%",
+   "10.13%",
+   "10.25%"
+  ],
+  "ans": 0,
+  "en": "Semiannual rate = 1.10^0.5 − 1 = 4.881%; bond equivalent yield = 2 × 4.881% = 9.76%. Stating the same effective return with semiannual compounding requires a lower quoted rate.",
+  "vi": "Lãi bán niên = 1,10^0,5 − 1 = 4,881%; bond equivalent yield = 2 × 4,881% = 9,76%. Cùng một lợi suất hiệu dụng, quy về ghép bán niên cho lãi suất niêm yết thấp hơn."
+ },
+ {
+  "q": "Which position requires the investor to satisfy an OBLIGATION upon option exercise?",
+  "opts": [
+   "Short put position",
+   "Long put position",
+   "Long call position"
+  ],
+  "ans": 0,
+  "en": "Option WRITERS carry obligations: the short put must buy the underlying at the strike when assigned. Long holders own rights, not duties.",
+  "vi": "Người BÁN quyền chọn mang nghĩa vụ: bên short put phải mua tài sản tại giá thực hiện khi bị gán. Người nắm giữ quyền chọn có quyền, không có nghĩa vụ."
+ },
+ {
+  "q": "Which statement concerning a security market index is most accurate?",
+  "opts": [
+   "Estimated market prices of constituent securities are not used to calculate the index value",
+   "The divisor will be adjusted to prevent changes not related to prices of constituent securities",
+   "At inception, the total return version of an index will be greater than the price version"
+  ],
+  "ans": 1,
+  "en": "Divisor adjustments neutralize splits, constituent changes, and other non-price events. Illiquid constituents MAY use estimated prices, and at inception the two versions start EQUAL.",
+  "vi": "Điều chỉnh divisor trung hòa chia tách, thay đổi thành phần và các sự kiện phi giá khác. Thành phần kém thanh khoản CÓ THỂ dùng giá ước tính, và tại thời điểm khởi tạo hai phiên bản BẰNG nhau."
+ },
+ {
+  "q": "Which best characterizes an interest rate swap?",
+  "opts": [
+   "A contingent claim derivative using Libor rates as reference rates",
+   "A contingent claim used to convert exposure from fixed-rate to floating-rate",
+   "A firm commitment derivative used by investment managers to change portfolio duration without trading bonds"
+  ],
+  "ans": 2,
+  "en": "Swaps are FORWARD COMMITMENTS — binding on both sides — and a classic duration-management tool. \"Contingent claim\" describes options, so A and B fail on classification.",
+  "vi": "Swap là CAM KẾT KỲ HẠN — ràng buộc cả hai bên — và là công cụ kinh điển để điều chỉnh duration. \"Contingent claim\" mô tả quyền chọn, nên A và B sai ngay ở khâu phân loại."
+ },
+ {
+  "q": "Which is best classified as a NONSYSTEMATIC risk?",
+  "opts": [
+   "Political uncertainty",
+   "Widespread natural disasters",
+   "Bankruptcy of a major automobile producer"
+  ],
+  "ans": 2,
+  "en": "One company's bankruptcy is firm-specific and diversifiable. Political shocks and widespread disasters wash over the whole market — systematic.",
+  "vi": "Phá sản của một công ty là rủi ro riêng, đa dạng hóa được. Cú sốc chính trị và thiên tai diện rộng quét qua toàn thị trường — hệ thống."
+ },
+ {
+  "q": "Preferred shares: par $100; annual dividend $6.00; market price $85.71; maturity 10 years. If the required return is 7% (marginal tax rate 30%), the shares are most likely:",
+  "opts": [
+   "Undervalued",
+   "Fairly valued",
+   "Overvalued"
+  ],
+  "ans": 0,
+  "en": "With a 10-year maturity, value = 6 × [1 − 1.07⁻¹⁰]/0.07 + 100/1.07¹⁰ = 42.14 + 50.83 = $92.98 > $85.71 → undervalued. Pricing it as a perpetuity (6/0.07 = 85.71) is the trap; the tax rate is noise.",
+  "vi": "Với kỳ hạn 10 năm, giá trị = 6 × [1 − 1,07⁻¹⁰]/0,07 + 100/1,07¹⁰ = 42,14 + 50,83 = $92,98 > $85,71 → bị định giá thấp. Tính như vĩnh viễn (6/0,07 = 85,71) là cái bẫy; thuế suất là số gây nhiễu."
+ },
+ {
+  "q": "Which transaction poses the risk of losing the GREATEST dollar amount?",
+  "opts": [
+   "Selling a put with a strike price of $15 for $0.90",
+   "Buying a call with a strike price of $15 for $11.25",
+   "Buying a put with a strike price of $37.50 for $12.75"
+  ],
+  "ans": 0,
+  "en": "Max losses: short put = 15 − 0.90 = $14.10 (underlying to zero); long call = premium $11.25; long put = premium $12.75. The short put risks the most.",
+  "vi": "Lỗ tối đa: bán put = 15 − 0,90 = $14,10 (tài sản về 0); mua call = phí $11,25; mua put = phí $12,75. Bán put rủi ro lớn nhất."
+ },
+ {
+  "q": "When securitizing a corporation's loans, a special purpose entity most likely:",
+  "opts": [
+   "Services the corporation's loans",
+   "Sells the collateral underlying the loans",
+   "Purchases the corporation's loans to use as collateral"
+  ],
+  "ans": 2,
+  "en": "The SPE buys the loan pool from the originator and issues securities backed by it — the purchase is what isolates the assets from the seller's bankruptcy. Servicing usually stays with the originator or a third party.",
+  "vi": "SPE mua danh mục khoản vay từ bên khởi tạo và phát hành chứng khoán được đảm bảo bằng nó — chính giao dịch mua này cách ly tài sản khỏi rủi ro phá sản của bên bán. Việc thu hồi nợ thường vẫn do bên khởi tạo hoặc bên thứ ba đảm nhận."
+ },
+ {
+  "q": "All else equal, which security is the MOST risky for an investor?",
+  "opts": [
+   "Putable preference shares",
+   "Callable preference shares",
+   "Non-callable preference shares"
+  ],
+  "ans": 1,
+  "en": "The call option belongs to the ISSUER and works against the investor — shares get called away exactly when conditions favor holding them. The put option protects the investor, making putable shares the safest.",
+  "vi": "Quyền mua lại thuộc về TỔ CHỨC PHÁT HÀNH và chống lại nhà đầu tư — cổ phiếu bị gọi lại đúng lúc đáng giữ nhất. Quyền bán lại bảo vệ nhà đầu tư, khiến cổ phiếu putable an toàn nhất."
+ },
+ {
+  "q": "An investor discovers that stock prices in a country are very slow to reflect new information. The investor can best profit from this using a(n):",
+  "opts": [
+   "Active fund",
+   "Passive fund",
+   "Low cost approach"
+  ],
+  "ans": 0,
+  "en": "Slow price adjustment = an inefficient market — exactly where active research and trading can capture mispricings before they close.",
+  "vi": "Giá điều chỉnh chậm = thị trường kém hiệu quả — đúng nơi nghiên cứu và giao dịch chủ động có thể chớp các định giá sai trước khi chúng khép lại."
+ },
+ {
+  "q": "A bond has modified duration 7.1 and convexity 49.2. The percentage price change for a 50 bps INCREASE in yield is closest to:",
+  "opts": [
+   "−3.61%",
+   "−3.49%",
+   "−1.65%"
+  ],
+  "ans": 1,
+  "en": "%ΔP = −7.1 × 0.005 + ½ × 49.2 × 0.005² = −3.55% + 0.06% = −3.49%. Convexity softens the duration-only estimate.",
+  "vi": "%ΔP = −7,1 × 0,005 + ½ × 49,2 × 0,005² = −3,55% + 0,06% = −3,49%. Độ lồi làm dịu ước tính chỉ dùng duration."
+ },
+ {
+  "q": "Security A: standard deviation 16%, weight 60%. Security B: standard deviation 27%, weight 40%. If the portfolio's standard deviation is 20.4%, the correlation between the securities is closest to:",
+  "opts": [
+   "−1",
+   "0",
+   "1"
+  ],
+  "ans": 2,
+  "en": "The weighted average of the standard deviations is 0.6 × 16 + 0.4 × 27 = 20.4% — exactly the portfolio's σ. That happens only with ρ = +1: zero diversification benefit.",
+  "vi": "Bình quân gia quyền của hai độ lệch chuẩn là 0,6 × 16 + 0,4 × 27 = 20,4% — đúng bằng σ danh mục. Điều đó chỉ xảy ra khi ρ = +1: lợi ích đa dạng hóa bằng 0."
+ },
+ {
+  "q": "The capital asset pricing model (CAPM) is based on the assumption that investors are risk:",
+  "opts": [
+   "Averse",
+   "Neutral",
+   "Seeking"
+  ],
+  "ans": 0,
+  "en": "CAPM assumes rational, risk-AVERSE, mean–variance investors — that aversion is what makes them demand compensation for systematic risk.",
+  "vi": "CAPM giả định nhà đầu tư duy lý, GHÉT rủi ro, tối ưu theo trung bình–phương sai — chính sự e ngại đó khiến họ đòi phần bù cho rủi ro hệ thống."
+ },
+ {
+  "q": "A buy-and-hold investor purchases a fixed-rate bond at issuance and holds it until maturity. With respect to interest rate risk, this investor is exposed to:",
+  "opts": [
+   "Market price risk only",
+   "Coupon reinvestment risk only",
+   "Both market price risk and coupon reinvestment risk"
+  ],
+  "ans": 1,
+  "en": "Held to maturity, the bond repays par regardless of rate moves — price risk never materializes. But every coupon must be reinvested at whatever rates prevail: reinvestment risk remains.",
+  "vi": "Giữ đến đáo hạn, trái phiếu trả đủ mệnh giá bất kể lãi suất biến động — rủi ro giá không bao giờ thành hiện thực. Nhưng mỗi coupon phải tái đầu tư ở mức lãi hiện hành: rủi ro tái đầu tư vẫn còn."
+ },
+ {
+  "q": "The value effect anomaly:",
+  "opts": [
+   "Contradicts semi-strong market efficiency",
+   "Was identified using time series of data only",
+   "States that growth stocks have consistently outperformed value stocks"
+  ],
+  "ans": 0,
+  "en": "Value stocks beating growth on public information (P/E, P/B) contradicts semi-strong efficiency. The direction runs VALUE over growth, and it was found in cross-sectional data.",
+  "vi": "Cổ phiếu giá trị thắng cổ phiếu tăng trưởng dựa trên thông tin công khai (P/E, P/B) mâu thuẫn với hiệu quả semi-strong. Chiều đúng là GIÁ TRỊ thắng tăng trưởng, và được phát hiện bằng dữ liệu chéo."
+ },
+ {
+  "q": "A bond's price sensitivity to a NON-PARALLEL shift in the benchmark yield curve is best measured by:",
+  "opts": [
+   "Key rate duration",
+   "Effective duration",
+   "Modified duration"
+  ],
+  "ans": 0,
+  "en": "Key rate (partial) durations isolate sensitivity at each maturity point — the tool for twists and butterflies. Effective and modified duration assume parallel moves.",
+  "vi": "Key rate (partial) duration cô lập độ nhạy tại từng điểm kỳ hạn — công cụ cho các cú xoắn và butterfly. Effective và modified duration giả định dịch chuyển song song."
+ },
+ {
+  "q": "Which instrument most likely offers investors some protection against INCREASES in the market interest rate?",
+  "opts": [
+   "Fixed-rate bonds",
+   "Floating-rate notes",
+   "Inverse floating-rate notes"
+  ],
+  "ans": 1,
+  "en": "FRN coupons reset upward with reference rates, keeping price near par when rates climb. Fixed-rate bonds fall, and inverse floaters get hit twice — coupons shrink as discounting bites.",
+  "vi": "Coupon của FRN tự điều chỉnh tăng theo lãi tham chiếu, giữ giá quanh mệnh giá khi lãi suất leo thang. Trái phiếu cố định giảm giá, còn inverse floater trúng đòn kép — coupon co lại trong khi chiết khấu cắn sâu."
+ },
+ {
+  "q": "Average portfolio return 8.50%; standard deviation 16.00%; beta 1.10; risk-free rate 1.75%. The portfolio's Sharpe ratio is closest to:",
+  "opts": [
+   "0.06",
+   "0.42",
+   "0.53"
+  ],
+  "ans": 1,
+  "en": "Sharpe = (8.50 − 1.75)/16.00 = 6.75/16 = 0.42. Beta belongs to the Treynor ratio — the distractor 0.53 comes from misusing it.",
+  "vi": "Sharpe = (8,50 − 1,75)/16,00 = 6,75/16 = 0,42. Beta thuộc về Treynor — đáp án nhiễu 0,53 đến từ việc dùng nhầm nó."
+ },
+ {
+  "q": "Which type of investor most likely has a LONG-TERM investment horizon AND HIGH liquidity needs?",
+  "opts": [
+   "Endowments",
+   "Life insurance companies",
+   "Defined benefit pension plans"
+  ],
+  "ans": 1,
+  "en": "Life insurers pair decades-long policy liabilities with high liquidity needs for claims. Endowments and DB plans share the long horizon but carry LOW liquidity needs.",
+  "vi": "Bảo hiểm nhân thọ ghép nghĩa vụ hợp đồng kéo dài hàng chục năm với nhu cầu thanh khoản cao để chi trả quyền lợi. Endowment và quỹ hưu DB cùng kỳ hạn dài nhưng nhu cầu thanh khoản THẤP."
+ },
+ {
+  "q": "All else equal, which bond most likely has the LOWEST price?",
+  "opts": [
+   "Putable bond",
+   "Callable bond",
+   "Option-free bond"
+  ],
+  "ans": 1,
+  "en": "Callable = straight bond MINUS the call option the investor granted the issuer → lowest price. Putable = straight bond PLUS the investor's put → highest.",
+  "vi": "Callable = trái phiếu thường TRỪ quyền mua lại mà nhà đầu tư trao cho tổ chức phát hành → giá thấp nhất. Putable = trái phiếu thường CỘNG quyền bán lại của nhà đầu tư → cao nhất."
+ },
+ {
+  "q": "Using the rating scale from Standard & Poor's or Fitch, the LOWEST rating for an investment-grade bond is:",
+  "opts": [
+   "BBB−",
+   "BBB",
+   "BBB+"
+  ],
+  "ans": 0,
+  "en": "Investment grade runs down to BBB−; one notch below, BB+, begins high yield.",
+  "vi": "Hạng đầu tư kéo xuống đến BBB−; thấp hơn một bậc, BB+, đã sang high yield."
+ },
+ {
+  "q": "If a risk-free asset is added to a portfolio of risky assets, the highest achievable return for a given level of risk most likely:",
+  "opts": [
+   "Decreases",
+   "Remains unchanged",
+   "Increases"
+  ],
+  "ans": 2,
+  "en": "The capital allocation line from the risk-free rate through the tangency portfolio dominates the risky-only efficient frontier — more return at every risk level except the tangency point itself.",
+  "vi": "Đường phân bổ vốn từ lãi suất phi rủi ro qua danh mục tiếp tuyến vượt trội đường biên hiệu quả chỉ-tài-sản-rủi-ro — lợi suất cao hơn ở mọi mức rủi ro trừ chính điểm tiếp tuyến."
+ },
+ {
+  "q": "Which statement best describes the relationship between the net costs of carry and the forward price?",
+  "opts": [
+   "If the costs of carry exceed the benefits, the forward price would be lower",
+   "If the costs of carry exceed the benefits, the forward price would be higher",
+   "If the benefits exceed the costs of carry, the forward price would be higher"
+  ],
+  "ans": 1,
+  "en": "F₀ = [S₀ + PV(costs) − PV(benefits)] × (1 + r)ᵀ: storage and insurance push the forward UP; dividends and convenience yield pull it DOWN.",
+  "vi": "F₀ = [S₀ + PV(chi phí) − PV(lợi ích)] × (1 + r)ᵀ: chi phí lưu kho, bảo hiểm đẩy giá forward LÊN; cổ tức và lợi ích nắm giữ kéo nó XUỐNG."
+ },
+ {
+  "q": "A European call option is IN THE MONEY whenever the value of the underlying is:",
+  "opts": [
+   "Less than the exercise price",
+   "Equal to the exercise price",
+   "Greater than the exercise price"
+  ],
+  "ans": 2,
+  "en": "A call pays max(S − X, 0): it has positive exercise value only when S > X.",
+  "vi": "Call trả max(S − X, 0): chỉ có giá trị thực hiện dương khi S > X."
+ },
+ {
+  "q": "Compared to trading an underlying directly, trading a derivative on the underlying most likely involves:",
+  "opts": [
+   "Lower transaction costs",
+   "A lower degree of leverage",
+   "A larger amount of required capital"
+  ],
+  "ans": 0,
+  "en": "Derivatives deliver the exposure with lower transaction costs, LESS capital, and MORE leverage — the last two options state the exact opposites.",
+  "vi": "Phái sinh mang lại cùng mức phơi nhiễm với chi phí giao dịch thấp hơn, vốn ÍT hơn và đòn bẩy CAO hơn — hai phương án sau nói ngược hoàn toàn."
+ },
+ {
+  "q": "Which statement about alternative investments' compensation structures is most accurate?",
+  "opts": [
+   "A hurdle rate protects clients from paying twice for the same performance",
+   "The management fee for a private equity fund is based on committed capital until fully drawn",
+   "The management fee is earned only after the fund achieves a return known as a high-water mark"
+  ],
+  "ans": 1,
+  "en": "PE management fees run on COMMITTED capital during the investment period, shifting to invested capital later. Double-payment protection is the high-water mark's job, and management fees accrue regardless of performance.",
+  "vi": "Phí quản lý PE tính trên vốn CAM KẾT trong giai đoạn đầu tư, sau đó chuyển sang vốn đã giải ngân. Chống trả phí hai lần là việc của high-water mark, còn phí quản lý chạy bất kể thành tích."
+ },
+ {
+  "q": "According to put–call FORWARD parity, a long put is equal to:",
+  "opts": [
+   "A long call, a long risk-free bond and a long forward",
+   "A long call, a long risk-free bond and a short forward",
+   "A short call, a long risk-free bond and a short forward"
+  ],
+  "ans": 1,
+  "en": "p = c + PV(X − F₀): buy the call, buy the bond, and take the SHORT side of the forward — the short forward replaces shorting the underlying in standard parity.",
+  "vi": "p = c + PV(X − F₀): mua call, mua trái phiếu, và đứng bên BÁN của hợp đồng forward — vị thế short forward thay cho việc bán khống tài sản trong parity chuẩn."
+ },
+ {
+  "q": "Initial stock price $80; leverage ratio 2.5. If the first margin call occurs at a stock price below $60, the maintenance margin is closest to:",
+  "opts": [
+   "15.0%",
+   "20.0%",
+   "46.7%"
+  ],
+  "ans": 1,
+  "en": "Leverage 2.5 → equity = 40% → debt = 0.60 × 80 = $48 per share. At $60: equity = 60 − 48 = 12 → 12/60 = 20%.",
+  "vi": "Đòn bẩy 2,5 → vốn chủ = 40% → nợ = 0,60 × 80 = $48 mỗi cổ phiếu. Tại $60: vốn chủ = 60 − 48 = 12 → 12/60 = 20%."
+ },
+ {
+  "q": "An option-free bond is valued at 92.733 at a yield of 11%. The value is 94.474 for a 60 bps decrease and 91.041 for a 60 bps increase. The approximate modified duration is closest to:",
+  "opts": [
+   "1.85",
+   "3.09",
+   "6.17"
+  ],
+  "ans": 1,
+  "en": "ApproxModDur = (P₋ − P₊)/(2 × P₀ × Δy) = (94.474 − 91.041)/(2 × 92.733 × 0.006) = 3.433/1.1128 = 3.09.",
+  "vi": "ApproxModDur = (P₋ − P₊)/(2 × P₀ × Δy) = (94,474 − 91,041)/(2 × 92,733 × 0,006) = 3,433/1,1128 = 3,09."
+ },
+ {
+  "q": "A hedge fund that implements trades based on a top-down analysis of expected movements in economic variables most likely uses a(n):",
+  "opts": [
+   "Macro strategy",
+   "Relative value strategy",
+   "Event-driven strategy"
+  ],
+  "ans": 0,
+  "en": "Betting on macroeconomic variables — rates, currencies, growth — from the top down is the definition of a macro strategy. Relative value trades pricing gaps; event-driven trades corporate events.",
+  "vi": "Đặt cược vào biến số vĩ mô — lãi suất, tiền tệ, tăng trưởng — theo hướng từ trên xuống chính là định nghĩa chiến lược macro. Relative value chơi chênh lệch định giá; event-driven chơi sự kiện doanh nghiệp."
+ },
+ {
+  "q": "Bond 1: rating B, issuer debt outstanding $1 billion. Bond 2: rating BB, $1 billion. Bond 3: rating BB, $30 billion. The bond with the GREATEST market liquidity risk is most likely:",
+  "opts": [
+   "Bond 1",
+   "Bond 2",
+   "Bond 3"
+  ],
+  "ans": 0,
+  "en": "Liquidity thins with smaller issue size AND lower credit quality — Bond 1 combines the small $1b float with the lowest (B) rating.",
+  "vi": "Thanh khoản mỏng đi khi quy mô phát hành nhỏ VÀ chất lượng tín dụng thấp — Bond 1 gộp cả lượng lưu hành nhỏ $1 tỷ lẫn xếp hạng thấp nhất (B)."
+ },
+ {
+  "q": "Four years ago, a 5% coupon, annual-pay bond with a 10-year maturity was issued at par. If the current market discount rate is 7%, the price per 100 of par is closest to:",
+  "opts": [
+   "90.34",
+   "90.47",
+   "93.23"
+  ],
+  "ans": 1,
+  "en": "Six years remain: P = 5 × [1 − 1.07⁻⁶]/0.07 + 100/1.07⁶ = 23.83 + 66.63 = 90.47. Using ten years (90.34-ish territory) is the trap.",
+  "vi": "Còn sáu năm: P = 5 × [1 − 1,07⁻⁶]/0,07 + 100/1,07⁶ = 23,83 + 66,63 = 90,47. Dùng nhầm mười năm là cái bẫy."
+ },
+ {
+  "q": "In an investment policy statement, which constraint most likely outlines a client's preference for environmentally sustainable investments?",
+  "opts": [
+   "Time horizon",
+   "Unique circumstances",
+   "Legal and regulatory factors"
+  ],
+  "ans": 1,
+  "en": "ESG preferences, exclusions, and other personal considerations live in the \"unique circumstances\" bucket of the IPS constraints.",
+  "vi": "Sở thích ESG, các loại trừ và cân nhắc cá nhân khác nằm trong ô \"unique circumstances\" của phần ràng buộc IPS."
+ },
+ {
+  "q": "For an institutional investor, the investment committee's approach to appointing and reviewing investment managers is most likely set out during the:",
+  "opts": [
+   "Portfolio construction process",
+   "Strategic asset allocation decision",
+   "Preparation of the investment policy statement"
+  ],
+  "ans": 2,
+  "en": "Governance arrangements — who selects, monitors, and replaces managers — belong in the IPS, the document that frames everything downstream.",
+  "vi": "Các dàn xếp quản trị — ai chọn, giám sát, thay thế nhà quản lý — thuộc về IPS, văn kiện đặt khung cho mọi bước phía sau."
+ },
+ {
+  "q": "All else equal, for option-free bonds, the percentage price change for a given yield change is most likely greater for a bond:",
+  "opts": [
+   "With a high coupon than for a bond with a low coupon",
+   "With a short time-to-maturity than for a bond with a long time-to-maturity",
+   "When the market discount rate goes down than when it goes up"
+  ],
+  "ans": 2,
+  "en": "Convexity makes price gains from falling yields exceed price losses from equal rises. Low coupons and LONG maturities — not high and short — amplify sensitivity.",
+  "vi": "Độ lồi khiến mức tăng giá khi lợi suất giảm lớn hơn mức giảm giá khi lợi suất tăng cùng biên độ. Coupon thấp và kỳ hạn DÀI — không phải cao và ngắn — mới khuếch đại độ nhạy."
+ },
+ {
+  "q": "Which statement is most accurate? Smart beta strategies:",
+  "opts": [
+   "Invest in high market beta stocks to generate an abnormal return",
+   "Use simple rules-based strategies as a basis for investment decisions",
+   "Typically have lower portfolio turnover than passive market-cap weighted strategies"
+  ],
+  "ans": 1,
+  "en": "Smart beta = transparent, rules-based tilts toward factors (value, size, quality). It is not about high-beta stocks, and rebalancing gives it HIGHER turnover than cap-weighted indexing.",
+  "vi": "Smart beta = nghiêng theo nhân tố (giá trị, quy mô, chất lượng) bằng quy tắc minh bạch. Không phải chọn cổ phiếu beta cao, và việc tái cân bằng khiến vòng quay CAO hơn chỉ số theo vốn hóa."
+ },
+ {
+  "q": "Hedge fund: beginning AUM £200m; management fee 2% of end-of-year AUM before fees; incentive fee 10%; SOFT hurdle rate 5%; annual return before fees 20%. If the incentive fee is calculated independently of the management fee, total fees are:",
+  "opts": [
+   "£7,800,000",
+   "£8,320,000",
+   "£8,800,000"
+  ],
+  "ans": 2,
+  "en": "End AUM = 240 → management fee = 2% × 240 = £4.8m. Gain = £40m; the 20% return clears the 5% SOFT hurdle, so the incentive applies to the ENTIRE gain: 10% × 40 = £4.0m. Total = £8.8m.",
+  "vi": "AUM cuối = 240 → phí quản lý = 2% × 240 = £4,8tr. Lãi = £40tr; lợi suất 20% vượt hurdle MỀM 5%, nên phí thành tích tính trên TOÀN BỘ khoản lãi: 10% × 40 = £4,0tr. Tổng = £8,8tr."
+ },
+ {
+  "q": "Which is most likely one of the main functions of the financial system?",
+  "opts": [
+   "Determining an equilibrium interest rate",
+   "Ensuring that markets are informationally efficient",
+   "Ensuring that all investment projects receive sufficient funding"
+  ],
+  "ans": 0,
+  "en": "The system discovers the rate that equates aggregate savings and borrowing — the equilibrium interest rate. Efficiency is a desirable byproduct, and only WORTHY projects should be funded.",
+  "vi": "Hệ thống tài chính khám phá mức lãi suất cân bằng tổng tiết kiệm và tổng vay — lãi suất cân bằng. Tính hiệu quả là sản phẩm phụ đáng mong, và chỉ dự án XỨNG ĐÁNG mới nên được cấp vốn."
+ },
+ {
+  "q": "Which is most likely a distinction between futures and forward contracts? Futures contracts are:",
+  "opts": [
+   "Easily customized",
+   "Traded on an exchange",
+   "More attractive than forwards for long positions when futures prices are negatively correlated to interest rates"
+  ],
+  "ans": 1,
+  "en": "Exchange trading — with standardization, clearing, and daily settlement — is THE distinction. Customization belongs to forwards, and negative price–rate correlation actually favors forwards.",
+  "vi": "Giao dịch trên sàn — kèm chuẩn hóa, thanh toán bù trừ, quyết toán hằng ngày — chính LÀ điểm phân biệt. May đo theo yêu cầu thuộc về forward, còn tương quan giá–lãi suất âm thực ra nghiêng lợi thế về forward."
+ },
+ {
+  "q": "Which is most likely a LONG-TERM benefit of adding alternative investments to a portfolio of traditional investments?",
+  "opts": [
+   "Enhanced liquidity of the combined portfolio",
+   "High correlation with traditional asset returns",
+   "Improved risk-return profile of the combined portfolio"
+  ],
+  "ans": 2,
+  "en": "The case for alternatives is diversification from LOW correlation, improving the risk-return profile. Liquidity typically worsens, and high correlation would defeat the purpose.",
+  "vi": "Lý do đầu tư alternatives là đa dạng hóa nhờ tương quan THẤP, cải thiện hồ sơ rủi ro-lợi suất. Thanh khoản thường xấu đi, còn tương quan cao thì phá hỏng mục đích."
+ },
+ {
+  "q": "In the event of a default, which mortgage structure exposes a LENDER to the greatest risk of loss?",
+  "opts": [
+   "Interest-only, recourse loan",
+   "Fully amortizing, recourse loan",
+   "Balloon payment, non-recourse loan"
+  ],
+  "ans": 2,
+  "en": "A balloon structure leaves the most principal outstanding at default, and non-recourse bars the lender from pursuing the borrower's other assets — maximum exposure on both dimensions.",
+  "vi": "Cấu trúc balloon để lại nhiều gốc chưa trả nhất khi vỡ nợ, và non-recourse chặn bên cho vay truy đòi tài sản khác của người vay — phơi nhiễm tối đa trên cả hai chiều."
+ },
+ {
+  "q": "Which statement about infrastructure investing is most accurate? Infrastructure:",
+  "opts": [
+   "Assets are typically unlevered",
+   "Assets are intended for public use",
+   "Cash flows typically have a negative correlation with inflation"
+  ],
+  "ans": 1,
+  "en": "Infrastructure assets serve the public — roads, utilities, airports. They are typically financed with SIGNIFICANT leverage, and regulated tariffs often link cash flows POSITIVELY to inflation.",
+  "vi": "Tài sản hạ tầng phục vụ công cộng — đường sá, tiện ích, sân bay. Chúng thường được tài trợ bằng đòn bẩy LỚN, và biểu phí điều tiết thường gắn dòng tiền THUẬN chiều với lạm phát."
+ },
+ {
+  "q": "EPS/DPS/ROE by year — Y1: 2.25/1.25/9%; Y2: 2.76/1.35/11%; Y3: 2.08/1.62/15%; Y4: 2.44/1.74/13%; Y5: 3.60/1.85/17%; Y6: 3.20/1.92/12%. Growth = average of (1) the compounded annual dividend growth rate over Y1–Y6 and (2) the sustainable growth rate for Year 6. With required return 15%, the intrinsic value is closest to:",
+  "opts": [
+   "$25.31",
+   "$23.71",
+   "$30.14"
+  ],
+  "ans": 0,
+  "en": "Dividend CAGR = (1.92/1.25)^(1/5) − 1 = 8.97%. Y6 sustainable growth = ROE × (1 − payout) = 12% × (1 − 1.92/3.20) = 12% × 0.40 = 4.8%. g = (8.97 + 4.8)/2 = 6.89%. V = 1.92 × 1.0689/(0.15 − 0.0689) = 2.052/0.0811 = $25.31.",
+  "vi": "CAGR cổ tức = (1,92/1,25)^(1/5) − 1 = 8,97%. SGR năm 6 = ROE × (1 − payout) = 12% × (1 − 1,92/3,20) = 12% × 0,40 = 4,8%. g = (8,97 + 4,8)/2 = 6,89%. V = 1,92 × 1,0689/(0,15 − 0,0689) = 2,052/0,0811 = $25,31."
+ },
+ {
+  "q": "Which is LEAST likely a component of yield spread?",
+  "opts": [
+   "Taxation",
+   "Credit risk",
+   "Expected inflation rate"
+  ],
+  "ans": 2,
+  "en": "Expected inflation lives inside the BENCHMARK yield. The spread over the benchmark compensates for credit risk, liquidity, and tax treatment.",
+  "vi": "Lạm phát kỳ vọng nằm trong lợi suất BENCHMARK. Phần spread trên benchmark bù đắp rủi ro tín dụng, thanh khoản và thuế."
+ },
+ {
+  "q": "The earnings multiplier (P/E) for a stock increases with a DECREASE in the:",
+  "opts": [
+   "Expected dividend growth rate",
+   "Expected dividend payout ratio",
+   "Estimated required rate of return on equity"
+  ],
+  "ans": 2,
+  "en": "P/E = payout/(r − g): a smaller r shrinks the denominator (r − g), lifting the multiple. Lower g or lower payout would push P/E DOWN.",
+  "vi": "P/E = payout/(r − g): r nhỏ hơn làm (r − g) co lại, nâng bội số lên. Giảm g hay giảm payout sẽ kéo P/E XUỐNG."
+ },
+ {
+  "q": "The most appropriate measure of interest rate risk for a bond to a PARALLEL shift in the benchmark yield curve is:",
+  "opts": [
+   "Effective duration",
+   "Modified duration",
+   "Macaulay duration"
+  ],
+  "ans": 0,
+  "en": "Effective duration shifts the whole BENCHMARK CURVE in parallel — exactly the scenario described. Modified duration responds to the bond's own YTM; Macaulay is a weighted-average time.",
+  "vi": "Effective duration dịch song song toàn bộ ĐƯỜNG CONG BENCHMARK — đúng kịch bản đề nêu. Modified duration phản ứng với YTM riêng của trái phiếu; Macaulay là thời gian bình quân gia quyền."
+ },
+ {
+  "q": "A successful portfolio risk budget will most likely:",
+  "opts": [
+   "Be based on multiple sources of risk",
+   "Produce superior performance compared to passive investing",
+   "Lead to investment in assets with the highest return per unit of risk"
+  ],
+  "ans": 2,
+  "en": "Risk budgeting allocates the total risk appetite to where it earns the most — assets and strategies with the highest return per unit of risk. It can use one or many risk measures, and beating passive is never guaranteed.",
+  "vi": "Ngân sách rủi ro phân bổ tổng khẩu vị rủi ro vào nơi sinh lợi nhiều nhất — các tài sản và chiến lược có lợi suất trên mỗi đơn vị rủi ro cao nhất. Nó có thể dùng một hay nhiều thước đo rủi ro, và không hề bảo đảm thắng đầu tư thụ động."
+ },
+ {
+  "q": "In an order-driven market, if the trade price is determined by the LIMIT PRICE of a standing order, the market most likely operates under the:",
+  "opts": [
+   "Uniform pricing rule",
+   "Derivative pricing rule",
+   "Discriminatory pricing rule"
+  ],
+  "ans": 2,
+  "en": "Continuous order-driven markets price each trade at the standing limit order it hits — different trades, different prices: discriminatory. Uniform pricing clears call auctions at one price; derivative pricing borrows prices from another market.",
+  "vi": "Thị trường khớp lệnh liên tục định giá mỗi giao dịch theo lệnh giới hạn đang chờ bị khớp — mỗi giao dịch một giá: discriminatory. Uniform pricing khớp phiên định kỳ tại một giá duy nhất; derivative pricing mượn giá từ thị trường khác."
+ },
+ {
+  "q": "An investor SELLS a European put: put price 50, exercise price 1,640. If the underlying is 1,670 at expiration, the profit for the seller is:",
+  "opts": [
+   "20",
+   "30",
+   "50"
+  ],
+  "ans": 2,
+  "en": "S = 1,670 > X = 1,640 → the put expires worthless and the seller keeps the entire 50 premium.",
+  "vi": "S = 1.670 > X = 1.640 → put hết hạn vô giá trị và người bán giữ trọn khoản phí 50."
+ },
+ {
+  "q": "Validity instructions indicate:",
+  "opts": [
+   "How to fill an order",
+   "When an order may be filled",
+   "How to arrange final settlement of an order"
+  ],
+  "ans": 1,
+  "en": "Validity instructions specify WHEN the order can execute (day order, good-till-cancelled, immediate-or-cancel). \"How to fill\" is an execution instruction; settlement arrangements are clearing instructions.",
+  "vi": "Chỉ thị hiệu lực quy định KHI NÀO lệnh được khớp (lệnh trong ngày, hiệu lực đến khi hủy, khớp ngay hoặc hủy). \"Khớp thế nào\" là chỉ thị thực hiện; dàn xếp quyết toán là chỉ thị bù trừ."
+ },
+ {
+  "q": "When the forward price of a commodity EXCEEDS the spot price, the commodity market is most likely in:",
+  "opts": [
+   "Carry",
+   "Contango",
+   "Backwardation"
+  ],
+  "ans": 1,
+  "en": "Forward above spot = contango — an upward-sloping forward curve, typical when storage costs dominate convenience yield. Backwardation is the mirror image.",
+  "vi": "Forward cao hơn spot = contango — đường cong kỳ hạn dốc lên, điển hình khi chi phí lưu kho lấn át lợi ích nắm giữ. Backwardation là hình ảnh gương."
+ },
+ {
+  "q": "Which is private debt funding used by companies in the SEED stage of their life cycle?",
+  "opts": [
+   "Venture debt",
+   "Direct lending",
+   "Mezzanine financing"
+  ],
+  "ans": 0,
+  "en": "Venture debt serves start-ups alongside VC equity — often with warrants to compensate the extreme risk. Direct lending and mezzanine target established, cash-flowing borrowers.",
+  "vi": "Venture debt phục vụ start-up song song với vốn VC — thường kèm warrant để bù rủi ro cực cao. Direct lending và mezzanine nhắm vào bên vay đã trưởng thành, có dòng tiền."
+ },
+ {
+  "q": "For a fixed-rate bond, Macaulay duration is:",
+  "opts": [
+   "Unrelated to the bond's yield-to-maturity",
+   "Inversely related to the bond's yield-to-maturity",
+   "Positively related to the bond's yield-to-maturity"
+  ],
+  "ans": 1,
+  "en": "Higher yields discount distant cash flows more harshly, shifting weight toward earlier payments — the weighted-average time (Macaulay duration) shortens.",
+  "vi": "Lợi suất cao chiết khấu dòng tiền xa nặng tay hơn, dồn trọng số về các khoản gần — thời gian bình quân gia quyền (Macaulay duration) ngắn lại."
+ },
+ {
+  "q": "With respect to portfolio construction, combining long-term capital market expectations with the objectives and constraints from the investment policy statement determines a portfolio's:",
+  "opts": [
+   "Security selection",
+   "Tactical asset allocation",
+   "Strategic asset allocation"
+  ],
+  "ans": 2,
+  "en": "Long-run expectations + IPS objectives and constraints = the strategic asset allocation. Tactical shifts are short-term deviations from it; security selection fills in the details.",
+  "vi": "Kỳ vọng dài hạn + mục tiêu và ràng buộc trong IPS = phân bổ tài sản chiến lược. Điều chỉnh chiến thuật là các độ lệch ngắn hạn khỏi nó; chọn chứng khoán lấp phần chi tiết."
+ },
+ {
+  "q": "The correlation of cryptocurrencies with traditional assets has been:",
+  "opts": [
+   "Decreasing",
+   "Steady",
+   "Increasing"
+  ],
+  "ans": 2,
+  "en": "As institutional adoption grew, cryptocurrencies increasingly traded like risk assets — their correlation with equities has risen, eroding the early diversification story.",
+  "vi": "Khi tổ chức tham gia nhiều hơn, tiền mã hóa ngày càng giao dịch như tài sản rủi ro — tương quan với cổ phiếu đã tăng lên, bào mòn câu chuyện đa dạng hóa thuở đầu."
+ },
+ {
+  "q": "Initial investment $100 million; one-year return 12%; management fee 1% of AUM (end-of-period valuation); incentive fee 10% of return net of the management fee. The investor's net return is closest to:",
+  "opts": [
+   "9.68%",
+   "9.79%",
+   "10.88%"
+  ],
+  "ans": 1,
+  "en": "End value = 112. Management fee = 1% × 112 = 1.12. Gain net of management fee = 12 − 1.12 = 10.88 → incentive = 1.088. Investor keeps 112 − 1.12 − 1.088 = 109.79 → net return 9.79%.",
+  "vi": "Giá trị cuối = 112. Phí quản lý = 1% × 112 = 1,12. Lãi sau phí quản lý = 12 − 1,12 = 10,88 → phí thành tích = 1,088. Nhà đầu tư còn 112 − 1,12 − 1,088 = 109,79 → lợi suất ròng 9,79%."
+ }
+]
+});
