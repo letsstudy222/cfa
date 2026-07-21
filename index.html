@@ -235,6 +235,32 @@ body.hideViVocab .viCol{filter:blur(5px);cursor:pointer}
 .expl .vi{margin-top:10px}
 .qscore{font:700 13px var(--mono);color:#fff;background:var(--grad);border:none;border-radius:12px;display:inline-block;padding:10px 18px;margin-top:8px;box-shadow:0 4px 14px rgba(93,86,233,.3)}
 
+/* mock test hub + branches */
+.mockgroup{margin:28px 0 6px}
+.mockgroup-h{display:flex;align-items:baseline;justify-content:space-between;gap:10px;border-bottom:2px solid var(--accent-border);padding-bottom:8px;margin-bottom:14px}
+.mockgroup-h h3{font-family:var(--disp);font-size:19px;font-weight:800}
+.mockcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px}
+.mockcard{display:block;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;text-decoration:none;color:var(--ink);box-shadow:var(--sh-sm);transition:transform .15s,box-shadow .15s,border-color .15s}
+.mockcard:hover{transform:translateY(-2px);box-shadow:var(--sh-md);border-color:var(--accent-border)}
+.mc-top{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap}
+.mc-ses{font:700 10.5px var(--mono);letter-spacing:.08em;color:var(--accent-deep);background:var(--accent-soft);border:1px solid var(--accent-border);border-radius:999px;padding:3px 9px;white-space:nowrap}
+.mchip{font:600 11px var(--mono);color:var(--ink-soft)}
+.mchip.prog{color:var(--amber)}
+.mchip.ok{color:var(--green)}
+.mchip.no{color:var(--red)}
+.mc-name{font-family:var(--disp);font-weight:700;font-size:16.5px;margin-bottom:2px}
+.mc-scope{font-size:12.5px;color:var(--ink-soft);line-height:1.5;margin-bottom:8px}
+.mc-meta{font:11.5px var(--mono);color:var(--ink-soft);margin-bottom:9px}
+.mc-bar{height:5px;border-radius:99px;background:var(--accent-soft);overflow:hidden}
+.mc-bar i{display:block;height:100%;background:var(--grad)}
+.mockback{display:inline-block;font:600 12.5px var(--body);color:var(--accent-deep);text-decoration:none;margin-bottom:10px}
+.mockback:hover{text-decoration:underline}
+.mockreset{font:600 12px var(--body);color:var(--red);background:var(--red-soft);border:1px solid var(--red-border);border-radius:99px;padding:5px 12px;cursor:pointer;margin-left:6px}
+.mockreset:hover{background:#FBDCDC}
+.mocknav-bottom{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:26px 0 4px}
+.mocknav-bottom a{font:600 13px var(--body);color:var(--accent-deep);text-decoration:none;background:var(--accent-soft);border:1px solid var(--accent-border);border-radius:10px;padding:8px 14px}
+.mocknav-bottom a:hover{background:#E3E6FD}
+
 /* misc */
 .pagenav{display:flex;justify-content:space-between;gap:12px;margin:46px 0 0;padding-top:24px;border-top:1px solid var(--line)}
 .pagenav a{flex:1;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px 18px;box-shadow:var(--sh-sm);transition:border-color .15s,transform .15s,box-shadow .15s}
@@ -377,7 +403,22 @@ function renderNav(active){
       h += '</div>';
     }
   });
-  h += '<a class="tlink'+(active==='mock'?' active':'')+'" href="#mock"><div class="tl-top"><span class="tl-num">✎</span><span class="tl-name">Mock Tests / Đề thi thử</span></div></a>';
+  const isMock = String(active).indexOf('mock')===0;
+  h += '<a class="tlink'+(isMock?' active':'')+'" href="#mock"><div class="tl-top"><span class="tl-num">✎</span><span class="tl-name">Mock Tests / Đề thi thử</span></div></a>';
+  if(isMock && MOCKTESTS.length){
+    const cur = String(active).indexOf('mock/')===0 ? parseInt(String(active).slice(5),10) : -1;
+    h += '<div class="subnav">';
+    h += '<a href="#mock"'+(cur<0?' style="color:var(--side-ink);background:rgba(255,255,255,.06)"':'')+'><span class="sn">☰</span><span>All tests · Danh sách đề</span></a>';
+    mockGroups().forEach(g=>{
+      h += '<div class="sep"></div>';
+      g.tests.forEach(m=>{
+        const st = mockStats(m.ti);
+        const tag = st.done>=st.total ? ' ✓' : (st.done ? ' · '+st.done+'/'+st.total : '');
+        h += '<a href="#mock/'+m.ti+'"'+(cur===m.ti?' style="color:var(--side-ink);background:rgba(255,255,255,.06)"':'')+'><span class="sn">'+g.num+'.'+m.ses+'</span><span>Mock '+g.num+' · Session '+m.ses+tag+'</span></a>';
+      });
+    });
+    h += '</div>';
+  }
   $('#navlist').innerHTML = h;
 }
 
@@ -581,22 +622,84 @@ function mockCard(ti, qi, q, total){
     q.opts.map((o,oi)=>'<button class="opt" onclick="answerMock('+ti+','+qi+','+oi+')"><span class="ol">'+'ABC'[oi]+'.</span><span>'+o+'</span></button>').join('')+
     '<div class="expl"><div class="verdict"></div><div class="etext">'+q.en+'</div>'+viBlock('<p>'+q.vi+'</p>','Giải thích tiếng Việt')+'</div></div>';
 }
-function renderMock(){
-  let h = '<div class="thead"><div class="tnum">MOCK EXAMS · FULL PRACTICE</div><h2>Mock Tests</h2><div class="viName">Đề thi thử — làm trong điều kiện sát thi thật (~90 giây/câu)</div></div>';
+function mockMeta(mt, ti){
+  const num = (mt.name.match(/Mock\s*(?:Exam)?\s*(\d+)/i)||[])[1] || String(ti+1);
+  const ses = (mt.name.match(/Session\s*(\d+)/i)||[])[1] || '';
+  const scope = (mt.name.match(/\(([^)]*)\)/)||[])[1] || '';
+  return {ti:ti, num:num, ses:ses, scope:scope, name:mt.name};
+}
+function mockGroups(){
+  const map = {}, order = [];
+  MOCKTESTS.forEach((mt,ti)=>{
+    const m = mockMeta(mt,ti);
+    if(!map[m.num]){ map[m.num] = []; order.push(m.num); }
+    map[m.num].push(m);
+  });
+  return order.map(n=>({num:n, tests:map[n]}));
+}
+function mockStats(ti){
+  const mt = MOCKTESTS[ti], p = progress.__mock || {};
+  let done = 0, correct = 0;
+  mt.qs.forEach((q,qi)=>{ const k = ti+'_'+qi; if(k in p){ done++; if(+p[k]===q.ans) correct++; } });
+  return {done:done, total:mt.qs.length, correct:correct};
+}
+window.resetMockTest = function(ti){
+  if(!confirm('Clear the saved answers for this exam and start over? / Xóa đáp án đã lưu của đề này và làm lại từ đầu?')) return;
+  const p = progress.__mock || {};
+  Object.keys(p).forEach(k=>{ if(k.split('_')[0]===String(ti)) delete p[k]; });
+  saveProgress(); renderMockTest(ti); window.scrollTo(0,0);
+};
+function renderMockHub(){
+  let h = '<div class="thead"><div class="tnum">MOCK EXAMS · FULL PRACTICE</div><h2>Mock Tests</h2><div class="viName">Đề thi thử — chọn đề bên dưới hoặc trong menu trái (~90 giây/câu)</div></div>';
   if(!MOCKTESTS.length){
     h += '<div class="intro"><p>No mock tests are loaded yet. Open <strong>data/mocktests.js</strong> — it contains a ready-made template showing exactly how to add exams. Once you add a test and reload, it will appear here with automatic grading and bilingual explanations, and your answers will be saved in the browser.</p>'+viBlock('<p>Chưa có đề thi thử nào. Mở file <strong>data/mocktests.js</strong> — trong đó có sẵn mẫu hướng dẫn cách thêm đề. Thêm đề xong tải lại trang, đề sẽ hiện ở đây với chấm điểm tự động, giải thích song ngữ, và đáp án được lưu ngay trên trình duyệt.</p>')+'</div>';
   } else {
-    h += '<div class="intro"><p>Answer every question, then check the score line at the end of each exam. Aim for roughly 90 seconds per question.</p>'+viBlock('<p>Trả lời hết các câu, sau đó xem dòng điểm ở cuối mỗi đề. Cố gắng giữ nhịp ~90 giây mỗi câu.</p>')+'</div>';
-    MOCKTESTS.forEach((mt,ti)=>{
-      h += '<div class="qset"><div class="sethead"><h4>'+mt.name+'</h4><span class="setmeta">'+mt.qs.length+' questions · ~'+Math.round(mt.qs.length*1.5)+' min</span></div>';
-      mt.qs.forEach((q,qi)=>{ h += mockCard(ti, qi, q, mt.qs.length); });
-      h += '<div id="mockscore_'+ti+'"></div></div>';
+    h += '<div class="intro"><p>Each mock mirrors the real exam: <strong>Session 1</strong> covers Ethics, Quant, Economics, FSA and Corporate Issuers; <strong>Session 2</strong> covers Fixed Income, Equity, Derivatives, Alternatives and Portfolio Management. Pick an exam below — answers and scores are saved automatically in this browser.</p>'+viBlock('<p>Mỗi mock mô phỏng đề thi thật: <strong>Session 1</strong> gồm Ethics, Quant, Econ, FSA, Corporate Issuers; <strong>Session 2</strong> gồm Fixed Income, Equity, Derivatives, Alternatives, Portfolio Management. Chọn một đề bên dưới — đáp án và điểm số được lưu tự động trên trình duyệt.</p>')+'</div>';
+    mockGroups().forEach(g=>{
+      h += '<div class="mockgroup"><div class="mockgroup-h"><h3>Mock Exam '+g.num+'</h3><span class="setmeta">Đề số '+g.num+' · '+g.tests.length+' session'+(g.tests.length>1?'s':'')+'</span></div><div class="mockcards">';
+      g.tests.forEach(m=>{
+        const st = mockStats(m.ti);
+        const bar = st.total ? Math.round(st.done/st.total*100) : 0;
+        let chip;
+        if(!st.done) chip = '<span class="mchip">Not started · Chưa làm</span>';
+        else if(st.done<st.total) chip = '<span class="mchip prog">In progress · '+st.done+'/'+st.total+'</span>';
+        else { const pct = Math.round(st.correct/st.total*100); chip = '<span class="mchip '+(pct>=70?'ok':'no')+'">Score '+st.correct+'/'+st.total+' ('+pct+'%)</span>'; }
+        h += '<a class="mockcard" href="#mock/'+m.ti+'">'+
+          '<div class="mc-top"><span class="mc-ses">SESSION '+m.ses+'</span>'+chip+'</div>'+
+          '<div class="mc-name">Mock '+g.num+' · Session '+m.ses+'</div>'+
+          '<div class="mc-scope">'+m.scope+'</div>'+
+          '<div class="mc-meta">'+st.total+' questions · ~'+Math.round(st.total*1.5)+' min</div>'+
+          '<div class="mc-bar"><i style="width:'+bar+'%"></i></div></a>';
+      });
+      h += '</div></div>';
     });
   }
   h += '<div class="footer">CFA® is a registered trademark owned by CFA Institute. Independent study notes — not affiliated with CFA Institute.</div>';
   content.innerHTML = h;
-  restoreMock();
+}
+function renderMockTest(ti){
+  const mt = MOCKTESTS[ti];
+  if(!mt){ location.hash = '#mock'; return; }
+  const m = mockMeta(mt,ti);
+  let h = '<div class="thead"><a class="mockback" href="#mock">← All mock tests · Danh sách đề</a><div class="tnum">MOCK EXAM '+m.num+' · SESSION '+m.ses+'</div><h2>Mock '+m.num+' — Session '+m.ses+'</h2><div class="viName">'+m.scope+'</div></div>';
+  h += '<div class="intro"><p>'+mt.qs.length+' questions · ~'+Math.round(mt.qs.length*1.5)+' min. Answer every question, then check the score line at the end. Aim for roughly 90 seconds per question. <button class="mockreset" onclick="resetMockTest('+ti+')">Reset · Làm lại đề</button></p>'+viBlock('<p>Trả lời hết các câu, sau đó xem dòng điểm ở cuối đề. Cố gắng giữ nhịp ~90 giây mỗi câu. Nút Reset xóa đáp án đã lưu của riêng đề này.</p>')+'</div>';
+  h += '<div class="qset">';
+  mt.qs.forEach((q,qi)=>{ h += mockCard(ti, qi, q, mt.qs.length); });
+  h += '<div id="mockscore_'+ti+'"></div></div>';
+  h += '<div class="mocknav-bottom">';
+  if(MOCKTESTS[ti-1]) h += '<a href="#mock/'+(ti-1)+'">← '+MOCKTESTS[ti-1].name.split(' (')[0]+'</a>';
+  h += '<a href="#mock">☰ All tests · Tất cả đề</a>';
+  if(MOCKTESTS[ti+1]) h += '<a href="#mock/'+(ti+1)+'">'+MOCKTESTS[ti+1].name.split(' (')[0]+' →</a>';
+  h += '</div>';
+  h += '<div class="footer">CFA® is a registered trademark owned by CFA Institute. Independent study notes — not affiliated with CFA Institute.</div>';
+  content.innerHTML = h;
+  restoreMockOne(ti);
   if(document.body.classList.contains('showAllVi')) openAllVi();
+}
+function restoreMockOne(ti){
+  const p = progress.__mock; if(!p) return;
+  Object.entries(p).forEach(([k,oi])=>{ const parts = k.split('_'); if(+parts[0]===ti) markMockCard(+parts[0], +parts[1], oi); });
+  showMockScore(ti);
 }
 function markMockCard(ti, qi, oi){
   const q = MOCKTESTS[ti] && MOCKTESTS[ti].qs[qi]; if(!q) return;
@@ -617,11 +720,6 @@ window.answerMock = function(ti, qi, oi){
   progress.__mock[ti+'_'+qi] = oi;
   saveProgress(); showMockScore(ti);
 };
-function restoreMock(){
-  const p = progress.__mock; if(!p) return;
-  Object.entries(p).forEach(([k,oi])=>{ const [ti,qi] = k.split('_'); markMockCard(+ti, +qi, oi); });
-  MOCKTESTS.forEach((mt,ti)=>showMockScore(ti));
-}
 function showMockScore(ti){
   const mt = MOCKTESTS[ti]; const p = progress.__mock || {};
   const el = document.getElementById('mockscore_'+ti); if(!el||!mt) return;
@@ -635,7 +733,12 @@ function showMockScore(ti){
 function route(){
   const id = location.hash.replace('#','') || 'home';
   const t = TOPICS.find(x=>x.id===id);
-  if(id==='mock'){ renderNav('mock'); renderMock(); window.scrollTo(0,0); $('#side').classList.remove('open'); return; }
+  if(id==='mock' || id.indexOf('mock/')===0){
+    renderNav(id);
+    if(id.indexOf('mock/')===0){ const ti = parseInt(id.slice(5),10); (!isNaN(ti) && MOCKTESTS[ti]) ? renderMockTest(ti) : renderMockHub(); }
+    else renderMockHub();
+    window.scrollTo(0,0); $('#side').classList.remove('open'); return;
+  }
   renderNav(t?id:'home');
   t ? renderTopic(t) : renderHome();
   window.scrollTo(0,0);
